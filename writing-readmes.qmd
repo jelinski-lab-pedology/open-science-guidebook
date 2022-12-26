@@ -1,113 +1,84 @@
 # Writing Readmes - Your First Assignment
 
 ## readme.txt and Project Metadata
-Writing in your project actually begins with adding content to the readme.txt file. This is the human-readable part of your project metadata, and should be as descriptive and narrative as possible. 
 
-The readme is arguably one of the most important features of your entire project. It forms a cornerstone of the metadata catalog for the entire project *see metadata section #todo and what is metadata #todo and metadata components #todo*. The readme should always be in plain text .txt format so that anyone on any system can read it and it is as futureproof as possible. Spending time on your readme file is extremely important: 
+Writing in your project actually begins with adding content to the readme.txt file. This is the human-readable part of your project metadata, and should be as descriptive and narrative as possible.
 
-- It is the first writing you will do on your project and helps you to describe at a high level what your project is about
-- It is the file that tells everyone the who, what, when where, why, and how of this project:
-  - who created this project?
-  - what is in this project?
-  - when was it created?
-  - where can i find relevant data, files, and documents within the project structure?
-  - why was this project done; what was the motivation?
-  - how should I use these project files; what are the file formats, what programs do I need to run or access them; how were these files created and using what tools?
-  
-A readme is a living document. You should begin any project with a draft readme, which, provided you use this workflow and file structure can be mostly copied from a suggested template located in this section. However, as your project grows and changes, your readme should be updated. Be as thorough as possible. Note that this is a project level readme. Although not required, you can consider including sub readmes at within multipl subfolders where necessary. Conversely, you can create a project level book in Quarto that contains all readmes and documentation (see section X).  *More information on how to use and write a readme in section X*. 
+The readme is arguably one of the most important features of your entire project. It forms a cornerstone of the metadata catalog for the entire project *see metadata section #todo and what is metadata #todo and metadata components #todo*. The readme should always be in plain text .txt format so that anyone on any system can read it and it is as futureproof as possible. Spending time on your readme file is extremely important:
+
+-   It is the first writing you will do on your project and helps you to describe at a high level what your project is about
+-   It is the file that tells everyone the who, what, when where, why, and how of this project:
+    -   who created this project?
+    -   what is in this project?
+    -   when was it created?
+    -   where can i find relevant data, files, and documents within the project structure?
+    -   why was this project done; what was the motivation?
+    -   how should I use these project files; what are the file formats, what programs do I need to run or access them; how were these files created and using what tools?
+
+A readme is a living document. You should begin any project with a draft readme, which, provided you use this workflow and file structure can be mostly copied from a suggested template located in this section. However, as your project grows and changes, your readme should be updated. Be as thorough as possible. Note that this is a project level readme. Although not required, you can consider including sub readmes at within multipl subfolders where necessary. Conversely, you can create a project level book in Quarto that contains all readmes and documentation (see section X). *More information on how to use and write a readme in section X*.
 
 ## Suggested Template
+
 The following text is an example readme template to populate the readme for your project when you first initialize the directory. It is also contained in the file in the /Resources folder of this repo called readme-template.txt. It is adapted from Cornell University Research Data Management Service Group.
 
-----
+------------------------------------------------------------------------
 
-This readme file was generated on [YYYY-MM-DD] by [NAME]
-<help text in angle brackets should be deleted before finalizing your document>
-<[text in square brackets should be changed for your specific dataset]>
-
+This readme file was generated on \[YYYY-MM-DD\] by \[NAME\] <help text in angle brackets should be deleted before finalizing your document> \<\[text in square brackets should be changed for your specific dataset\]\>
 
 GENERAL INFORMATION
 
-Title of Dataset: 
+Title of Dataset:
 
-<provide at least two contacts>
-Author/Principal Investigator Information
-Name: 
-ORCID:
-Institution: 
-Address: 
-Email: 
+<provide at least two contacts> Author/Principal Investigator Information Name: ORCID: Institution: Address: Email:
 
-Author/Associate or Co-investigator Information
-Name: 
-ORCID:
-Institution: 
-Address: 
-Email: 
+Author/Associate or Co-investigator Information Name: ORCID: Institution: Address: Email:
 
-Author/Alternate Contact Information
-Name: 
-ORCID:
-Institution: 
-Address: 
-Email: 
+Author/Alternate Contact Information Name: ORCID: Institution: Address: Email:
 
-Dates of data collection: <provide single date, range, or approximate date; suggested format YYYY-MM-DD> 
+Dates of data collection: \<provide single date, range, or approximate date; suggested format YYYY-MM-DD\>
 
-Geographic location of data collection: <provide latitude, longiude bounding box, or city/region, State, Country>
+Geographic location of data collection: \<provide latitude, longiude bounding box, or city/region, State, Country\>
 
-Funding sources: <include funding source and grant or agreemnet number, title and date range if applicable>. 
+Funding sources: \<include funding source and grant or agreemnet number, title and date range if applicable\>.
 
 SHARING/ACCESS INFORMATION
 
-Licenses/restrictions placed on the data: 
+Licenses/restrictions placed on the data:
 
-Links to publications that cite or use the data: 
+Links to publications that cite or use the data:
 
-Links to other publicly accessible locations of the data: 
+Links to other publicly accessible locations of the data:
 
-Links/relationships to ancillary data sets: 
+Links/relationships to ancillary data sets:
 
-Was data derived from another source?
-If yes, list source(s): 
+Was data derived from another source? If yes, list source(s):
 
-Recommended citation for this dataset: 
-
+Recommended citation for this dataset:
 
 DATA & FILE OVERVIEW
 
-File List: <list all files (or folders, as appropriate for dataset organization) contained in the dataset, with a brief description, organize this by subfolder>
+File List: \<list all files (or folders, as appropriate for dataset organization) contained in the dataset, with a brief description, organize this by subfolder\>
 
--   /00-data-raw *this folder contains the curated raw data: unmodified, comprehensive, containing outliers, missing values, imperfections and other items that may be removed in data pre-processing. It also contains any foundational geospatial data from other authors or sources that were not generated as part of this project but were used in data analysis. Source information for external data provided below*
-    <- list files>
--   /01-data *This folder contains all post-processed data used for analysis. It also contains foundational geospatial data from other authors/sources following any necessary processing to change formats*
-    <- list files>
--   /02-src *This folder contains all of your source code and R scripts that were used to conduct data processing and analysis, and includes a .Rproj file to initialize the environment prior to running the scripts.*
-    <- list files>
--   /03-cache *This folder contains any large files generated as part of data analysis, which can be optionally used from this directory to save time running scripts.*
-    <- list files>
+NOTE: You may not see every subfolder listed here. By default, Git does not push subfolders that do not contain at least one file to the repository. Therefore, if you do not see one of the below listed folders, assume that there were no files in the folder at the time of the push.
+
+-   /00-data-raw *this folder contains the curated raw data: unmodified, comprehensive, containing outliers, missing values, imperfections and other items that may be removed in data pre-processing. It also contains any foundational geospatial data from other authors or sources that were not generated as part of this project but were used in data analysis. Source information for external data provided below* \<- list files\>
+-   /01-data *This folder contains all post-processed data used for analysis. It also contains foundational geospatial data from other authors/sources following any necessary processing to change formats* \<- list files\>
+-   /02-src *This folder contains all of your source code and R scripts that were used to conduct data processing and analysis, and includes a .Rproj file to initialize the environment prior to running the scripts.* \<- list files\>
+-   /03-cache *This folder contains any large files generated as part of data analysis, which can be optionally used from this directory to save time running scripts.* \<- list files\>
 -   /04-temp *This folder is left purposely empty - it was used during analysis as a repository for temporary or experimental files.*
--   /05-docs *This folder holds everything related to manuscripts or reports resulting from the project. It has subfolders for holding drafts, submitted versions (inclduign subsequent revisions), final and proofs, figures, tables, and references (contained in a single .bib file).*
-    <- list files>
--   /06-presentations *This folder contains a subfolder for each presentation given on this project.*
-    <- list files>
--   /07-log *This folder contains data analysis and writing logs*
-    <- list files>
+-   /05-docs *This folder holds everything related to manuscripts or reports resulting from the project. It has subfolders for holding drafts, submitted versions (inclduign subsequent revisions), final and proofs, figures, tables, and references (contained in a single .bib file).* \<- list files\>
+-   /06-presentations *This folder contains a subfolder for each presentation given on this project.* \<- list files\>
+-   /07-log *This folder contains data analysis and writing logs* \<- list files\>
 -   /08-archive *This folder may be left purposely empty. If it is not empty, it contains anything that is not relevant to the current workflow but that was not permanently deleted; may not be well organized*
--   /09-books *This folder contains all files for generating a published, project level book in html or pdf form. This is hosted on GitHub Pages* #NOTE this should be generated in both html and pdf form to ensure maximum readability. See section X #todo for how to build and generate a book.
-    <- list files>
+-   /09-books *This folder contains all files for generating a published, project level book in html or pdf form. This is hosted on GitHub Pages* #NOTE this should be generated in both html and pdf form to ensure maximum readability. See section X #todo for how to build and generate a book. \<- list files\>
 -   \[readme.txt\] *YOU ARE READING THIS NOW!*
 -   \[TODOs.txt\]
-    
-Relationship between files, if important: 
 
-Additional related data collected that was not included in the current data package: 
+Relationship between files, if important:
 
-Are there multiple versions of the dataset?
-If yes, name of file(s) that was updated: 
-Why was the file updated? 
-When was the file updated? 
+Additional related data collected that was not included in the current data package:
 
+Are there multiple versions of the dataset? If yes, name of file(s) that was updated: Why was the file updated? When was the file updated?
 
 METHODOLOGICAL INFORMATION
 
@@ -115,31 +86,30 @@ Description of methods used for collection/generation of data: <include links or
 
 Methods for processing the data: <describe how the submitted data were generated from the raw or collected data>
 
-Instrument- or software-specific information needed to interpret the data: <include full name and version of software, and any necessary packages or libraries needed to run scripts>
+Instrument- or software-specific information needed to interpret the data: \<include full name and version of software, and any necessary packages or libraries needed to run scripts\>
 
-Standards and calibration information, if appropriate: 
+Standards and calibration information, if appropriate:
 
-Environmental/experimental conditions: 
+Environmental/experimental conditions:
 
-Describe any quality-assurance procedures performed on the data: 
+Describe any quality-assurance procedures performed on the data:
 
-People involved with sample collection, processing, analysis and/or submission: 
+People involved with sample collection, processing, analysis and/or submission:
 
+DATA-SPECIFIC INFORMATION FOR: \[FILENAME\] \<repeat this section for each dataset in the 00-raw-data and 01-data folders, folder or file, as appropriate\>
 
-DATA-SPECIFIC INFORMATION FOR: [FILENAME]
-<repeat this section for each dataset in the 00-raw-data and 01-data folders, folder or file, as appropriate>
+Number of variables:
 
-Number of variables: 
+Number of cases/rows:
 
-Number of cases/rows: 
-
-Variable List: <list variable name(s), description(s), unit(s) and value labels as appropriate for each>
+Variable List: \<list variable name(s), description(s), unit(s) and value labels as appropriate for each\>
 
 Missing data codes: <list code/symbol and definition>
 
-Specialized formats or other abbreviations used: 
+Specialized formats or other abbreviations used:
 
----
+------------------------------------------------------------------------
 
 ## References
+
 Cornell University Research Data Management Service Group: [Guide to writing "readme" style metadata](https://data.research.cornell.edu/content/readme).
