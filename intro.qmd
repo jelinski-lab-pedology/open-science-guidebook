@@ -1,15 +1,34 @@
-# Introduction
+# Introduction {.unnumbered}
 
-This is a book created from markdown and executable code.
+The sections of this book each outline a single component of an integrated workflow that attempts at every turn to use well-documented, open source tools. The major components of this workflow are:
 
-See @knuth84 for additional discussion of literate programming.
+-   Project Setup and "Pre"-Data
+-   Raw Data Collection
+-   Raw Data Curation & Data Production
+-   Data Analysis and Interpretation
+-   Writing and External Products
+-   Long-Term Data Archiving and Storage
+-   X Notetaking Strategies
 
-```{r}
-1 + 1
-```
+*Note that although these major components are listed in chronological order, they will likely not necessarily occur in distinct stages in your project. For example data analysis may begin with preliminary data and continue as you are writing drafts of manuscripts AND writing occurs across all of these components - writing actually begins with project setup as you will see. If you have a project idea, you can start writing! Thhis allows you to never start with a blank page*
 
-## A subsection
+To execute this standardized workflow as described, it will be necessary for you to be familiar with and utilize the following tools:
 
-Note that subsections appear in the sidebar table of contents for this chapter
+-   [ArcGIS Online](https://www.arcgis.com/home/index.html): [Survey123](https://survey123.arcgis.com) (*Proprietary* - Free account available through UMN)
+-   [Obsidian](https://obsidian.md) (*Open source*)
+-   [Zotero](https://www.zotero.org) (*Open source*)
+-   [QGIS](https://www.qgis.org/en/site/) (*Open source*)
+-   [R](https://www.r-project.org)/[RStudio](https://posit.co/download/rstudio-desktop/) (*Open source*)
+-   [GitHub](https://github.com)/[GitHub Desktop](https://desktop.github.com) (*Proprietary* - Free account available to anyone)
+-   [Google Drive](https://www.google.com/drive/) (*Proprietary* - Free account available to anyone, unlimited storage available through UMN)
+-   [InkScape](https://inkscape.org) (*Open source*)
+-   [Hack MD](https://hackmd.io) (*Proprietary* - Free account available to anyone)
+-   *note to potentially include social professional sites like ResearchGate and Google Scholar + ORCID + X?*
 
-## Another subsection
+These are not a randomly selected group of tools - they are designed at every turn to allow deep integration and (as much as possible) free and open source usage. Although not all of these tools are open source (ArcGIS Online, GitHub, Google Drive, Hack MD) with the exception of ArcGIS Online, all of these tools have a free base level, which will be sufficient to execute this workflow. Additionally, because of UMN's enterprise license with ArcGIS Online, all of those tools are available free to you.
+
+These tools will require you to be fluent in the following languages:
+
+-   R (*core language, critical skill*)
+-   Markdown (*core language, critical skill*)
+-   *Although not required to execute this workflow, familiarity with Python and SQL might help you do more customization*

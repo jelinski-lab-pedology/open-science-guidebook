@@ -12,6 +12,9 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - part: project-setup.qmd
+      chapters: 
+        - para-system.qmd
     - summary.qmd
     - references.qmd
 

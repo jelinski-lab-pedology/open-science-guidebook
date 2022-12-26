@@ -1,0 +1,18 @@
+# Project Setup, Documentation, and "Pre-Data"
+
+This is the first part of any project, and can begin as soon as you have an idea - in fact, it is completely fine to set up a project that is just an idea, with no content yet. Just going through the setup process makes a project more "real" in your mind, and also gives you a structure to collect thoughts, ideas, and related information for future work, even before you are starting to work on a project in earnest. I've got many directories on my computer that are empty placeholders for wishlist projects years in the future.
+
+## Project Setup
+
+This includes deciding what constitutes a **"project"** (this seems like it should be an easy thing, but it's actually very difficult), how to generate a file and folder structure for your project before you even begin that lives and syncs across platforms. This setup is designed to work for all of the project types we deal with regardless of the initial data origin (i.e. field projects, laboratory projects, review or data compilation).
+
+::: callout-tip
+## Required Tools - Project Setup
+
+-   A local folder structure on your personal computer
+-   GitHub/GitHub Desktop
+-   Google Drive
+-   Zotero
+-   Obsidian
+-   Inkscape
+:::
