@@ -1,0 +1,100 @@
+# Project Subfolder Structure
+
+This workflow is based around projects as discrete scientific entities, so we will spend some time here describing how the subdirectory within any single project can be set up in a standardized way.
+
+*Note that within the PARA-adapted system, a project is anything that is in your Projects directory as a stand-alone folder (these would be projects which will be finalized and not further revised, like a thesis or a paper), but could also be something nested under an "Area" (for projects that may be living, such as course syllabi), or a deliverable under a grant.*
+
+*Challenge here - how to deal with grants as areas, but have projects which are maybe manuscripts organized around grant deliverables? Think through GitHub Organization vs "Project" structure for AKSDB.*
+
+Setting up this standardized project subfolder structure will allow you to have a place to put everything related to your project in a clear way, without having to think extensively about where something should go. Note: not every project is the same, so you may have some subfolders which are empty for some projects, but that is totally fine! Keep the empty folders - you never know when you may need them. If they are empty thats fine!
+
+## Example Standardized Subfolder Structure for a Project
+This standardized structure is my own, modified from the following [insert sources].
+
+-   ./M09-permafrost-table-id
+    -   /00-data-raw
+    -   /01-data
+    -   /02-src
+        -   \[M09-permafrost-table-id.Rproj\] *will initiate in section X*
+    -   /03-cache
+    -   /04-temp
+    -   /05-docs
+        -   /drafts
+        -   /submitted
+        -   /final-and-proofs
+        -   /figures
+        -   /tables
+        -   /refs
+    -   /06-presentations
+    -   /07-log
+        -   /analysis-log
+        -   /writing-log
+    -   /08-archive
+    -   /09-books
+    -   \[readme.txt\]
+    -   \[TODOs.txt\]
+
+*Note that what I dodn't use here was -lib or -libs and -tests*
+
+## What Do Each of These Folders Mean and What Should I Put in Them?
+Although this list may seem daunting at first, each of these folders has a purpose, and this structure allows for deep integration with transparent data curation and data analysis workflows using R. Some of these folders may remain empty for the duration of your project and that is just fine! Note that each of the folders have a number convention for quick association once you start using this standardized structure. The numbers also allow for the folders to be arranged in a logical order, rather than alphabetically.
+
+### /00-data-raw
+This folder contains your curated raw data: unmodified, comprehensive, containing outliers, missing values, imperfections and other items that may be removed in data pre-processing. *Insert link to data pre-processing chapter.* It also contains any foundational geospatial data from other authors/sources that you did not generate but that you are pulling in for the purposes of analysis **and that needs further processing to be utilized in your workflow**. For example if an external data source came in a proprietary format that needed to be exported and modified. *Note - need to create a subfolder separate for this, and also need to have a way to track origin and authorship - probably a readme or metadata file .txt or something - can be a running open file that is added to - maybe a markdown or something?*
+
+Any raw data that you generated should be in open and easily readable formats. Specifically:
+
+- Tabular data should be in .csv format
+- Spatial vector data (points, lines or polygons) should be in [OGC geopackage](https://en.wikipedia.org/wiki/GeoPackage) format.
+
+Any data in raw data that is not your own should be in an /external-sources subdirectory which contains a metadata file that details the source of each of the external data sources.
+
+### /01-data
+This folder is the sink where all of your post-processed data will live. It also contains any foundational geospatial data from other authors/sources that you did not generate but that you are pulling in for the purposes of analysis following any necessary processing to change formats - note that this can include reprojected data, etc? *actually maybye it shouldn't because all of that can go into an R script - hmm need to think about this*. *Note - need to create a subfolder separate for this, and also need to have a way to track origin and authorship - probably a readme or metadata file .txt or something - can be a running open file that is added to - maybe a markdown or something?* Data should be in open and easily readable formats. Specifically:
+
+- Tabular data should be in .csv format
+- Spatial vector data (points, lines or polygons) should be in [OGC geopackage](https://en.wikipedia.org/wiki/GeoPackage) format.
+- Spatial raster data should be in [GeoTIFF](https://en.wikipedia.org/wiki/GeoTIFF) format.
+
+Any data in that is not your own should be in an /external-sources subdirectory which contains a metadata file that details the source of each of the external data sources.
+
+### /02-src
+This folder contains all of your source code and R scripts that you use to conduct your data processing and analysis. *Note link to how to actually write and breakdown and organize scripts and analysis in projects - this can be in your R style guide or as a separate section - talk about sequential numbering, a master script, functions script, global script, readme, and how to renumber or keep your growing scripts squared away.* This folder should always contain a .Rproj file to initialize the environment for running your R scripts.
+
+### /03-cache
+Your cache folder may not be used often. However it is there to provide a storage place for any large objects or data that take a very long time to generate initially in a script. When these are generated once, they can be exported to this folder - this provides a shortcut for subsequent running of the scripts that saves time. People can still run your original scripts to generate these objects if they so choose.
+
+### /04-temp
+The temp folder is basically to hold any temporary non-important files, such as tests script outputs, test figures, etc. These are not important to the overall analysis. This folder should be empty and not be included in your final project using [.gitignore] file.
+
+### /05-docs
+This folder houses everything related to manuscripts or reports resulting from the project. It has subfolders for holding drafts, submitted versions (inclduign subsequent revisions), final and proofs, figures, tables, and references (which contains a single .bib file - ideally exported from your Zotero project folder which *matches the name of this project*).
+
+### /06-presentations
+This folder should contain subfolders for each presentation realted to the topic. Subfolders should start with "P0X" and also include the year and venue. So if I gave a presentation at the Soil Science Sciety of America meetings in 2017 on a particular project, and it was the first presentation that I gave under that project, my subdirectory containing all of the relevant things for that presentation would be "P01-2017-SSSA".
+
+### /07-log
+This folder contains logs related to your project, specifically your analysis log and writing log. You can choose to make these public or not. *See this section for how to write and construct logs - do it at the end of every day/session - take the 5 MINUTES!!!*
+
+### /08-archive
+This folder contains anything that is not relevant to the current workflow but that you are not ready to delete permanently *yet*. Items can be moved to the archive folder at any time.
+
+### /09-book
+If you choose to create a book to consolidate your metadata and readmes, all relevant files should go in this subdirectory. More information on generating an html book from separate markdown files *here*.
+
+### readme.txt
+This is arguably one of the most important features of your entire project. The readme should always be in plain text .txt format so that anyone on any system can read it. Spending time on your readme file is extremely important: 
+
+- It is the first writing you will do on your project and helps you to describe at a high level what your project is about
+- It is the file that tells everyone the who, what, when where, why, and how of this project:
+  - who created this project?
+  - what is in this project?
+  - when was it created?
+  - where can i find relevant data, files, and documents within the project structure?
+  - why was this project done; what was the motivation?
+  - how should I use these project files; what are the file formats, what programs do I need to run or access them; how were these files created and using what tools?
+  
+A readme is a living document. You should begin any project with a draft readme, which, provided you use this workflow and file structure can be mostly copied from a suggested template located in this section. However, as your project grows and changes, your readme should be updated. Be as thorough as possible. Note that this is a project level readme. Although not required, you should strongly consider including sub readmes at within multipl subfolders where necessary. Conversely, you can create a project level book in Quarto that contains all readmes and documentation (see section X).  *More information on how to use and write a readme in section X*. 
+
+### TODOs.txt
+This is a running list of TODOs - actually this shouldn't be a thing. You should use GitHub Issues to track this? Not sure need to look into this more.

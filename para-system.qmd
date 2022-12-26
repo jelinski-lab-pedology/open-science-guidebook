@@ -1,65 +1,136 @@
 # Overview of the PARA system
-This workflow is designed around discrete units of work called projects and utilizes Tiago Forte's PARA system of file structure and organization. The PARA system (Projects, Areas, Resources, and Archive) is an excellent place to start for organizing your files - if you don't have strong feelings about how your work files are organized on your computer, I *highly* suggest starting with this. If you do have strong feelings, you can always adapt the system to something that works for you. Utilizing this system doesn't necessarily commit you to going back and re-organizing all of your work files on your computer. Just start now, and build as you go and work on new projects. As you have time in the future, you can always go back and fit your previous work into this structure. *However - see my notes on things to watch for when you go back to "refactor" your files and folder structure.* 
+
+This workflow is designed around discrete units of work called projects and utilizes Tiago Forte's PARA file structure and organization. The PARA system (Projects, Areas, Resources, and Archive) is an excellent place to start for organizing your files - if you don't have strong feelings about how your work files are organized on your computer, I *highly* suggest starting with this. If you do have strong feelings, you can always adapt the system to something that works for you. Utilizing this system doesn't necessarily commit you to going back and re-organizing all of your work files on your computer. Just start now, and build as you go and work on new projects. As you have time in the future, you can always go back and fit your previous work into this structure. *However - see my notes on things to watch for when you go back to "refactor" your files and folder structure.*
 
 The most important thing is to **start now; start today**.
 
 The second most important thing is to use the same structure *across apps, platforms, and languages*, which will allow deep integration and ensure you always know where everything is. You will spend less time trying to find for example, a small test R script you wrote last year or that interesting thing you read 18 months (or 2 months!) ago that was related to this project.
 
 ## The PARA system in practice
+
 Tiago Forte's PARA acronym stands for: Projects, Areas, Resources, and Archive. This system is not strictly hierarchical, but each category from front to back in PARA is given precedence over the last. That is because the underlying philosophy is that projects should produce end outputs or deliverables. Things that are not yet projects, or are larger than a single project are more nebulous, **but not any less valuable**.
 
 Using the PARA system requires you to set up high level folders (I would suggest in the Documents directory of your computer) for each of the PARA categories: Projects, Areas, Resources, and Archive. Then, all of your professional work, and eventually some of your personal work and interests will nest under these.
 
-Defining projects is probably the most important part of this workflow and drives everything else, so I will start there.
+Deciding what is a "Project" vs an "Area" vs a "Resource" vs an "Archive" is probably the most important part of this workflow and drives everything else, so I will start there. One simple way to think about this is that when you need to consider where something should go in this system start at the beginning - if its doesn't fit into the definition of a "Project", then move down and see if it fits into the definition of an "Area". If it is not an "Area", then it will likely be a "Resource" unless it is something completed or inactive, in which case it goes in the "Archive".
 
-## Projects vs Areas vs Resources vs Archive
-Work through from Projects to Archive - dichotomous key - if it doesnt fit in the others, its an archive
+## What is a Project? How should I name my Projects?
 
-## What is a project? How should I name my projects?
 ### Defining Projects - How to Determine if Something is a Project
+
 This seems like a trivial question but defining project boundaries in research can be difficult. Where does one project end and another begin? Does a project include multiple sub projects?
 
-**A project is something you are involved in that has a discrete, definable end state or product**. Note that our definition of projects here means they are **flat**. There should not be multiple projects nested under other projects. Each project is a discrete entity - this alings with GitHub repository organization (as we will see in future chapters), which allows **deep integration**. In our line of work, examples would be:	
+**A project is something you are involved in that has a discrete, definable end state or product**. Note that our definition of projects here means they are **flat**. There should not be multiple projects nested under other projects. Each project is a discrete entity - this alings with GitHub repository organization (as we will see in future chapters), which allows **deep integration**. In our line of work, examples would be:
 
-- A thesis **chapter**; see below for why a thesis or dissertation itself is actually larger than a Project - it is an Area
+-   A thesis **chapter**; see below for why a thesis or dissertation itself is actually larger than a Project - it is an Area
 
-- A manuscript
+-   A manuscript
 
-- A grant *might* be a project, but is usually better defined as an Area (because these days all grants are collaborative) with multiple projects underneath. Also, because most grants actually have multiple end products such as reports and manuscripts.
+-   A grant *might* be a project, but is usually better defined as an Area (because these days all grants are collaborative) with multiple projects underneath. Also, because most grants actually have multiple end products such as reports and manuscripts.
 
-- Reports to stakeholders on unpublished data.
+-   Reports to stakeholders on unpublished data.
 
-- X Are conference presentations nested in here? No - they are not projects but nested under projects.
+-   X Are conference presentations nested in here? No - they are not projects but nested under projects.
 
-- X Photos are nested and linked to projects in the GitHub readme file
+-   X Photos are nested and linked to projects in the GitHub readme file
 
 ### Naming Projects
+
 This is a general style guide for naming projects (in the context of files or folder structures). Projects may have very long actual names (or you may not even know what, exactly the name of your project or project idea will eventually be). This doesn't matter for the purposes of project setup. For now, we just need a two to three word abbreviated title for the project that we will use in our folder structure. For example, I am working on a manuscript called "Techniques for Field Identification of the Permafrost Table" - but the three words in the project name in my folder structure are: permafrost, table, ID. Here is a style guide for naming your projects:
 
-1. Project names should start with your initials
+0.  Use all lowercase letters and short dashes instead of spaces.
 
-2. Projects should be designated as M (for manuscript, including thesis chapters, which should each be a publishable unit), P (for proposal), or R (for report) depending on the type of the end output.
+1.  Project names should start with your initials.
 
-3. Projects should be given a two digit number (with a leading zero for any project numbers under 10) - these are just given in sequence as you create projects - so your first project is 01 - *the order doesn't matter*.
+2.  Projects should be designated as M (for manuscript, including thesis chapters, which should each be a publishable unit), P (for proposal), or C (for communications such as reports) depending on the type of the end output.
 
-4. Projects should have a unique two to three word abbreviated name that is different from other projects you are working on.
+3.  Projects should be given a two digit number (with a leading zero for any project numbers under 10) - these are just given in sequence as you create projects - so your first project is 01 - *the order doesn't matter*.
 
-Your final project name is a combination of these four components as follows. Lets say I wanted to create a project structure for the "Techniques for Field Identification of the Permafrost Table" manuscript I am working on, and lets say it is the 9th project in my directory. 
+4.  Projects should have a unique two to three word abbreviated name that is different from other projects you are working on.
+
+Your final project name is a combination of these four components as follows. Lets say I wanted to create a project structure for the "Techniques for Field Identification of the Permafrost Table" manuscript I am working on, and lets say it is the 9th project in my directory.
 
 My project name is then Initials-TypeNumber-Word1-Word2-Word3. So, the project name for my manuscript would be:
 
 **NAJ-M09-permafrost-table-ID**
 
 ## What is an Area? How should I name my Areas?
+
 ### Defining Areas - How to Determine if Something is an Area
+
 Areas are larger and more nebulous to define than projects, and they are also recurring and don't necessarily have an endpoint (although they might have milestones or deliverables nested within them). The following are examples of Areas:
 
-- Teaching a course.
-- Grants. Although grants do have a definable end state, they should still be areas because they are highly collaborative and typically have multiple projects under them.
-- Annual reviews or summaries
-- X Other examples?
+-   Teaching a course.
+-   Grants. Although grants do have a definable end state, they should still be areas because they are highly collaborative and typically have multiple projects under them.
+-   Annual reviews or summaries
+-   X Other examples?
 
 ### Naming Areas
-Area names can be a bit more general than project names. They should still be numbered
+
+Area names can be a bit more general than project names. They can also be hierarchical, but they should still be numbered. A01-teaching is an area. Within that is a specific course, which would also have its own folder. "A01-teaching/umn-soil-2125", finally a syllabus project would nest under the area: "A01-teaching/umn-soil-2125/syllabus". Note that thise would not get it's own project in the PARA method because a course syllabus could be recurring. Grants also get areas.
+
+## What is a Resource? How should I name my Resources?
+
+### Defining Resources - How to Determine if Something is a Resource
+
+Resources are things you actively, continuously refer to but that fall outside of projects and areas. Resources examples are:
+
+-   A note that contains all accounting codes
+-   A folder of templates for email responses to common inquiries
+-   An actively maintained or growing list of books to read
+-   Your CV
+
+### Naming Resources
+
+Resource names can also be quite general and can also be numbered. They should start with "R". An example would be "R01-accounting", which could include a note that had all of the EFS strings you use, etc.
+
+## What is the Archive?
+
+The archive is for anything that doesn't fit into the first three categories. This could be individual files such as unmaintained or inactive lists, or completed projects and areas that are no longer relevant to the work you are doing. Whole folders can be moved from the previous three categories into Archive.
 
 ## Example folder structure
+
+Here is an example folder structure on my computer
+
+-   ./Documents
+    -   /00-projects
+        -   /M03-nayabeda-P
+        -   /M04-pb-distributions
+        -   /M05-platy-e-horizons
+        -   /M06-cryoturbation-review
+        -   /M07-gelisol-classification-change
+        -   /M08-cold-soils-chapter
+        -   /M09-permafrost-table-id
+    -   /01-areas
+        -   /A01-teaching
+            -   /umn-soil-2125
+                -   /syllabus
+        -   /A02-editing
+            -   /permafrost-periglacial-processes
+        -   /A03-student-support
+            -   /undergrad-advising
+            -   /recommendation-letters
+        -   /A04-grants
+            -   /nrcs-aksdb
+        -   /A05-general-accounting
+    -   /02-resources
+        -   /R01-personal
+        -   /R02-literature-notes
+        -   /R03-email-responses
+    -   /03-archive
+        -   /M01-crb-gelisols
+        -   /M02-us-eroded-soils
+
+*\# note that presentations go in the project or area subdirectory that they are associated with. Presentation folders should start with "P0X" and also include the year and venue. So if I gave a presentation at the Soil Science Sciety of America meetings in 2017 on a particular project, and it was the first presentation that I gave under that project, my subdirectory containing all of the relevant things for that presentation would be "P01-2017-SSSA"*
+
+## Why do this?
+
+At this point you are thinking this seems overly complicated. Why should I bother doing this, and why set up an unneccessarily strange and "computer" looking folder structure when I can just have folders named like "My Soil Project 2018"? I know what that is and I only have one project right now anyway...
+
+If you are early in your career, this may seem unneccessary. But I can *promise* you this is actually the perfect time to start. This folder structure allows you to do four things:
+
+-   create a publicly available repository out of any one of your directories at anytime with little to no work
+-   share your folder with anyone in our lab group (or anyone who reads this workflow document) who with little further direction will be able to understand your files and where to locate things
+-   maintain an increasingly complex and growing list of projects and areas as you move forward in your career with little to no headache
+-   spend little to no time finding exactly what you are looking for. As you grow this system, the numbers associated with particular projects will become secondhand nature - "oh that manuscript is M07".
+-   as you complete projects or certain areas are no longer relevant to your job, you can move whole folders into the archive without compromising your ability to find things. Note, in the example above, how two manuscript folders (M01 and M02) have been moved to the archive. They retain the numbers I associated with them when I was working on them.

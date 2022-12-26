@@ -29,6 +29,6 @@ These are not a randomly selected group of tools - they are designed at every tu
 
 These tools will require you to be fluent in the following languages:
 
--   R (*core language, critical skill*)
--   Markdown (*core language, critical skill*)
--   *Although not required to execute this workflow, familiarity with Python and SQL might help you do more customization*
+-   [R](https://datacarpentry.org/R-ecology-lesson/) (*core language, critical skill*)
+-   [Markdown](https://www.markdownguide.org/) (*core language, critical skill*)
+-   *Although not required to execute this workflow, familiarity with Python, Javascript, and SQL might help you do more customization*

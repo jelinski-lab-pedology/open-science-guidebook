@@ -25,7 +25,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./project-subfolder-structure.html" rel="next">
 <link href="./project-setup.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -111,11 +111,21 @@ ul.task-list{list-style: none;}
   <a href="./para-system.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Overview of the PARA system</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./project-subfolder-structure.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Project Subfolder Structure</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./writing-readmes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Writing Readmes - Your First Assignment</span></a>
+  </div>
+</li>
     </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -133,18 +143,24 @@ ul.task-list{list-style: none;}
    
   <ul>
   <li><a href="#the-para-system-in-practice" id="toc-the-para-system-in-practice" class="nav-link active" data-scroll-target="#the-para-system-in-practice"> <span class="header-section-number">1.1</span> The PARA system in practice</a></li>
-  <li><a href="#projects-vs-areas-vs-resources-vs-archive" id="toc-projects-vs-areas-vs-resources-vs-archive" class="nav-link" data-scroll-target="#projects-vs-areas-vs-resources-vs-archive"> <span class="header-section-number">1.2</span> Projects vs Areas vs Resources vs Archive</a></li>
-  <li><a href="#what-is-a-project-how-should-i-name-my-projects" id="toc-what-is-a-project-how-should-i-name-my-projects" class="nav-link" data-scroll-target="#what-is-a-project-how-should-i-name-my-projects"> <span class="header-section-number">1.3</span> What is a project? How should I name my projects?</a>
+  <li><a href="#what-is-a-project-how-should-i-name-my-projects" id="toc-what-is-a-project-how-should-i-name-my-projects" class="nav-link" data-scroll-target="#what-is-a-project-how-should-i-name-my-projects"> <span class="header-section-number">1.2</span> What is a Project? How should I name my Projects?</a>
   <ul class="collapse">
-  <li><a href="#defining-projects---how-to-determine-if-something-is-a-project" id="toc-defining-projects---how-to-determine-if-something-is-a-project" class="nav-link" data-scroll-target="#defining-projects---how-to-determine-if-something-is-a-project"> <span class="header-section-number">1.3.1</span> Defining Projects - How to Determine if Something is a Project</a></li>
-  <li><a href="#naming-projects" id="toc-naming-projects" class="nav-link" data-scroll-target="#naming-projects"> <span class="header-section-number">1.3.2</span> Naming Projects</a></li>
+  <li><a href="#defining-projects---how-to-determine-if-something-is-a-project" id="toc-defining-projects---how-to-determine-if-something-is-a-project" class="nav-link" data-scroll-target="#defining-projects---how-to-determine-if-something-is-a-project"> <span class="header-section-number">1.2.1</span> Defining Projects - How to Determine if Something is a Project</a></li>
+  <li><a href="#naming-projects" id="toc-naming-projects" class="nav-link" data-scroll-target="#naming-projects"> <span class="header-section-number">1.2.2</span> Naming Projects</a></li>
   </ul></li>
-  <li><a href="#what-is-an-area-how-should-i-name-my-areas" id="toc-what-is-an-area-how-should-i-name-my-areas" class="nav-link" data-scroll-target="#what-is-an-area-how-should-i-name-my-areas"> <span class="header-section-number">1.4</span> What is an Area? How should I name my Areas?</a>
+  <li><a href="#what-is-an-area-how-should-i-name-my-areas" id="toc-what-is-an-area-how-should-i-name-my-areas" class="nav-link" data-scroll-target="#what-is-an-area-how-should-i-name-my-areas"> <span class="header-section-number">1.3</span> What is an Area? How should I name my Areas?</a>
   <ul class="collapse">
-  <li><a href="#defining-areas---how-to-determine-if-something-is-an-area" id="toc-defining-areas---how-to-determine-if-something-is-an-area" class="nav-link" data-scroll-target="#defining-areas---how-to-determine-if-something-is-an-area"> <span class="header-section-number">1.4.1</span> Defining Areas - How to Determine if Something is an Area</a></li>
-  <li><a href="#naming-areas" id="toc-naming-areas" class="nav-link" data-scroll-target="#naming-areas"> <span class="header-section-number">1.4.2</span> Naming Areas</a></li>
+  <li><a href="#defining-areas---how-to-determine-if-something-is-an-area" id="toc-defining-areas---how-to-determine-if-something-is-an-area" class="nav-link" data-scroll-target="#defining-areas---how-to-determine-if-something-is-an-area"> <span class="header-section-number">1.3.1</span> Defining Areas - How to Determine if Something is an Area</a></li>
+  <li><a href="#naming-areas" id="toc-naming-areas" class="nav-link" data-scroll-target="#naming-areas"> <span class="header-section-number">1.3.2</span> Naming Areas</a></li>
   </ul></li>
-  <li><a href="#example-folder-structure" id="toc-example-folder-structure" class="nav-link" data-scroll-target="#example-folder-structure"> <span class="header-section-number">1.5</span> Example folder structure</a></li>
+  <li><a href="#what-is-a-resource-how-should-i-name-my-resources" id="toc-what-is-a-resource-how-should-i-name-my-resources" class="nav-link" data-scroll-target="#what-is-a-resource-how-should-i-name-my-resources"> <span class="header-section-number">1.4</span> What is a Resource? How should I name my Resources?</a>
+  <ul class="collapse">
+  <li><a href="#defining-resources---how-to-determine-if-something-is-a-resource" id="toc-defining-resources---how-to-determine-if-something-is-a-resource" class="nav-link" data-scroll-target="#defining-resources---how-to-determine-if-something-is-a-resource"> <span class="header-section-number">1.4.1</span> Defining Resources - How to Determine if Something is a Resource</a></li>
+  <li><a href="#naming-resources" id="toc-naming-resources" class="nav-link" data-scroll-target="#naming-resources"> <span class="header-section-number">1.4.2</span> Naming Resources</a></li>
+  </ul></li>
+  <li><a href="#what-is-the-archive" id="toc-what-is-the-archive" class="nav-link" data-scroll-target="#what-is-the-archive"> <span class="header-section-number">1.5</span> What is the Archive?</a></li>
+  <li><a href="#example-folder-structure" id="toc-example-folder-structure" class="nav-link" data-scroll-target="#example-folder-structure"> <span class="header-section-number">1.6</span> Example folder structure</a></li>
+  <li><a href="#why-do-this" id="toc-why-do-this" class="nav-link" data-scroll-target="#why-do-this"> <span class="header-section-number">1.7</span> Why do this?</a></li>
   </ul>
 </nav>
     </div>
@@ -167,23 +183,19 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>This workflow is designed around discrete units of work called projects and utilizes Tiago Forte’s PARA system of file structure and organization. The PARA system (Projects, Areas, Resources, and Archive) is an excellent place to start for organizing your files - if you don’t have strong feelings about how your work files are organized on your computer, I <em>highly</em> suggest starting with this. If you do have strong feelings, you can always adapt the system to something that works for you. Utilizing this system doesn’t necessarily commit you to going back and re-organizing all of your work files on your computer. Just start now, and build as you go and work on new projects. As you have time in the future, you can always go back and fit your previous work into this structure. <em>However - see my notes on things to watch for when you go back to “refactor” your files and folder structure.</em></p>
+<p>This workflow is designed around discrete units of work called projects and utilizes Tiago Forte’s PARA file structure and organization. The PARA system (Projects, Areas, Resources, and Archive) is an excellent place to start for organizing your files - if you don’t have strong feelings about how your work files are organized on your computer, I <em>highly</em> suggest starting with this. If you do have strong feelings, you can always adapt the system to something that works for you. Utilizing this system doesn’t necessarily commit you to going back and re-organizing all of your work files on your computer. Just start now, and build as you go and work on new projects. As you have time in the future, you can always go back and fit your previous work into this structure. <em>However - see my notes on things to watch for when you go back to “refactor” your files and folder structure.</em></p>
 <p>The most important thing is to <strong>start now; start today</strong>.</p>
 <p>The second most important thing is to use the same structure <em>across apps, platforms, and languages</em>, which will allow deep integration and ensure you always know where everything is. You will spend less time trying to find for example, a small test R script you wrote last year or that interesting thing you read 18 months (or 2 months!) ago that was related to this project.</p>
 <section id="the-para-system-in-practice" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="the-para-system-in-practice"><span class="header-section-number">1.1</span> The PARA system in practice</h2>
 <p>Tiago Forte’s PARA acronym stands for: Projects, Areas, Resources, and Archive. This system is not strictly hierarchical, but each category from front to back in PARA is given precedence over the last. That is because the underlying philosophy is that projects should produce end outputs or deliverables. Things that are not yet projects, or are larger than a single project are more nebulous, <strong>but not any less valuable</strong>.</p>
 <p>Using the PARA system requires you to set up high level folders (I would suggest in the Documents directory of your computer) for each of the PARA categories: Projects, Areas, Resources, and Archive. Then, all of your professional work, and eventually some of your personal work and interests will nest under these.</p>
-<p>Defining projects is probably the most important part of this workflow and drives everything else, so I will start there.</p>
+<p>Deciding what is a “Project” vs an “Area” vs a “Resource” vs an “Archive” is probably the most important part of this workflow and drives everything else, so I will start there. One simple way to think about this is that when you need to consider where something should go in this system start at the beginning - if its doesn’t fit into the definition of a “Project”, then move down and see if it fits into the definition of an “Area”. If it is not an “Area”, then it will likely be a “Resource” unless it is something completed or inactive, in which case it goes in the “Archive”.</p>
 </section>
-<section id="projects-vs-areas-vs-resources-vs-archive" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="projects-vs-areas-vs-resources-vs-archive"><span class="header-section-number">1.2</span> Projects vs Areas vs Resources vs Archive</h2>
-<p>Work through from Projects to Archive - dichotomous key - if it doesnt fit in the others, its an archive</p>
-</section>
-<section id="what-is-a-project-how-should-i-name-my-projects" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="what-is-a-project-how-should-i-name-my-projects"><span class="header-section-number">1.3</span> What is a project? How should I name my projects?</h2>
-<section id="defining-projects---how-to-determine-if-something-is-a-project" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="defining-projects---how-to-determine-if-something-is-a-project"><span class="header-section-number">1.3.1</span> Defining Projects - How to Determine if Something is a Project</h3>
+<section id="what-is-a-project-how-should-i-name-my-projects" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="what-is-a-project-how-should-i-name-my-projects"><span class="header-section-number">1.2</span> What is a Project? How should I name my Projects?</h2>
+<section id="defining-projects---how-to-determine-if-something-is-a-project" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="defining-projects---how-to-determine-if-something-is-a-project"><span class="header-section-number">1.2.1</span> Defining Projects - How to Determine if Something is a Project</h3>
 <p>This seems like a trivial question but defining project boundaries in research can be difficult. Where does one project end and another begin? Does a project include multiple sub projects?</p>
 <p><strong>A project is something you are involved in that has a discrete, definable end state or product</strong>. Note that our definition of projects here means they are <strong>flat</strong>. There should not be multiple projects nested under other projects. Each project is a discrete entity - this alings with GitHub repository organization (as we will see in future chapters), which allows <strong>deep integration</strong>. In our line of work, examples would be:</p>
 <ul>
@@ -195,12 +207,13 @@ ul.task-list{list-style: none;}
 <li><p>X Photos are nested and linked to projects in the GitHub readme file</p></li>
 </ul>
 </section>
-<section id="naming-projects" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="naming-projects"><span class="header-section-number">1.3.2</span> Naming Projects</h3>
+<section id="naming-projects" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="naming-projects"><span class="header-section-number">1.2.2</span> Naming Projects</h3>
 <p>This is a general style guide for naming projects (in the context of files or folder structures). Projects may have very long actual names (or you may not even know what, exactly the name of your project or project idea will eventually be). This doesn’t matter for the purposes of project setup. For now, we just need a two to three word abbreviated title for the project that we will use in our folder structure. For example, I am working on a manuscript called “Techniques for Field Identification of the Permafrost Table” - but the three words in the project name in my folder structure are: permafrost, table, ID. Here is a style guide for naming your projects:</p>
-<ol type="1">
-<li><p>Project names should start with your initials</p></li>
-<li><p>Projects should be designated as M (for manuscript, including thesis chapters, which should each be a publishable unit), P (for proposal), or R (for report) depending on the type of the end output.</p></li>
+<ol start="0" type="1">
+<li><p>Use all lowercase letters and short dashes instead of spaces.</p></li>
+<li><p>Project names should start with your initials.</p></li>
+<li><p>Projects should be designated as M (for manuscript, including thesis chapters, which should each be a publishable unit), P (for proposal), or C (for communications such as reports) depending on the type of the end output.</p></li>
 <li><p>Projects should be given a two digit number (with a leading zero for any project numbers under 10) - these are just given in sequence as you create projects - so your first project is 01 - <em>the order doesn’t matter</em>.</p></li>
 <li><p>Projects should have a unique two to three word abbreviated name that is different from other projects you are working on.</p></li>
 </ol>
@@ -209,10 +222,10 @@ ul.task-list{list-style: none;}
 <p><strong>NAJ-M09-permafrost-table-ID</strong></p>
 </section>
 </section>
-<section id="what-is-an-area-how-should-i-name-my-areas" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="what-is-an-area-how-should-i-name-my-areas"><span class="header-section-number">1.4</span> What is an Area? How should I name my Areas?</h2>
-<section id="defining-areas---how-to-determine-if-something-is-an-area" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="defining-areas---how-to-determine-if-something-is-an-area"><span class="header-section-number">1.4.1</span> Defining Areas - How to Determine if Something is an Area</h3>
+<section id="what-is-an-area-how-should-i-name-my-areas" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="what-is-an-area-how-should-i-name-my-areas"><span class="header-section-number">1.3</span> What is an Area? How should I name my Areas?</h2>
+<section id="defining-areas---how-to-determine-if-something-is-an-area" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="defining-areas---how-to-determine-if-something-is-an-area"><span class="header-section-number">1.3.1</span> Defining Areas - How to Determine if Something is an Area</h3>
 <p>Areas are larger and more nebulous to define than projects, and they are also recurring and don’t necessarily have an endpoint (although they might have milestones or deliverables nested within them). The following are examples of Areas:</p>
 <ul>
 <li>Teaching a course.</li>
@@ -221,13 +234,98 @@ ul.task-list{list-style: none;}
 <li>X Other examples?</li>
 </ul>
 </section>
-<section id="naming-areas" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="naming-areas"><span class="header-section-number">1.4.2</span> Naming Areas</h3>
-<p>Area names can be a bit more general than project names. They should still be numbered</p>
+<section id="naming-areas" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="naming-areas"><span class="header-section-number">1.3.2</span> Naming Areas</h3>
+<p>Area names can be a bit more general than project names. They can also be hierarchical, but they should still be numbered. A01-teaching is an area. Within that is a specific course, which would also have its own folder. “A01-teaching/umn-soil-2125”, finally a syllabus project would nest under the area: “A01-teaching/umn-soil-2125/syllabus”. Note that thise would not get it’s own project in the PARA method because a course syllabus could be recurring. Grants also get areas.</p>
 </section>
 </section>
-<section id="example-folder-structure" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="example-folder-structure"><span class="header-section-number">1.5</span> Example folder structure</h2>
+<section id="what-is-a-resource-how-should-i-name-my-resources" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="what-is-a-resource-how-should-i-name-my-resources"><span class="header-section-number">1.4</span> What is a Resource? How should I name my Resources?</h2>
+<section id="defining-resources---how-to-determine-if-something-is-a-resource" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="defining-resources---how-to-determine-if-something-is-a-resource"><span class="header-section-number">1.4.1</span> Defining Resources - How to Determine if Something is a Resource</h3>
+<p>Resources are things you actively, continuously refer to but that fall outside of projects and areas. Resources examples are:</p>
+<ul>
+<li>A note that contains all accounting codes</li>
+<li>A folder of templates for email responses to common inquiries</li>
+<li>An actively maintained or growing list of books to read</li>
+<li>Your CV</li>
+</ul>
+</section>
+<section id="naming-resources" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="naming-resources"><span class="header-section-number">1.4.2</span> Naming Resources</h3>
+<p>Resource names can also be quite general and can also be numbered. They should start with “R”. An example would be “R01-accounting”, which could include a note that had all of the EFS strings you use, etc.</p>
+</section>
+</section>
+<section id="what-is-the-archive" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="what-is-the-archive"><span class="header-section-number">1.5</span> What is the Archive?</h2>
+<p>The archive is for anything that doesn’t fit into the first three categories. This could be individual files such as unmaintained or inactive lists, or completed projects and areas that are no longer relevant to the work you are doing. Whole folders can be moved from the previous three categories into Archive.</p>
+</section>
+<section id="example-folder-structure" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="example-folder-structure"><span class="header-section-number">1.6</span> Example folder structure</h2>
+<p>Here is an example folder structure on my computer</p>
+<ul>
+<li>./Documents
+<ul>
+<li>/00-projects
+<ul>
+<li>/M03-nayabeda-P</li>
+<li>/M04-pb-distributions</li>
+<li>/M05-platy-e-horizons</li>
+<li>/M06-cryoturbation-review</li>
+<li>/M07-gelisol-classification-change</li>
+<li>/M08-cold-soils-chapter</li>
+<li>/M09-permafrost-table-id</li>
+</ul></li>
+<li>/01-areas
+<ul>
+<li>/A01-teaching
+<ul>
+<li>/umn-soil-2125
+<ul>
+<li>/syllabus</li>
+</ul></li>
+</ul></li>
+<li>/A02-editing
+<ul>
+<li>/permafrost-periglacial-processes</li>
+</ul></li>
+<li>/A03-student-support
+<ul>
+<li>/undergrad-advising</li>
+<li>/recommendation-letters</li>
+</ul></li>
+<li>/A04-grants
+<ul>
+<li>/nrcs-aksdb</li>
+</ul></li>
+<li>/A05-general-accounting</li>
+</ul></li>
+<li>/02-resources
+<ul>
+<li>/R01-personal</li>
+<li>/R02-literature-notes</li>
+<li>/R03-email-responses</li>
+</ul></li>
+<li>/03-archive
+<ul>
+<li>/M01-crb-gelisols</li>
+<li>/M02-us-eroded-soils</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><em># note that presentations go in the project or area subdirectory that they are associated with. Presentation folders should start with “P0X” and also include the year and venue. So if I gave a presentation at the Soil Science Sciety of America meetings in 2017 on a particular project, and it was the first presentation that I gave under that project, my subdirectory containing all of the relevant things for that presentation would be “P01-2017-SSSA”</em></p>
+</section>
+<section id="why-do-this" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="why-do-this"><span class="header-section-number">1.7</span> Why do this?</h2>
+<p>At this point you are thinking this seems overly complicated. Why should I bother doing this, and why set up an unneccessarily strange and “computer” looking folder structure when I can just have folders named like “My Soil Project 2018”? I know what that is and I only have one project right now anyway…</p>
+<p>If you are early in your career, this may seem unneccessary. But I can <em>promise</em> you this is actually the perfect time to start. This folder structure allows you to do four things:</p>
+<ul>
+<li>create a publicly available repository out of any one of your directories at anytime with little to no work</li>
+<li>share your folder with anyone in our lab group (or anyone who reads this workflow document) who with little further direction will be able to understand your files and where to locate things</li>
+<li>maintain an increasingly complex and growing list of projects and areas as you move forward in your career with little to no headache</li>
+<li>spend little to no time finding exactly what you are looking for. As you grow this system, the numbers associated with particular projects will become secondhand nature - “oh that manuscript is M07”.</li>
+<li>as you complete projects or certain areas are no longer relevant to your job, you can move whole folders into the archive without compromising your ability to find things. Note, in the example above, how two manuscript folders (M01 and M02) have been moved to the archive. They retain the numbers I associated with them when I was working on them.</li>
+</ul>
 
 
 </section>
@@ -319,8 +417,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./project-subfolder-structure.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Project Subfolder Structure</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

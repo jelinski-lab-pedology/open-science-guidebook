@@ -15,6 +15,8 @@ book:
     - part: project-setup.qmd
       chapters: 
         - para-system.qmd
+        - project-subfolder-structure.qmd
+        - writing-readmes.qmd
     - summary.qmd
     - references.qmd
 
