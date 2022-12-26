@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.636">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Nic Jelinski">
+<meta name="dcterms.date" content="2022-12-25">
+
+<title>Open Science: Tools Applications, &amp; Workflow</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./intro.html" rel="next">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Open Science: Tools Applications, &amp; Workflow</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Open Science: Tools Applications, &amp; Workflow</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <ul class="collapse">
+  <li><a href="#no-work-is-wasted-work." id="toc-no-work-is-wasted-work." class="nav-link" data-scroll-target="#no-work-is-wasted-work.">No work is wasted work.</a></li>
+  <li><a href="#reduce-trivial-decisions-so-that-you-can-focus-on-science-and-your-life." id="toc-reduce-trivial-decisions-so-that-you-can-focus-on-science-and-your-life." class="nav-link" data-scroll-target="#reduce-trivial-decisions-so-that-you-can-focus-on-science-and-your-life.">Reduce trivial decisions so that you can focus on science, and your life.</a></li>
+  <li><a href="#implementing-a-standardized-workflow-is-just-good-science---and-open-science-is-the-future-and-the-future-is-here-now." id="toc-implementing-a-standardized-workflow-is-just-good-science---and-open-science-is-the-future-and-the-future-is-here-now." class="nav-link" data-scroll-target="#implementing-a-standardized-workflow-is-just-good-science---and-open-science-is-the-future-and-the-future-is-here-now.">Implementing a standardized workflow is just good science - and Open Science is the future (and the future is here now).</a></li>
+  <li><a href="#traveling-together" id="toc-traveling-together" class="nav-link" data-scroll-target="#traveling-together">Traveling together</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Open Science: Tools Applications, &amp; Workflow</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nic Jelinski </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 25, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+
+<section id="preface" class="level1 unnumbered">
+<p><img src="open-science-badge.png" title="Open Science: Tools Applications, &amp; Workflow" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Preface</h1>
+<p>This book outlines an open, standardize workflow for use on all projects in the Jelinski lab. With the diverse library of tools, apps, and digital repositories available to you as it as a researcher, it is extremely difficult to understand which ones to use and how to put together a workflow. My goal is to standardize workflow for all projects in our lab - or at the very least to provide a scaffold, foundational approach that everyone can borrow and modify from as best fits their needs. This is not so much meant to force you into a particular way of doing your thinking things, but rather to free you up to do what’s really important, the research. Making decisions about how to name files, what format and style to use for code, how to structure project files and folders, and what tools and apps to use is exhausting, and these decisions take you away from the science. The goal of this standardized workflow is to produce transparent, open science, that is easily reproducible, transparent, usable by others, and most importantly well organized and documented so that you and others can easily understand what you’ve done and how you’ve done it. There are a few principal concepts behind this workflow and how you can structure your work to be most productive:</p>
+<section id="no-work-is-wasted-work." class="level2">
+<h2 class="anchored" data-anchor-id="no-work-is-wasted-work.">No work is wasted work.</h2>
+<p>A major part of research is hitting dead ends, going down rabbit holes, and generally feeling like you <em>might</em> be wasting your time because it’s taking you so long two get to the correct analysis or perspective. However, none of this is waste of time. Every dead end is a door that has closed to allow you to find your path forward. It’s your job as a scientist and researcher to define and document those dead ass and not give up. Recognize that those that ends are part of the process, and make those dead ends work for you. By using a standardized workflow even those dead ends become reproducible transparent learning experiences that are documented fully for you and others to grow from.</p>
+</section>
+<section id="reduce-trivial-decisions-so-that-you-can-focus-on-science-and-your-life." class="level2">
+<h2 class="anchored" data-anchor-id="reduce-trivial-decisions-so-that-you-can-focus-on-science-and-your-life.">Reduce trivial decisions so that you can focus on science, and your life.</h2>
+<p>One of my mentors as probationary faculty, Dr.&nbsp;Ed Nater, told me that a career in science “is a marathon, not a sprint”. Despite the modern urgency to publish as many papers as possible in a short amount of time, research still takes time. And often we don’t know exactly how long is gonna take. It’s better to do good science then to do fast science. Of course ideally we could do good, fast science. This workflow will help you do that - it will help you do good science, create transparent citeable and reproducible content, even from your unfinished drafts, dead ends, and false starts. Because research is not is a marathon and not a sprint, it is absolutely important that you take care of your whole being. This means taking care of your body and your mind. Let me tell you a story.</p>
+<p>As an academic, most of us who are in this for the career work long hours. I’ve been working long hours overnights, 50 to 60 hours a week for as long as I can remember - this is normal in academia. I used to view this as “the grind”. I used to think that the answer to be more productive was just putting in more hours in the grind. If I could just stay up one more night, push through for three more hours, sit at my desk for 10-12 hours in a day, and work work work, I could produce more. What I realized as I’ve reached the middle of my career is that there are more ways to produce more which also allow you to be healthier than just grinding the large number of hours. Certainly hours are important, for example you probably are not gonna publish a research paper write a thesis write a dissertation or be successful in a faculty job without putting in more than 40 hours a week and some overnights. But, those should not be the norm. There are ways to design your life so that those are few and far between. Striving for a physical and mental balance is extremely important and my years of grinding have taken a toll. Although they have given me a lot, and I’ve been able to achieve tenure, looking back I now see how I could have changed my processes to work fewer hours, be more physically healthy and more mentally available for my friends and family, and produce more.</p>
+<p>Much of this starts with prioritizing your physical health. You simply can’t reach your top productivity if you are not physically healthy because the mind-body connection is strong. Physical health is a cornerstone for long-term productivity in any career. And science is no different. After years of mucking through different processes, workflows, and trial and error, I’m finally starting to reach an understanding regarding how to construct these processes to reduce decision fatigue and be more productive, allow me more time to do more things outside of work and to take care of myself my family. This all involves standardization. <a href="https://en.wikipedia.org/wiki/Jocko_Willink">Jocko Willink</a> is famous for his mantra “Discipline Equals Freedom”. This also holds true in creative work such as academia. Although it seems counterintuitive and potentially restricting at first, standardized processes actually allow you to do better, more creative, more reproducible, and more inspiring work. <em>Note to insert references to dance, art and writers that have used standardized processes</em>. This is because all of the small decisions that you make about, for example (just to name a few):</p>
+<ul>
+<li>What to name files how to create a structure in a folder,</li>
+<li>what app to use to do data analysis,</li>
+<li>how to write and structure code,</li>
+</ul>
+<p>reduce your ability to focus on what really matters, generating data, analyzing data, the science and the writing. By standardizing workflows and processes, we relegate the trivial stuff to a <a href="https://fortelabs.com/blog/basboverview/">trusted system</a> This system is one that holds important information, and allows you to access it freely and readily, but makes all of the trivial decisions for you. This allows you to focus on just the information. It frees you to think more and more deeply about what really matters, to focus your time and effort outside of work on your physical and mental health.</p>
+</section>
+<section id="implementing-a-standardized-workflow-is-just-good-science---and-open-science-is-the-future-and-the-future-is-here-now." class="level2">
+<h2 class="anchored" data-anchor-id="implementing-a-standardized-workflow-is-just-good-science---and-open-science-is-the-future-and-the-future-is-here-now.">Implementing a standardized workflow is just good science - and Open Science is the future (and the future is here now).</h2>
+<p>10 years ago, very few people were doing open science. Now with <a href="https://www.openscapes.org/">openscapes</a> and a handful of other strong initiatives more and more people are doing open science in environmental fields. More journals require that you submit raw data, code or somehow package everything to make your analysis and results reproducible. This workflow will allow you to do that automatically as you build your project. When you get to the point of submitting a manuscript you will already have a citable online repository that you can point to when you submit your manuscript. This workflow also fosters a mindset of development and growth, where you “show your work” all the time. Showing your work all the time is a great way to:</p>
+<ul>
+<li>Foster collaboration,</li>
+<li>to be “constantly producing”, and<br>
+</li>
+<li>to feel more accomplished feel that you can be “done” at the end of a workday day.</li>
+</ul>
+<p>In the beginning you may find implementing this workflow to be slower, and at first there will be a learning curve. Also, fitting your project into a standardize workflow will cause you to work a bit slower at sometimes then you could if you didn’t have to fit in the standardize workflow. However after 18 years of managing projects and doing science, I can tell you the time effort and mental strain saved from having an organized, standardized, and open process and workflow will save you an incredible amount of time, but it can also provide you a strong foundation that you can carry into the future and never duplicate or backtrack on work you have already done. I can’t tell you how many times I’ve gone back to read a paper that I’ve read five times just to fit it into another reference, or to format a bibliography, or to make sense of code that I wrote just six months ago, or to update the class syllabus documents or find different versions of files that are scattered across my computer, in cloud storage, and named different things. As you go on your research career you will accumulate more and more of this baggage. If you start with a standardized workflow early in your career, this baggage will be manageable, well structured, available to you and others, and will actually promote a positive feedback loop whereby the work that you do now makes future work even easier.</p>
+</section>
+<section id="traveling-together" class="level2">
+<h2 class="anchored" data-anchor-id="traveling-together">Traveling together</h2>
+<p>I am a traveler on this road as well. I do not have all of the answers, but I have spent time developing a system and set of tools that have begun to pay huge dividends in my work and personal life. I hope to share these lessons learned with you.</p>
+<p>I hope you will join me on this journey.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./intro.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
