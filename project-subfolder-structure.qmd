@@ -19,7 +19,7 @@ This standardized structure is my own, modified from the following \[insert sour
         -   \[M09-permafrost-table-id.Rproj\] *will initiate in section X*
     -   /03-cache
     -   /04-temp
-    -   /05-docs
+    -   /05-manuscript
         -   /drafts
         -   /submitted
         -   /final-and-proofs
@@ -31,7 +31,7 @@ This standardized structure is my own, modified from the following \[insert sour
         -   /analysis-log
         -   /writing-log
     -   /08-archive
-    -   /09-books
+    -   /docs
     -   \[readme.txt\]
     -   \[TODOs.txt\]
 
@@ -76,7 +76,7 @@ Your cache folder may not be used often. However it is there to provide a storag
 
 The temp folder is basically to hold any temporary non-important files, such as tests script outputs, test figures, etc. These are not important to the overall analysis. This folder should be empty and not be included in your final project using \[.gitignore\] file.
 
-### /05-docs
+### /05-manuscript
 
 This folder houses everything related to manuscripts or reports resulting from the project. It has subfolders for holding drafts, submitted versions (inclduign subsequent revisions), final and proofs, figures, tables, and references (which contains a single .bib file - ideally exported from your Zotero project folder which *matches the name of this project*).
 
@@ -92,9 +92,9 @@ This folder contains logs related to your project, specifically your analysis lo
 
 This folder contains anything that is not relevant to the current workflow but that you are not ready to delete permanently *yet*. Items can be moved to the archive folder at any time.
 
-### /09-book
+### /docs
 
-If you choose to create a book to consolidate your metadata and readmes, all relevant files should go in this subdirectory. More information on generating an html book from separate markdown files *here*.
+If you choose to create a book to consolidate your metadata and readmes, all relevant files should go in this subdirectory. More information on generating an html book from separate markdown files *here*. NOTE - the only way to get GitHub Pages to find the files and render the htmls together is to have them in a /docs subdirectory. There is no other options currently. That is why /docs doesn't have a number before it.
 
 ### readme.txt
 

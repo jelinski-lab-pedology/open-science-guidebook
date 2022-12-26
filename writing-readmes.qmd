@@ -66,11 +66,11 @@ NOTE: You may not see every subfolder listed here. By default, Git does not push
 -   /02-src *This folder contains all of your source code and R scripts that were used to conduct data processing and analysis, and includes a .Rproj file to initialize the environment prior to running the scripts.* \<- list files\>
 -   /03-cache *This folder contains any large files generated as part of data analysis, which can be optionally used from this directory to save time running scripts.* \<- list files\>
 -   /04-temp *This folder is left purposely empty - it was used during analysis as a repository for temporary or experimental files.*
--   /05-docs *This folder holds everything related to manuscripts or reports resulting from the project. It has subfolders for holding drafts, submitted versions (inclduign subsequent revisions), final and proofs, figures, tables, and references (contained in a single .bib file).* \<- list files\>
+-   /05-manuscript *This folder holds everything related to manuscripts or reports resulting from the project. It has subfolders for holding drafts, submitted versions (inclduign subsequent revisions), final and proofs, figures, tables, and references (contained in a single .bib file).* \<- list files\>
 -   /06-presentations *This folder contains a subfolder for each presentation given on this project.* \<- list files\>
 -   /07-log *This folder contains data analysis and writing logs* \<- list files\>
 -   /08-archive *This folder may be left purposely empty. If it is not empty, it contains anything that is not relevant to the current workflow but that was not permanently deleted; may not be well organized*
--   /09-books *This folder contains all files for generating a published, project level book in html or pdf form. This is hosted on GitHub Pages* #NOTE this should be generated in both html and pdf form to ensure maximum readability. See section X #todo for how to build and generate a book. \<- list files\>
+-   /09-docs *This folder contains all files for generating a published, project level book in html or pdf form. This is hosted on GitHub Pages* #NOTE this should be generated in both html and pdf form to ensure maximum readability. See section X #todo for how to build and generate a book. NOTE ALSO - the name of this cannot be changed if you want to publish an html through GitHub pages. It needs to render from docs. \<- list files\>
 -   \[readme.txt\] *YOU ARE READING THIS NOW!*
 -   \[TODOs.txt\]
 

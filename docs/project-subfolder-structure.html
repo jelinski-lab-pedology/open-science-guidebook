@@ -150,11 +150,11 @@ ul.task-list{list-style: none;}
   <li><a href="#src" id="toc-src" class="nav-link" data-scroll-target="#src"> <span class="header-section-number">2.2.3</span> /02-src</a></li>
   <li><a href="#cache" id="toc-cache" class="nav-link" data-scroll-target="#cache"> <span class="header-section-number">2.2.4</span> /03-cache</a></li>
   <li><a href="#temp" id="toc-temp" class="nav-link" data-scroll-target="#temp"> <span class="header-section-number">2.2.5</span> /04-temp</a></li>
-  <li><a href="#docs" id="toc-docs" class="nav-link" data-scroll-target="#docs"> <span class="header-section-number">2.2.6</span> /05-docs</a></li>
+  <li><a href="#manuscript" id="toc-manuscript" class="nav-link" data-scroll-target="#manuscript"> <span class="header-section-number">2.2.6</span> /05-manuscript</a></li>
   <li><a href="#presentations" id="toc-presentations" class="nav-link" data-scroll-target="#presentations"> <span class="header-section-number">2.2.7</span> /06-presentations</a></li>
   <li><a href="#log" id="toc-log" class="nav-link" data-scroll-target="#log"> <span class="header-section-number">2.2.8</span> /07-log</a></li>
   <li><a href="#archive" id="toc-archive" class="nav-link" data-scroll-target="#archive"> <span class="header-section-number">2.2.9</span> /08-archive</a></li>
-  <li><a href="#book" id="toc-book" class="nav-link" data-scroll-target="#book"> <span class="header-section-number">2.2.10</span> /09-book</a></li>
+  <li><a href="#docs" id="toc-docs" class="nav-link" data-scroll-target="#docs"> <span class="header-section-number">2.2.10</span> /docs</a></li>
   <li><a href="#readme.txt" id="toc-readme.txt" class="nav-link" data-scroll-target="#readme.txt"> <span class="header-section-number">2.2.11</span> readme.txt</a></li>
   <li><a href="#todos.txt" id="toc-todos.txt" class="nav-link" data-scroll-target="#todos.txt"> <span class="header-section-number">2.2.12</span> TODOs.txt</a></li>
   </ul></li>
@@ -198,7 +198,7 @@ ul.task-list{list-style: none;}
 </ul></li>
 <li>/03-cache</li>
 <li>/04-temp</li>
-<li>/05-docs
+<li>/05-manuscript
 <ul>
 <li>/drafts</li>
 <li>/submitted</li>
@@ -214,7 +214,7 @@ ul.task-list{list-style: none;}
 <li>/writing-log</li>
 </ul></li>
 <li>/08-archive</li>
-<li>/09-books</li>
+<li>/docs</li>
 <li>[readme.txt]</li>
 <li>[TODOs.txt]</li>
 </ul></li>
@@ -257,8 +257,8 @@ ul.task-list{list-style: none;}
 <h3 data-number="2.2.5" class="anchored" data-anchor-id="temp"><span class="header-section-number">2.2.5</span> /04-temp</h3>
 <p>The temp folder is basically to hold any temporary non-important files, such as tests script outputs, test figures, etc. These are not important to the overall analysis. This folder should be empty and not be included in your final project using [.gitignore] file.</p>
 </section>
-<section id="docs" class="level3" data-number="2.2.6">
-<h3 data-number="2.2.6" class="anchored" data-anchor-id="docs"><span class="header-section-number">2.2.6</span> /05-docs</h3>
+<section id="manuscript" class="level3" data-number="2.2.6">
+<h3 data-number="2.2.6" class="anchored" data-anchor-id="manuscript"><span class="header-section-number">2.2.6</span> /05-manuscript</h3>
 <p>This folder houses everything related to manuscripts or reports resulting from the project. It has subfolders for holding drafts, submitted versions (inclduign subsequent revisions), final and proofs, figures, tables, and references (which contains a single .bib file - ideally exported from your Zotero project folder which <em>matches the name of this project</em>).</p>
 </section>
 <section id="presentations" class="level3" data-number="2.2.7">
@@ -273,9 +273,9 @@ ul.task-list{list-style: none;}
 <h3 data-number="2.2.9" class="anchored" data-anchor-id="archive"><span class="header-section-number">2.2.9</span> /08-archive</h3>
 <p>This folder contains anything that is not relevant to the current workflow but that you are not ready to delete permanently <em>yet</em>. Items can be moved to the archive folder at any time.</p>
 </section>
-<section id="book" class="level3" data-number="2.2.10">
-<h3 data-number="2.2.10" class="anchored" data-anchor-id="book"><span class="header-section-number">2.2.10</span> /09-book</h3>
-<p>If you choose to create a book to consolidate your metadata and readmes, all relevant files should go in this subdirectory. More information on generating an html book from separate markdown files <em>here</em>.</p>
+<section id="docs" class="level3" data-number="2.2.10">
+<h3 data-number="2.2.10" class="anchored" data-anchor-id="docs"><span class="header-section-number">2.2.10</span> /docs</h3>
+<p>If you choose to create a book to consolidate your metadata and readmes, all relevant files should go in this subdirectory. More information on generating an html book from separate markdown files <em>here</em>. NOTE - the only way to get GitHub Pages to find the files and render the htmls together is to have them in a /docs subdirectory. There is no other options currently. That is why /docs doesn’t have a number before it.</p>
 </section>
 <section id="readme.txt" class="level3" data-number="2.2.11">
 <h3 data-number="2.2.11" class="anchored" data-anchor-id="readme.txt"><span class="header-section-number">2.2.11</span> readme.txt</h3>
