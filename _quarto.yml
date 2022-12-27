@@ -6,7 +6,7 @@ project:
 book:
   title: "Open Science: Tools Applications, & Workflow"
   author: "Nic Jelinski"
-  date: "12/25/2022"
+  date: "12/27/2022"
   cover-image: "open-science-badge.png"
   
   chapters:
@@ -17,6 +17,11 @@ book:
         - para-system.qmd
         - project-subfolder-structure.qmd
         - writing-readmes.qmd
+        - github-setup-workflow.qmd
+        - integrating-zotero.qmd
+    - part: pre-data-raw-data.qmd
+      chapters:
+      - field-projects.qmd
     - summary.qmd
     - references.qmd
 

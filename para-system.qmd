@@ -38,9 +38,7 @@ This seems like a trivial question but defining project boundaries in research c
 
 This is a general style guide for naming projects (in the context of files or folder structures). Projects may have very long actual names (or you may not even know what, exactly the name of your project or project idea will eventually be). This doesn't matter for the purposes of project setup. For now, we just need a two to three word abbreviated title for the project that we will use in our folder structure. For example, I am working on a manuscript called "Techniques for Field Identification of the Permafrost Table" - but the three words in the project name in my folder structure are: permafrost, table, ID. Here is a style guide for naming your projects:
 
-0.  Use all lowercase letters and short dashes instead of spaces.
-
-1.  Project names should start with your initials.
+1.  Use all lowercase letters and short dashes instead of spaces.
 
 2.  Projects should be designated as M (for manuscript, including thesis chapters, which should each be a publishable unit), P (for proposal), or C (for communications such as reports) depending on the type of the end output.
 
@@ -48,11 +46,11 @@ This is a general style guide for naming projects (in the context of files or fo
 
 4.  Projects should have a unique two to three word abbreviated name that is different from other projects you are working on.
 
-Your final project name is a combination of these four components as follows. Lets say I wanted to create a project structure for the "Techniques for Field Identification of the Permafrost Table" manuscript I am working on, and lets say it is the 9th project in my directory.
+Your final project name is a combination of these three components as follows. Lets say I wanted to create a project structure for the "Techniques for Field Identification of the Permafrost Table" manuscript I am working on, and lets say it is the 9th project in my directory.
 
-My project name is then Initials-TypeNumber-Word1-Word2-Word3. So, the project name for my manuscript would be:
+My project name is then TypeNumber-Word1-Word2-Word3. So, the project name for my manuscript would be:
 
-**NAJ-M09-permafrost-table-ID**
+**M09-permafrost-table-ID**
 
 ## What is an Area? How should I name my Areas?
 

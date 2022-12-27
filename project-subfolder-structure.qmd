@@ -1,4 +1,4 @@
-# Project Subfolder Structure
+# Project Subfolder Structure {@sec-subfolderstructure}
 
 This workflow is based around projects as discrete scientific entities, so we will spend some time here describing how the subdirectory within any single project can be set up in a standardized way.
 

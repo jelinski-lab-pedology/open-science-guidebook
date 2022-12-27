@@ -1,0 +1,64 @@
+project:
+  type: book
+  # change output-dir to "docs" to publish to gh pages
+  output-dir: docs
+
+book:
+  title: "Open Science: Tools Applications, & Workflow"
+  author: "Nic Jelinski"
+  date: "12/27/2022"
+  cover-image: "open-science-badge.png"
+  
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part: project-setup.qmd
+      chapters: 
+        - para-system.qmd
+        - project-subfolder-structure.qmd
+        - writing-readmes.qmd
+        - github-setup-workflow.qmd
+        - integrating-zotero.qmd
+    - part: pre-data-raw-data.qmd #metadata
+        - field-projects.qmd
+        #- review-projects.qmd
+        #- data-synthesis-projects.qmd
+    #- part: data-production.qmd #metadata
+        #- pulling-raw-data.qmd
+        #- qaqc-data-cleaning.qmd #includes log
+        #- standardized-formats.qmd
+    #- part: data-analysis-interpretation.qmd #metadata
+        #- data-analysis-log.qmd
+        #- building-analysis-scripts.qmd
+        #- maintaining-R-project.qmd
+    #- part: writing-external-products.qmd
+        #- notetaking-strategies.qmd 
+        #- on-writing.qmd
+        #- writing-manuscripts.qmd
+        #- writing-metadata.qmd #standards
+        #- writing-in-markdown.qmd
+    #- part: publishing.qmd
+        #- data-archiving-storage.qmd
+        #- licenses-copyright.qmd
+        #- formats-standards.qmd
+        #- quarto-books.qmd
+        #- orcid-google-scholar.qmd
+    #- part: style-guides.qmd
+        #- r-style-guide.qmd
+        #- markdown-style-guide.qmd
+    #- part: open-source-resources.qmd
+        #- other-references.qmd
+        #- looking-at-future.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.636">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Open Science: Tools Applications, &amp; Workflow - 4&nbsp; Getting Your Project on GitHub: Standards and Workflow</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./integrating-zotero.html" rel="next">
+<link href="./writing-readmes.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Getting Your Project on GitHub: Standards and Workflow</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Open Science: Tools Applications, &amp; Workflow</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a href="./project-setup.html" class="sidebar-item-text sidebar-link">Project Setup, Documentation, and "Pre-Data"</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./para-system.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Overview of the PARA system</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./project-subfolder-structure.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Project Subfolder Structure</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./writing-readmes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Writing Readmes - Your First Assignment</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./github-setup-workflow.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Getting Your Project on GitHub: Standards and Workflow</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integrating-zotero.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Setting Up Zotero for Your Project - Early Success with Writing and Reference Management</span></a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a href="./pre-data-raw-data.html" class="sidebar-item-text sidebar-link">"Pre-Data": Setting Up Raw Data Collection and Curation Infrastructure for Different Project Types</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./field-projects.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Field Projects</span></a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#getting-set-up-in-github-and-github-desktop" id="toc-getting-set-up-in-github-and-github-desktop" class="nav-link active" data-scroll-target="#getting-set-up-in-github-and-github-desktop"> <span class="header-section-number">4.1</span> Getting set up in GitHub and GitHub Desktop</a></li>
+  <li><a href="#what-is-the-difference-between-github.com-and-github.umn.edu-and-where-should-my-project-go" id="toc-what-is-the-difference-between-github.com-and-github.umn.edu-and-where-should-my-project-go" class="nav-link" data-scroll-target="#what-is-the-difference-between-github.com-and-github.umn.edu-and-where-should-my-project-go"> <span class="header-section-number">4.2</span> What is the difference between github.com and github.umn.edu and where should my project go?</a></li>
+  <li><a href="#what-is-the-difference-between-github-and-github-desktop" id="toc-what-is-the-difference-between-github-and-github-desktop" class="nav-link" data-scroll-target="#what-is-the-difference-between-github-and-github-desktop"> <span class="header-section-number">4.3</span> What is the difference between GitHub and GitHub Desktop?</a></li>
+  <li><a href="#when-should-i-create-a-github-repo-for-my-project" id="toc-when-should-i-create-a-github-repo-for-my-project" class="nav-link" data-scroll-target="#when-should-i-create-a-github-repo-for-my-project"> <span class="header-section-number">4.4</span> When should I create a GitHub repo for my project?</a></li>
+  <li><a href="#when-should-i-create-an-organization-vs-a-repository" id="toc-when-should-i-create-an-organization-vs-a-repository" class="nav-link" data-scroll-target="#when-should-i-create-an-organization-vs-a-repository"> <span class="header-section-number">4.5</span> When should I create an Organization vs a Repository?</a></li>
+  <li><a href="#how-should-i-create-the-github-repo-for-my-project" id="toc-how-should-i-create-the-github-repo-for-my-project" class="nav-link" data-scroll-target="#how-should-i-create-the-github-repo-for-my-project"> <span class="header-section-number">4.6</span> How should I create the GitHub repo for my project?</a></li>
+  <li><a href="#jelinski-lab-github-repo-standards" id="toc-jelinski-lab-github-repo-standards" class="nav-link" data-scroll-target="#jelinski-lab-github-repo-standards"> <span class="header-section-number">4.7</span> Jelinski Lab GitHub Repo Standards</a>
+  <ul class="collapse">
+  <li><a href="#repo-initialization" id="toc-repo-initialization" class="nav-link" data-scroll-target="#repo-initialization"> <span class="header-section-number">4.7.1</span> Repo Initialization</a></li>
+  <li><a href="#jelinski-lab-github-workflow-follows-github-flow" id="toc-jelinski-lab-github-workflow-follows-github-flow" class="nav-link" data-scroll-target="#jelinski-lab-github-workflow-follows-github-flow"> <span class="header-section-number">4.7.2</span> Jelinski Lab GitHub Workflow Follows <span>GitHub Flow</span></a></li>
+  <li><a href="#guidelines-for-pushing-to-your-repo" id="toc-guidelines-for-pushing-to-your-repo" class="nav-link" data-scroll-target="#guidelines-for-pushing-to-your-repo"> <span class="header-section-number">4.7.3</span> Guidelines for Pushing to Your Repo</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Getting Your Project on GitHub: Standards and Workflow</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="getting-set-up-in-github-and-github-desktop" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="getting-set-up-in-github-and-github-desktop"><span class="header-section-number">4.1</span> Getting set up in GitHub and GitHub Desktop</h2>
+<p>This chapter assumes that you already have setup your personal GitHub account (either on public GitHub or on the University’s GitHub Enterprise instance; or both), have downloaded GitHub Desktop and linked or accessed your account and a test repository through the GitHub Desktop app, and understand some basics regarding GitHub functionality. If you have not yet done these things or need resources to help you get set up, check out the [GitHub/GitHub Desktop] chapter in the Tools section of this book.</p>
+</section>
+<section id="what-is-the-difference-between-github.com-and-github.umn.edu-and-where-should-my-project-go" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="what-is-the-difference-between-github.com-and-github.umn.edu-and-where-should-my-project-go"><span class="header-section-number">4.2</span> What is the difference between github.com and github.umn.edu and where should my project go?</h2>
+<p>First and most importantly, the University Enterprise version of GitHub <a href="https://it.umn.edu/services-technologies/github">github.umn.edu</a> is a private instance of GitHub that is accessible only to students, faculty and staff (i.e.&nbsp;you must have a UMN x500 number to access it). Apart from the standard GitHub interface, look and feel, <strong>it is on completely different servers and does not talk to public GitHub</strong>. If you no longer have an x500, you will not be able to access UMN Enterprise GitHub. Because you may not be at the University of Minnesota for your entire career, you should generally default to setting up and using your personal profile on public <a href="https://github.com">GitHub</a>, which you will be able to maintain and access in perpetuity. However, there are some limited instances when the UMN Enterprise version of GitHub might be preferred:</p>
+<ul>
+<li>You want to create a repository that is only accessible to UMN students, faculty and staff.</li>
+<li>You want to publish a Quarto book using GitHub Pages for a class, but only want students who are in the class at UMN to be able to see and access it. <em>NOTE: generally speaking, I am of the philosophy that most general class materials such as the syllabus, lab manuals, and other exercises should be public, however there are some class items such as student submissions and essays that you would not want to be public. However for most classes, the use for GitHub would just be to publish a stable link to a Quarto book using GitHub Pages and point to it in your Canvas course site, since Canvas is the platform of choice for classes. Everything else regarding class management can and should be done in Canvas with the exception of some computer science classes that are writing and submitting code on GitHub as a matter of professional practice. UMN Enterprise GitHub instance makes a lot of sense for those classes but not for many others.</em></li>
+<li>You want to “show your work as you go” on a project in this workflow, by utilizing a project book (modeled on Hava’s procedure), but do not want others to see this until you are ready to share it. On github.umn.edu, you can create a private repository and publish a Quarto rendered book using GitHub pages that only you will be able to see or that you will be able to tighly control access on. <em>NOTE: On public GitHub, you have the ability to set repo access to private. However, when using the free tier of GitHub, you cannot publish a Quarto book to GitHub Pages unless your repo is public. Therefore, in order to keep a repo private and keep a book-based project and analysis log, everyone will be able to see your progress. Maybe this is ok, maybe it isn’t it is up to you and the nature of your project. Conversely - the “Team” tier for GitHub is (as of 2022) $44/yr, and allows you to publish private GitHub pages from private repos where you control access.</em></li>
+</ul>
+<p>Bottom line: if you are a graduate student working on a project as part of your thesis, you can initiate your repo on UMN Enterprise GitHub if you choose (that way you won’t have to worry about privacy and can publish to GitHub Pages without paying). Especially for your first repo and when you are learning to use GitHub, this will also allow you to experiment with Git functionality without fear of public access in any way, shape, or form. However, just be aware then when your project moves to final stages you will need to create a new repository on your public GitHub and push from the repo on your local computer - you cannot simply mirror your UMN Enterprise repo to public GitHub. Not a big deal either way, but you should plan ahead for what is most appropriate for your project.</p>
+</section>
+<section id="what-is-the-difference-between-github-and-github-desktop" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="what-is-the-difference-between-github-and-github-desktop"><span class="header-section-number">4.3</span> What is the difference between GitHub and GitHub Desktop?</h2>
+<p>GitHub Desktop is a user interface which makes it easy to interact with repositories in your personal GitHub account and any organizations that you either created or are a member of. I <em>highly recommend</em> when you are just starting to learn how to use GitHub, and even beyond. There are other options for interacting with GitHub and GitHub repos - such as command line tools and through R Studio, but until you know the basics and understand what is happening and when, using command line tools will likely be more confusing. Once you know what you are doing, it can sometimes be more convenient to interact with your repos through R Studio (seldom is the command line more convenient), but its really not that much more convenient. <strong>Bottom line: Set up and use GitHub Desktop unless you have a compelling reason not to!</strong></p>
+</section>
+<section id="when-should-i-create-a-github-repo-for-my-project" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="when-should-i-create-a-github-repo-for-my-project"><span class="header-section-number">4.4</span> When should I create a GitHub repo for my project?</h2>
+<p>Start an empty project at any time! I regularly create empty folders for manuscripts I just have an idea for or want to write. Especially if a project is also a GitHub repo, at the very least it encourages you to write some metadata, and have a file structure for when things do come up. Also, the project feels more official and branded, which can sometimes be a kick in the pants to get moving, esp if public.</p>
+<p>How to decide when to make a repo on GitHub - some options:</p>
+<ul>
+<li>Anytime!</li>
+<li>Once you have some materials in your project folder</li>
+<li>Once the project is well defined
+<ul>
+<li>it’s common for dissertation chapters and non-data (i.e.&nbsp;review or big idea manuscripts (what I will call luxury manuscripts) to be nebulous and change). These are usually not very collaborative either. You can wait to make GitHub repos for these until they coalesce or become better defined. BUT you should still have a local folder structure for them.</li>
+</ul></li>
+</ul>
+</section>
+<section id="when-should-i-create-an-organization-vs-a-repository" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="when-should-i-create-an-organization-vs-a-repository"><span class="header-section-number">4.5</span> When should I create an Organization vs a Repository?</h2>
+<p>Here is where we can achieve some excellent deep integration with the PARA system. Generally speaking, only Projects and Areas should get repositories. Projects get individual Repositories while Areas get Organizations with individual project repositories under them. Resources and Archive should, generally speaking remain on your local computer.</p>
+</section>
+<section id="how-should-i-create-the-github-repo-for-my-project" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="how-should-i-create-the-github-repo-for-my-project"><span class="header-section-number">4.6</span> How should I create the GitHub repo for my project?</h2>
+<p>There are a few different ways to [create your GitHub repo]#todo - link to Tools chapter. However, since most of us begin work on a project on our local computer, I highly recommend you start by building a local directory and then create a [GitHub repo using GitHub Desktop]#todo - link to tools chapter.</p>
+</section>
+<section id="jelinski-lab-github-repo-standards" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="jelinski-lab-github-repo-standards"><span class="header-section-number">4.7</span> Jelinski Lab GitHub Repo Standards</h2>
+<section id="repo-initialization" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="repo-initialization"><span class="header-section-number">4.7.1</span> Repo Initialization</h3>
+<p>Regardless of how and where you choose to set up your project repo, you should follow these standards:</p>
+<ul>
+<li>Your repo should follow the standard project directory setup as outlined in <span class="quarto-unresolved-ref">?sec-subfolderstructure</span>.</li>
+<li>Your repo should be <a href="./writing-readmes.html">initialized with a readme.txt file</a>, which at the very least contains the readme template with as much current information as you can currently provide for your project.</li>
+<li>You should [choose a license]. The default license for projects in our lab is X #todo</li>
+</ul>
+</section>
+<section id="jelinski-lab-github-workflow-follows-github-flow" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="jelinski-lab-github-workflow-follows-github-flow"><span class="header-section-number">4.7.2</span> Jelinski Lab GitHub Workflow Follows <a href="https://docs.github.com/en/get-started/quickstart/github-flow">GitHub Flow</a></h3>
+<p>Our standard GitHub workflow follows the well documented <a href="https://docs.github.com/en/get-started/quickstart/github-flow">GitHub flow</a> process, which is a branch based workflow:</p>
+<ul>
+<li><p>If you are the sole person working on a repository, you can get away with pushing and pulling from the /main branch.</p></li>
+<li><p>However, if you are working on your repository with others (or even by yourself, but want to ensure you don’t inadvertently change your main branch while making edits and changes), you should <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">create a branch</a> within the repo and give it a descriptive name. You can modify, push and pull from the branch, and allow others to see what you have done.</p></li>
+<li><p>Eventually, once you are happy with your changes (if you wish) merge it with the main branch to update everything. GitHub has some excellent tools for merging and for controlling through “pull request merges](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request).</p></li>
+<li><p>After a branch has been fully merged, it can be <a href="https://nira.com/how-to-delete-a-branch-in-github/">deleted and pruned</a> without loss of information as deleting a branch does not <a href="https://nira.com/how-to-delete-a-branch-in-github/">delete the commit history</a>.</p></li>
+</ul>
+</section>
+<section id="guidelines-for-pushing-to-your-repo" class="level3" data-number="4.7.3">
+<h3 data-number="4.7.3" class="anchored" data-anchor-id="guidelines-for-pushing-to-your-repo"><span class="header-section-number">4.7.3</span> Guidelines for Pushing to Your Repo</h3>
+<p>Additionally, you should do the following when working with your GitHub repo:</p>
+<ul>
+<li><p>Strive to commit and push to your repo at the end of each day of work on a project or at small milestones in your work. Writing good commit messages (see below) will help you understand when to do that. <em>Don’t</em> wait long periods of time to push your local repo/directory to your GitHub repo! This is incremental work!</p></li>
+<li><p>Every commit should contain a <a href="https://gist.github.com/tonibardina/9290fbc7d605b4f86919426e614fe692">good commit message</a>, and a detailed description where possible. General guidelines that we will follow whihc are adapted from <a href="https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53">Robert Painsi</a>, (<a href="https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/">Bolaji Ayodeji</a>, including example from <a href="https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/">Tim Pope</a> <a href="https://gist.github.com/tonibardina/9290fbc7d605b4f86919426e614fe692">Toni Bardina</a> and <a href="https://www.gitkraken.com/learn/git/best-practices/git-commit-message#:~:text=Git%20commits%20are%20a%20way,or%20savepoint%20for%20your%20project">GitKraken</a>:</p>
+<ul>
+<li>Commit messages should have an entry in the subject and body</li>
+<li>Subject line should be capitalized and less than 50 characters</li>
+<li>Spaces are allowed</li>
+<li>No period at end of subject line, punctuations allowed in body of message (description on GitHub Desktop)</li>
+<li>Subject line written in imperative mode (i.e.&nbsp;<em>Add</em>, not <em>Added</em> or <em>Adds</em>)</li>
+<li>Subject line should begin with one of the following verbs (which are adapted from their comp sci meanings to what best fits our work - see full list <a href="https://gist.github.com/tonibardina/9290fbc7d605b4f86919426e614fe692">here</a>):
+<ul>
+<li>Add - added a document, file, code, or section within a document</li>
+<li>Delete - added a document, file, code, or section within a document</li>
+<li>Edit - edited a document, file, code, or section within a document</li>
+<li>Fix - fix an issue e.g.&nbsp;bug, typo, accident, misstatement.</li>
+<li>Start - begin doing something</li>
+<li>Stop - end doing something</li>
+<li>Refactor - reorganize or refactor code</li>
+<li>Restructure - reorganize or refactor directory or project structure</li>
+<li>Document - editing, changing or adding to metadata</li>
+</ul></li>
+</ul></li>
+<li><p>The commit message body should only contain <em>what</em> and never <em>why</em> or <em>how</em>. Whys and hows should go into documentation such as project logs (writing or analysis logs), metadata, or the project Quarto book (if you have one).</p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./writing-readmes.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Writing Readmes - Your First Assignment</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./integrating-zotero.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Setting Up Zotero for Your Project - Early Success with Writing and Reference Management</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

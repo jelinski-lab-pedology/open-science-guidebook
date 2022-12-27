@@ -1,0 +1,85 @@
+# Getting Your Project on GitHub: Standards and Workflow
+
+## Getting set up in GitHub and GitHub Desktop
+
+This chapter assumes that you already have setup your personal GitHub account (either on public GitHub or on the University's GitHub Enterprise instance; or both), have downloaded GitHub Desktop and linked or accessed your account and a test repository through the GitHub Desktop app, and understand some basics regarding GitHub functionality. If you have not yet done these things or need resources to help you get set up, check out the \[GitHub/GitHub Desktop\] chapter in the Tools section of this book.
+
+## What is the difference between github.com and github.umn.edu and where should my project go?
+
+First and most importantly, the University Enterprise version of GitHub [github.umn.edu](https://it.umn.edu/services-technologies/github) is a private instance of GitHub that is accessible only to students, faculty and staff (i.e. you must have a UMN x500 number to access it). Apart from the standard GitHub interface, look and feel, **it is on completely different servers and does not talk to public GitHub**. If you no longer have an x500, you will not be able to access UMN Enterprise GitHub. Because you may not be at the University of Minnesota for your entire career, you should generally default to setting up and using your personal profile on public [GitHub](https://github.com), which you will be able to maintain and access in perpetuity. However, there are some limited instances when the UMN Enterprise version of GitHub might be preferred:
+
+-   You want to create a repository that is only accessible to UMN students, faculty and staff.
+-   You want to publish a Quarto book using GitHub Pages for a class, but only want students who are in the class at UMN to be able to see and access it. *NOTE: generally speaking, I am of the philosophy that most general class materials such as the syllabus, lab manuals, and other exercises should be public, however there are some class items such as student submissions and essays that you would not want to be public. However for most classes, the use for GitHub would just be to publish a stable link to a Quarto book using GitHub Pages and point to it in your Canvas course site, since Canvas is the platform of choice for classes. Everything else regarding class management can and should be done in Canvas with the exception of some computer science classes that are writing and submitting code on GitHub as a matter of professional practice. UMN Enterprise GitHub instance makes a lot of sense for those classes but not for many others.*
+-   You want to "show your work as you go" on a project in this workflow, by utilizing a project book (modeled on Hava's procedure), but do not want others to see this until you are ready to share it. On github.umn.edu, you can create a private repository and publish a Quarto rendered book using GitHub pages that only you will be able to see or that you will be able to tighly control access on. *NOTE: On public GitHub, you have the ability to set repo access to private. However, when using the free tier of GitHub, you cannot publish a Quarto book to GitHub Pages unless your repo is public. Therefore, in order to keep a repo private and keep a book-based project and analysis log, everyone will be able to see your progress. Maybe this is ok, maybe it isn't it is up to you and the nature of your project. Conversely - the "Team" tier for GitHub is (as of 2022) \$44/yr, and allows you to publish private GitHub pages from private repos where you control access.*
+
+Bottom line: if you are a graduate student working on a project as part of your thesis, you can initiate your repo on UMN Enterprise GitHub if you choose (that way you won't have to worry about privacy and can publish to GitHub Pages without paying). Especially for your first repo and when you are learning to use GitHub, this will also allow you to experiment with Git functionality without fear of public access in any way, shape, or form. However, just be aware then when your project moves to final stages you will need to create a new repository on your public GitHub and push from the repo on your local computer - you cannot simply mirror your UMN Enterprise repo to public GitHub. Not a big deal either way, but you should plan ahead for what is most appropriate for your project.
+
+## What is the difference between GitHub and GitHub Desktop?
+
+GitHub Desktop is a user interface which makes it easy to interact with repositories in your personal GitHub account and any organizations that you either created or are a member of. I *highly recommend* when you are just starting to learn how to use GitHub, and even beyond. There are other options for interacting with GitHub and GitHub repos - such as command line tools and through R Studio, but until you know the basics and understand what is happening and when, using command line tools will likely be more confusing. Once you know what you are doing, it can sometimes be more convenient to interact with your repos through R Studio (seldom is the command line more convenient), but its really not that much more convenient. **Bottom line: Set up and use GitHub Desktop unless you have a compelling reason not to!**
+
+## When should I create a GitHub repo for my project?
+
+Start an empty project at any time! I regularly create empty folders for manuscripts I just have an idea for or want to write. Especially if a project is also a GitHub repo, at the very least it encourages you to write some metadata, and have a file structure for when things do come up. Also, the project feels more official and branded, which can sometimes be a kick in the pants to get moving, esp if public.
+
+How to decide when to make a repo on GitHub - some options:
+
+-   Anytime!
+-   Once you have some materials in your project folder
+-   Once the project is well defined
+    -   it's common for dissertation chapters and non-data (i.e. review or big idea manuscripts (what I will call luxury manuscripts) to be nebulous and change). These are usually not very collaborative either. You can wait to make GitHub repos for these until they coalesce or become better defined. BUT you should still have a local folder structure for them.
+
+## When should I create an Organization vs a Repository?
+
+Here is where we can achieve some excellent deep integration with the PARA system. Generally speaking, only Projects and Areas should get repositories. Projects get individual Repositories while Areas get Organizations with individual project repositories under them. Resources and Archive should, generally speaking remain on your local computer.
+
+## How should I create the GitHub repo for my project?
+
+There are a few different ways to \[create your GitHub repo\]#todo - link to Tools chapter. However, since most of us begin work on a project on our local computer, I highly recommend you start by building a local directory and then create a \[GitHub repo using GitHub Desktop\]#todo - link to tools chapter.
+
+## Jelinski Lab GitHub Repo Standards
+
+### Repo Initialization
+
+Regardless of how and where you choose to set up your project repo, you should follow these standards:
+
+-   Your repo should follow the standard project directory setup as outlined in @sec-subfolderstructure.
+-   Your repo should be [initialized with a readme.txt file](writing-readmes.qmd), which at the very least contains the readme template with as much current information as you can currently provide for your project.
+-   You should \[choose a license\]. The default license for projects in our lab is X #todo
+
+### Jelinski Lab GitHub Workflow Follows [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+
+Our standard GitHub workflow follows the well documented [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) process, which is a branch based workflow:
+
+-   If you are the sole person working on a repository, you can get away with pushing and pulling from the /main branch.
+
+-   However, if you are working on your repository with others (or even by yourself, but want to ensure you don't inadvertently change your main branch while making edits and changes), you should [create a branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository) within the repo and give it a descriptive name. You can modify, push and pull from the branch, and allow others to see what you have done.
+
+-   Eventually, once you are happy with your changes (if you wish) merge it with the main branch to update everything. GitHub has some excellent tools for merging and for controlling through "pull request merges\](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request).
+
+-   After a branch has been fully merged, it can be [deleted and pruned](https://nira.com/how-to-delete-a-branch-in-github/) without loss of information as deleting a branch does not [delete the commit history](https://nira.com/how-to-delete-a-branch-in-github/).
+
+### Guidelines for Pushing to Your Repo
+
+Additionally, you should do the following when working with your GitHub repo: 
+
+- Strive to commit and push to your repo at the end of each day of work on a project or at small milestones in your work. Writing good commit messages (see below) will help you understand when to do that. *Don't* wait long periods of time to push your local repo/directory to your GitHub repo! This is incremental work!
+
+-   Every commit should contain a [good commit message](https://gist.github.com/tonibardina/9290fbc7d605b4f86919426e614fe692), and a detailed description where possible. General guidelines that we will follow whihc are adapted from [Robert Painsi](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53), ([Bolaji Ayodeji](https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/), including example from [Tim Pope](https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/) [Toni Bardina](https://gist.github.com/tonibardina/9290fbc7d605b4f86919426e614fe692) and [GitKraken](https://www.gitkraken.com/learn/git/best-practices/git-commit-message#:~:text=Git%20commits%20are%20a%20way,or%20savepoint%20for%20your%20project):
+    -   Commit messages should have an entry in the subject and body
+    -   Subject line should be capitalized and less than 50 characters
+    -   Spaces are allowed
+    -   No period at end of subject line, punctuations allowed in body of message (description on GitHub Desktop)
+    -   Subject line written in imperative mode (i.e. *Add*, not *Added* or *Adds*)
+    -   Subject line should begin with one of the following verbs (which are adapted from their comp sci meanings to what best fits our work - see full list [here](https://gist.github.com/tonibardina/9290fbc7d605b4f86919426e614fe692)):
+        -   Add - added a document, file, code, or section within a document
+        -   Delete - added a document, file, code, or section within a document
+        -   Edit - edited a document, file, code, or section within a document
+        -   Fix - fix an issue e.g. bug, typo, accident, misstatement.
+        -   Start - begin doing something
+        -   Stop - end doing something
+        -   Refactor - reorganize or refactor code
+        -   Restructure - reorganize or refactor directory or project structure
+        -   Document - editing, changing or adding to metadata
+
+-   The commit message body should only contain *what* and never *why* or *how*. Whys and hows should go into documentation such as project logs (writing or analysis logs), metadata, or the project Quarto book (if you have one).
