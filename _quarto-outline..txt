@@ -25,7 +25,7 @@ book:
         #- data-synthesis-projects.qmd
     #- part: data-production.qmd #metadata
         #- pulling-raw-data.qmd
-        #- qaqc-data-cleaning.qmd #includes log
+        #- qaqc-data-cleaning.qmd #includes log, includes reps for lab data, flagging samples for rerun
         #- standardized-formats.qmd
     #- part: data-analysis-interpretation.qmd #metadata
         #- data-analysis-log.qmd
@@ -43,9 +43,10 @@ book:
         #- formats-standards.qmd
         #- quarto-books.qmd
         #- orcid-google-scholar.qmd
-    #- part: style-guides.qmd
+    #- part: style-guides-and-standards.qmd
         #- r-style-guide.qmd
         #- markdown-style-guide.qmd
+        #- tabular-data-standards.qmd #csv, header names, data types, etc
     #- part: open-source-resources.qmd
         #- other-references.qmd
         #- looking-at-future.qmd

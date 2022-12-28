@@ -22,6 +22,7 @@ book:
     - part: pre-data-raw-data.qmd
       chapters:
       - field-projects.qmd
+      - lab-projects.qmd
     - summary.qmd
     - references.qmd
 

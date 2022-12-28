@@ -25,7 +25,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./lab-projects.html" rel="next">
 <link href="./pre-data-raw-data.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -146,11 +146,16 @@ ul.task-list{list-style: none;}
   <a href="./field-projects.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Field Projects</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab-projects.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Laboratory Projects</span></a>
+  </div>
+</li>
     </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -179,8 +184,14 @@ ul.task-list{list-style: none;}
   <li><a href="#tips-for-using-survey-123-in-the-field" id="toc-tips-for-using-survey-123-in-the-field" class="nav-link" data-scroll-target="#tips-for-using-survey-123-in-the-field"> <span class="header-section-number">6.2.1</span> Tips for using Survey 123 in the field</a></li>
   </ul></li>
   <li><a href="#raw-data-curation" id="toc-raw-data-curation" class="nav-link" data-scroll-target="#raw-data-curation"> <span class="header-section-number">6.3</span> Raw Data Curation</a></li>
-  <li><a href="#creating-the-raw-data-archive" id="toc-creating-the-raw-data-archive" class="nav-link" data-scroll-target="#creating-the-raw-data-archive"> <span class="header-section-number">6.4</span> Creating the Raw Data Archive</a></li>
-  <li><a href="#physical-sample-curation" id="toc-physical-sample-curation" class="nav-link" data-scroll-target="#physical-sample-curation"> <span class="header-section-number">6.5</span> Physical Sample Curation</a></li>
+  <li><a href="#standards-for-creating-the-raw-data-archive" id="toc-standards-for-creating-the-raw-data-archive" class="nav-link" data-scroll-target="#standards-for-creating-the-raw-data-archive"> <span class="header-section-number">6.4</span> Standards for Creating the Raw Data Archive</a></li>
+  <li><a href="#physical-sample-curation" id="toc-physical-sample-curation" class="nav-link" data-scroll-target="#physical-sample-curation"> <span class="header-section-number">6.5</span> Physical Sample Curation</a>
+  <ul class="collapse">
+  <li><a href="#sample-names" id="toc-sample-names" class="nav-link" data-scroll-target="#sample-names"> <span class="header-section-number">6.5.1</span> Sample Names</a></li>
+  <li><a href="#sample-log" id="toc-sample-log" class="nav-link" data-scroll-target="#sample-log"> <span class="header-section-number">6.5.2</span> Sample Log</a></li>
+  <li><a href="#connecting-your-sample-log-to-a-master-laboratory-sample-log-todo" id="toc-connecting-your-sample-log-to-a-master-laboratory-sample-log-todo" class="nav-link" data-scroll-target="#connecting-your-sample-log-to-a-master-laboratory-sample-log-todo"> <span class="header-section-number">6.5.3</span> Connecting your sample log to a master laboratory sample log #todo</a></li>
+  <li><a href="#subsequent-laboratory-analysis-of-physical-samples-todo" id="toc-subsequent-laboratory-analysis-of-physical-samples-todo" class="nav-link" data-scroll-target="#subsequent-laboratory-analysis-of-physical-samples-todo"> <span class="header-section-number">6.5.4</span> Subsequent Laboratory Analysis of Physical Samples #todo</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -244,28 +255,76 @@ ul.task-list{list-style: none;}
 </section>
 <section id="raw-data-collection" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="raw-data-collection"><span class="header-section-number">6.2</span> Raw Data Collection</h2>
+<p>After your pre-data infrastructure is set up, do some test runs and some mock data collection around campus. This will allow you to use your infrastructure, datasheets, and think through any missing pieces or functionality issues. Revise as needed and get ready for your travel - check out our [Field Manual]#todo for protocols and processes related to field work.</p>
 <section id="tips-for-using-survey-123-in-the-field" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="tips-for-using-survey-123-in-the-field"><span class="header-section-number">6.2.1</span> Tips for using Survey 123 in the field</h3>
-<p>Images</p>
-<p>Offline/Online</p>
+<p>Survey 123 is generally an excellent app in the field, and most new phones are sufficiently durable and waterproof to be used in the field. As recently as 2019 I carried a separate digital camera and GPS. Now I do everything (capture GPS, take pictures, use Survey123 for tabular data) on my phone. *NOTE - this also means you should have a backup field ready rugged battery pack to charge your phone during the day if necessary in the field. There are also some other tips when using Survey123 in the field.</p>
+<ul>
+<li><p><strong>Images</strong>. When choosing to use Survey123 as an image repository, ensure that you 1) take pictures with your phone and upload them to a survey response from your photo library (instead of taking them live through the app) - this ensures that if something goes wrong with the response you still have the image on your camera. The images will also be full quality this way, while taking them through the app may result in reduced quality and image compression. Additionally, make sure your survey is set up to receive and store original quality images - the default is compression so you need to change the default (google search how to do this and provide link here)#todo.</p></li>
+<li><p><strong>Offline/Online</strong>. Unless you are in a populated area, you may not be able to upload survey responses live in the field. That is fine. Survey 123 allows you to save draft responses to your outbox which are stored locally on your phone. When you get back to a good internet connection, you can submit your survey responses.</p></li>
+<li><p><strong>Phone GPS Accuracy</strong>. Even if you don’t have service or wifi signal, your phone GPS will be more accurate if you keep your cellular and wifi on. This will drain your battery faster in remote areas but the gain in accuracy is worth it. As mentioned above, for this reason, bring a field ready battery pack.</p></li>
+<li><p><strong>GPS Backup</strong>. Always ensure that your phone is not your only source of GPS data to insure against data loss. There are several combinations you can use to achieve this:</p>
+<ul>
+<li>Phone + Hard Copy. Write down the Lat/Lon on your data sheet or notebook</li>
+<li>Two Phone apps. Take GPS points with Survey123 &amp; another app such as OnX.</li>
+<li>Phone + GPS unit. Take an indendent GPS unit in the field with you and take a GPS point at every plot or site. Store on the GPS unit.</li>
+</ul></li>
+<li><p><strong>Data Backup</strong>. Your data should be backed up each evening when you return from the field. Do this by: exporting images from your phone to a computer or external drive, taking pictures of all hard copy data sheets collected that day and backing them up to a computer or external drive, if you have a wifi connection, uploading tabular data and survey responses to Survey123 and downloading the updated version of the database.</p></li>
+</ul>
 </section>
 </section>
 <section id="raw-data-curation" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="raw-data-curation"><span class="header-section-number">6.3</span> Raw Data Curation</h2>
+<p>Once your raw data has been collected, you are ready to curate it. Raw data curation involves assuring that your dataset is complete, formatted correctly, is properly stored and backed up, and includes additional notes not contained in the standard data formats.</p>
 </section>
-<section id="creating-the-raw-data-archive" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="creating-the-raw-data-archive"><span class="header-section-number">6.4</span> Creating the Raw Data Archive</h2>
-<p>Should be generated within 2 weeks of retruning from the field</p>
-<p>consists of: - shapefile in OGC Geopackage format containing lat lon and point or plot IDs - tabular data exported from Survey123 -</p>
-<p>local + cloud (if fits local)</p>
-<p>should contain pre-data - form spreadsheets, some way to export or archive the Survey123 form - what format?</p>
-<p>NOTE: folder repo structure should contain a pre-data folder!!!!!</p>
+<section id="standards-for-creating-the-raw-data-archive" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="standards-for-creating-the-raw-data-archive"><span class="header-section-number">6.4</span> Standards for Creating the Raw Data Archive</h2>
+<p>You should strive to meet the following standards when curating your raw data archive:</p>
+<ul>
+<li><p>Your raw data archive should be generated within 1 week of returning from the field (if a single trip), or updated within 1 weeks of collection (for recurring work over longer periods).</p></li>
+<li><p>Your raw data archive should consist of:</p>
+<ul>
+<li>a shapefile in OGC Geopackage format containing lat lon and point or plot IDs</li>
+<li>tabular data exported from Survey123</li>
+<li>pictures or scans of your raw data sheets</li>
+<li>a local image/video repository where images are placed in a uniqely named folder for each plot or site. NOTE: ideally the title of each folder, in addition to containing the plot or site code should also have a descriptive name alongside the plot code to jog your memory when you are looking back at your plots and images. For example “FRN-31 where we saw moose in lake”.
+<ul>
+<li>NOTE: your images should contain metadata in their image names. Nowadays most image files will be exported from your phone with a unique number ID such as “IMG_6249”. You should always retain that number in your file name; BUT you should add additional metadata to the file name by appending: 1) the project id, 2) the plot id, 3) a one or two word phrase regarding the question the image was taken in repsonse to. So, for example, an excellent image title for an image with the name and the folder above would be: “FRN-31_pedon_IMG_6249”. Note that this can be done in an automated way using XLSForms in Survey123. If you want to really take this to the next level, also include some descriptive text in the image file name between the Survey123 generated material and the image file name i.e.&nbsp;“FRN-31_pedon_Bwhorizon30cm_IMG_6249”. *Alternatively, you can also use an open source desktop image metadata editing app such as <a href="https://www.digikam.org">DigiKam</a>.</li>
+</ul></li>
+<li>a file (preferrably in [Markdown]#todo) format which contains any additional qualitative information, notes, observations, or a brain dump from the field data collection - if applicable.</li>
+<li>our standardized [sample log file]#todo that details characteristics and names of physical samples taken.</li>
+<li>a readme.txt file that contains metadata about your raw data archive. You can add to your existing readme file or Quarto book as well to include the files in your raw data subdirectory in the readme/metadata.</li>
+</ul></li>
+</ul>
+<p>These files live in the raw data folder of your repo. However note that the image repository will be very large in some cases and gitHub is not a good place to store images. Therefore - in your [.gitignore file]#todo, you should include the image type or the image repository directory so that these do not upload to GitHub.</p>
+<ul>
+<li><p>Your raw data repository should be stored locally and somewhere in the cloud. For everything except your image/video repository should be stored on GitHub. The image/video repository should be stored locally and either in Flickr or a <strong>Shared</strong> Google Drive (a truly shared drive, not through your personal account) or Google Photos (same re: shared). <em>NOTE #todo: should image repositories also be required to upload to CFANS Drive?</em></p></li>
+<li><p>Your raw data should also contain pre-data - including spreadsheet forms and an archive of the Survey123 form - in what format?#todo.</p></li>
+</ul>
+<p>NOTE: folder repo structure should contain a pre-data folder!!!!!#todo</p>
 </section>
 <section id="physical-sample-curation" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="physical-sample-curation"><span class="header-section-number">6.5</span> Physical Sample Curation</h2>
-<p>sample numbers master sample sheet</p>
+<p>The short- and long-term curation of physical samples collected during fieldwork is not trivial. There are several issues to be solved - sample names, sample log, and connecting your sample log to a laboratory sample log.</p>
+<section id="sample-names" class="level3" data-number="6.5.1">
+<h3 data-number="6.5.1" class="anchored" data-anchor-id="sample-names"><span class="header-section-number">6.5.1</span> Sample Names</h3>
+<p>See our field manual for detailed protocols on sample naming. Briefly, however, your physical samples should be collected in pre-labelled bags. These bags are pre-labelled with a two digit year and sample number. This allows you to collect samples in the field without labelling bags in difficult conditions. The sample log is then a critical piece of your raw data as it connects your sample numbers to metadata about the sample (depths, plot or site, and horizon, for example). Sample numbers then be something like “22-001”. NOTE; this assumes that you won’t collect more than 999 samples in a year (usually safe?). If projects are occuring at the same time, then we need a way of differentiating between these samples. We should therefore append the sample number with the last initials of the project lead who is collecting them in the field (i.e.&nbsp;“22-001-NAJ”).</p>
+<p>*NOTE: if you are working on an externally sponsored project or a project that has a larger collaborative team or more parts, your sample names may be prescribed for you. That is fine - in that case, use the sample naming conventions that are part of the larger project. - how will this work with master sample log integration?</p>
+</section>
+<section id="sample-log" class="level3" data-number="6.5.2">
+<h3 data-number="6.5.2" class="anchored" data-anchor-id="sample-log"><span class="header-section-number">6.5.2</span> Sample Log</h3>
+<p>Use the sample log template provided in our Field Manual. Take pictures and backup pictures or scans of the sample log each night after data collection.</p>
+</section>
+<section id="connecting-your-sample-log-to-a-master-laboratory-sample-log-todo" class="level3" data-number="6.5.3">
+<h3 data-number="6.5.3" class="anchored" data-anchor-id="connecting-your-sample-log-to-a-master-laboratory-sample-log-todo"><span class="header-section-number">6.5.3</span> Connecting your sample log to a master laboratory sample log #todo</h3>
+<p>Big idea - use Make (Integromat) to trigger a watch on a Survey123 survey that automatically appends row (note need to have survey set up with repeat to produce multiple records of samples with one survey record submission) to a master laboratory physical sample sheet. The Google sheet should also somehow provide a sample name for each? Or you could have in your question at the site or plot level with multipl entries - what are the names/IDs of the samples collected at this plot/site? YES, this second is the best way to go.</p>
+</section>
+<section id="subsequent-laboratory-analysis-of-physical-samples-todo" class="level3" data-number="6.5.4">
+<h3 data-number="6.5.4" class="anchored" data-anchor-id="subsequent-laboratory-analysis-of-physical-samples-todo"><span class="header-section-number">6.5.4</span> Subsequent Laboratory Analysis of Physical Samples #todo</h3>
+<p>This should maybe be a separate chapter after lab analysis. then can be two stages - integrate with Google Sheets, pull from physical sample log, build on that.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -355,8 +414,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./lab-projects.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Laboratory Projects</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

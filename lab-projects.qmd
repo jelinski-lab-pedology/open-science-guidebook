@@ -1,0 +1,39 @@
+# Laboratory Projects
+
+The raw data for laboratory projects consists of laboratory analysis of existing soil samples or samples consolidated from collaborators.
+
+## Pre-Data Infrastructure
+
+### Google Sheets Integration with Master Data Sheet Using Make and R
+The primary data entry location for laboratory data is Google Sheets. NOTE: your Google Drive folders for your project should be configured exactly the same as your local PARA repository. Since you are using GitHub there doens't need to be an extra full copy of the repo on Google Drive, so there will be a lot of empty folders - but that is fine. Set up a Google Sheet in your raw data folder for the project on Google Drive. Then, using the googlesheet4 package in R, [pull down a copy of the lab master sample log]#todo, [subset it for the samples in your project]#todo, and export that subset to another google sheet. Now you can add fields to the Google Sheet to populate them as you receive data or conduct laboratory analysis. *NOTE: once you have your project subsetted sample log you can create a field which contains an internal "lab" ID, which is usually a short integer and can be convenient when labelling tubes, etc. However, only include these short lab IDs on your project specific sample log. Do not include them on the laboratory master sample sheet.
+
+*NOTE: if you are analyzing samples in your project that were not physically collected by you (but were collected by collaborators as part of this or another project), you should manually enter those samples into the master lab sample log and utilize the sample IDs provided by the collaborators.*
+
+### Self-Generated Data: Laboratory Notebook and Analysis or Task Log
+For data that you are generating yourself, you should keep a [Laboratory Notebook] #todo - see standards and templates in our Laboratory Manual. If you are doing an analysis that results in manually recorded data (such as pH, which requires you to look at a screen and writ ethe number down in your lab notebook), data is then transferred manually from your laboratory notebook to the Google Sheet and fields are added as needed. If you are doing an analysis that results in digital data (such as pXRF, MIR, or LPSA), then you will need to export the digital data and populate it into the correct fields associated with the samples in your data sheet.
+
+### Externally Generated Data: Original Data File + Integration
+For externally generated data (i.e. you sent samples off to a commerical lab and recieved a pdf or tabular report back). you will need to export the digital data and populate it into the correct fields associated with the samples in your data sheet. *NOTE that all original data files from external sources should be kept (as they were received) in a subfolder of the raw-data subdirectory.*
+
+## Curating Laboratory Data
+Lab Data curation involves ensuring that all self- or externally-generated data is kept in its original form as well as transferred to the project sample log/data sheet which is the foundational raw data sheet for the project.
+
+### Raw Data Repository Standards for Laboratory Projects
+Your raw-data repository for Laboratory Projects should include the following:
+
+- The subsetted sample log w/ fields added and updated according to the [Jelinski Lab Tabular Data Standards] #todo
+- Images or scans of a laboratory notebook
+- Ocassionally, your laboratory analysis may result in physical products such as soil chromatographs. These should be stored in their original state, scanned in a standardized way, and the image repository should be handled in the same way as image repositories are handled for field projects.
+- a readme or metadata file (or chapter in your metadata Quarto book). The metadata file should contain references, either to our internal lab protocols documented in our lab manual #todo or to published or available protocols from other sources.
+
+*NOTE: see the laboratory methods manual for standardized protocols on how to maintain a laboratory notebook, and a sample analysis/task log.*
+
+These files live in the raw data folder of your repo. However note that if you have images, the image repository will be very large in some cases and gitHub is not a good place to store images. Therefore - in your \[.gitignore file\]#todo, you should include the image type or the image repository directory so that these do not upload to GitHub.
+
+-   Your raw data repository should be stored locally and somewhere in the cloud. For everything except your image/video repository should be stored on GitHub. The image/video repository should be stored locally and either in Flickr or a **Shared** Google Drive (a truly shared drive, not through your personal account) or Google Photos (same re: shared). *NOTE #todo: should image repositories also be required to upload to CFANS Drive?*
+
+-   Your raw data should also contain pre-data - what is pre-data in this case? #todo - in what format?#todo.
+
+NOTE: folder repo structure should contain a pre-data folder!!!!!#todo
+
+*NOTES to add: #how deal with replicate sample runs.# flagging samples for reruns*
