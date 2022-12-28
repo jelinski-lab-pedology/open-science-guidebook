@@ -6,7 +6,7 @@ project:
 book:
   title: "Open Science: Tools Applications, & Workflow"
   author: "Nic Jelinski"
-  date: "12/27/2022"
+  date: "12/28/2022"
   cover-image: "open-science-badge.png"
   
   chapters:
@@ -23,6 +23,11 @@ book:
       chapters:
       - field-projects.qmd
       - lab-projects.qmd
+      - review-projects.qmd
+      - data-synthesis-projects.qmd
+    - part: data-production.qmd
+      chapters:
+      - standardizing-formats.qmd
     - summary.qmd
     - references.qmd
 

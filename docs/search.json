@@ -16,14 +16,14 @@
   {
     "objectID": "project-setup.html",
     "href": "project-setup.html",
-    "title": "Project Setup, Documentation, and “Pre-Data”",
+    "title": "Project Setup and Documentation",
     "section": "",
     "text": "This is the first part of any project, and can begin as soon as you have an idea - in fact, it is completely fine to set up a project that is just an idea, with no content yet. Just going through the setup process makes a project more “real” in your mind, and also gives you a structure to collect thoughts, ideas, and related information for future work, even before you are starting to work on a project in earnest. I’ve got many directories on my computer that are empty placeholders for wishlist projects years in the future."
   },
   {
     "objectID": "project-setup.html#project-setup",
     "href": "project-setup.html#project-setup",
-    "title": "Project Setup, Documentation, and “Pre-Data”",
+    "title": "Project Setup and Documentation",
     "section": "Project Setup",
     "text": "Project Setup\nThis includes deciding what constitutes a “project” (this seems like it should be an easy thing, but it’s actually very difficult), how to generate a file and folder structure for your project before you even begin that lives and syncs across platforms. This setup is designed to work for all of the project types we deal with regardless of the initial data origin (i.e. field projects, laboratory projects, review or data compilation).\n\n\n\n\n\n\nRequired Tools - Project Setup\n\n\n\n\nA local folder structure on your personal computer\nGitHub/GitHub Desktop\nGoogle Drive\nZotero\nObsidian\nInkscape"
   },
@@ -308,9 +308,72 @@
     "text": "7.2 Curating Laboratory Data\nLab Data curation involves ensuring that all self- or externally-generated data is kept in its original form as well as transferred to the project sample log/data sheet which is the foundational raw data sheet for the project.\n\n7.2.1 Raw Data Repository Standards for Laboratory Projects\nYour raw-data repository for Laboratory Projects should include the following:\n\nThe subsetted sample log w/ fields added and updated according to the [Jelinski Lab Tabular Data Standards] #todo\nImages or scans of a laboratory notebook\nOcassionally, your laboratory analysis may result in physical products such as soil chromatographs. These should be stored in their original state, scanned in a standardized way, and the image repository should be handled in the same way as image repositories are handled for field projects.\na readme or metadata file (or chapter in your metadata Quarto book). The metadata file should contain references, either to our internal lab protocols documented in our lab manual #todo or to published or available protocols from other sources.\n\nNOTE: see the laboratory methods manual for standardized protocols on how to maintain a laboratory notebook, and a sample analysis/task log.\nThese files live in the raw data folder of your repo. However note that if you have images, the image repository will be very large in some cases and gitHub is not a good place to store images. Therefore - in your [.gitignore file]#todo, you should include the image type or the image repository directory so that these do not upload to GitHub.\n\nYour raw data repository should be stored locally and somewhere in the cloud. For everything except your image/video repository should be stored on GitHub. The image/video repository should be stored locally and either in Flickr or a Shared Google Drive (a truly shared drive, not through your personal account) or Google Photos (same re: shared). NOTE #todo: should image repositories also be required to upload to CFANS Drive?\nYour raw data should also contain pre-data - what is pre-data in this case? #todo - in what format?#todo.\n\nNOTE: folder repo structure should contain a pre-data folder!!!!!#todo\nNOTES to add: #how deal with replicate sample runs.# flagging samples for reruns"
   },
   {
+    "objectID": "review-projects.html",
+    "href": "review-projects.html",
+    "title": "8  Review Projects #todo",
+    "section": "",
+    "text": "The raw data for review projects is literature itself (peer-reviewed, gray or unpublished)."
+  },
+  {
+    "objectID": "review-projects.html#pre-data-infrastructure",
+    "href": "review-projects.html#pre-data-infrastructure",
+    "title": "8  Review Projects #todo",
+    "section": "8.1 Pre-Data Infrastructure",
+    "text": "8.1 Pre-Data Infrastructure\n\n8.1.1 Resources for determining review type and protocol\nShould consult with Hava here or ask her to contribute as she has become and expert.\nFor now just providing a few resources:\n\n[SciSpace Literature Tools Review] (https://typeset.io/resources/online-tools-for-easy-literature-review/#:~:text=5%20Tools%20for%20Easy%20Literature,Guides%20%26%20eBooks)\nUMN Libraries Systematic Review and Evidence Syntheses Landing Page\nGore and Boruff - McGill University, Systematic Reviews, Scoping Reviews, and other Knowledge Syntheses"
+  },
+  {
+    "objectID": "data-synthesis-projects.html",
+    "href": "data-synthesis-projects.html",
+    "title": "9  Data Synthesis Projects #todo - ask Hava for opinions as she is an expert",
+    "section": "",
+    "text": "Data synthesis projects consolidate published and unpublished data from other scientists and collaborators."
+  },
+  {
+    "objectID": "data-synthesis-projects.html#pre-data-infrastructure",
+    "href": "data-synthesis-projects.html#pre-data-infrastructure",
+    "title": "9  Data Synthesis Projects #todo - ask Hava for opinions as she is an expert",
+    "section": "9.1 Pre-Data Infrastructure",
+    "text": "9.1 Pre-Data Infrastructure\n\n9.1.1 Selecting and documenting a data platform\nBecause data synthesis projects involve consolidating and wrangling of data from many different sources, it is important to choose a data “platform” that will support consolidation and curation of this data.\nThis data platform could be as simple as a well documented folder structure on your local computer, or more complex such as the UMN GEMS data platform, which provides a workspace for uploading datasets, curating dataset and field metadata, controlled vocabularies and ontologies, and post curation scripting for data harmonization.\nAll projects should include a data management plan (as a default you can use our template, developed from this workflow and located here #todo) however, data synthesis projects in particular require significant metadata documentation. As with other project types, this project-level metadata documentation should begin on project creation and continue during the pre-data phase, so that the documentation is well developed prior to data acquisition.\n\n\n9.1.2 Selecting and documenting data harmonization procedures\nData synthesis projects require some level of harmonization that allows comparison of similar data types between diverse datasets. At a high level, this harmonization requires understanding similar fields between different datasets, despite very different data structures and field naming conventions. It is important that this field data curation occurs in conjunction with field and dataset metadata in the original datasets.\nThere are two main approaches to data harmonization (may not be using the right terms here #todo):\n\nPre-ingestion harmonization\nPost-ingestion harmonization\n\nNOTE: see and cite the work of Kathe Todd-Brown and others here - include Hava’s expertise.\nThe advantages and disadvantages of each approach are as follows:\n\nPre-ingestion harmonization The advantage of pre-ingestion harmonization is that the datasets are manually placed in a single, easy to work with format. There are major disadvantages though. Fields are renamed from the original source with little to no record or mapping back to the original field in the original source.\nPost ingestion harmonization The advantage of post-ingestion harmonization is that raw datasets are retained on the data platform in their original form. Provided you have a data platform infrastructure that has advanced capabilities such as GEMS, field metadata tags can be added on top of the original field names in each dataset which both preserves the fidelity of the original data and provides mapping from terms and field names in the original data to a controlled vocabulary or ontology developed and documented in the context of the project."
+  },
+  {
+    "objectID": "data-synthesis-projects.html#curating-raw-data-in-a-data-synthesis-project",
+    "href": "data-synthesis-projects.html#curating-raw-data-in-a-data-synthesis-project",
+    "title": "9  Data Synthesis Projects #todo - ask Hava for opinions as she is an expert",
+    "section": "9.2 Curating Raw Data in a Data Synthesis Project",
+    "text": "9.2 Curating Raw Data in a Data Synthesis Project\nData Synthesis curation involves ensuring that all datasets are kept in their original form along with their original metadata and links or references to the original source material or the data in the data repository.\n\n9.2.1 Raw Data Repository Standards for Data Synthesis Projects\nYour raw-data repository for Laboratory Projects should include the following:\n\nData from the original sources in its original form, regardless of whether or not that form is in the acceptable standardized format for the data platform. # note that not all platforms require data to be in the same format prior to ingestion. Flexible platforms such as GEMS allow all types of datasets, and then format conversion can be accomplished as part of the scripting process.\nAll metadata associated with original datasets in its original form. This metadata should include links back to the original sources, references, or data repositories.\nProject metadata documentation, including information about data platform capabilities and harmonization procedures. This should include information about any controlled vocabularies or ontologies built or utilized.\n\n\n\n9.2.2 Other considerations #todo\n\ndata sharing agreement for each dataset contributed\nco-authorship guidelines # how far do they go?\nprivate or public options for each dataset"
+  },
+  {
+    "objectID": "data-production.html",
+    "href": "data-production.html",
+    "title": "Data Production",
+    "section": "",
+    "text": "Data production as defined here is the process of moving from raw data to data in a processed form that is usable in analysis. Data production consists of format standardization and Quality Assurance and Quality Control (QAQC)."
+  },
+  {
+    "objectID": "data-production.html#documenting-data-production---standards",
+    "href": "data-production.html#documenting-data-production---standards",
+    "title": "Data Production",
+    "section": "Documenting Data Production - Standards",
+    "text": "Documenting Data Production - Standards\nAs R is the main language of choice in our lab, the default data production documentation standard involves an R project or series of R scripts. These should be stored in the src folder of your project directory and curated according to our lab [R code and project style guidelines]#todo.\nData production documentation should also include metadata for this stage - and could be in the form of part of a project Quarto book published on GitHub Pages. This metadata should document all decisions made in the data production process, the why and how. Due to the detailed nature of many of these decisions they are too much detail for a standard readme file or a project metadata file. However, a Quarto book with sections, chapters, and space to provide R code blocks would be an excellent way to document these decisions.\n\n\n\n\n\n\nRequired Tools - Data Production\n\n\n\n\nR/RStudio\nGoogle Drive"
+  },
+  {
+    "objectID": "standardizing-formats.html",
+    "href": "standardizing-formats.html",
+    "title": "10  Standardizing Formats #todo",
+    "section": "",
+    "text": "The first step in data production is standardization of the formats of raw data. Raw data should be standardized using R scripts. R is now capable enough now to handle both tabular and geospatial data. For raw data archives containing image or video data, these should be converted to our lab standard formats using native tools on Mac such as Preview [need to provide references and how tos here] #todos"
+  },
+  {
+    "objectID": "standardizing-formats.html#jelinski-lab-standard-data-formats",
+    "href": "standardizing-formats.html#jelinski-lab-standard-data-formats",
+    "title": "10  Standardizing Formats #todo",
+    "section": "10.1 Jelinski Lab Standard Data Formats",
+    "text": "10.1 Jelinski Lab Standard Data Formats\n\n10.1.1 Tabular Data\nAll raw tabular data should be converted to .csv format. .csv is a simple text file that allows data to be stored in text form but readable by R, Excel and many other programs as a spreadsheet. In a .csv file, commas separate cells within a row and returns (new lines) indicate a new row. Tabular data in text form with other delimiters (such as tab, space or custom delimiters) can be converted to .csv formats easily in R.\nNote that one disadvantage of .csv formats is that data types which are stored in databases (such as dataframes in R or in other databases) are not retained. The data is text only. For most projects this is not an issue since R will automatically detect data types upon ingestion, but for some specialized projects database to database transfers might be better a better option to retain this information if necessary.\n\n\n10.1.2 Spatial data\nVector data (points, lines and polygons) should be converted to OGC Geopackage format. This can be easily accomplished in the terra package in R.\nRaster data (cell-based information) should be converted to GeoTIFF format.\nNote that these conversions can also occur as part of larger scripts in workflows, but should be documented clearly.\n\n\n10.1.3 Images\nImages should be converted to .jpeg format without compression so that the original image quality is retained. If you are taking pictures on an iPhone, the raw exported format will be Apple’s proprietary .HEIC format which is readable on Apple devices but not Windows devices. .jpeg is currently the most widely used and future proof image format. #todo - add something about RAW formats from DSLRs.\nThese conversions need to occur with a manual workflow using a Native application such as Preview or a proprietary application such as Photoshop.\n\n\n10.1.4 Videos\n#todo - .mpeg format?"
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "8  Summary",
+    "title": "11  Summary",
     "section": "",
     "text": "1 + 1\n\n[1] 2"
   }

@@ -1,4 +1,4 @@
-# Project Setup, Documentation, and "Pre-Data"
+# Project Setup and Documentation
 
 This is the first part of any project, and can begin as soon as you have an idea - in fact, it is completely fine to set up a project that is just an idea, with no content yet. Just going through the setup process makes a project more "real" in your mind, and also gives you a structure to collect thoughts, ideas, and related information for future work, even before you are starting to work on a project in earnest. I've got many directories on my computer that are empty placeholders for wishlist projects years in the future.
 

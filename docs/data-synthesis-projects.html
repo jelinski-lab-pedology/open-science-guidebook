@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Science: Tools Applications, &amp; Workflow - Project Setup and Documentation</title>
+<title>Open Science: Tools Applications, &amp; Workflow - 9&nbsp; Data Synthesis Projects #todo - ask Hava for opinions as she is an expert</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,8 +25,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./para-system.html" rel="next">
-<link href="./intro.html" rel="prev">
+<link href="./data-production.html" rel="next">
+<link href="./review-projects.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Project Setup and Documentation</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Synthesis Projects #todo - ask Hava for opinions as she is an expert</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,7 +100,7 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./project-setup.html" class="sidebar-item-text sidebar-link active">Project Setup and Documentation</a>
+        <a href="./project-setup.html" class="sidebar-item-text sidebar-link">Project Setup and Documentation</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -158,7 +158,7 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data-synthesis-projects.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Synthesis Projects #todo - ask Hava for opinions as she is an expert</span></a>
+  <a href="./data-synthesis-projects.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Synthesis Projects #todo - ask Hava for opinions as she is an expert</span></a>
   </div>
 </li>
     </ul>
@@ -197,7 +197,16 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#project-setup" id="toc-project-setup" class="nav-link active" data-scroll-target="#project-setup">Project Setup</a></li>
+  <li><a href="#pre-data-infrastructure" id="toc-pre-data-infrastructure" class="nav-link active" data-scroll-target="#pre-data-infrastructure"> <span class="header-section-number">9.1</span> Pre-Data Infrastructure</a>
+  <ul class="collapse">
+  <li><a href="#selecting-and-documenting-a-data-platform" id="toc-selecting-and-documenting-a-data-platform" class="nav-link" data-scroll-target="#selecting-and-documenting-a-data-platform"> <span class="header-section-number">9.1.1</span> Selecting and documenting a data platform</a></li>
+  <li><a href="#selecting-and-documenting-data-harmonization-procedures" id="toc-selecting-and-documenting-data-harmonization-procedures" class="nav-link" data-scroll-target="#selecting-and-documenting-data-harmonization-procedures"> <span class="header-section-number">9.1.2</span> Selecting and documenting data harmonization procedures</a></li>
+  </ul></li>
+  <li><a href="#curating-raw-data-in-a-data-synthesis-project" id="toc-curating-raw-data-in-a-data-synthesis-project" class="nav-link" data-scroll-target="#curating-raw-data-in-a-data-synthesis-project"> <span class="header-section-number">9.2</span> Curating Raw Data in a Data Synthesis Project</a>
+  <ul class="collapse">
+  <li><a href="#raw-data-repository-standards-for-data-synthesis-projects" id="toc-raw-data-repository-standards-for-data-synthesis-projects" class="nav-link" data-scroll-target="#raw-data-repository-standards-for-data-synthesis-projects"> <span class="header-section-number">9.2.1</span> Raw Data Repository Standards for Data Synthesis Projects</a></li>
+  <li><a href="#other-considerations-todo" id="toc-other-considerations-todo" class="nav-link" data-scroll-target="#other-considerations-todo"> <span class="header-section-number">9.2.2</span> Other considerations #todo</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -206,7 +215,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Project Setup and Documentation</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Synthesis Projects #todo - ask Hava for opinions as she is an expert</span></h1>
 </div>
 
 
@@ -220,32 +229,53 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>This is the first part of any project, and can begin as soon as you have an idea - in fact, it is completely fine to set up a project that is just an idea, with no content yet. Just going through the setup process makes a project more “real” in your mind, and also gives you a structure to collect thoughts, ideas, and related information for future work, even before you are starting to work on a project in earnest. I’ve got many directories on my computer that are empty placeholders for wishlist projects years in the future.</p>
-<section id="project-setup" class="level2">
-<h2 class="anchored" data-anchor-id="project-setup">Project Setup</h2>
-<p>This includes deciding what constitutes a <strong>“project”</strong> (this seems like it should be an easy thing, but it’s actually very difficult), how to generate a file and folder structure for your project before you even begin that lives and syncs across platforms. This setup is designed to work for all of the project types we deal with regardless of the initial data origin (i.e.&nbsp;field projects, laboratory projects, review or data compilation).</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Required Tools - Project Setup
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<p>Data synthesis projects consolidate published and unpublished data from other scientists and collaborators.</p>
+<section id="pre-data-infrastructure" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="pre-data-infrastructure"><span class="header-section-number">9.1</span> Pre-Data Infrastructure</h2>
+<section id="selecting-and-documenting-a-data-platform" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="selecting-and-documenting-a-data-platform"><span class="header-section-number">9.1.1</span> Selecting and documenting a data platform</h3>
+<p>Because data synthesis projects involve consolidating and wrangling of data from many different sources, it is important to choose a data “platform” that will support consolidation and curation of this data.</p>
+<p>This data platform could be as simple as a well documented folder structure on your local computer, or more complex such as the <a href="https://gems.umn.edu/">UMN GEMS data platform</a>, which provides a workspace for uploading datasets, curating dataset and field metadata, controlled vocabularies and ontologies, and post curation scripting for data harmonization.</p>
+<p>All projects should include a data management plan (as a default you can use our template, developed from this workflow and located here #todo) however, data synthesis projects in particular require significant metadata documentation. As with other project types, this project-level metadata documentation should begin on project creation and continue during the pre-data phase, so that the documentation is well developed prior to data acquisition.</p>
+</section>
+<section id="selecting-and-documenting-data-harmonization-procedures" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="selecting-and-documenting-data-harmonization-procedures"><span class="header-section-number">9.1.2</span> Selecting and documenting data harmonization procedures</h3>
+<p>Data synthesis projects require some level of harmonization that allows comparison of similar data types between diverse datasets. At a high level, this harmonization requires understanding similar fields between different datasets, despite very different data structures and field naming conventions. It is important that this field data curation occurs in conjunction with field and dataset metadata in the original datasets.</p>
+<p>There are two main approaches to data harmonization (may not be using the right terms here #todo):</p>
 <ul>
-<li>A local folder structure on your personal computer</li>
-<li>GitHub/GitHub Desktop</li>
-<li>Google Drive</li>
-<li>Zotero</li>
-<li>Obsidian</li>
-<li>Inkscape</li>
+<li>Pre-ingestion harmonization</li>
+<li>Post-ingestion harmonization</li>
 </ul>
-</div>
-</div>
+<p><em>NOTE: see and cite the work of Kathe Todd-Brown and others here - include Hava’s expertise.</em></p>
+<p>The advantages and disadvantages of each approach are as follows:</p>
+<ul>
+<li><p><em>Pre-ingestion harmonization</em> The advantage of pre-ingestion harmonization is that the datasets are manually placed in a single, easy to work with format. There are major disadvantages though. Fields are renamed from the original source with little to no record or mapping back to the original field in the original source.</p></li>
+<li><p><em>Post ingestion harmonization</em> The advantage of post-ingestion harmonization is that raw datasets are retained on the data platform in their original form. Provided you have a data platform infrastructure that has advanced capabilities such as GEMS, field metadata tags can be added on top of the original field names in each dataset which both preserves the fidelity of the original data and provides mapping from terms and field names in the original data to a controlled vocabulary or ontology developed and documented in the context of the project.</p></li>
+</ul>
+</section>
+</section>
+<section id="curating-raw-data-in-a-data-synthesis-project" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="curating-raw-data-in-a-data-synthesis-project"><span class="header-section-number">9.2</span> Curating Raw Data in a Data Synthesis Project</h2>
+<p>Data Synthesis curation involves ensuring that all datasets are kept in their original form along with their original metadata and links or references to the original source material or the data in the data repository.</p>
+<section id="raw-data-repository-standards-for-data-synthesis-projects" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="raw-data-repository-standards-for-data-synthesis-projects"><span class="header-section-number">9.2.1</span> Raw Data Repository Standards for Data Synthesis Projects</h3>
+<p>Your raw-data repository for Laboratory Projects should include the following:</p>
+<ul>
+<li><p>Data from the original sources in its original form, regardless of whether or not that form is in the acceptable standardized format for the data platform. # note that not all platforms require data to be in the same format prior to ingestion. Flexible platforms such as GEMS allow all types of datasets, and then format conversion can be accomplished as part of the scripting process.</p></li>
+<li><p>All metadata associated with original datasets in its original form. This metadata should include links back to the original sources, references, or data repositories.</p></li>
+<li><p>Project metadata documentation, including information about data platform capabilities and harmonization procedures. This should include information about any controlled vocabularies or ontologies built or utilized.</p></li>
+</ul>
+</section>
+<section id="other-considerations-todo" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="other-considerations-todo"><span class="header-section-number">9.2.2</span> Other considerations #todo</h3>
+<ul>
+<li>data sharing agreement for each dataset contributed</li>
+<li>co-authorship guidelines # how far do they go?</li>
+<li>private or public options for each dataset</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -330,13 +360,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      <a href="./review-projects.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Review Projects #todo</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./para-system.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Overview of the PARA system</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./data-production.html" class="pagination-link">
+        <span class="nav-page-text">Data Production</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

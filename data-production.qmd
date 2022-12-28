@@ -1,0 +1,16 @@
+# Data Production
+
+Data production as defined here is the process of moving from [raw data](@sec-rawdata) to data in a processed form that is usable in analysis. Data production consists of format standardization and Quality Assurance and Quality Control (QAQC).
+
+## Documenting Data Production - Standards
+
+As R is the main language of choice in our lab, the default data production documentation standard involves an R project or series of R scripts. These should be stored in the **src** folder of your project directory and curated according to our lab [R code and project style guidelines]#todo. 
+
+Data production documentation should also include metadata for this stage - and could be in the form of part of a project Quarto book published on GitHub Pages. This metadata should document all decisions made in the data production process, the why and how. Due to the detailed nature of many of these decisions they are too much detail for a standard readme file or a project metadata file. However, a Quarto book with sections, chapters, and space to provide R code blocks would be an excellent way to document these decisions.
+
+::: callout-tip
+## Required Tools - Data Production
+
+-   R/RStudio
+-   Google Drive
+:::

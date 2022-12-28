@@ -1,0 +1,28 @@
+# Standardizing Formats #todo
+
+The first step in data production is standardization of the formats of raw data. Raw data should be standardized using R scripts. R is now capable enough now to handle both tabular and geospatial data. For raw data archives containing image or video data, these should be converted to our lab standard formats using native tools on Mac such as Preview [need to provide references and how tos here] #todos
+
+## Jelinski Lab Standard Data Formats
+
+### Tabular Data
+
+All raw tabular data should be converted to [.csv format](https://en.wikipedia.org/wiki/Comma-separated_values). .csv is a simple text file that allows data to be stored in text form but readable by R, Excel and many other programs as a spreadsheet. In a .csv file, commas separate cells within a row and returns (new lines) indicate a new row. Tabular data in text form with other delimiters (such as tab, space or custom delimiters) can be converted to .csv formats easily in R.
+
+Note that one disadvantage of .csv formats is that data types which are stored in databases (such as dataframes in R or in other databases) are not retained. The data is text only. For most projects this is not an issue since R will automatically detect data types upon ingestion, but for some specialized projects database to database transfers might be better a better option to retain this information if necessary.
+
+### Spatial data
+
+Vector data (points, lines and polygons) should be converted to OGC Geopackage format. This can be easily accomplished in the [terra](https://cran.r-project.org/web/packages/terra/index.html) package in R.
+
+Raster data (cell-based information) should be converted to GeoTIFF format. 
+
+*Note that these conversions can also occur as part of larger scripts in workflows, but should be documented clearly*.
+
+### Images
+
+Images should be converted to .jpeg format without compression so that the original image quality is retained. If you are taking pictures on an iPhone, the raw exported format will be Apple's proprietary .HEIC format which is readable on Apple devices but not Windows devices. .jpeg is currently the most widely used and future proof image format. #todo - add something about RAW formats from DSLRs.
+
+These conversions need to occur with a manual workflow using a Native application such as Preview or a proprietary application such as Photoshop.
+
+### Videos
+#todo - .mpeg format?

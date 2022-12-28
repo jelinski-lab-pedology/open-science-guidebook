@@ -1,0 +1,49 @@
+# Data Synthesis Projects #todo - ask Hava for opinions as she is an expert
+
+Data synthesis projects consolidate published and unpublished data from other scientists and collaborators.
+
+## Pre-Data Infrastructure
+
+### Selecting and documenting a data platform
+
+Because data synthesis projects involve consolidating and wrangling of data from many different sources, it is important to choose a data "platform" that will support consolidation and curation of this data. 
+
+This data platform could be as simple as a well documented folder structure on your local computer, or more complex such as the [UMN GEMS data platform](https://gems.umn.edu/), which provides a workspace for uploading datasets, curating dataset and field metadata, controlled vocabularies and ontologies, and post curation scripting for data harmonization.
+
+All projects should include a data management plan (as a default you can use our template, developed from this workflow and located here #todo) however, data synthesis projects in particular require significant metadata documentation. As with other project types, this project-level metadata documentation should begin on project creation and continue during the pre-data phase, so that the documentation is well developed prior to data acquisition.
+
+### Selecting and documenting data harmonization procedures
+
+Data synthesis projects require some level of harmonization that allows comparison of similar data types between diverse datasets. At a high level, this harmonization requires understanding similar fields between different datasets, despite very different data structures and field naming conventions. It is important that this field data curation occurs in conjunction with field and dataset metadata in the original datasets. 
+
+There are two main approaches to data harmonization (may not be using the right terms here #todo): 
+
+- Pre-ingestion harmonization
+- Post-ingestion harmonization
+
+*NOTE: see and cite the work of Kathe Todd-Brown and others here - include Hava's expertise.*
+
+The advantages and disadvantages of each approach are as follows:
+
+- *Pre-ingestion harmonization* The advantage of pre-ingestion harmonization is that the datasets are manually placed in a single, easy to work with format. There are major disadvantages though. Fields are renamed from the original source with little to no record or mapping back to the original field in the original source.
+
+- *Post ingestion harmonization* The advantage of post-ingestion harmonization is that raw datasets are retained on the data platform in their original form. Provided you have a data platform infrastructure that has advanced capabilities such as GEMS, field metadata tags can be added on top of the original field names in each dataset which both preserves the fidelity of the original data and provides mapping from terms and field names in the original data to a controlled vocabulary or ontology developed and documented in the context of the project.
+
+## Curating Raw Data in a Data Synthesis Project
+
+Data Synthesis curation involves ensuring that all datasets are kept in their original form along with their original metadata and links or references to the original source material or the data in the data repository.
+
+### Raw Data Repository Standards for Data Synthesis Projects
+
+Your raw-data repository for Laboratory Projects should include the following:
+
+- Data from the original sources in its original form, regardless of whether or not that form is in the acceptable standardized format for the data platform. # note that not all platforms require data to be in the same format prior to ingestion. Flexible platforms such as GEMS allow all types of datasets, and then format conversion can be accomplished as part of the scripting process.
+
+- All metadata associated with original datasets in its original form. This metadata should include links back to the original sources, references, or data repositories.
+
+- Project metadata documentation, including information about data platform capabilities and harmonization procedures. This should include information about any controlled vocabularies or ontologies built or utilized.
+
+### Other considerations #todo
+- data sharing agreement for each dataset contributed
+- co-authorship guidelines # how far do they go?
+- private or public options for each dataset

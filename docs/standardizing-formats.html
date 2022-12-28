@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Science: Tools Applications, &amp; Workflow - Project Setup and Documentation</title>
+<title>Open Science: Tools Applications, &amp; Workflow - 10&nbsp; Standardizing Formats #todo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,8 +25,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./para-system.html" rel="next">
-<link href="./intro.html" rel="prev">
+<link href="./summary.html" rel="next">
+<link href="./data-production.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Project Setup and Documentation</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,7 +100,7 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./project-setup.html" class="sidebar-item-text sidebar-link active">Project Setup and Documentation</a>
+        <a href="./project-setup.html" class="sidebar-item-text sidebar-link">Project Setup and Documentation</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -173,7 +173,7 @@ ul.task-list{list-style: none;}
     <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./standardizing-formats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></a>
+  <a href="./standardizing-formats.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></a>
   </div>
 </li>
     </ul>
@@ -197,7 +197,13 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#project-setup" id="toc-project-setup" class="nav-link active" data-scroll-target="#project-setup">Project Setup</a></li>
+  <li><a href="#jelinski-lab-standard-data-formats" id="toc-jelinski-lab-standard-data-formats" class="nav-link active" data-scroll-target="#jelinski-lab-standard-data-formats"> <span class="header-section-number">10.1</span> Jelinski Lab Standard Data Formats</a>
+  <ul class="collapse">
+  <li><a href="#tabular-data" id="toc-tabular-data" class="nav-link" data-scroll-target="#tabular-data"> <span class="header-section-number">10.1.1</span> Tabular Data</a></li>
+  <li><a href="#spatial-data" id="toc-spatial-data" class="nav-link" data-scroll-target="#spatial-data"> <span class="header-section-number">10.1.2</span> Spatial data</a></li>
+  <li><a href="#images" id="toc-images" class="nav-link" data-scroll-target="#images"> <span class="header-section-number">10.1.3</span> Images</a></li>
+  <li><a href="#videos" id="toc-videos" class="nav-link" data-scroll-target="#videos"> <span class="header-section-number">10.1.4</span> Videos</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -206,7 +212,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Project Setup and Documentation</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></h1>
 </div>
 
 
@@ -220,32 +226,31 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>This is the first part of any project, and can begin as soon as you have an idea - in fact, it is completely fine to set up a project that is just an idea, with no content yet. Just going through the setup process makes a project more “real” in your mind, and also gives you a structure to collect thoughts, ideas, and related information for future work, even before you are starting to work on a project in earnest. I’ve got many directories on my computer that are empty placeholders for wishlist projects years in the future.</p>
-<section id="project-setup" class="level2">
-<h2 class="anchored" data-anchor-id="project-setup">Project Setup</h2>
-<p>This includes deciding what constitutes a <strong>“project”</strong> (this seems like it should be an easy thing, but it’s actually very difficult), how to generate a file and folder structure for your project before you even begin that lives and syncs across platforms. This setup is designed to work for all of the project types we deal with regardless of the initial data origin (i.e.&nbsp;field projects, laboratory projects, review or data compilation).</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Required Tools - Project Setup
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>A local folder structure on your personal computer</li>
-<li>GitHub/GitHub Desktop</li>
-<li>Google Drive</li>
-<li>Zotero</li>
-<li>Obsidian</li>
-<li>Inkscape</li>
-</ul>
-</div>
-</div>
+<p>The first step in data production is standardization of the formats of raw data. Raw data should be standardized using R scripts. R is now capable enough now to handle both tabular and geospatial data. For raw data archives containing image or video data, these should be converted to our lab standard formats using native tools on Mac such as Preview [need to provide references and how tos here] #todos</p>
+<section id="jelinski-lab-standard-data-formats" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="jelinski-lab-standard-data-formats"><span class="header-section-number">10.1</span> Jelinski Lab Standard Data Formats</h2>
+<section id="tabular-data" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="tabular-data"><span class="header-section-number">10.1.1</span> Tabular Data</h3>
+<p>All raw tabular data should be converted to <a href="https://en.wikipedia.org/wiki/Comma-separated_values">.csv format</a>. .csv is a simple text file that allows data to be stored in text form but readable by R, Excel and many other programs as a spreadsheet. In a .csv file, commas separate cells within a row and returns (new lines) indicate a new row. Tabular data in text form with other delimiters (such as tab, space or custom delimiters) can be converted to .csv formats easily in R.</p>
+<p>Note that one disadvantage of .csv formats is that data types which are stored in databases (such as dataframes in R or in other databases) are not retained. The data is text only. For most projects this is not an issue since R will automatically detect data types upon ingestion, but for some specialized projects database to database transfers might be better a better option to retain this information if necessary.</p>
+</section>
+<section id="spatial-data" class="level3" data-number="10.1.2">
+<h3 data-number="10.1.2" class="anchored" data-anchor-id="spatial-data"><span class="header-section-number">10.1.2</span> Spatial data</h3>
+<p>Vector data (points, lines and polygons) should be converted to OGC Geopackage format. This can be easily accomplished in the <a href="https://cran.r-project.org/web/packages/terra/index.html">terra</a> package in R.</p>
+<p>Raster data (cell-based information) should be converted to GeoTIFF format.</p>
+<p><em>Note that these conversions can also occur as part of larger scripts in workflows, but should be documented clearly</em>.</p>
+</section>
+<section id="images" class="level3" data-number="10.1.3">
+<h3 data-number="10.1.3" class="anchored" data-anchor-id="images"><span class="header-section-number">10.1.3</span> Images</h3>
+<p>Images should be converted to .jpeg format without compression so that the original image quality is retained. If you are taking pictures on an iPhone, the raw exported format will be Apple’s proprietary .HEIC format which is readable on Apple devices but not Windows devices. .jpeg is currently the most widely used and future proof image format. #todo - add something about RAW formats from DSLRs.</p>
+<p>These conversions need to occur with a manual workflow using a Native application such as Preview or a proprietary application such as Photoshop.</p>
+</section>
+<section id="videos" class="level3" data-number="10.1.4">
+<h3 data-number="10.1.4" class="anchored" data-anchor-id="videos"><span class="header-section-number">10.1.4</span> Videos</h3>
+<p>#todo - .mpeg format?</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -330,13 +335,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      <a href="./data-production.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data Production</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./para-system.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Overview of the PARA system</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

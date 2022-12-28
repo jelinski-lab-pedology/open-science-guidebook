@@ -21,8 +21,8 @@ book:
         - integrating-zotero.qmd
     - part: pre-data-raw-data.qmd #metadata
         - field-projects.qmd
-        #- review-projects.qmd
-        #- data-synthesis-projects.qmd
+        - review-projects.qmd
+        - data-synthesis-projects.qmd
     #- part: data-production.qmd #metadata
         #- pulling-raw-data.qmd
         #- qaqc-data-cleaning.qmd #includes log, includes reps for lab data, flagging samples for rerun

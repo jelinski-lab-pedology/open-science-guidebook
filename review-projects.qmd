@@ -1,0 +1,17 @@
+# Review Projects #todo
+
+The raw data for review projects is literature itself (peer-reviewed, gray or unpublished).
+
+## Pre-Data Infrastructure
+
+### Resources for determining review type and protocol
+
+Should consult with Hava here or ask her to contribute as she has become and expert.
+
+For now just providing a few resources:
+
+-   \[SciSpace Literature Tools Review\] (https://typeset.io/resources/online-tools-for-easy-literature-review/#:\~:text=5%20Tools%20for%20Easy%20Literature,Guides%20%26%20eBooks)
+
+-   [UMN Libraries Systematic Review and Evidence Syntheses Landing Page](https://libguides.umn.edu/c.php?g=1264119&p=9268703)
+
+-   [Gore and Boruff - McGill University, Systematic Reviews, Scoping Reviews, and other Knowledge Syntheses](https://libraryguides.mcgill.ca/knowledge-syntheses#s-lg-box-15608945)
