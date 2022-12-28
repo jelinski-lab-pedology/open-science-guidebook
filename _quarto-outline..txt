@@ -23,10 +23,10 @@ book:
         - field-projects.qmd
         - review-projects.qmd
         - data-synthesis-projects.qmd
-    #- part: data-production.qmd #metadata
+    - part: data-production.qmd #metadata
         #- pulling-raw-data.qmd
         #- qaqc-data-cleaning.qmd #includes log, includes reps for lab data, flagging samples for rerun
-        #- standardized-formats.qmd
+        - standardized-formats.qmd
     #- part: data-analysis-interpretation.qmd #metadata
         #- data-analysis-log.qmd
         #- building-analysis-scripts.qmd
