@@ -1,0 +1,137 @@
+# Jelinski Lab R code Style Guide and Standards
+These main principles are adapted from the [Tidyverse style guide](https://style.tidyverse.org/index.html), which, in turn, was originally adapted from the [Google style guide](https://google.github.io/styleguide/Rguide.html). But now, Google's style guide refers to the Tidyverse style guide!
+
+The Tidyverse style guide is more comprehensive than what is summarized here, but I believe that for day-to-day usage for most graduate students, these main principles address most scenarios.
+
+**Writing code is writing! Bring the care you would take when writing a paper to writing code!**
+
+## Naming things
+Naming things is hard - one of the hardest parts of scripting. Below are the guidelines you should use for naming things in your R code as a memebr of my lab group. These are not absolute rules, but rather guidelines that will ensure all of our code is consistent and is readable by all group members. Here are some general guidelines before I get to the specific styles below. These guidelines are from Robert Martin's [Clean Code: A Handbook of Agile Software Craftsmanship (2009)](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+
+-   **Don't use names of established objects, classes or functions**
+-   **Make Meaningful Distinctions**
+-   **Avoid Redundancy**
+-   **Use pronounceable names**
+-   **Use searchable names**
+-   **Don't be cute**
+-   **Pick one word for an abstract concept and stick to it - i.e. don't use synonyms - instead add a description in the name after that word; i.e. "get_type", "get_value", etc.**
+-   **Don't add gratuitous context or prefixes**
+
+### R scripts
+These files end in .R. They should contain **NO** special characters ```!, @, #, $, %, ^, &, *, (, )``` or spaces. Only lowercase letters (no capital letters), ```-```, and ```_```. Additionally, I *highly* recommend adding numbers to your R scripts within projects (see section X.X, above. This helps both with file name recall and for you and/or a user to understand a sequence for running the scripts (if there is one). Left pad the numbers with a zero to allow you to go up to 99. The "00" script should be reserved for a master script that runs all of the other scripts for a project within it. The name for your script should be descriptive, and preferably 2-4 words in length. *However* if a longer name provides a better description or more comprehensive readability **do not hesitate** to use it!
+```
+# Good
+00_master_script.R
+01_load_baseline_data.R
+
+# Bad 
+00 Master!.R
+01LOAD.R
+```
+
+### Functions
+For functions that *you* write (i.e. private functions), use ```.BigCamelCase```. The camel case clearly differentiates functions from other named things (objects and scripts), and the dot at the beginning clearly identifies the function as a private function, and not one being called from Base R or an existing package.
+
+```
+# Good
+.DoNothingPrivately <- function() {
+  return(invisible(NULL))
+}
+
+# Bad
+do_nothing <- function() {
+  return(invisible(NULL))
+}
+```
+
+R.C. Martin (2009) suggests the following with regard to writing functions. Many of these are useful, some irrelevant in 2023, but all good things to think about if you are writing your own functions:
+-   Functions should be small, less than 20 lines max, and even smaller than that if possible.
+-   Blocks and indenting should be used
+-   Functions should do one thing
+    -   "if a function does only the step that are one level of abstraction below the stated name of the function, then the function does one thing".
+    -   another way "to know that a function is doing more than one thing is if you can extract another function from it with a name that is not merely a restatement of its implementation"
+-   One level of abstraction per function
+    -   what is a "level of abstraction"?
+    -   the stepdown rule - read code from top to bottom
+        -   human readable: to blank then we need to blank, to blank then we need to blank, etc - see page 113
+-   Use Descriptive Names
+-   Try to have two arguments per function max
+
+
+### Objects 
+Object names are assigned within an R script. Similar to script names, they should contain **NO** special characters ```!, @, #, $, %, ^, &, *, (, )``` or spaces. Only lowercase letters (no capital letters), ```-```, and ```_```. Unlike script names, however, they **do not** begin with numbers. The name for your objects should be descriptive, and preferrably 2-4 words in length. *However* if a longer object name provides a better description or more comprehensive readability you may use it! Just be aware there is a dichotomy here - unlike script names, objects tend to be called and referred to multiple times and therefore will show up in your code multiple times. Long and/or tedious object names can be difficult to maintain. So think carefully about these. I think naming objects is the hardest. also, name linear models with a .lm at the end etc. Plots )or saved plot components end in .p
+
+```
+# Good
+pf_binary
+annual_data
+
+# Bad 
+PFbinary
+annual data
+```
+
+## Code length, punctuation, and readability
+### Commas, parentheses, spaces, operators 
+Use commas and parentheses as in normal English. Always use a single space after a comma...
+```
+# Good
+[, 1]
+
+# Bad
+[,1]
+```
+...no spaces before or after (inside or outside) parentheses...
+```
+# Good
+mean(x, f)
+
+# Bad
+mean( x, f )
+```
+...*except* for when ```()``` is used for function arguments.
+```
+# Good
+function(x) {}
+
+# Bad
+function (x) {}
+function(x){}
+```
+
+"Infix" operators (operators typically used between two objects or text strings, i.e. ```(=, ==, +, -, <-, etc.)```) should be surrounded by spaces....
+```
+# Good
+height <- (feet * 12) + inches
+mean(x, na.rm = TRUE)
+
+# Bad
+height<-feet*12+inches
+mean(x, na.rm=TRUE)
+```
+...however, operators with high precedence ```:, ::, :::, $, @, [, [[, ^, etc.``` should never be surrounded by spaces.
+```
+# Good
+sqrt(x^2 + y^2)
+df$z
+x <- 1:10
+
+# Bad
+sqrt(x ^ 2 + y ^ 2)
+df $ z
+x <- 1 : 10
+```
+
+### Line breaks and length
+need to add
+
+## Code sections, comments, fences, folds and scripts.
+- Break your workflow up into numbered scripts. 
+- Within each numbered script, you should have code sections that are fenced off that delineate major sections within that script.
+- Standard for fences is 4 hashes to start followed by 4 hashes i.e.: #### Fence section name ####
+- This ensures foldability, etc. Fenced section names start with a capital letter and are then all lowercase. No period at the end.
+- Each function you write should each be in a single script, unnumbered, but titled by the function name.
+- Each line of a ==comment== should begin with the ==comment== symbol and a single space: `#` then should begin with lowercase, all lowercase, no period at the end. Comments go above the code that they run.
+
+## Examples.
+

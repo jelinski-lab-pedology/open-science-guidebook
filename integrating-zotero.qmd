@@ -1,23 +1,25 @@
 # Setting Up Zotero for Your Project - Early Success with Writing and Reference Management
 
-Our tool of choice for reference management is Zotero because it is open source, free, has excellent functionality, and most importantly integrates deeply with our note taking app of choice, Obsidian. This chapter assumes that you have familiarity with both Zotero. If you don't, check out the [Zotero]#todo chapter in the tools section of this book #todo.
+Our tool of choice for reference management is Zotero because it is open source, free, has excellent functionality, and most importantly integrates deeply with our note taking app of choice, Obsidian. This chapter assumes that you have familiarity with both Zotero. If you don't, check out the \[Zotero\]#todo chapter in the tools section of this book #todo.
 
 ## Zotero Folder Structure for Your Project
 
 There are a few things you should do to setup Zotero to deeply integrate with your project folder structure. Assuming you have at least one project you are working on, your Zotero library should, at a minimum, have the following Collections (i.e. main folders under the Library icon):
 
-- A folder that you will call "000 Inbox". This has three leading zeros to ensure this folder remains at the top of your library regardless of what you name the other folders.
-- Folders that mirror your high-level PARA system#todo folders (i.e. "00-projects", "01-areas", "02-resources","03-archive"). You should then set up a folder (i.e. subcollection) under the 00-projects folder that is named the same as your project directory or repo name (i.e. "M09-permafrost-table-id"). This ensures that you collect relevant references in a folder that has **exactly** the same name as your repo or directory. The key is association, number and name - across apps.
+-   A folder that you will call "000 Inbox". This has three leading zeros to ensure this folder remains at the top of your library regardless of what you name the other folders.
+-   Folders that mirror your high-level PARA system#todo folders (i.e. "00-projects", "01-areas", "02-resources","03-archive"). You should then set up a folder (i.e. subcollection) under the 000-projects folder that is named the same as your project directory or repo name (i.e. "M009-jelinski-permafrost-table-id"). This ensures that you collect relevant references in a folder that has **exactly** the same name as your repo or directory. The key is association, number and name - across apps.
 
 ## Integrating Zotero With Your Browser
+
 You should install the Zotero Connector add-on to your browser of choice ([Chrome](https://chrome.google.com/webstore/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc?hl=en) or [Safari](https://www.zotero.org/support/kb/safari_connector_installation)). Ensure the add-on is enabled - it will show up as a small icon to the right of your address bar.
 
 ## Caching Relevant References As You Go
+
 As you begin your project and go about your other work, you will slowly start to come across relevant referencesor interesting references not relevant to your current project that you would like to keep. This deep integration makes it easy to cache and later find all of the references that you come across prior to the point where you are spending time on dedicated wirting on your manuscript. This allows you to begin building a bibliography before you even begin writing your manuscript in earnest. If you are searching for references online or come across a reference online, simply:
 
-- Make sure Zotero is open
-- Ensure your "000 Inbox" folder is highlighted
-- Click the Zotero add-on icon in your browser to import the full paper reference (note: this also works for websites and books).
-- If you have access to the pdf (i.e. if it is open sources or if you are logged in to University internet or remotely through VPN to the University Libraries), the pdf will also be automatically downloaded and attached to your reference record.
+-   Make sure Zotero is open
+-   Ensure your "000 Inbox" folder is highlighted
+-   Click the Zotero add-on icon in your browser to import the full paper reference (note: this also works for websites and books).
+-   If you have access to the pdf (i.e. if it is open sources or if you are logged in to University internet or remotely through VPN to the University Libraries), the pdf will also be automatically downloaded and attached to your reference record.
 
-*NOTE: I prefer to send everything to the Inbox first and then later go through the inbox to shuffle records to the relevant folders. However, if you choose you could also highlight the relevant folder instead of 000 Inbox and Zotero will send the reference there instead of to your inbox. Note that Zotero allows you to place a single reference in two or more collections or subcollections without duplication of the original file. This is very handy. There are many other excellent Zotero features - not least of which is [Integration with Obsidian]#todo, merging duplicate references, text and area highlighting in PDFs, and sharing reference collections.
+\*NOTE: I prefer to send everything to the Inbox first and then later go through the inbox to shuffle records to the relevant folders. However, if you choose you could also highlight the relevant folder instead of 000 Inbox and Zotero will send the reference there instead of to your inbox. Note that Zotero allows you to place a single reference in two or more collections or subcollections without duplication of the original file. This is very handy. There are many other excellent Zotero features - not least of which is \[Integration with Obsidian\]#todo, merging duplicate references, text and area highlighting in PDFs, and sharing reference collections.

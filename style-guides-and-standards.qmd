@@ -1,0 +1,3 @@
+# Jelinski Lab Style Guides and Standards {#sec-stylestandards}
+
+This section details our current style guides and standards for R scripts, markdown, and tabular data.

@@ -1,6 +1,6 @@
 # Field Projects
 
-Field projects here as projects that require doing fieldwork to collect novel physical samples or morphological data. These projects require travel of some sort to collect raw data. Raw data for these projects typically will consist of physical samples.
+Field projects are defined here as projects that require doing fieldwork to collect novel physical samples or morphological data. These projects require travel of some sort to collect raw data. Raw data for these projects typically will consist of physical samples.
 
 ## Pre-Data Infrastructure
 

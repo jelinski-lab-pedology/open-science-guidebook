@@ -7,10 +7,10 @@ The sections of this book each outline a single component of an integrated workf
 -   Raw Data Curation & Data Production
 -   Data Analysis and Interpretation
 -   Writing and External Products
--   Long-Term Data Archiving and Storage
 -   X Notetaking Strategies
+-   Long-Term Data Archiving and Storage
 
-*Note that although these major components are listed in chronological order, they will likely not necessarily occur in distinct stages in your project. For example data analysis may begin with preliminary data and continue as you are writing drafts of manuscripts AND writing occurs across all of these components - writing actually begins with project setup as you will see. If you have a project idea, you can start writing! Thhis allows you to never start with a blank page*
+*Note that although these major components are listed in chronological order, they will likely not necessarily occur in distinct stages in your project. For example data analysis may begin with preliminary data and continue as you are writing drafts of manuscripts, AND writing occurs across all of these components - writing actually begins with project setup as you will see. If you have a project idea, you can start writing! This allows you to never start with a blank page*
 
 To execute this standardized workflow as described, it will be necessary for you to be familiar with and utilize the following tools:
 

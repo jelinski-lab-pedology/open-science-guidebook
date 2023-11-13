@@ -165,7 +165,7 @@ ul.task-list{list-style: none;}
   </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./data-production.html" class="sidebar-item-text sidebar-link">Data Production</a>
+        <a href="./data-munging.html" class="sidebar-item-text sidebar-link">Data Munging</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -178,9 +178,24 @@ ul.task-list{list-style: none;}
 </li>
     </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a href="./style-guides-and-standards.html" class="sidebar-item-text sidebar-link">Jelinski Lab Style Guides and Standards</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./r-style-guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Jelinski Lab R code Style Guide and Standards</span></a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -239,8 +254,8 @@ ul.task-list{list-style: none;}
 </header>
 
 <p>This workflow is designed around discrete units of work called projects and utilizes Tiago Forte’s PARA file structure and organization. The PARA system (Projects, Areas, Resources, and Archive) is an excellent place to start for organizing your files - if you don’t have strong feelings about how your work files are organized on your computer, I <em>highly</em> suggest starting with this. If you do have strong feelings, you can always adapt the system to something that works for you. Utilizing this system doesn’t necessarily commit you to going back and re-organizing all of your work files on your computer. Just start now, and build as you go and work on new projects. As you have time in the future, you can always go back and fit your previous work into this structure. <em>However - see my notes on things to watch for when you go back to “refactor” your files and folder structure.</em></p>
-<p>The most important thing is to <strong>start now; start today</strong>.</p>
-<p>The second most important thing is to use the same structure <em>across apps, platforms, and languages</em>, which will allow deep integration and ensure you always know where everything is. You will spend less time trying to find for example, a small test R script you wrote last year or that interesting thing you read 18 months (or 2 months!) ago that was related to this project.</p>
+<p>The most important thing is to <strong>start now; start today, with the project you are working on</strong>.</p>
+<p>The second most important thing is to use the same structure <em>across apps, platforms, and languages</em>, which will allow deep integration and ensure you always know where everything is. You will spend less time trying to find for example, a small test R script you wrote last year or that interesting thing you read 18 months (or 2 months!) ago that was related to this project. The PARA system also explicitly focuses attention on those units of work (i.e.&nbsp;Projects) that are the most critical (in an R1 institution these would be manuscripts and proposals - even for us teaching faculty!).</p>
 <section id="the-para-system-in-practice" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="the-para-system-in-practice"><span class="header-section-number">1.1</span> The PARA system in practice</h2>
 <p>Tiago Forte’s PARA acronym stands for: Projects, Areas, Resources, and Archive. This system is not strictly hierarchical, but each category from front to back in PARA is given precedence over the last. That is because the underlying philosophy is that projects should produce end outputs or deliverables. Things that are not yet projects, or are larger than a single project are more nebulous, <strong>but not any less valuable</strong>.</p>
@@ -252,45 +267,77 @@ ul.task-list{list-style: none;}
 <section id="defining-projects---how-to-determine-if-something-is-a-project" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="defining-projects---how-to-determine-if-something-is-a-project"><span class="header-section-number">1.2.1</span> Defining Projects - How to Determine if Something is a Project</h3>
 <p>This seems like a trivial question but defining project boundaries in research can be difficult. Where does one project end and another begin? Does a project include multiple sub projects?</p>
-<p><strong>A project is something you are involved in that has a discrete, definable end state or product</strong>. Note that our definition of projects here means they are <strong>flat</strong>. There should not be multiple projects nested under other projects. Each project is a discrete entity - this alings with GitHub repository organization (as we will see in future chapters), which allows <strong>deep integration</strong>. In our line of work, examples would be:</p>
+<p><strong>A project is something you are involved in that has a discrete, definable end state or product</strong>. Note that our definition of projects here means they are <strong>flat</strong>. There should not be multiple projects nested under other projects. Each project is a discrete entity - this aligns with GitHub repository organization (as we will see in future chapters), which allows <strong>deep integration</strong>. In our line of work, examples would be:</p>
 <ul>
 <li><p>A thesis <strong>chapter</strong>; see below for why a thesis or dissertation itself is actually larger than a Project - it is an Area</p></li>
 <li><p>A manuscript</p></li>
-<li><p>A grant <em>might</em> be a project, but is usually better defined as an Area (because these days all grants are collaborative) with multiple projects underneath. Also, because most grants actually have multiple end products such as reports and manuscripts.</p></li>
-<li><p>Reports to stakeholders on unpublished data.</p></li>
-<li><p>X Are conference presentations nested in here? No - they are not projects but nested under projects.</p></li>
-<li><p>X Photos are nested and linked to projects in the GitHub readme file</p></li>
+<li><p>A proposal</p></li>
+<li><p>Conference presentations and invited lectures (one-time - not recurring teaching responsibilities)</p></li>
+<li><p>Reports to stakeholders on unpublished data. NOTE: grant reports (as addressed below) are not projects, but belong in areas with grants.</p></li>
+<li><p>NOTE: A grant is best defined as an Area (because these days all grants are collaborative) with multiple projects underneath. Also, because most grants actually have multiple end products such as reports and manuscripts.</p></li>
 </ul>
 </section>
 <section id="naming-projects" class="level3" data-number="1.2.2">
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="naming-projects"><span class="header-section-number">1.2.2</span> Naming Projects</h3>
-<p>This is a general style guide for naming projects (in the context of files or folder structures). Projects may have very long actual names (or you may not even know what, exactly the name of your project or project idea will eventually be). This doesn’t matter for the purposes of project setup. For now, we just need a two to three word abbreviated title for the project that we will use in our folder structure. For example, I am working on a manuscript called “Techniques for Field Identification of the Permafrost Table” - but the three words in the project name in my folder structure are: permafrost, table, ID. Here is a style guide for naming your projects:</p>
+<p>This is a general style guide for naming projects (in the context of files or folder structures). Projects may have very long actual names (or you may not even know what, exactly the name of your project or project idea will eventually be). This doesn’t matter for the purposes of project setup. For now, we just need a two to four word abbreviated title for the project that we will use in our folder structure.</p>
+<section id="naming-manuscripts---standardized-with-unique-ids-as-these-will-become-github-repos" class="level4" data-number="1.2.2.1">
+<h4 data-number="1.2.2.1" class="anchored" data-anchor-id="naming-manuscripts---standardized-with-unique-ids-as-these-will-become-github-repos"><span class="header-section-number">1.2.2.1</span> Naming Manuscripts - standardized with unique IDs as these will become GitHub repos</h4>
+<p>All manuscripts (following project setup) will eventually have a GitHub repo which is built from the <a href="https://github.com/jelinski-lab-pedology/MXXX-project-template">jelinski-lab-pedology-MXXX-project-template</a> repo, and therefore coordinated and standardized naming is essential. Here is a style guide for naming your projects:</p>
 <ol type="1">
 <li><p>Use all lowercase letters and short dashes instead of spaces.</p></li>
-<li><p>Projects should be designated as M (for manuscript, including thesis chapters, which should each be a publishable unit), P (for proposal), or C (for communications such as reports) depending on the type of the end output.</p></li>
-<li><p>Projects should be given a two digit number (with a leading zero for any project numbers under 10) - these are just given in sequence as you create projects - so your first project is 01 - <em>the order doesn’t matter</em>.</p></li>
-<li><p>Projects should have a unique two to three word abbreviated name that is different from other projects you are working on.</p></li>
+<li><p>Manuscripts should be designated as M (for manuscript, including thesis chapters, which should each be a publishable unit).</p></li>
+<li><p>Projects should then be given a three digit number (with two leading zeros for any project numbers under 100) - these are just given in sequence as we create projects - <em>the order doesn’t matter</em>. **If you are in my lab group*, please obtain a new project ID number by adding your project as a new row to <a href="https://github.com/orgs/jelinski-lab-pedology/projects/1"><span class="citation" data-cites="jelinski-lab-project-registry">(</span></a><a href="#ref-jelinski-lab-project-registry" role="doc-biblioref"><strong>jelinski-lab-project-registry?</strong></a>). Simply add a row with the next number in sequence (i.e.&nbsp;if the last registered project is M059-jelinski-permafrost-table-id, then your project should be M060-).</p></li>
+<li><p>Project numbers are followed by the last name of the project lead.</p></li>
+<li><p>Then all projects should have a 2-4 word descriptive title (note - spend at least a bit of time thinking about this as this is what will be used on all other platforms (your personal computer, GitHub, GoogleDrive, etc…) as your project name.</p></li>
 </ol>
-<p>Your final project name is a combination of these three components as follows. Lets say I wanted to create a project structure for the “Techniques for Field Identification of the Permafrost Table” manuscript I am working on, and lets say it is the 9th project in my directory.</p>
+<p>Your final project name is a combination of components 2 to 5 as follows: Lets say I wanted to create a project structure for the “Techniques for Field Identification of the Permafrost Table” manuscript I am working on, and lets say it is the 59th project in the registry.</p>
 <p>My project name is then TypeNumber-Word1-Word2-Word3. So, the project name for my manuscript would be:</p>
-<p><strong>M09-permafrost-table-ID</strong></p>
+<p><strong>M059-jelinski-permafrost-table-ID</strong></p>
+</section>
+<section id="naming-proposals" class="level4" data-number="1.2.2.2">
+<h4 data-number="1.2.2.2" class="anchored" data-anchor-id="naming-proposals"><span class="header-section-number">1.2.2.2</span> Naming Proposals</h4>
+<p>All lab-wide proposals (following project setup) will eventually have a GitHub repo which is built from the <a href="https://github.com/jelinski-lab-pedology/MXXX-project-template">jelinski-lab-pedology-MXXX-project-template</a> repo, and therefore coordinated and standardized naming is essential. Here is a style guide for naming your projects:</p>
+<p>Proposals should be designated PL or PI (for proposal lab or proposal individual (see below)) and numbered by year. If the proposal is awarded then the entire proposal folder is copied to a grants folder in Areas (see below) with the same number. Group-wide grants (i.e.&nbsp;that Nic writes) start with the big PL label. Individual grants (student grants or personal applications) get a PI label so they do not conflict. Basically Nic is the only one who creates group proposal projects that are registered on the <a href="https://github.com/orgs/jelinski-lab-pedology/projects/1"><span class="citation" data-cites="jelinski-lab-project-registry">(</span></a><a href="#ref-jelinski-lab-project-registry" role="doc-biblioref"><strong>jelinski-lab-project-registry?</strong></a>). Your proposals (which should start with PI) can have your own numbers, starting with 01).</p>
+<p>Proposal names begin with PL or PI, then add the two digit year, and a unique two digit proposal ID. For numbers less than 10, pad to the left with a zero. Then, add your name, the name of the funder, and a short two to four word descriptive title.</p>
+<p>Examples: - PL23-05-jelinski-maelc-soil-texture - PI23-01-ainuddin-cogs-travel-grant</p>
+</section>
+<section id="naming-conference-presentations-and-lectures" class="level4" data-number="1.2.2.3">
+<h4 data-number="1.2.2.3" class="anchored" data-anchor-id="naming-conference-presentations-and-lectures"><span class="header-section-number">1.2.2.3</span> Naming Conference Presentations and Lectures</h4>
+<p>Conference presentations and invited lectures do not need to be named and coordinated across all lab members, so ID numbers do not need to be unique. Many conference presentations may eventually end up in manuscript repos if a published manuscript presents the data.</p>
+<p>Conference presentations or invited lectures begin with C or L, followed by the two digit year, person giving the presentation, conference or meeting name, and two to four word descriptive name.</p>
+<p>Examples: - C22-03-jelinski-sssa-cryoturbation-review - L23-01-jelinski-waterresources-soil-landscape-health</p>
+</section>
 </section>
 </section>
 <section id="what-is-an-area-how-should-i-name-my-areas" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="what-is-an-area-how-should-i-name-my-areas"><span class="header-section-number">1.3</span> What is an Area? How should I name my Areas?</h2>
 <section id="defining-areas---how-to-determine-if-something-is-an-area" class="level3" data-number="1.3.1">
 <h3 data-number="1.3.1" class="anchored" data-anchor-id="defining-areas---how-to-determine-if-something-is-an-area"><span class="header-section-number">1.3.1</span> Defining Areas - How to Determine if Something is an Area</h3>
-<p>Areas are larger and more nebulous to define than projects, and they are also recurring and don’t necessarily have an endpoint (although they might have milestones or deliverables nested within them). The following are examples of Areas:</p>
+<p>Areas are larger and more nebulous to define than projects, and they are also often recurring and don’t necessarily have an endpoint (although they might have milestones or deliverables nested within them or an end date). The following are examples of Areas:</p>
 <ul>
-<li>Teaching a course.</li>
-<li>Grants. Although grants do have a definable end state, they should still be areas because they are highly collaborative and typically have multiple projects under them.</li>
-<li>Annual reviews or summaries</li>
-<li>X Other examples?</li>
+<li>Teaching a course or invited lectures.</li>
+<li>Grants (including grant reports). Although grants do have a definable end date, they should still be areas because they are highly collaborative and typically have multiple projects under them. Grants typically end with a whimper and not a bang so are best defined as areas. Projects end with a bang!</li>
+<li>Service</li>
+<li>Employment related items such as annual reviews or summaries</li>
 </ul>
 </section>
 <section id="naming-areas" class="level3" data-number="1.3.2">
 <h3 data-number="1.3.2" class="anchored" data-anchor-id="naming-areas"><span class="header-section-number">1.3.2</span> Naming Areas</h3>
-<p>Area names can be a bit more general than project names. They can also be hierarchical, but they should still be numbered. A01-teaching is an area. Within that is a specific course, which would also have its own folder. “A01-teaching/umn-soil-2125”, finally a syllabus project would nest under the area: “A01-teaching/umn-soil-2125/syllabus”. Note that thise would not get it’s own project in the PARA method because a course syllabus could be recurring. Grants also get areas.</p>
+<p>Area names can be a bit more general than project names and (with the exception of grants) they are more personal so do not need to be registered or have a GitHub repository (although they certainly can if it makes sense).</p>
+<section id="naming-grants" class="level4" data-number="1.3.2.1">
+<h4 data-number="1.3.2.1" class="anchored" data-anchor-id="naming-grants"><span class="header-section-number">1.3.2.1</span> Naming Grants</h4>
+<p>All lab-wide proposals (following project setup) which are funded become grants. The contents of the proposal folder are copied into Areas and the name remains the same except the PL or PI is removed and replaced with G. Grants should also eventually have a GitHub repo which is built from the <a href="https://github.com/jelinski-lab-pedology/MXXX-project-template">jelinski-lab-pedology-MXXX-project-template</a> repo, and therefore coordinated and standardized naming is essential. Here is a style guide for naming your projects: <em>NOTE - need to create project folder/repo template for grants</em></p>
+</section>
+<section id="naming-teaching-foldersrepositories" class="level4" data-number="1.3.2.2">
+<h4 data-number="1.3.2.2" class="anchored" data-anchor-id="naming-teaching-foldersrepositories"><span class="header-section-number">1.3.2.2</span> Naming Teaching Folders/Repositories</h4>
+<p>Teaching folder should start with a T and then the two digit year followed by the course number and semester. Teaching folders may or may not have an associated GitHub repo - they should definitely have a Google Drive folder/archive of the same name. <em>NOTE - need to create project folder template for teaching?</em></p>
+<p>Examples: - T23-soil2125-spring</p>
+</section>
+<section id="naming-service-foldersrepositories" class="level4" data-number="1.3.2.3">
+<h4 data-number="1.3.2.3" class="anchored" data-anchor-id="naming-service-foldersrepositories"><span class="header-section-number">1.3.2.3</span> Naming Service Folders/Repositories</h4>
+<p>Service obligations are personal and therefore do not need to be coordinated across lab members. As service obligations can stretch across many years, these are not labelled by year - simply sequentially.</p>
+<p>Examples: - S07-cfans-uprc</p>
+</section>
 </section>
 </section>
 <section id="what-is-a-resource-how-should-i-name-my-resources" class="level2" data-number="1.4">
@@ -307,7 +354,7 @@ ul.task-list{list-style: none;}
 </section>
 <section id="naming-resources" class="level3" data-number="1.4.2">
 <h3 data-number="1.4.2" class="anchored" data-anchor-id="naming-resources"><span class="header-section-number">1.4.2</span> Naming Resources</h3>
-<p>Resource names can also be quite general and can also be numbered. They should start with “R”. An example would be “R01-accounting”, which could include a note that had all of the EFS strings you use, etc.</p>
+<p>Resource names can also be quite general and can also be numbered. They should start with “R”. An example would be “R01-accounting”, which could include a note that had all of the EFS strings you use, etc. Resource folder should be best thought of as tags perhaps? <em>NOTE: how to deal with shared resources on Google Drive or GitHub? Need to have a resource registry to parallel the project registry? YES</em></p>
 </section>
 </section>
 <section id="what-is-the-archive" class="level2" data-number="1.5">
@@ -322,37 +369,57 @@ ul.task-list{list-style: none;}
 <ul>
 <li>/00-projects
 <ul>
-<li>/M03-nayabeda-P</li>
-<li>/M04-pb-distributions</li>
-<li>/M05-platy-e-horizons</li>
-<li>/M06-cryoturbation-review</li>
-<li>/M07-gelisol-classification-change</li>
-<li>/M08-cold-soils-chapter</li>
-<li>/M09-permafrost-table-id</li>
+<li>/01-manuscripts
+<ul>
+<li>/M003-jelinski-nayabeda-P</li>
+<li>/M004-jelinski-pb-distributions</li>
+<li>/M005-jelinski-platy-e-horizons</li>
+<li>/M020-jelinski-cold-soils-chapter</li>
+<li>/M059-jelinski-permafrost-table-id</li>
+</ul></li>
+<li>/02-proposals
+<ul>
+<li>/PL23-01-jelinski-nrcs-urban-soil-mapping</li>
+<li>/PL23-03-jelinski-transtlantic-permafrost-thaw</li>
+</ul></li>
+<li>/03-conferences
+<ul>
+<li>/C22-04-jelinski-sssa-cryoturbation-review</li>
+</ul></li>
 </ul></li>
 <li>/01-areas
 <ul>
-<li>/A01-teaching
+<li>/01-grants
 <ul>
-<li>/umn-soil-2125
+<li>/G23-03-jelinski-nrcs-urban-soil-mapping</li>
+<li>/G23-08-jelinski-maelc-soil-texture</li>
+</ul></li>
+<li>/02-teaching
 <ul>
-<li>/syllabus</li>
+<li>/T23-soil2125-spring</li>
+<li>/T23-laas5101-spring</li>
+</ul></li>
+<li>/03-personnel
+<ul>
+<li>/undergraduate-students
+<ul>
+<li>jones-ben</li>
+</ul></li>
+<li>/graduate-students
+<ul>
+<li>lohese-al</li>
+</ul></li>
+<li>/staff
+<ul>
+<li>labine-kat</li>
 </ul></li>
 </ul></li>
-<li>/A02-editing
+<li>/04-service
 <ul>
-<li>/permafrost-periglacial-processes</li>
+<li>/S12-editing-ppp</li>
+<li>/S23-cfans-uprc</li>
 </ul></li>
-<li>/A03-student-support
-<ul>
-<li>/undergrad-advising</li>
-<li>/recommendation-letters</li>
-</ul></li>
-<li>/A04-grants
-<ul>
-<li>/nrcs-aksdb</li>
-</ul></li>
-<li>/A05-general-accounting</li>
+<li>/05-general-accounting</li>
 </ul></li>
 <li>/02-resources
 <ul>
@@ -362,22 +429,21 @@ ul.task-list{list-style: none;}
 </ul></li>
 <li>/03-archive
 <ul>
-<li>/M01-crb-gelisols</li>
-<li>/M02-us-eroded-soils</li>
+<li>/M001-jelinski-crb-gelisols</li>
+<li>/M002-jelinski-us-eroded-soils</li>
 </ul></li>
 </ul></li>
 </ul>
-<p><em># note that presentations go in the project or area subdirectory that they are associated with. Presentation folders should start with “P0X” and also include the year and venue. So if I gave a presentation at the Soil Science Sciety of America meetings in 2017 on a particular project, and it was the first presentation that I gave under that project, my subdirectory containing all of the relevant things for that presentation would be “P01-2017-SSSA”</em></p>
 </section>
 <section id="why-do-this" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="why-do-this"><span class="header-section-number">1.7</span> Why do this?</h2>
-<p>At this point you are thinking this seems overly complicated. Why should I bother doing this, and why set up an unneccessarily strange and “computer” looking folder structure when I can just have folders named like “My Soil Project 2018”? I know what that is and I only have one project right now anyway…</p>
-<p>If you are early in your career, this may seem unneccessary. But I can <em>promise</em> you this is actually the perfect time to start. This folder structure allows you to do four things:</p>
+<p>At this point you might be thinking this seems overly complicated. Why should I bother doing this, and why set up an unneccessarily strange and “computer” looking folder structure when I can just have folders named like “My Soil Project 2018”? I know what that is and I only have one project right now anyway…</p>
+<p>If you are early in your career, this may seem unneccessary. But I can <em>promise</em> you this is actually the perfect time to start. This folder structure allows you to do five things:</p>
 <ul>
-<li>create a publicly available repository out of any one of your directories at anytime with little to no work</li>
+<li>create a publicly available repository out of any one of your project directories at anytime with little to no work</li>
 <li>share your folder with anyone in our lab group (or anyone who reads this workflow document) who with little further direction will be able to understand your files and where to locate things</li>
 <li>maintain an increasingly complex and growing list of projects and areas as you move forward in your career with little to no headache</li>
-<li>spend little to no time finding exactly what you are looking for. As you grow this system, the numbers associated with particular projects will become secondhand nature - “oh that manuscript is M07”.</li>
+<li>spend little to no time finding exactly what you are looking for. As you grow this system, the numbers associated with particular projects will become secondhand nature - “oh that manuscript is M007”.</li>
 <li>as you complete projects or certain areas are no longer relevant to your job, you can move whole folders into the archive without compromising your ability to find things. Note, in the example above, how two manuscript folders (M01 and M02) have been moved to the archive. They retain the numbers I associated with them when I was working on them.</li>
 </ul>
 

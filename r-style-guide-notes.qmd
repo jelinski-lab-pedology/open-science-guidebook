@@ -1,0 +1,92 @@
+# R Script and R Project Stle Guide - Jelinski Lab
+
+This style guide is for use in Jelinski Lab projects requiring and maintaining R scripts. It is adapted from the following sources: - [Google's R Style Guide](https://google.github.io/styleguide/Rguide.html) - Robert Martin's Clean Code: A Handbook of Agile Software Craftsmanship (2009)
+
+## General Considerations (from Martin, 2009)
+
+-   Need to get stuff from the first part of the book
+-   Writing code is writing! Bring the care you would take when writing a paper to writing code.
+
+### Names of things
+
+-   **Use intention revealing names** + **Naming is hard**
+    -   Examples
+-   **Don't use names of established objects, classes or functions**
+-   **Make Meaningful Distinctions**
+-   **Avoid Redundancy**
+-   **Use pronounceable names**
+-   **Use searchable names**
+-   **Don't be cute**
+-   **Pick one word for an abstract concept and stick to it - i.e. don't use synonyms - instead add a description in the name after that word; i.e. "get_type", "get_value", etc.**
+-   **Don't add gratuitous context or prefixes**
+
+### Functions
+
+-   Functions should be small, less than 20 lines max, and even smaller than that if possible
+-   Blocks and indenting
+-   Functions should do one thing
+    -   "if a function does only the step that are one level of abstraction below the stated name of the function, then the function does one thing".
+    -   another way "to know that a function is doing more than one thing is if you can extract another function from it with a name that is not merely a restatement of its implementation"
+-   One level of abstraction per function
+    -   what is a "level of abstraction"?
+    -   the stepdown rule - read code from top to bottom
+        -   human readable: to blank then we need to blank, to blank then we need to blank, etc - see page 113
+-   Use Descriptive Names
+-   Try to have two arguments per function max -
+
+#### Building in error codes #todo
+
+-   need to do more work on this but "Prefer exceptions to returning error codes"
+
+## \## Comments
+
+## R Project Structure - Directory
+
+## Files
+
+### R Scripts
+
+-   Text files containing R code should be named .R and be numbered in the order that they should be run, with a zero padded on the left. Names should be decsriptive - it is OK if they are long. Names should contain no spaces - use "-". Do not capitalize any words. *Note that while you are writing code for a project it can be hard to know what order the functions or operations you are writing should be run - nevertheless, there are ways that you can number your scripts as you develop your project to keep them organized - see section #todo on easy strategies for doing this.*
+
+Example: 01-import-and-pre-process-spatial-data.R
+
+-   Section comments: Think of a single .R file as a human readable document. Break up code into clearly defined sections (think of these as paragraphs) with the following format of comment blocks. Since this is not code (it is a comment), you can use capital letters and spaces.
+
+################################################## 
+
+\### Pre-Processs Elevation Raster \##################################################
+
+-   Line level comments: Leave comments on individual lines as follows. These comments should come before the code it describes.
+
+\# Load data ---------------------------
+
+-   All packages required to run the script should be loaded using library calls at the top (beginning) of the script.
+
+## Syntax
+
+### Variable Names
+
+-   Variable names should be very descriptive. A long descriptive name is much better than a short ambiguous name. They should not contain the names of variable or data types, such as "raster" or "variable1". Resist the temptation to create new ambiguous variables simply by adding numbers in sequence (i.e. a1, a2, a3, etc). Names should be all lowercase, with any words separated by an underscore (\_).
+
+    -   Bad:
+        -   d
+        -   a2
+        -   raster
+    -   Good:
+        -   natali_permafrost_depth_2018
+        -   infews_soil
+
+## Project Setup
+
+This includes deciding what constitutes a **"project"** (this seems like it should be an easy thing, but it's actually very difficult), how to generate a file and folder structure for your project before you even begin that lives and syncs across platforms. This setup is designed to work for all of the project types we deal with regardless of the initial data origin (i.e. field projects, laboratory projects, review or data compilation).
+
+::: callout-tip
+## Required Tools - Project Setup
+
+-   A local folder structure on your personal computer
+-   GitHub/GitHub Desktop
+-   Google Drive
+-   Zotero
+-   Obsidian
+-   Inkscape
+:::

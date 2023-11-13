@@ -165,7 +165,7 @@ ul.task-list{list-style: none;}
   </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./data-production.html" class="sidebar-item-text sidebar-link">Data Production</a>
+        <a href="./data-munging.html" class="sidebar-item-text sidebar-link">Data Munging</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -178,9 +178,24 @@ ul.task-list{list-style: none;}
 </li>
     </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a href="./style-guides-and-standards.html" class="sidebar-item-text sidebar-link">Jelinski Lab Style Guides and Standards</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./r-style-guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Jelinski Lab R code Style Guide and Standards</span></a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -197,7 +212,7 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#readme.txt-and-project-metadata" id="toc-readme.txt-and-project-metadata" class="nav-link active" data-scroll-target="#readme.txt-and-project-metadata"> <span class="header-section-number">3.1</span> readme.txt and Project Metadata</a></li>
+  <li><a href="#readme.md-and-project-metadata" id="toc-readme.md-and-project-metadata" class="nav-link active" data-scroll-target="#readme.md-and-project-metadata"> <span class="header-section-number">3.1</span> readme.md and Project Metadata</a></li>
   <li><a href="#suggested-template" id="toc-suggested-template" class="nav-link" data-scroll-target="#suggested-template"> <span class="header-section-number">3.2</span> Suggested Template</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"> <span class="header-section-number">3.3</span> References</a></li>
   </ul>
@@ -222,10 +237,10 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<section id="readme.txt-and-project-metadata" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="readme.txt-and-project-metadata"><span class="header-section-number">3.1</span> readme.txt and Project Metadata</h2>
-<p>Writing in your project actually begins with adding content to the readme.txt file. This is the human-readable part of your project metadata, and should be as descriptive and narrative as possible.</p>
-<p>The readme is arguably one of the most important features of your entire project. It forms a cornerstone of the metadata catalog for the entire project <em>see metadata section #todo and what is metadata #todo and metadata components #todo</em>. The readme should always be in plain text .txt format so that anyone on any system can read it and it is as futureproof as possible. Spending time on your readme file is extremely important:</p>
+<section id="readme.md-and-project-metadata" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="readme.md-and-project-metadata"><span class="header-section-number">3.1</span> readme.md and Project Metadata</h2>
+<p>Writing in your project actually begins with adding content to the readme.md file. This is the human-readable part of your project metadata, and should be as descriptive and narrative as possible.</p>
+<p>The readme is arguably one of the most important features of your entire project. It forms a cornerstone of the metadata catalog for the entire project <em>see metadata section #todo and what is metadata #todo and metadata components #todo</em>. The readme should always be in plain text .txt or .md format so that anyone on any system can read it and it is as futureproof as possible. Spending time on your readme file is extremely important:</p>
 <ul>
 <li>It is the first writing you will do on your project and helps you to describe at a high level what your project is about</li>
 <li>It is the file that tells everyone the who, what, when where, why, and how of this project:
@@ -238,7 +253,7 @@ ul.task-list{list-style: none;}
 <li>how should I use these project files; what are the file formats, what programs do I need to run or access them; how were these files created and using what tools?</li>
 </ul></li>
 </ul>
-<p>A readme is a living document. You should begin any project with a draft readme, which, provided you use this workflow and file structure can be mostly copied from a suggested template located in this section. However, as your project grows and changes, your readme should be updated. Be as thorough as possible. Note that this is a project level readme. Although not required, you can consider including sub readmes at within multipl subfolders where necessary. Conversely, you can create a project level book in Quarto that contains all readmes and documentation (see section X). <em>More information on how to use and write a readme in section X</em>.</p>
+<p>A readme is a living document. You should begin any project with a draft readme, which, provided you use this workflow and file structure can be mostly copied from a suggested template located in this section. However, as your project grows and changes, your readme should be updated. Be as thorough as possible. Note that this is a project level readme. Although not required, you can consider including sub readmes within multiple subfolders where necessary. Conversely, you can create a project level book in Quarto that contains all readmes and documentation (see section X). <em>More information on how to use and write a readme in section X</em>.</p>
 </section>
 <section id="suggested-template" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="suggested-template"><span class="header-section-number">3.2</span> Suggested Template</h2>

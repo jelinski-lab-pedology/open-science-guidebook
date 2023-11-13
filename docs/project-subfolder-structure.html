@@ -165,7 +165,7 @@ ul.task-list{list-style: none;}
   </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./data-production.html" class="sidebar-item-text sidebar-link">Data Production</a>
+        <a href="./data-munging.html" class="sidebar-item-text sidebar-link">Data Munging</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -178,9 +178,24 @@ ul.task-list{list-style: none;}
 </li>
     </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a href="./style-guides-and-standards.html" class="sidebar-item-text sidebar-link">Jelinski Lab Style Guides and Standards</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./r-style-guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Jelinski Lab R code Style Guide and Standards</span></a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -197,21 +212,25 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#example-standardized-subfolder-structure-for-a-project" id="toc-example-standardized-subfolder-structure-for-a-project" class="nav-link active" data-scroll-target="#example-standardized-subfolder-structure-for-a-project"> <span class="header-section-number">2.1</span> Example Standardized Subfolder Structure for a Project</a></li>
-  <li><a href="#what-do-each-of-these-folders-mean-and-what-should-i-put-in-them" id="toc-what-do-each-of-these-folders-mean-and-what-should-i-put-in-them" class="nav-link" data-scroll-target="#what-do-each-of-these-folders-mean-and-what-should-i-put-in-them"> <span class="header-section-number">2.2</span> What Do Each of These Folders Mean and What Should I Put in Them?</a>
+  <li><a href="#registering-a-unique-project-id-on-jelinski-lab-project-registry" id="toc-registering-a-unique-project-id-on-jelinski-lab-project-registry" class="nav-link active" data-scroll-target="#registering-a-unique-project-id-on-jelinski-lab-project-registry"> <span class="header-section-number">2.1</span> Registering a unique project ID on <span class="citation" data-cites="jelinski-lab-project-registry">(<span><strong>jelinski-lab-project-registry?</strong></span>)</span></a></li>
+  <li><a href="#cloning-the-template-to-your-personal-github-page" id="toc-cloning-the-template-to-your-personal-github-page" class="nav-link" data-scroll-target="#cloning-the-template-to-your-personal-github-page"> <span class="header-section-number">2.2</span> Cloning the template to your personal GitHub page</a></li>
+  <li><a href="#rename-the-template-repo" id="toc-rename-the-template-repo" class="nav-link" data-scroll-target="#rename-the-template-repo"> <span class="header-section-number">2.3</span> Rename the template repo</a></li>
+  <li><a href="#default-repo-directory-and-subdirectory-structure" id="toc-default-repo-directory-and-subdirectory-structure" class="nav-link" data-scroll-target="#default-repo-directory-and-subdirectory-structure"> <span class="header-section-number">2.4</span> Default repo directory and subdirectory structure</a></li>
+  <li><a href="#what-do-each-of-these-folders-mean-and-what-should-i-put-in-them" id="toc-what-do-each-of-these-folders-mean-and-what-should-i-put-in-them" class="nav-link" data-scroll-target="#what-do-each-of-these-folders-mean-and-what-should-i-put-in-them"> <span class="header-section-number">2.5</span> What Do Each of These Folders Mean and What Should I Put in Them?</a>
   <ul class="collapse">
-  <li><a href="#data-raw" id="toc-data-raw" class="nav-link" data-scroll-target="#data-raw"> <span class="header-section-number">2.2.1</span> /00-data-raw</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"> <span class="header-section-number">2.2.2</span> /01-data</a></li>
-  <li><a href="#src" id="toc-src" class="nav-link" data-scroll-target="#src"> <span class="header-section-number">2.2.3</span> /02-src</a></li>
-  <li><a href="#cache" id="toc-cache" class="nav-link" data-scroll-target="#cache"> <span class="header-section-number">2.2.4</span> /03-cache</a></li>
-  <li><a href="#temp" id="toc-temp" class="nav-link" data-scroll-target="#temp"> <span class="header-section-number">2.2.5</span> /04-temp</a></li>
-  <li><a href="#manuscript" id="toc-manuscript" class="nav-link" data-scroll-target="#manuscript"> <span class="header-section-number">2.2.6</span> /05-manuscript</a></li>
-  <li><a href="#presentations" id="toc-presentations" class="nav-link" data-scroll-target="#presentations"> <span class="header-section-number">2.2.7</span> /06-presentations</a></li>
-  <li><a href="#log" id="toc-log" class="nav-link" data-scroll-target="#log"> <span class="header-section-number">2.2.8</span> /07-log</a></li>
-  <li><a href="#archive" id="toc-archive" class="nav-link" data-scroll-target="#archive"> <span class="header-section-number">2.2.9</span> /08-archive</a></li>
-  <li><a href="#docs" id="toc-docs" class="nav-link" data-scroll-target="#docs"> <span class="header-section-number">2.2.10</span> /docs</a></li>
-  <li><a href="#readme.txt" id="toc-readme.txt" class="nav-link" data-scroll-target="#readme.txt"> <span class="header-section-number">2.2.11</span> readme.txt</a></li>
-  <li><a href="#todos.txt" id="toc-todos.txt" class="nav-link" data-scroll-target="#todos.txt"> <span class="header-section-number">2.2.12</span> TODOs.txt</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"> <span class="header-section-number">2.5.1</span> /00-data</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"> <span class="header-section-number">2.5.2</span> /01-code</a></li>
+  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output"> <span class="header-section-number">2.5.3</span> /02-output</a></li>
+  <li><a href="#support-files" id="toc-support-files" class="nav-link" data-scroll-target="#support-files"> <span class="header-section-number">2.5.4</span> /03-support-files</a></li>
+  <li><a href="#manuscript" id="toc-manuscript" class="nav-link" data-scroll-target="#manuscript"> <span class="header-section-number">2.5.5</span> /04-manuscript</a></li>
+  </ul></li>
+  <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata"> <span class="header-section-number">2.6</span> /05-metadata</a>
+  <ul class="collapse">
+  <li><a href="#presentations" id="toc-presentations" class="nav-link" data-scroll-target="#presentations"> <span class="header-section-number">2.6.1</span> /06-presentations</a></li>
+  <li><a href="#docs" id="toc-docs" class="nav-link" data-scroll-target="#docs"> <span class="header-section-number">2.6.2</span> /docs</a></li>
+  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license"> <span class="header-section-number">2.6.3</span> LICENSE</a></li>
+  <li><a href="#mxxx-project-name.rproj" id="toc-mxxx-project-name.rproj" class="nav-link" data-scroll-target="#mxxx-project-name.rproj"> <span class="header-section-number">2.6.4</span> MXXX-project-name.Rproj</a></li>
+  <li><a href="#readme.md" id="toc-readme.md" class="nav-link" data-scroll-target="#readme.md"> <span class="header-section-number">2.6.5</span> README.md</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -235,105 +254,184 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>This workflow is based around projects as discrete scientific entities, so we will spend some time here describing how the subdirectory within any single project can be set up in a standardized way.</p>
-<p><em>Note that within the PARA-adapted system, a project is anything that is in your Projects directory as a stand-alone folder (these would be projects which will be finalized and not further revised, like a thesis or a paper), but could also be something nested under an “Area” (for projects that may be living, such as course syllabi), or a deliverable under a grant.</em></p>
-<p><em>Challenge here - how to deal with grants as areas, but have projects which are maybe manuscripts organized around grant deliverables? Think through GitHub Organization vs “Project” structure for AKSDB.</em></p>
-<p>Setting up this standardized project subfolder structure will allow you to have a place to put everything related to your project in a clear way, without having to think extensively about where something should go. Note: not every project is the same, so you may have some subfolders which are empty for some projects, but that is totally fine! Keep the empty folders - you never know when you may need them. If they are empty thats fine!</p>
-<section id="example-standardized-subfolder-structure-for-a-project" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="example-standardized-subfolder-structure-for-a-project"><span class="header-section-number">2.1</span> Example Standardized Subfolder Structure for a Project</h2>
-<p>This standardized structure is my own, modified from the following [insert sources].</p>
+<p>This workflow is based around projects as discrete scientific entities, so we will spend some time here describing how the subdirectory within any single project can be set up in a standardized way. Every project should have a GitHub repo (even if it is in just idea phase) and the associated local directory on your computer, which are synced (I think the easiest way is to use GitHub Desktop, but you can also use the command line if you prefer). Setting up this standardized project subfolder structure will allow you to have a place to put everything related to your project in a clear way, without having to think extensively about where something should go. Note: not every project is the same, so you may have some subfolders which are empty for some projects, but that is totally fine! Keep the empty folders - you never know when you may need them. If they are empty that is fine!</p>
+<section id="registering-a-unique-project-id-on-jelinski-lab-project-registry" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="registering-a-unique-project-id-on-jelinski-lab-project-registry"><span class="header-section-number">2.1</span> Registering a unique project ID on <span class="citation" data-cites="jelinski-lab-project-registry">(<a href="references.html#ref-jelinski-lab-project-registry" role="doc-biblioref"><strong>jelinski-lab-project-registry?</strong></a>)</span></h2>
+<p>**If you are in my lab group*, when using this template to set up a new project repo, please first obtain a new project ID by adding your project as a new row to <a href="https://github.com/orgs/jelinski-lab-pedology/projects/1"><span class="citation" data-cites="jelinski-lab-project-registry">(</span></a><a href="#ref-jelinski-lab-project-registry" role="doc-biblioref"><strong>jelinski-lab-project-registry?</strong></a>). <strong>NOTE: If you are not in my lab group, feel free to use this template repo and name it whatever the heck you want!</strong> Simply add a row with the next number in sequence (i.e.&nbsp;if the last registered project is M059-jelinski-permafrost-table-id, then your project should be M060-xxxxx) followed by your last name (assuming you are the project lead/owner) and then a 2-4 word descriptive title for your project (note - spend at least a bit of time thinking about this as this is what will be used on all other platforms (your personal computer, GitHub, GoogleDrive, etc…) as your project name.</p>
+</section>
+<section id="cloning-the-template-to-your-personal-github-page" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="cloning-the-template-to-your-personal-github-page"><span class="header-section-number">2.2</span> Cloning the template to your personal GitHub page</h2>
+<p>Assuming that you are the project lead/owner, the first step is to clone this template to your personal GitHub page and set it as private initially. Any manuscripts/proposals in development (i.e.&nbsp;not published or awarded) should be set as private by default. Once manuscripts are in press or published then you can flip the repo to public.</p>
+</section>
+<section id="rename-the-template-repo" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="rename-the-template-repo"><span class="header-section-number">2.3</span> Rename the template repo</h2>
+<p>Now, rename the template repo using your registered project ID.</p>
+</section>
+<section id="default-repo-directory-and-subdirectory-structure" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="default-repo-directory-and-subdirectory-structure"><span class="header-section-number">2.4</span> Default repo directory and subdirectory structure</h2>
+<p>Use the default standardized folder structure unless there is an explicit reason to do something different!</p>
+<p>This standardized structure is my own, modified and inspired from many excellent sources <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. This is likely a living template and will change/improve as we adapt to diverse projects. Here is an example of the template repo structure for an arbitrary project [M009-jelinski-permafrost-id].</p>
 <ul>
-<li>./M09-permafrost-table-id
+<li>./M009-jelinski-permafrost-table-id
 <ul>
-<li>/00-data-raw</li>
-<li>/01-data</li>
-<li>/02-src
+<li>/00-data
 <ul>
-<li>[M09-permafrost-table-id.Rproj] <em>will initiate in section X</em></li>
+<li>/a-raw</li>
+<li>/b-prepared</li>
 </ul></li>
-<li>/03-cache</li>
-<li>/04-temp</li>
-<li>/05-manuscript
+<li>/01-code
 <ul>
-<li>/drafts</li>
-<li>/submitted</li>
-<li>/final-and-proofs</li>
-<li>/figures</li>
-<li>/tables</li>
-<li>/refs</li>
+<li>/a-Rscripts</li>
+<li>/b-markdowns</li>
 </ul></li>
+<li>/02-output
+<ul>
+<li>/a-figures</li>
+<li>/b-tables</li>
+</ul></li>
+<li>/03-support-files
+<ul>
+<li>/archive</li>
+<li>/cache</li>
+<li>/logs</li>
+<li>/temp</li>
+</ul></li>
+<li>/04-manuscript
+<ul>
+<li>/a-drafts</li>
+<li>/b-submitted</li>
+<li>/c-final-and-proofs</li>
+</ul></li>
+<li>/05-metadata</li>
 <li>/06-presentations</li>
-<li>/07-log
-<ul>
-<li>/analysis-log</li>
-<li>/writing-log</li>
-</ul></li>
-<li>/08-archive</li>
 <li>/docs</li>
-<li>[readme.txt]</li>
-<li>[TODOs.txt]</li>
+<li>[LICENSE]</li>
+<li>[MXXX-project-name.Rproj] <em>will initiate in section X</em></li>
+<li>[README.md]</li>
 </ul></li>
 </ul>
 <p><em>Note that what I dodn’t use here was -lib or -libs and -tests</em></p>
-<p><em>ANOTHER NOTE #todo - Git will automatically not create subfolders if there are no files in them!!! - That is actually very useful for this workflow but bears on my documentation and instructions for the metadata template - should add some text about that.</em></p>
 </section>
-<section id="what-do-each-of-these-folders-mean-and-what-should-i-put-in-them" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="what-do-each-of-these-folders-mean-and-what-should-i-put-in-them"><span class="header-section-number">2.2</span> What Do Each of These Folders Mean and What Should I Put in Them?</h2>
+<section id="what-do-each-of-these-folders-mean-and-what-should-i-put-in-them" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="what-do-each-of-these-folders-mean-and-what-should-i-put-in-them"><span class="header-section-number">2.5</span> What Do Each of These Folders Mean and What Should I Put in Them?</h2>
 <p>Although this list may seem daunting at first, each of these folders has a purpose, and this structure allows for deep integration with transparent data curation and data analysis workflows using R. Some of these folders may remain empty for the duration of your project and that is just fine! Note that each of the folders have a number convention for quick association once you start using this standardized structure. The numbers also allow for the folders to be arranged in a logical order, rather than alphabetically.</p>
-<section id="data-raw" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="data-raw"><span class="header-section-number">2.2.1</span> /00-data-raw</h3>
-<p>This folder contains your curated raw data: unmodified, comprehensive, containing outliers, missing values, imperfections and other items that may be removed in data pre-processing. <em>Insert link to data pre-processing chapter.</em> It also contains any foundational geospatial data from other authors/sources that you did not generate but that you are pulling in for the purposes of analysis <strong>and that needs further processing to be utilized in your workflow</strong>. For example if an external data source came in a proprietary format that needed to be exported and modified. <em>Note - need to create a subfolder separate for this, and also need to have a way to track origin and authorship - probably a readme or metadata file .txt or something - can be a running open file that is added to - maybe a markdown or something?</em></p>
-<p>Any raw data that you generated should be in open and easily readable formats. Specifically:</p>
+<section id="data" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="data"><span class="header-section-number">2.5.1</span> /00-data</h3>
+<p>This folder contains all of the input data being used in this project. EVERY dataset (whether external or project generated) should have an associated metadata file! For complex projects with many datasources, each dataset should live in its own subfolder.</p>
+<section id="dataa-raw" class="level4" data-number="2.5.1.1">
+<h4 data-number="2.5.1.1" class="anchored" data-anchor-id="dataa-raw"><span class="header-section-number">2.5.1.1</span> /00-data/a-raw</h4>
+<p>The raw data: unmodified, comprehensive, containing outliers, missing values, imperfections and other items that may be removed in data pre-processing (sometimes called “munging”<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>). <em>Insert link to data pre-processing chapter.</em> It also contains any foundational geospatial data from other authors/sources that you did not generate but that you are pulling in for the purposes of analysis <strong>and that needs further processing to be utilized in your workflow</strong>. For example if an external data source came in a proprietary format that needed to be exported and modified. <em>Note - need to create a subfolder separate for this, and also need to have a way to track origin and authorship - probably a readme or metadata file .txt or something - can be a running open file that is added to - maybe a markdown or something?</em></p>
+<p>Any raw data that you generated should be in open and easily readable formats. Raw data from other sources may not be in these open and readable formats and require further processing or preparation to make usable Specifically:</p>
 <ul>
 <li>Tabular data should be in .csv format</li>
 <li>Spatial vector data (points, lines or polygons) should be in <a href="https://en.wikipedia.org/wiki/GeoPackage">OGC geopackage</a> format.</li>
 </ul>
 <p>Any data in raw data that is not your own should be in an /external-sources subdirectory which contains a metadata file that details the source of each of the external data sources.</p>
 </section>
-<section id="data" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="data"><span class="header-section-number">2.2.2</span> /01-data</h3>
+<section id="datab-prepared" class="level4" data-number="2.5.1.2">
+<h4 data-number="2.5.1.2" class="anchored" data-anchor-id="datab-prepared"><span class="header-section-number">2.5.1.2</span> /00-data/b-prepared</h4>
 <p>This folder is the sink where all of your post-processed data will live. It also contains any foundational geospatial data from other authors/sources that you did not generate but that you are pulling in for the purposes of analysis following any necessary processing to change formats - note that this can include reprojected data, etc? <em>actually maybye it shouldn’t because all of that can go into an R script - hmm need to think about this</em>. <em>Note - need to create a subfolder separate for this, and also need to have a way to track origin and authorship - probably a readme or metadata file .txt or something - can be a running open file that is added to - maybe a markdown or something?</em> Data should be in open and easily readable formats. Specifically:</p>
 <ul>
 <li>Tabular data should be in .csv format</li>
 <li>Spatial vector data (points, lines or polygons) should be in <a href="https://en.wikipedia.org/wiki/GeoPackage">OGC geopackage</a> format.</li>
 <li>Spatial raster data should be in <a href="https://en.wikipedia.org/wiki/GeoTIFF">GeoTIFF</a> format.</li>
 </ul>
-<p>Any data in that is not your own should be in an /external-sources subdirectory which contains a metadata file that details the source of each of the external data sources.</p>
 </section>
-<section id="src" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="src"><span class="header-section-number">2.2.3</span> /02-src</h3>
-<p>This folder contains all of your source code and R scripts that you use to conduct your data processing and analysis. <em>Note link to how to actually write and breakdown and organize scripts and analysis in projects - this can be in your R style guide or as a separate section - talk about sequential numbering, a master script, functions script, global script, readme, and how to renumber or keep your growing scripts squared away.</em> This folder should always contain a .Rproj file to initialize the environment for running your R scripts.</p>
 </section>
-<section id="cache" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="cache"><span class="header-section-number">2.2.4</span> /03-cache</h3>
+<section id="code" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="code"><span class="header-section-number">2.5.2</span> /01-code</h3>
+<p>This folder contains all of your source code and R scripts that you use to conduct your data processing and analysis as well as markdowns which describe your processing pipeline in depth (if you choose).</p>
+<section id="codea-rscripts" class="level4" data-number="2.5.2.1">
+<h4 data-number="2.5.2.1" class="anchored" data-anchor-id="codea-rscripts"><span class="header-section-number">2.5.2.1</span> /01code/a-Rscripts</h4>
+<p>This folder contains all of your R scripts. <em>Note link to how to actually write and breakdown and organize scripts and analysis in projects - this can be in your R style guide or as a separate section - talk about sequential numbering, a master script, functions script, global script, readme, and how to renumber or keep your growing scripts squared away.</em></p>
+</section>
+<section id="codeb-markdowns" class="level4" data-number="2.5.2.2">
+<h4 data-number="2.5.2.2" class="anchored" data-anchor-id="codeb-markdowns"><span class="header-section-number">2.5.2.2</span> /01code/b-markdowns</h4>
+<p>The idea for this folder comes from the pipeline subfolder idea from Ties de Kok<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. Ties suggests that every script file in 01-code has a subfolder in a 02-pipeline subflder. Within each subfolder are three other directories: <em>tmp</em>, <em>store</em>, and <em>out</em>. Per Ties<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>:</p>
+<blockquote class="blockquote">
+<p><em>02_pipeline/sub-folder/out</em> contains files that you save with the intention of loading them in a future code file. These are usually the “end-products” of the current code file.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>02_pipeline/sub-folder/store</em> contains files that you save with the intention of loading them in the current code file. This is, for example, used in scenarios where it takes a while to run parts of your code and to avoid having to re-run these parts every time you might want to intermittently save the progress of your generated data to the store folder.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>02_pipeline/sub-folder/tmp</em> contains files that you save for inspection purposes or some other temporary reason. The basic principle is that you should not have to worry about anything in the tmp folder being deleted as it only serves a temporary purpose.</p>
+</blockquote>
+<p>I really like this idea, however in reflecting think that a similar thing can be accomplished with markdown files and/or a quarto ebook. I want to keep the script folder clean and just R scripts (don’t want to junk it up with markdowns), so I actually think the best solution is to have a separate folder for markdowns. Note that these markdowns can then be used as inputs to build an ebook with Quarto and display as a GitHub Pages website.</p>
+<p>So, this folder is to store markdowns from the individual scripts, or from groups of scripts. NOTE: NEVER EVER copy and paste code from R scripts to markdowns - the potential for error is just too high. Instead, call R scripts within the markdowns<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a><a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>.</p>
+</section>
+</section>
+<section id="output" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="output"><span class="header-section-number">2.5.3</span> /02-output</h3>
+<p>This folder contains final, polished figures and tables or other products that will go in the manuscript. Note - although the /04-manuscript folder has subfolders for tables and figures, these are not necessarily the same thing. Any figures and tables in /02-output are generated from your code and source data. It is likely/possible that you may also end up with manuscript figures and tables that are not generated from your source data (conceptual figures, logic models, etc).</p>
+<section id="outputa-figures" class="level4" data-number="2.5.3.1">
+<h4 data-number="2.5.3.1" class="anchored" data-anchor-id="outputa-figures"><span class="header-section-number">2.5.3.1</span> /02-output/a-figures</h4>
+<p>Figures generated from data-code workflow in R</p>
+</section>
+<section id="outputb-tables" class="level4" data-number="2.5.3.2">
+<h4 data-number="2.5.3.2" class="anchored" data-anchor-id="outputb-tables"><span class="header-section-number">2.5.3.2</span> /02-output/b-tables</h4>
+<p>Tables generated from data-code workflow in R</p>
+</section>
+</section>
+<section id="support-files" class="level3" data-number="2.5.4">
+<h3 data-number="2.5.4" class="anchored" data-anchor-id="support-files"><span class="header-section-number">2.5.4</span> /03-support-files</h3>
+<p>The support files folder contains information that may help support understanding of your project development, workflow, and speed up processing through the use of a cache. However these files should NEVER be strictly necessary for reproducing your data, analysis, and outputs.</p>
+<section id="support-filesarchive" class="level4" data-number="2.5.4.1">
+<h4 data-number="2.5.4.1" class="anchored" data-anchor-id="support-filesarchive"><span class="header-section-number">2.5.4.1</span> /03-support-files/archive</h4>
+<p>This folder contains anything that is not relevant to the current workflow but that you are not ready to delete permanently <em>yet</em>. Items can be moved to the archive folder at any time. Consider including in git-ignore.</p>
+</section>
+<section id="support-filescache" class="level4" data-number="2.5.4.2">
+<h4 data-number="2.5.4.2" class="anchored" data-anchor-id="support-filescache"><span class="header-section-number">2.5.4.2</span> /03-support-files/cache</h4>
 <p>Your cache folder may not be used often. However it is there to provide a storage place for any large objects or data that take a very long time to generate initially in a script. When these are generated once, they can be exported to this folder - this provides a shortcut for subsequent running of the scripts that saves time. People can still run your original scripts to generate these objects if they so choose.</p>
 </section>
-<section id="temp" class="level3" data-number="2.2.5">
-<h3 data-number="2.2.5" class="anchored" data-anchor-id="temp"><span class="header-section-number">2.2.5</span> /04-temp</h3>
-<p>The temp folder is basically to hold any temporary non-important files, such as tests script outputs, test figures, etc. These are not important to the overall analysis. This folder should be empty and not be included in your final project using [.gitignore] file.</p>
-</section>
-<section id="manuscript" class="level3" data-number="2.2.6">
-<h3 data-number="2.2.6" class="anchored" data-anchor-id="manuscript"><span class="header-section-number">2.2.6</span> /05-manuscript</h3>
-<p>This folder houses everything related to manuscripts or reports resulting from the project. It has subfolders for holding drafts, submitted versions (inclduign subsequent revisions), final and proofs, figures, tables, and references (which contains a single .bib file - ideally exported from your Zotero project folder which <em>matches the name of this project</em>).</p>
-</section>
-<section id="presentations" class="level3" data-number="2.2.7">
-<h3 data-number="2.2.7" class="anchored" data-anchor-id="presentations"><span class="header-section-number">2.2.7</span> /06-presentations</h3>
-<p>This folder should contain subfolders for each presentation realted to the topic. Subfolders should start with “P0X” and also include the year and venue. So if I gave a presentation at the Soil Science Sciety of America meetings in 2017 on a particular project, and it was the first presentation that I gave under that project, my subdirectory containing all of the relevant things for that presentation would be “P01-2017-SSSA”.</p>
-</section>
-<section id="log" class="level3" data-number="2.2.8">
-<h3 data-number="2.2.8" class="anchored" data-anchor-id="log"><span class="header-section-number">2.2.8</span> /07-log</h3>
+<section id="support-fileslogs" class="level4" data-number="2.5.4.3">
+<h4 data-number="2.5.4.3" class="anchored" data-anchor-id="support-fileslogs"><span class="header-section-number">2.5.4.3</span> /03-support-files/logs</h4>
 <p>This folder contains logs related to your project, specifically your analysis log and writing log. You can choose to make these public or not. <em>See this section for how to write and construct logs - do it at the end of every day/session - take the 5 MINUTES!!!</em></p>
 </section>
-<section id="archive" class="level3" data-number="2.2.9">
-<h3 data-number="2.2.9" class="anchored" data-anchor-id="archive"><span class="header-section-number">2.2.9</span> /08-archive</h3>
-<p>This folder contains anything that is not relevant to the current workflow but that you are not ready to delete permanently <em>yet</em>. Items can be moved to the archive folder at any time.</p>
+<section id="support-filestemp" class="level4" data-number="2.5.4.4">
+<h4 data-number="2.5.4.4" class="anchored" data-anchor-id="support-filestemp"><span class="header-section-number">2.5.4.4</span> /03-support-files/temp</h4>
+<p>The temp folder is basically to hold any temporary non-important files, such as tests script outputs, test figures, etc. These are not important to the overall analysis. This folder should be not be included in your final project using [.gitignore] file.</p>
 </section>
-<section id="docs" class="level3" data-number="2.2.10">
-<h3 data-number="2.2.10" class="anchored" data-anchor-id="docs"><span class="header-section-number">2.2.10</span> /docs</h3>
-<p>If you choose to create a book to consolidate your metadata and readmes, all relevant files should go in this subdirectory. More information on generating an html book from separate markdown files <em>here</em>. NOTE - the only way to get GitHub Pages to find the files and render the htmls together is to have them in a /docs subdirectory. There is no other options currently. That is why /docs doesn’t have a number before it.</p>
 </section>
-<section id="readme.txt" class="level3" data-number="2.2.11">
-<h3 data-number="2.2.11" class="anchored" data-anchor-id="readme.txt"><span class="header-section-number">2.2.11</span> readme.txt</h3>
+<section id="manuscript" class="level3" data-number="2.5.5">
+<h3 data-number="2.5.5" class="anchored" data-anchor-id="manuscript"><span class="header-section-number">2.5.5</span> /04-manuscript</h3>
+<p>This folder houses everything related to manuscripts or reports resulting from the project. It has subfolders for holding drafts, submitted versions (inclduign subsequent revisions), final and proofs, final figures &amp; tables, and references (which contains a single .bib file - ideally exported from your Zotero project folder which <em>matches the name of this project</em>).</p>
+<section id="manuscripta-drafts" class="level4" data-number="2.5.5.1">
+<h4 data-number="2.5.5.1" class="anchored" data-anchor-id="manuscripta-drafts"><span class="header-section-number">2.5.5.1</span> /04-manuscript/a-drafts</h4>
+<p>Manuscript drafts. If there are critical draft versions (like those sent to collaborators at certain times, those should get a subfolder with date of draft - i.e.&nbsp;10JAN2023). You do not need to save regular working drafts with specific dates unless you choose. There should be further figures, tables, and refs subfolders within those containing the versions of figures and tables used, and a .bib file in the refs folder.</p>
+</section>
+<section id="manuscriptb-submitted" class="level4" data-number="2.5.5.2">
+<h4 data-number="2.5.5.2" class="anchored" data-anchor-id="manuscriptb-submitted"><span class="header-section-number">2.5.5.2</span> /04-manuscript/b-submitted</h4>
+<p>Submitted versions of manuscripts should be placed in a subfolder in here with date of submission - i.e.&nbsp;10JAN2023). There should be further figures, tables, and refs subfolders within those containing the versions of figures and tables used, and a .bib file in the refs folder.</p>
+</section>
+<section id="manuscriptc-final-and-proofs" class="level4" data-number="2.5.5.3">
+<h4 data-number="2.5.5.3" class="anchored" data-anchor-id="manuscriptc-final-and-proofs"><span class="header-section-number">2.5.5.3</span> /04-manuscript/c-final-and-proofs</h4>
+<p>Final accepted version of manuscript and galley proofs.</p>
+</section>
+</section>
+</section>
+<section id="metadata" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="metadata"><span class="header-section-number">2.6</span> /05-metadata</h2>
+<p>This folder contains all metadata files and metadata products. - MXXX-project-name-metadata.json: This is your metadata file for the entire project. This metadata file should be formatted according to our general conventions on metadata <em>here</em>. - MXXX-project-name-metadata.html: This is the .html file generated from dataspice -/csvs: this is a subdirectory to contain foundational .csv files used to build the .json and html using the <a href="https://cran.r-project.org/web/packages/dataspice/index.html"><em>dataspice</em></a> package <a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>.</p>
+<p>This is your metadata file for the entire project (note that all datasets should also have associated metadata files as well in the 00-data directory. This metadata file should be formatted according to our general conventions on metadata <em>here</em>.</p>
+<section id="presentations" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="presentations"><span class="header-section-number">2.6.1</span> /06-presentations</h3>
+<p>This folder should contain subfolders for each presentation realted to the topic. Subfolders should start with “C0X” and also include the year and venue. So if I gave a presentation at the Soil Science Sciety of America meetings in 2017 on a particular project, and it was the first presentation that I gave under that project, my subdirectory containing all of the relevant things for that presentation would be “C01-2017-SSSA”.</p>
+</section>
+<section id="docs" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="docs"><span class="header-section-number">2.6.2</span> /docs</h3>
+<p>If you choose to create a Quarto e-book to consolidate your metadata and readmes as well as project workflow and potentially manuscript, all relevant files should go in this subdirectory. More information on generating an html book from separate markdown files <em>here</em>. NOTE - the only way to get GitHub Pages to find the files and render the htmls together is to have them in a /docs subdirectory. There is no other options currently. That is why /docs doesn’t have a number before it.</p>
+</section>
+<section id="license" class="level3" data-number="2.6.3">
+<h3 data-number="2.6.3" class="anchored" data-anchor-id="license"><span class="header-section-number">2.6.3</span> LICENSE</h3>
+<p>This is a standard open source license shipped with this template. I am choosing to use the MIT license currently, but this may not be the best choice<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a><a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>.</p>
+</section>
+<section id="mxxx-project-name.rproj" class="level3" data-number="2.6.4">
+<h3 data-number="2.6.4" class="anchored" data-anchor-id="mxxx-project-name.rproj"><span class="header-section-number">2.6.4</span> MXXX-project-name.Rproj</h3>
+<p>**NOTE: even though this contains a .Rproj file, you should always use the here::here function in the <a href="https://here.r-lib.org/">here package in R</a> when referencing file locations in your project repo - there are excellent reasons for using both .Rproj and here::here - when combined these are a powerful way to guarantee there won’t be any issues with other users running your code due to directory issues. <a href="https://www.rstudio.com/authors/malcolm-barrett/">Malcom Barrett</a> gave an an excellent talk at the <a href="https://user2020.r-project.org/program/contributed/">useR! 2020 conference</a> entitled <a href="https://m.youtube.com/watch?v=QYrdsjBvZN4">“Why use the <em>here</em> package when you’re already using projects?”</a>. The .Rproj file contained in this tenplate is pre-configured to start with a <em>completely clean workspace EVERY TIME</em> by selecting in <em>Project Options &gt; General</em> “Restore .RData into workspace at startup” = NO and “Save workspace to .RData on exit” = NO, “Disable .Pprofile execution on session start/resume” = CHECKED, “Quit child processes on exit” = CHECKED. These two options combined will also ensure that others running your code (or even you at a later date) don’t experience errors or conflictions due to workspace-specific background<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a> - this is often the cause of the following issue: “I swear…my code worked the last time I ran it and I didn’t change anything!”.</p>
+</section>
+<section id="readme.md" class="level3" data-number="2.6.5">
+<h3 data-number="2.6.5" class="anchored" data-anchor-id="readme.md"><span class="header-section-number">2.6.5</span> README.md</h3>
 <p>This is arguably one of the most important features of your entire project. The readme should always be in plain text .txt format so that anyone on any system can read it. Spending time on your readme file is extremely important:</p>
 <ul>
 <li>It is the first writing you will do on your project and helps you to describe at a high level what your project is about</li>
@@ -348,13 +446,34 @@ ul.task-list{list-style: none;}
 </ul></li>
 </ul>
 <p>A readme is a living document. You should begin any project with a draft readme, which, provided you use this workflow and file structure can be mostly copied from a suggested template located in this section. However, as your project grows and changes, your readme should be updated. Be as thorough as possible. Note that this is a project level readme. Although not required, you should strongly consider including sub readmes at within multipl subfolders where necessary. Conversely, you can create a project level book in Quarto that contains all readmes and documentation (see section X). <em>More information on how to use and write a readme in section X</em>.</p>
-</section>
-<section id="todos.txt" class="level3" data-number="2.2.12">
-<h3 data-number="2.2.12" class="anchored" data-anchor-id="todos.txt"><span class="header-section-number">2.2.12</span> TODOs.txt</h3>
+<section id="a-note-on-a-todo-list.-do-not-keep-a-list-of-todos-in-a-separate-file.-instead-log-them-as-issues-on-github.-more-powerful-more-flexible." class="level4" data-number="2.6.5.1">
+<h4 data-number="2.6.5.1" class="anchored" data-anchor-id="a-note-on-a-todo-list.-do-not-keep-a-list-of-todos-in-a-separate-file.-instead-log-them-as-issues-on-github.-more-powerful-more-flexible."><span class="header-section-number">2.6.5.1</span> A note on a TODO list. Do not keep a list of TODOs in a separate file. Instead log them as <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues"><em>issues</em></a> on GitHub. More powerful, more flexible.</h4>
 <p>This is a running list of TODOs - actually this shouldn’t be a thing. You should use GitHub Issues to track this? Not sure need to look into this more.</p>
 
 
 </section>
+</section>
+</section>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p><a href="https://alexd106.github.io/intro2R/project_setup.html">Alex Douglas::Setting up a reproducible project in R</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p><a href="https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a">Ties de Kok::How to keep your research projects organized: folder structure</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p><a href="https://github.com/KentonWhite/ProjectTemplate">Kenyon White::ProjectTemplate</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p><a href="http://projecttemplate.net/index.html">Project Template</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p><a href="http://projecttemplate.net/index.html">Anna Krystalli::Projects in R Studio</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p><a href="https://www.rostrum.blog/posts/2019-06-11-r-repo-template/">Matt Dray &amp; Anna De Palma - rostrum.blog::A GitHub repo template for R analysis</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7" role="doc-endnote"><p><a href="https://waterdata.usgs.gov/blog/data-munging/">USGS::Beyond Basic R - Data Munging</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8" role="doc-endnote"><p><a href="https://tjmurphy.github.io/jabstb/jaxwest7.html">TJ Murphy::Reproducible Data Munging in R</a><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9" role="doc-endnote"><p><a href="https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a">Ties de Kok::How to keep your research projects organized: folder structure</a><a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10" role="doc-endnote"><p><a href="https://towardsdatascience.com/how-to-keep-your-research-projects-organized-part-1-folder-structure-10bd56034d3a">Ties de Kok::How to keep your research projects organized: folder structure</a><a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11" role="doc-endnote"><p><a href="https://www.reddit.com/r/RStudio/comments/v8g8kf/what_is_best_workflow_for_new_r_user/">Steve Shu::What is the best workflow for a new R user?</a><a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12" role="doc-endnote"><p><a href="https://rpubs.com/thaufas/450838">Thaufas::Using Code Chunks in R Markdown</a><a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13" role="doc-endnote"><p><a href="https://annakrystalli.me/dataspice-tutorial/">Anna Krystalli::Dataspice Tutorial</a><a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14" role="doc-endnote"><p><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository">GitHub Docs::Licensing a Repository</a><a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn15" role="doc-endnote"><p><a href="https://choosealicense.com">choosealicense.com::Choose an Open Source License</a><a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn16" role="doc-endnote"><p><a href="https://alexd106.github.io/intro2R/project_setup.html">Alex Douglas::Setting up a reproducible project in R</a><a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

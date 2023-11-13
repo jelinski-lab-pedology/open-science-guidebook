@@ -31,7 +31,7 @@ How to decide when to make a repo on GitHub - some options:
 
 ## When should I create an Organization vs a Repository?
 
-Here is where we can achieve some excellent deep integration with the PARA system. Generally speaking, only Projects and Areas should get repositories. Projects get individual Repositories while Areas get Organizations with individual project repositories under them. Resources and Archive should, generally speaking remain on your local computer.
+Here is where we can achieve some excellent deep integration with the PARA system. Generally speaking, only Projects and Areas should get repositories. Projects get individual Repositories while Areas get Organizations with individual project repositories under them. Resources and Archive should, generally speaking remain on your local computer or be in the cloud in Google Drive.
 
 ## How should I create the GitHub repo for my project?
 
@@ -45,7 +45,7 @@ Regardless of how and where you choose to set up your project repo, you should f
 
 -   Your repo should follow the standard project directory setup as outlined in @sec-subfolderstructure.
 -   Your repo should be [initialized with a readme.txt file](writing-readmes.qmd), which at the very least contains the readme template with as much current information as you can currently provide for your project.
--   You should \[choose a license\]. The default license for projects in our lab is X #todo
+-   You should \[choose a license\]. The default license for projects in our lab is the [MIT license](https://choosealicense.com/licenses/mit/).
 
 ### Jelinski Lab GitHub Workflow Follows [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
 
@@ -61,11 +61,12 @@ Our standard GitHub workflow follows the well documented [GitHub flow](https://d
 
 ### Guidelines for Pushing to Your Repo
 
-Additionally, you should do the following when working with your GitHub repo: 
+Additionally, you should do the following when working with your GitHub repo:
 
-- Strive to commit and push to your repo at the end of each day of work on a project or at small milestones in your work. Writing good commit messages (see below) will help you understand when to do that. *Don't* wait long periods of time to push your local repo/directory to your GitHub repo! This is incremental work!
+-   Strive to commit and push to your repo at the end of each day of work on a project or at small milestones in your work. Writing good commit messages (see below) will help you understand when to do that. *Don't* wait long periods of time to push your local repo/directory to your GitHub repo! This is incremental work!
 
 -   Every commit should contain a [good commit message](https://gist.github.com/tonibardina/9290fbc7d605b4f86919426e614fe692), and a detailed description where possible. General guidelines that we will follow whihc are adapted from [Robert Painsi](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53), ([Bolaji Ayodeji](https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/), including example from [Tim Pope](https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/) [Toni Bardina](https://gist.github.com/tonibardina/9290fbc7d605b4f86919426e614fe692) and [GitKraken](https://www.gitkraken.com/learn/git/best-practices/git-commit-message#:~:text=Git%20commits%20are%20a%20way,or%20savepoint%20for%20your%20project):
+
     -   Commit messages should have an entry in the subject and body
     -   Subject line should be capitalized and less than 50 characters
     -   Spaces are allowed

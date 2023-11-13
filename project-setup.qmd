@@ -9,7 +9,8 @@ This includes deciding what constitutes a **"project"** (this seems like it shou
 ::: callout-tip
 ## Required Tools - Project Setup
 
--   A local folder structure on your personal computer
+-   A project idea
+-   Local folder structure on your personal computer
 -   GitHub/GitHub Desktop
 -   Google Drive
 -   Zotero

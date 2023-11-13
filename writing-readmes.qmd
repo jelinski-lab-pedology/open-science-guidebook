@@ -1,10 +1,10 @@
 # Writing Readmes - Your First Assignment
 
-## readme.txt and Project Metadata
+## readme.md and Project Metadata
 
-Writing in your project actually begins with adding content to the readme.txt file. This is the human-readable part of your project metadata, and should be as descriptive and narrative as possible.
+Writing in your project actually begins with adding content to the readme.md file. This is the human-readable part of your project metadata, and should be as descriptive and narrative as possible.
 
-The readme is arguably one of the most important features of your entire project. It forms a cornerstone of the metadata catalog for the entire project *see metadata section #todo and what is metadata #todo and metadata components #todo*. The readme should always be in plain text .txt format so that anyone on any system can read it and it is as futureproof as possible. Spending time on your readme file is extremely important:
+The readme is arguably one of the most important features of your entire project. It forms a cornerstone of the metadata catalog for the entire project *see metadata section #todo and what is metadata #todo and metadata components #todo*. The readme should always be in plain text .txt or .md format so that anyone on any system can read it and it is as futureproof as possible. Spending time on your readme file is extremely important:
 
 -   It is the first writing you will do on your project and helps you to describe at a high level what your project is about
 -   It is the file that tells everyone the who, what, when where, why, and how of this project:
@@ -15,7 +15,7 @@ The readme is arguably one of the most important features of your entire project
     -   why was this project done; what was the motivation?
     -   how should I use these project files; what are the file formats, what programs do I need to run or access them; how were these files created and using what tools?
 
-A readme is a living document. You should begin any project with a draft readme, which, provided you use this workflow and file structure can be mostly copied from a suggested template located in this section. However, as your project grows and changes, your readme should be updated. Be as thorough as possible. Note that this is a project level readme. Although not required, you can consider including sub readmes at within multipl subfolders where necessary. Conversely, you can create a project level book in Quarto that contains all readmes and documentation (see section X). *More information on how to use and write a readme in section X*.
+A readme is a living document. You should begin any project with a draft readme, which, provided you use this workflow and file structure can be mostly copied from a suggested template located in this section. However, as your project grows and changes, your readme should be updated. Be as thorough as possible. Note that this is a project level readme. Although not required, you can consider including sub readmes within multiple subfolders where necessary. Conversely, you can create a project level book in Quarto that contains all readmes and documentation (see section X). *More information on how to use and write a readme in section X*.
 
 ## Suggested Template
 
