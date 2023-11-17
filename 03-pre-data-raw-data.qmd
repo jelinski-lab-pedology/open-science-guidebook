@@ -1,6 +1,6 @@
-# "Pre-Data": Setting Up Raw Data Collection and Curation Infrastructure for Different Project Types {#sec-rawdata}
+## "Pre-Data" and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types {#sec-rawdata}
 
-## Defining "Pre-Data" and Raw Data
+### Defining "Pre-Data" and Raw Data
 
 Pre-data here refers to the foundational work that is done and infrastructure that is set up to prepare your project to receive data. This work is critical and will ensure high quality datasets. It will also help you as you plan for data collection and think through each piece of data you need to collect in your project and why you are collecting it. "Pre-data" work facilitates the receipt and organization of raw data. Data is the information that drives a project and is used for answering a problem, question, or achieving a result.
 
@@ -18,7 +18,7 @@ Examples of pre-data infrastructure are:
 
 ## Project Types
 
-Projects come in many different shapes and forms. For the purposes of this book, we will use three main categories of project which should fit most projects happening in our lab. Note that these project types refer to where the major portion of the raw data is coming from:
+Projects come in many different shapes and forms. For the purposes of this book, we will use four main categories of project which should fit most projects happening in our lab. Note that these project types refer to where the major portion of the raw data is coming from:
 
 -   Field projects
 -   Laboratory projects

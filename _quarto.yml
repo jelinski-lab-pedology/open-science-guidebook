@@ -25,37 +25,37 @@ book:
       - 03b-lab-projects.qmd
       - 03c-review-projects.qmd
       - 03d-data-synthesis-projects.qmd
-    - part: 04-data-munging.qmd
+    - part: 05-data-munging.qmd
       chapters:
-      #- 04a-pulling-raw-data.qmd
-      #- 04b-qaqc-data-cleaning.qmd #includes log, includes reps for lab data, flagging samples for rerun
-      - 04c-standardizing-formats.qmd
-    #- part: 05-data-analysis-interpretation.qmd #metadata
-        #- 05a-data-analysis-log.qmd
-        #- 05b-building-analysis-scripts.qmd
-        #- 05c-maintaining-R-project.qmd
-    #- part: 06-writing-external-products.qmd
-        #- 06a-notetaking-strategies.qmd 
-        #- 06b-on-writing.qmd
-        #- 06c-writing-manuscripts.qmd
-        #- 06d-writing-metadata.qmd #standards
-        #- 06e-writing-in-markdown.qmd
-    #- part: 07-publishing.qmd
-        #- 07a-data-archiving-storage.qmd
-        #- 07b-licenses-copyright.qmd
-        #- 07c-formats-standards.qmd
-        #- 07d-quarto-books.qmd
-        #- 07e-orcid-google-scholar.qmd
-    - part: 08-style-guides-and-standards.qmd
+      - 05a-pulling-raw-data.qmd
+      #- 05b-qaqc-data-cleaning.qmd #includes log, includes reps for lab data, flagging samples for rerun
+      - 05c-standardizing-formats.qmd
+    #- part: 06-data-analysis-interpretation.qmd #metadata
+        #- 06a-data-analysis-log.qmd
+        #- 06b-building-analysis-scripts.qmd
+        #- 06c-maintaining-R-project.qmd
+    #- part: 07-writing-external-products.qmd
+        #- 07a-notetaking-strategies.qmd 
+        #- 07b-on-writing.qmd
+        #- 07c-writing-manuscripts.qmd
+        #- 07d-writing-metadata.qmd #standards
+        #- 07e-writing-in-markdown.qmd
+    #- part: 08-publishing.qmd
+        #- 08a-data-archiving-storage.qmd
+        #- 08b-licenses-copyright.qmd
+        #- 08c-formats-standards.qmd
+        #- 08d-quarto-books.qmd
+        #- 08e-orcid-google-scholar.qmd
+    - part: 09-style-guides-and-standards.qmd
       chapters:
-      - 08a-r-style-guide.qmd
-      #- 08b-markdown-style-guide.qmd
-      #- 08c-tabular-data-standards.qmd #csv, header names, data types, etc
-    #- part: 09-open-source-resources.qmd
-        #- 09a-other-references.qmd
-        #- 09b-looking-at-future.qmd
-    - 10-summary.qmd
-    - 11-references.qmd
+      - 09a-r-style-guide.qmd
+      #- 09b-markdown-style-guide.qmd
+      #- 09c-tabular-data-standards.qmd #csv, header names, data types, etc
+    #- part: 10-open-source-resources.qmd
+        #- 10a-other-references.qmd
+        #- 10b-looking-at-future.qmd
+    - 11-summary.qmd
+    - 12-references.qmd
 
 bibliography: references.bib
 

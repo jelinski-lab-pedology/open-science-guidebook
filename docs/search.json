@@ -240,42 +240,42 @@
   {
     "objectID": "03-pre-data-raw-data.html",
     "href": "03-pre-data-raw-data.html",
-    "title": "“Pre-Data”: Setting Up Raw Data Collection and Curation Infrastructure for Different Project Types",
+    "title": "“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types",
     "section": "",
     "text": "Pre-data here refers to the foundational work that is done and infrastructure that is set up to prepare your project to receive data. This work is critical and will ensure high quality datasets. It will also help you as you plan for data collection and think through each piece of data you need to collect in your project and why you are collecting it. “Pre-data” work facilitates the receipt and organization of raw data. Data is the information that drives a project and is used for answering a problem, question, or achieving a result.\nRaw data is data in its original form - unfiltered, unprocessed, with potential errors, outliers, and duplicates. Without “pre-data” infrastructure, there is no structured repository for raw data. The quality of your pre-data infrastructure depends on how well you have thought through your project and what types of information will be generated through the course of data collection.\nExamples of pre-data infrastructure are:\n\nA digital form for collecting information about samples or sampling sites\nA hard copy data sheet for recording information about soil samples or soil morphology in the field\nAn image repository or image organizing system (such as the native “Photos” app on iOS)\nLaboratory notebooks or spreadsheets for recording data generated in the lab\nLiterature review protocols\nLiterature review tools or apps\nData platforms such as GEMS"
   },
   {
     "objectID": "03-pre-data-raw-data.html#project-types",
     "href": "03-pre-data-raw-data.html#project-types",
-    "title": "“Pre-Data”: Setting Up Raw Data Collection and Curation Infrastructure for Different Project Types",
+    "title": "“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types",
     "section": "Project Types",
-    "text": "Project Types\nProjects come in many different shapes and forms. For the purposes of this book, we will use three main categories of project which should fit most projects happening in our lab. Note that these project types refer to where the major portion of the raw data is coming from:\n\nField projects\nLaboratory projects\nReview projects\nData synthesis projects\n\nNote that all projects may contain some components of several of these categories, but generally speaking, there should be a single category that best fits your project and can be used as a template to set up your pre-data infrastructure. You may also combine tools from multiple categories as appropriate for your project."
+    "text": "Project Types\nProjects come in many different shapes and forms. For the purposes of this book, we will use four main categories of project which should fit most projects happening in our lab. Note that these project types refer to where the major portion of the raw data is coming from:\n\nField projects\nLaboratory projects\nReview projects\nData synthesis projects\n\nNote that all projects may contain some components of several of these categories, but generally speaking, there should be a single category that best fits your project and can be used as a template to set up your pre-data infrastructure. You may also combine tools from multiple categories as appropriate for your project."
   },
   {
     "objectID": "03-pre-data-raw-data.html#field-projects",
     "href": "03-pre-data-raw-data.html#field-projects",
-    "title": "“Pre-Data”: Setting Up Raw Data Collection and Curation Infrastructure for Different Project Types",
+    "title": "“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types",
     "section": "Field Projects",
     "text": "Field Projects\nI’ll define field projects here as projects that require doing fieldwork to collect novel physical samples or morphological data. These projects require travel of some sort to collect raw data. Raw data for these projects typically will consist of physical samples."
   },
   {
     "objectID": "03-pre-data-raw-data.html#laboratory-projects",
     "href": "03-pre-data-raw-data.html#laboratory-projects",
-    "title": "“Pre-Data”: Setting Up Raw Data Collection and Curation Infrastructure for Different Project Types",
+    "title": "“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types",
     "section": "Laboratory projects",
     "text": "Laboratory projects\nThe raw data for laboratory projects consists of laboratory analysis of existing soil samples or samples consolidated from collaborators."
   },
   {
     "objectID": "03-pre-data-raw-data.html#review-projects",
     "href": "03-pre-data-raw-data.html#review-projects",
-    "title": "“Pre-Data”: Setting Up Raw Data Collection and Curation Infrastructure for Different Project Types",
+    "title": "“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types",
     "section": "Review Projects",
     "text": "Review Projects\nThe raw data for review projects is literature itself (peer-reviewed, gray or unpublished)."
   },
   {
     "objectID": "03-pre-data-raw-data.html#data-synthesis-projects",
     "href": "03-pre-data-raw-data.html#data-synthesis-projects",
-    "title": "“Pre-Data”: Setting Up Raw Data Collection and Curation Infrastructure for Different Project Types",
+    "title": "“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types",
     "section": "Data Synthesis Projects",
     "text": "Data Synthesis Projects\nData synthesis projects consolidate published and unpublished data from other scientists and collaborators."
   },
@@ -378,79 +378,100 @@
     "text": "9.2 Curating Raw Data in a Data Synthesis Project\nData Synthesis curation involves ensuring that all datasets are kept in their original form along with their original metadata and links or references to the original source material or the data in the data repository.\n\n9.2.1 Raw Data Repository Standards for Data Synthesis Projects\nYour raw-data repository for Laboratory Projects should include the following:\n\nData from the original sources in its original form, regardless of whether or not that form is in the acceptable standardized format for the data platform. # note that not all platforms require data to be in the same format prior to ingestion. Flexible platforms such as GEMS allow all types of datasets, and then format conversion can be accomplished as part of the scripting process.\nAll metadata associated with original datasets in its original form. This metadata should include links back to the original sources, references, or data repositories.\nProject metadata documentation, including information about data platform capabilities and harmonization procedures. This should include information about any controlled vocabularies or ontologies built or utilized.\n\n\n\n9.2.2 Other considerations #todo\n\ndata sharing agreement for each dataset contributed\nco-authorship guidelines # how far do they go?\nprivate or public options for each dataset"
   },
   {
-    "objectID": "04-data-munging.html",
-    "href": "04-data-munging.html",
+    "objectID": "05-data-munging.html",
+    "href": "05-data-munging.html",
     "title": "Data Munging",
     "section": "",
     "text": "Data munging as defined here is the process of moving from raw data to data in a processed form that is usable in analysis. Data munging consists of format standardization and Quality Assurance and Quality Control (QAQC)."
   },
   {
-    "objectID": "04-data-munging.html#documenting-data-munging---standards",
-    "href": "04-data-munging.html#documenting-data-munging---standards",
+    "objectID": "05-data-munging.html#documenting-data-munging---standards",
+    "href": "05-data-munging.html#documenting-data-munging---standards",
     "title": "Data Munging",
     "section": "Documenting Data Munging - Standards",
     "text": "Documenting Data Munging - Standards\nAs R is the main language of choice in our lab, the default data munging documentation standard involves an R project or series of R scripts. These should be stored in the src folder of your project directory and curated according to our lab [R code and project style guidelines]#todo.\nData munging documentation should also include metadata for this stage - and could be in the form of part of a project Quarto book published on GitHub Pages. This metadata should document all decisions made in the data munging process, the why and how. Due to the detailed nature of many of these decisions they are too much detail for a standard readme file or a project metadata file. However, a Quarto book with sections, chapters, and space to provide R code blocks would be an excellent way to document these decisions.\n\n\n\n\n\n\nRequired Tools - Data Munging\n\n\n\n\nR/RStudio\nGoogle Drive"
   },
   {
-    "objectID": "04c-standardizing-formats.html",
-    "href": "04c-standardizing-formats.html",
-    "title": "10  Standardizing Formats #todo",
+    "objectID": "05a-pulling-raw-data.html",
+    "href": "05a-pulling-raw-data.html",
+    "title": "10  Reproducibly Pulling Raw Data",
+    "section": "",
+    "text": "The first step in data munging is ensuring your raw data files are placed within the standardized folder structure and reproducibly pulling your raw data into R."
+  },
+  {
+    "objectID": "05a-pulling-raw-data.html#where-to-put-your-raw-data",
+    "href": "05a-pulling-raw-data.html#where-to-put-your-raw-data",
+    "title": "10  Reproducibly Pulling Raw Data",
+    "section": "10.1 Where to put your raw data",
+    "text": "10.1 Where to put your raw data\nAny raw data you generated should live in the following place in our standardized project repository:\n./00-data/a-raw\nAny data in raw data that is not your own and IS NOT findable by DOI or in an existing long term data repository should either be in an /external-sources subdirectory of the ./00-data/a-raw/ directory, which contains a metadata file that details the source of each of the external data sources. Raw data that IS findable in an existing long-term data repository by DOI should be reproducibly pulled in by script (see below)."
+  },
+  {
+    "objectID": "05a-pulling-raw-data.html#how-to-reproducibly-pull-raw-data-into-your-workflow",
+    "href": "05a-pulling-raw-data.html#how-to-reproducibly-pull-raw-data-into-your-workflow",
+    "title": "10  Reproducibly Pulling Raw Data",
+    "section": "10.2 How to reproducibly pull raw data into your workflow",
+    "text": "10.2 How to reproducibly pull raw data into your workflow\nThe way in which you reproducibly pull raw data into your workflow depends on whether: 1) you generated it or it is an external datasources that is not openly finadable and accessible by DOI or 2) it is an external datasource that is openly accessible and findable by DOI.\n\n10.2.1 Reproducibly pulling data that is your own or is not accessible by DOI\nEven though the project directory template already contains a .Rproj file, you should always use the here::here function in the here package in R when referencing file locations in your project repo - there are excellent reasons for using both .Rproj and here::here - when combined these are a powerful way to guarantee there won’t be any issues with other users running your code due to directory issues. Malcom Barrett gave an an excellent talk at the useR! 2020 conference entitled “Why use the here package when you’re already using projects?”. The .Rproj file contained in this tenplate is pre-configured to start with a completely clean workspace EVERY TIME by selecting in Project Options > General “Restore .RData into workspace at startup” = NO and “Save workspace to .RData on exit” = NO, “Disable .Pprofile execution on session start/resume” = CHECKED, “Quit child processes on exit” = CHECKED. These two options combined will also ensure that others running your code (or even you at a later date) don’t experience errors or conflictions due to workspace-specific background - this is often the cause of the following issue: “I swear…my code worked the last time I ran it and I didn’t change anything!”. This will also avoid Jenny Bryan coming into your office and setting your computer on fire.\n\n\n10.2.2 Reproducibly pulling data that is not your own or is accessible by DOI\nAny data sources required for your workflow that are open and accessible by DOI should be pulled into your workflow reproducibly by using the download.file and if necessary the unzip functions in R utils. This data should be placed in either the ./00-data/a-raw folder if it needs to be further munged or in the ./00-data/b-prepared/ folder if it is ready to be used immediately in your workflow.\n\n\n\n\n\n\nRequired Tools - Data Munging\n\n\n\n\nR/RStudio"
+  },
+  {
+    "objectID": "05c-standardizing-formats.html",
+    "href": "05c-standardizing-formats.html",
+    "title": "11  Standardizing Formats #todo",
     "section": "",
     "text": "The first step in data production is standardization of the formats of raw data. Raw data should be standardized using R scripts. R is now capable enough now to handle both tabular and geospatial data. For raw data archives containing image or video data, these should be converted to our lab standard formats using native tools on Mac such as Preview [need to provide references and how tos here] #todos"
   },
   {
-    "objectID": "04c-standardizing-formats.html#jelinski-lab-standard-data-formats",
-    "href": "04c-standardizing-formats.html#jelinski-lab-standard-data-formats",
-    "title": "10  Standardizing Formats #todo",
-    "section": "10.1 Jelinski Lab Standard Data Formats",
-    "text": "10.1 Jelinski Lab Standard Data Formats\n\n10.1.1 Tabular Data\nAll raw tabular data should be converted to .csv format. .csv is a simple text file that allows data to be stored in text form but readable by R, Excel and many other programs as a spreadsheet. In a .csv file, commas separate cells within a row and returns (new lines) indicate a new row. Tabular data in text form with other delimiters (such as tab, space or custom delimiters) can be converted to .csv formats easily in R.\nNote that one disadvantage of .csv formats is that data types which are stored in databases (such as dataframes in R or in other databases) are not retained. The data is text only. For most projects this is not an issue since R will automatically detect data types upon ingestion, but for some specialized projects database to database transfers might be better a better option to retain this information if necessary.\n\n\n10.1.2 Spatial data\nVector data (points, lines and polygons) should be converted to OGC Geopackage format. This can be easily accomplished in the terra package in R.\nRaster data (cell-based information) should be converted to GeoTIFF format.\nNote that these conversions can also occur as part of larger scripts in workflows, but should be documented clearly.\n\n\n10.1.3 Images\nImages should be converted to .jpeg format without compression so that the original image quality is retained. If you are taking pictures on an iPhone, the raw exported format will be Apple’s proprietary .HEIC format which is readable on Apple devices but not Windows devices. .jpeg is currently the most widely used and future proof image format. #todo - add something about RAW formats from DSLRs.\nThese conversions need to occur with a manual workflow using a Native application such as Preview or a proprietary application such as Photoshop.\n\n\n10.1.4 Videos\n#todo - .mpeg format?"
+    "objectID": "05c-standardizing-formats.html#jelinski-lab-standard-data-formats",
+    "href": "05c-standardizing-formats.html#jelinski-lab-standard-data-formats",
+    "title": "11  Standardizing Formats #todo",
+    "section": "11.1 Jelinski Lab Standard Data Formats",
+    "text": "11.1 Jelinski Lab Standard Data Formats\n\n11.1.1 Tabular Data\nAll raw tabular data should be converted to .csv format. .csv is a simple text file that allows data to be stored in text form but readable by R, Excel and many other programs as a spreadsheet. In a .csv file, commas separate cells within a row and returns (new lines) indicate a new row. Tabular data in text form with other delimiters (such as tab, space or custom delimiters) can be converted to .csv formats easily in R.\nNote that one disadvantage of .csv formats is that data types which are stored in databases (such as dataframes in R or in other databases) are not retained. The data is text only. For most projects this is not an issue since R will automatically detect data types upon ingestion, but for some specialized projects database to database transfers might be better a better option to retain this information if necessary.\n\n\n11.1.2 Spatial data\nVector data (points, lines and polygons) should be converted to OGC Geopackage format. This can be easily accomplished in the terra package in R.\nRaster data (cell-based information) should be converted to GeoTIFF format.\nNote that these conversions can also occur as part of larger scripts in workflows, but should be documented clearly.\n\n\n11.1.3 Images\nImages should be converted to .jpeg format without compression so that the original image quality is retained. If you are taking pictures on an iPhone, the raw exported format will be Apple’s proprietary .HEIC format which is readable on Apple devices but not Windows devices. .jpeg is currently the most widely used and future proof image format. #todo - add something about RAW formats from DSLRs.\nThese conversions need to occur with a manual workflow using a Native application such as Preview or a proprietary application such as Photoshop.\n\n\n11.1.4 Videos\n#todo - .mpeg format?"
   },
   {
-    "objectID": "08-style-guides-and-standards.html",
-    "href": "08-style-guides-and-standards.html",
+    "objectID": "09-style-guides-and-standards.html",
+    "href": "09-style-guides-and-standards.html",
     "title": "Jelinski Lab Style Guides and Standards",
     "section": "",
     "text": "This section details our current style guides and standards for R scripts, markdown, and tabular data."
   },
   {
-    "objectID": "08a-r-style-guide.html",
-    "href": "08a-r-style-guide.html",
-    "title": "11  Jelinski Lab R code Style Guide and Standards",
+    "objectID": "09a-r-style-guide.html",
+    "href": "09a-r-style-guide.html",
+    "title": "12  Jelinski Lab R code Style Guide and Standards",
     "section": "",
     "text": "These main principles are adapted from the Tidyverse style guide, which, in turn, was originally adapted from the Google style guide. But now, Google’s style guide refers to the Tidyverse style guide!\nThe Tidyverse style guide is more comprehensive than what is summarized here, but I believe that for day-to-day usage for most graduate students, these main principles address most scenarios.\nWriting code is writing! Bring the care you would take when writing a paper to writing code!"
   },
   {
-    "objectID": "08a-r-style-guide.html#naming-things",
-    "href": "08a-r-style-guide.html#naming-things",
-    "title": "11  Jelinski Lab R code Style Guide and Standards",
-    "section": "11.1 Naming things",
-    "text": "11.1 Naming things\nNaming things is hard - one of the hardest parts of scripting. Below are the guidelines you should use for naming things in your R code as a memebr of my lab group. These are not absolute rules, but rather guidelines that will ensure all of our code is consistent and is readable by all group members. Here are some general guidelines before I get to the specific styles below. These guidelines are from Robert Martin’s Clean Code: A Handbook of Agile Software Craftsmanship (2009)\n\nDon’t use names of established objects, classes or functions\nMake Meaningful Distinctions\nAvoid Redundancy\nUse pronounceable names\nUse searchable names\nDon’t be cute\nPick one word for an abstract concept and stick to it - i.e. don’t use synonyms - instead add a description in the name after that word; i.e. “get_type”, “get_value”, etc.\nDon’t add gratuitous context or prefixes\n\n\n11.1.1 R scripts\nThese files end in .R. They should contain NO special characters !, @, #, $, %, ^, &, *, (, ) or spaces. Only lowercase letters (no capital letters), -, and _. Additionally, I highly recommend adding numbers to your R scripts within projects (see section X.X, above. This helps both with file name recall and for you and/or a user to understand a sequence for running the scripts (if there is one). Left pad the numbers with a zero to allow you to go up to 99. The “00” script should be reserved for a master script that runs all of the other scripts for a project within it. The name for your script should be descriptive, and preferably 2-4 words in length. However if a longer name provides a better description or more comprehensive readability do not hesitate to use it!\n# Good\n00_master_script.R\n01_load_baseline_data.R\n\n# Bad \n00 Master!.R\n01LOAD.R\n\n\n11.1.2 Functions\nFor functions that you write (i.e. private functions), use .BigCamelCase. The camel case clearly differentiates functions from other named things (objects and scripts), and the dot at the beginning clearly identifies the function as a private function, and not one being called from Base R or an existing package.\n# Good\n.DoNothingPrivately <- function() {\n  return(invisible(NULL))\n}\n\n# Bad\ndo_nothing <- function() {\n  return(invisible(NULL))\n}\nR.C. Martin (2009) suggests the following with regard to writing functions. Many of these are useful, some irrelevant in 2023, but all good things to think about if you are writing your own functions: - Functions should be small, less than 20 lines max, and even smaller than that if possible. - Blocks and indenting should be used - Functions should do one thing - “if a function does only the step that are one level of abstraction below the stated name of the function, then the function does one thing”. - another way “to know that a function is doing more than one thing is if you can extract another function from it with a name that is not merely a restatement of its implementation” - One level of abstraction per function - what is a “level of abstraction”? - the stepdown rule - read code from top to bottom - human readable: to blank then we need to blank, to blank then we need to blank, etc - see page 113 - Use Descriptive Names - Try to have two arguments per function max\n\n\n11.1.3 Objects\nObject names are assigned within an R script. Similar to script names, they should contain NO special characters !, @, #, $, %, ^, &, *, (, ) or spaces. Only lowercase letters (no capital letters), -, and _. Unlike script names, however, they do not begin with numbers. The name for your objects should be descriptive, and preferrably 2-4 words in length. However if a longer object name provides a better description or more comprehensive readability you may use it! Just be aware there is a dichotomy here - unlike script names, objects tend to be called and referred to multiple times and therefore will show up in your code multiple times. Long and/or tedious object names can be difficult to maintain. So think carefully about these. I think naming objects is the hardest. also, name linear models with a .lm at the end etc. Plots )or saved plot components end in .p\n# Good\npf_binary\nannual_data\n\n# Bad \nPFbinary\nannual data"
+    "objectID": "09a-r-style-guide.html#naming-things",
+    "href": "09a-r-style-guide.html#naming-things",
+    "title": "12  Jelinski Lab R code Style Guide and Standards",
+    "section": "12.1 Naming things",
+    "text": "12.1 Naming things\nNaming things is hard - one of the hardest parts of scripting. Below are the guidelines you should use for naming things in your R code as a memebr of my lab group. These are not absolute rules, but rather guidelines that will ensure all of our code is consistent and is readable by all group members. Here are some general guidelines before I get to the specific styles below. These guidelines are from Robert Martin’s Clean Code: A Handbook of Agile Software Craftsmanship (2009)\n\nDon’t use names of established objects, classes or functions\nMake Meaningful Distinctions\nAvoid Redundancy\nUse pronounceable names\nUse searchable names\nDon’t be cute\nPick one word for an abstract concept and stick to it - i.e. don’t use synonyms - instead add a description in the name after that word; i.e. “get_type”, “get_value”, etc.\nDon’t add gratuitous context or prefixes\n\n\n12.1.1 R scripts\nThese files end in .R. They should contain NO special characters !, @, #, $, %, ^, &, *, (, ) or spaces. Only lowercase letters (no capital letters), -, and _. Additionally, I highly recommend adding numbers to your R scripts within projects (see section X.X, above. This helps both with file name recall and for you and/or a user to understand a sequence for running the scripts (if there is one). Left pad the numbers with a zero to allow you to go up to 99. The “00” script should be reserved for a master script that runs all of the other scripts for a project within it. The name for your script should be descriptive, and preferably 2-4 words in length. However if a longer name provides a better description or more comprehensive readability do not hesitate to use it!\n# Good\n00_master_script.R\n01_load_baseline_data.R\n\n# Bad \n00 Master!.R\n01LOAD.R\n\n\n12.1.2 Functions\nFor functions that you write (i.e. private functions), use .BigCamelCase. The camel case clearly differentiates functions from other named things (objects and scripts), and the dot at the beginning clearly identifies the function as a private function, and not one being called from Base R or an existing package.\n# Good\n.DoNothingPrivately <- function() {\n  return(invisible(NULL))\n}\n\n# Bad\ndo_nothing <- function() {\n  return(invisible(NULL))\n}\nR.C. Martin (2009) suggests the following with regard to writing functions. Many of these are useful, some irrelevant in 2023, but all good things to think about if you are writing your own functions: - Functions should be small, less than 20 lines max, and even smaller than that if possible. - Blocks and indenting should be used - Functions should do one thing - “if a function does only the step that are one level of abstraction below the stated name of the function, then the function does one thing”. - another way “to know that a function is doing more than one thing is if you can extract another function from it with a name that is not merely a restatement of its implementation” - One level of abstraction per function - what is a “level of abstraction”? - the stepdown rule - read code from top to bottom - human readable: to blank then we need to blank, to blank then we need to blank, etc - see page 113 - Use Descriptive Names - Try to have two arguments per function max\n\n\n12.1.3 Objects\nObject names are assigned within an R script. Similar to script names, they should contain NO special characters !, @, #, $, %, ^, &, *, (, ) or spaces. Only lowercase letters (no capital letters), -, and _. Unlike script names, however, they do not begin with numbers. The name for your objects should be descriptive, and preferrably 2-4 words in length. However if a longer object name provides a better description or more comprehensive readability you may use it! Just be aware there is a dichotomy here - unlike script names, objects tend to be called and referred to multiple times and therefore will show up in your code multiple times. Long and/or tedious object names can be difficult to maintain. So think carefully about these. I think naming objects is the hardest. also, name linear models with a .lm at the end etc. Plots )or saved plot components end in .p\n# Good\npf_binary\nannual_data\n\n# Bad \nPFbinary\nannual data"
   },
   {
-    "objectID": "08a-r-style-guide.html#code-length-punctuation-and-readability",
-    "href": "08a-r-style-guide.html#code-length-punctuation-and-readability",
-    "title": "11  Jelinski Lab R code Style Guide and Standards",
-    "section": "11.2 Code length, punctuation, and readability",
-    "text": "11.2 Code length, punctuation, and readability\n\n11.2.1 Commas, parentheses, spaces, operators\nUse commas and parentheses as in normal English. Always use a single space after a comma…\n# Good\n[, 1]\n\n# Bad\n[,1]\n…no spaces before or after (inside or outside) parentheses…\n# Good\nmean(x, f)\n\n# Bad\nmean( x, f )\n…except for when () is used for function arguments.\n# Good\nfunction(x) {}\n\n# Bad\nfunction (x) {}\nfunction(x){}\n“Infix” operators (operators typically used between two objects or text strings, i.e. (=, ==, +, -, <-, etc.)) should be surrounded by spaces….\n# Good\nheight <- (feet * 12) + inches\nmean(x, na.rm = TRUE)\n\n# Bad\nheight<-feet*12+inches\nmean(x, na.rm=TRUE)\n…however, operators with high precedence :, ::, :::, $, @, [, [[, ^, etc. should never be surrounded by spaces.\n# Good\nsqrt(x^2 + y^2)\ndf$z\nx <- 1:10\n\n# Bad\nsqrt(x ^ 2 + y ^ 2)\ndf $ z\nx <- 1 : 10\n\n\n11.2.2 Line breaks and length\nneed to add"
+    "objectID": "09a-r-style-guide.html#code-length-punctuation-and-readability",
+    "href": "09a-r-style-guide.html#code-length-punctuation-and-readability",
+    "title": "12  Jelinski Lab R code Style Guide and Standards",
+    "section": "12.2 Code length, punctuation, and readability",
+    "text": "12.2 Code length, punctuation, and readability\n\n12.2.1 Commas, parentheses, spaces, operators\nUse commas and parentheses as in normal English. Always use a single space after a comma…\n# Good\n[, 1]\n\n# Bad\n[,1]\n…no spaces before or after (inside or outside) parentheses…\n# Good\nmean(x, f)\n\n# Bad\nmean( x, f )\n…except for when () is used for function arguments.\n# Good\nfunction(x) {}\n\n# Bad\nfunction (x) {}\nfunction(x){}\n“Infix” operators (operators typically used between two objects or text strings, i.e. (=, ==, +, -, <-, etc.)) should be surrounded by spaces….\n# Good\nheight <- (feet * 12) + inches\nmean(x, na.rm = TRUE)\n\n# Bad\nheight<-feet*12+inches\nmean(x, na.rm=TRUE)\n…however, operators with high precedence :, ::, :::, $, @, [, [[, ^, etc. should never be surrounded by spaces.\n# Good\nsqrt(x^2 + y^2)\ndf$z\nx <- 1:10\n\n# Bad\nsqrt(x ^ 2 + y ^ 2)\ndf $ z\nx <- 1 : 10\n\n\n12.2.2 Line breaks and length\nneed to add"
   },
   {
-    "objectID": "08a-r-style-guide.html#code-sections-comments-fences-folds-and-scripts.",
-    "href": "08a-r-style-guide.html#code-sections-comments-fences-folds-and-scripts.",
-    "title": "11  Jelinski Lab R code Style Guide and Standards",
-    "section": "11.3 Code sections, comments, fences, folds and scripts.",
-    "text": "11.3 Code sections, comments, fences, folds and scripts.\n\nBreak your workflow up into numbered scripts.\nWithin each numbered script, you should have code sections that are fenced off that delineate major sections within that script.\nStandard for fences is 4 hashes to start followed by 4 hashes i.e.: #### Fence section name ####\nThis ensures foldability, etc. Fenced section names start with a capital letter and are then all lowercase. No period at the end.\nEach function you write should each be in a single script, unnumbered, but titled by the function name.\nEach line of a ==comment== should begin with the ==comment== symbol and a single space: # then should begin with lowercase, all lowercase, no period at the end. Comments go above the code that they run."
+    "objectID": "09a-r-style-guide.html#code-sections-comments-fences-folds-and-scripts.",
+    "href": "09a-r-style-guide.html#code-sections-comments-fences-folds-and-scripts.",
+    "title": "12  Jelinski Lab R code Style Guide and Standards",
+    "section": "12.3 Code sections, comments, fences, folds and scripts.",
+    "text": "12.3 Code sections, comments, fences, folds and scripts.\n\nBreak your workflow up into numbered scripts.\nWithin each numbered script, you should have code sections that are fenced off that delineate major sections within that script.\nStandard for fences is 4 hashes to start followed by 4 hashes i.e.: #### Fence section name ####\nThis ensures foldability, etc. Fenced section names start with a capital letter and are then all lowercase. No period at the end.\nEach function you write should each be in a single script, unnumbered, but titled by the function name.\nEach line of a ==comment== should begin with the ==comment== symbol and a single space: # then should begin with lowercase, all lowercase, no period at the end. Comments go above the code that they run."
   },
   {
-    "objectID": "08a-r-style-guide.html#examples.",
-    "href": "08a-r-style-guide.html#examples.",
-    "title": "11  Jelinski Lab R code Style Guide and Standards",
-    "section": "11.4 Examples.",
-    "text": "11.4 Examples."
+    "objectID": "09a-r-style-guide.html#examples.",
+    "href": "09a-r-style-guide.html#examples.",
+    "title": "12  Jelinski Lab R code Style Guide and Standards",
+    "section": "12.4 Examples.",
+    "text": "12.4 Examples."
   },
   {
-    "objectID": "10-summary.html",
-    "href": "10-summary.html",
-    "title": "12  Summary",
+    "objectID": "11-summary.html",
+    "href": "11-summary.html",
+    "title": "13  Summary",
     "section": "",
     "text": "1 + 1\n\n[1] 2"
   }

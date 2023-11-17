@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Science: Tools Applications, &amp; Workflow - “Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types</title>
+<title>Open Science: Tools Applications, &amp; Workflow - 11&nbsp; Standardizing Formats #todo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,8 +25,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03a-field-projects.html" rel="next">
-<link href="./02e-integrating-zotero.html" rel="prev">
+<link href="./09-style-guides-and-standards.html" rel="next">
+<link href="./05a-pulling-raw-data.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -135,7 +135,7 @@ ul.task-list{list-style: none;}
   </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./03-pre-data-raw-data.html" class="sidebar-item-text sidebar-link active">"Pre-Data" and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types</a>
+        <a href="./03-pre-data-raw-data.html" class="sidebar-item-text sidebar-link">"Pre-Data" and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -178,7 +178,7 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05c-standardizing-formats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></a>
+  <a href="./05c-standardizing-formats.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></a>
   </div>
 </li>
     </ul>
@@ -217,12 +217,13 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#defining-pre-data-and-raw-data" id="toc-defining-pre-data-and-raw-data" class="nav-link active" data-scroll-target="#defining-pre-data-and-raw-data">Defining “Pre-Data” and Raw Data</a></li>
-  <li><a href="#project-types" id="toc-project-types" class="nav-link" data-scroll-target="#project-types">Project Types</a></li>
-  <li><a href="#field-projects" id="toc-field-projects" class="nav-link" data-scroll-target="#field-projects">Field Projects</a></li>
-  <li><a href="#laboratory-projects" id="toc-laboratory-projects" class="nav-link" data-scroll-target="#laboratory-projects">Laboratory projects</a></li>
-  <li><a href="#review-projects" id="toc-review-projects" class="nav-link" data-scroll-target="#review-projects">Review Projects</a></li>
-  <li><a href="#data-synthesis-projects" id="toc-data-synthesis-projects" class="nav-link" data-scroll-target="#data-synthesis-projects">Data Synthesis Projects</a></li>
+  <li><a href="#jelinski-lab-standard-data-formats" id="toc-jelinski-lab-standard-data-formats" class="nav-link active" data-scroll-target="#jelinski-lab-standard-data-formats"> <span class="header-section-number">11.1</span> Jelinski Lab Standard Data Formats</a>
+  <ul class="collapse">
+  <li><a href="#tabular-data" id="toc-tabular-data" class="nav-link" data-scroll-target="#tabular-data"> <span class="header-section-number">11.1.1</span> Tabular Data</a></li>
+  <li><a href="#spatial-data" id="toc-spatial-data" class="nav-link" data-scroll-target="#spatial-data"> <span class="header-section-number">11.1.2</span> Spatial data</a></li>
+  <li><a href="#images" id="toc-images" class="nav-link" data-scroll-target="#images"> <span class="header-section-number">11.1.3</span> Images</a></li>
+  <li><a href="#videos" id="toc-videos" class="nav-link" data-scroll-target="#videos"> <span class="header-section-number">11.1.4</span> Videos</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -231,7 +232,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-rawdata" class="quarto-section-identifier d-none d-lg-block">“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></h1>
 </div>
 
 
@@ -245,49 +246,31 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<section id="defining-pre-data-and-raw-data" class="level3">
-<h3 class="anchored" data-anchor-id="defining-pre-data-and-raw-data">Defining “Pre-Data” and Raw Data</h3>
-<p>Pre-data here refers to the foundational work that is done and infrastructure that is set up to prepare your project to receive data. This work is critical and will ensure high quality datasets. It will also help you as you plan for data collection and think through each piece of data you need to collect in your project and why you are collecting it. “Pre-data” work facilitates the receipt and organization of raw data. Data is the information that drives a project and is used for answering a problem, question, or achieving a result.</p>
-<p>Raw data is data in its original form - unfiltered, unprocessed, with potential errors, outliers, and duplicates. Without “pre-data” infrastructure, there is no structured repository for raw data. The quality of your pre-data infrastructure depends on how well you have thought through your project and what types of information will be generated through the course of data collection.</p>
-<p>Examples of pre-data infrastructure are:</p>
-<ul>
-<li>A digital form for collecting information about samples or sampling sites</li>
-<li>A hard copy data sheet for recording information about soil samples or soil morphology in the field</li>
-<li>An image repository or image organizing system (such as the native “Photos” app on iOS)</li>
-<li>Laboratory notebooks or spreadsheets for recording data generated in the lab</li>
-<li>Literature review protocols</li>
-<li>Literature review tools or apps</li>
-<li>Data platforms such as <a href="https://gems.umn.edu/">GEMS</a></li>
-</ul>
+<p>The first step in data production is standardization of the formats of raw data. Raw data should be standardized using R scripts. R is now capable enough now to handle both tabular and geospatial data. For raw data archives containing image or video data, these should be converted to our lab standard formats using native tools on Mac such as Preview [need to provide references and how tos here] #todos</p>
+<section id="jelinski-lab-standard-data-formats" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="jelinski-lab-standard-data-formats"><span class="header-section-number">11.1</span> Jelinski Lab Standard Data Formats</h2>
+<section id="tabular-data" class="level3" data-number="11.1.1">
+<h3 data-number="11.1.1" class="anchored" data-anchor-id="tabular-data"><span class="header-section-number">11.1.1</span> Tabular Data</h3>
+<p>All raw tabular data should be converted to <a href="https://en.wikipedia.org/wiki/Comma-separated_values">.csv format</a>. .csv is a simple text file that allows data to be stored in text form but readable by R, Excel and many other programs as a spreadsheet. In a .csv file, commas separate cells within a row and returns (new lines) indicate a new row. Tabular data in text form with other delimiters (such as tab, space or custom delimiters) can be converted to .csv formats easily in R.</p>
+<p>Note that one disadvantage of .csv formats is that data types which are stored in databases (such as dataframes in R or in other databases) are not retained. The data is text only. For most projects this is not an issue since R will automatically detect data types upon ingestion, but for some specialized projects database to database transfers might be better a better option to retain this information if necessary.</p>
 </section>
-<section id="project-types" class="level2">
-<h2 class="anchored" data-anchor-id="project-types">Project Types</h2>
-<p>Projects come in many different shapes and forms. For the purposes of this book, we will use four main categories of project which should fit most projects happening in our lab. Note that these project types refer to where the major portion of the raw data is coming from:</p>
-<ul>
-<li>Field projects</li>
-<li>Laboratory projects</li>
-<li>Review projects</li>
-<li>Data synthesis projects</li>
-</ul>
-<p><em>Note that all projects may contain some components of several of these categories, but generally speaking, there should be a single category that best fits your project and can be used as a template to set up your pre-data infrastructure. You may also combine tools from multiple categories as appropriate for your project.</em></p>
+<section id="spatial-data" class="level3" data-number="11.1.2">
+<h3 data-number="11.1.2" class="anchored" data-anchor-id="spatial-data"><span class="header-section-number">11.1.2</span> Spatial data</h3>
+<p>Vector data (points, lines and polygons) should be converted to OGC Geopackage format. This can be easily accomplished in the <a href="https://cran.r-project.org/web/packages/terra/index.html">terra</a> package in R.</p>
+<p>Raster data (cell-based information) should be converted to GeoTIFF format.</p>
+<p><em>Note that these conversions can also occur as part of larger scripts in workflows, but should be documented clearly</em>.</p>
 </section>
-<section id="field-projects" class="level2">
-<h2 class="anchored" data-anchor-id="field-projects">Field Projects</h2>
-<p>I’ll define field projects here as projects that require doing fieldwork to collect novel physical samples or morphological data. These projects require travel of some sort to collect raw data. Raw data for these projects typically will consist of physical samples.</p>
+<section id="images" class="level3" data-number="11.1.3">
+<h3 data-number="11.1.3" class="anchored" data-anchor-id="images"><span class="header-section-number">11.1.3</span> Images</h3>
+<p>Images should be converted to .jpeg format without compression so that the original image quality is retained. If you are taking pictures on an iPhone, the raw exported format will be Apple’s proprietary .HEIC format which is readable on Apple devices but not Windows devices. .jpeg is currently the most widely used and future proof image format. #todo - add something about RAW formats from DSLRs.</p>
+<p>These conversions need to occur with a manual workflow using a Native application such as Preview or a proprietary application such as Photoshop.</p>
 </section>
-<section id="laboratory-projects" class="level2">
-<h2 class="anchored" data-anchor-id="laboratory-projects">Laboratory projects</h2>
-<p>The raw data for laboratory projects consists of laboratory analysis of existing soil samples or samples consolidated from collaborators.</p>
-</section>
-<section id="review-projects" class="level2">
-<h2 class="anchored" data-anchor-id="review-projects">Review Projects</h2>
-<p>The raw data for review projects is literature itself (peer-reviewed, gray or unpublished).</p>
-</section>
-<section id="data-synthesis-projects" class="level2">
-<h2 class="anchored" data-anchor-id="data-synthesis-projects">Data Synthesis Projects</h2>
-<p>Data synthesis projects consolidate published and unpublished data from other scientists and collaborators.</p>
+<section id="videos" class="level3" data-number="11.1.4">
+<h3 data-number="11.1.4" class="anchored" data-anchor-id="videos"><span class="header-section-number">11.1.4</span> Videos</h3>
+<p>#todo - .mpeg format?</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -372,13 +355,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02e-integrating-zotero.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Setting Up Zotero for Your Project - Early Success with Writing and Reference Management</span></span>
+      <a href="./05a-pulling-raw-data.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Reproducibly Pulling Raw Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03a-field-projects.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Field Projects</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./09-style-guides-and-standards.html" class="pagination-link">
+        <span class="nav-page-text">Jelinski Lab Style Guides and Standards</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

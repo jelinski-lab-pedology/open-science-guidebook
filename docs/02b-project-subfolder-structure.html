@@ -135,7 +135,7 @@ ul.task-list{list-style: none;}
   </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./03-pre-data-raw-data.html" class="sidebar-item-text sidebar-link">"Pre-Data": Setting Up Raw Data Collection and Curation Infrastructure for Different Project Types</a>
+        <a href="./03-pre-data-raw-data.html" class="sidebar-item-text sidebar-link">"Pre-Data" and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -165,7 +165,7 @@ ul.task-list{list-style: none;}
   </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./04-data-munging.html" class="sidebar-item-text sidebar-link">Data Munging</a>
+        <a href="./05-data-munging.html" class="sidebar-item-text sidebar-link">Data Munging</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -173,14 +173,19 @@ ul.task-list{list-style: none;}
     <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04c-standardizing-formats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></a>
+  <a href="./05a-pulling-raw-data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Reproducibly Pulling Raw Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05c-standardizing-formats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></a>
   </div>
 </li>
     </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./08-style-guides-and-standards.html" class="sidebar-item-text sidebar-link">Jelinski Lab Style Guides and Standards</a>
+        <a href="./09-style-guides-and-standards.html" class="sidebar-item-text sidebar-link">Jelinski Lab Style Guides and Standards</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -188,19 +193,19 @@ ul.task-list{list-style: none;}
     <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08a-r-style-guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Jelinski Lab R code Style Guide and Standards</span></a>
+  <a href="./09a-r-style-guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Jelinski Lab R code Style Guide and Standards</span></a>
   </div>
 </li>
     </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./10-summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./11-summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11-references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./12-references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
     </ul>
@@ -256,7 +261,7 @@ ul.task-list{list-style: none;}
 
 <p>This workflow is based around projects as discrete scientific entities, so we will spend some time here describing how the subdirectory within any single project can be set up in a standardized way. Every project should have a GitHub repo (even if it is in just idea phase) and the associated local directory on your computer, which are synced (I think the easiest way is to use GitHub Desktop, but you can also use the command line if you prefer). Setting up this standardized project subfolder structure will allow you to have a place to put everything related to your project in a clear way, without having to think extensively about where something should go. Note: not every project is the same, so you may have some subfolders which are empty for some projects, but that is totally fine! Keep the empty folders - you never know when you may need them. If they are empty that is fine!</p>
 <section id="registering-a-unique-project-id-on-jelinski-lab-project-registry" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="registering-a-unique-project-id-on-jelinski-lab-project-registry"><span class="header-section-number">2.1</span> Registering a unique project ID on <span class="citation" data-cites="jelinski-lab-project-registry">(<a href="11-references.html#ref-jelinski-lab-project-registry" role="doc-biblioref"><strong>jelinski-lab-project-registry?</strong></a>)</span></h2>
+<h2 data-number="2.1" class="anchored" data-anchor-id="registering-a-unique-project-id-on-jelinski-lab-project-registry"><span class="header-section-number">2.1</span> Registering a unique project ID on <span class="citation" data-cites="jelinski-lab-project-registry">(<a href="12-references.html#ref-jelinski-lab-project-registry" role="doc-biblioref"><strong>jelinski-lab-project-registry?</strong></a>)</span></h2>
 <p>**If you are in my lab group*, when using this template to set up a new project repo, please first obtain a new project ID by adding your project as a new row to <a href="https://github.com/orgs/jelinski-lab-pedology/projects/1"><span class="citation" data-cites="jelinski-lab-project-registry">(</span></a><a href="#ref-jelinski-lab-project-registry" role="doc-biblioref"><strong>jelinski-lab-project-registry?</strong></a>). <strong>NOTE: If you are not in my lab group, feel free to use this template repo and name it whatever the heck you want!</strong> Simply add a row with the next number in sequence (i.e.&nbsp;if the last registered project is M059-jelinski-permafrost-table-id, then your project should be M060-xxxxx) followed by your last name (assuming you are the project lead/owner) and then a 2-4 word descriptive title for your project (note - spend at least a bit of time thinking about this as this is what will be used on all other platforms (your personal computer, GitHub, GoogleDrive, etc…) as your project name.</p>
 </section>
 <section id="cloning-the-template-to-your-personal-github-page" class="level2" data-number="2.2">
