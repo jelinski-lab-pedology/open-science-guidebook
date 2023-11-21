@@ -1,0 +1,4 @@
+# Major Resources
+
+[Hadley Wickham::R for Data Science (2e)](https://r4ds.hadley.nz)
+[Software Carpentry::Programming with R](http://swcarpentry.github.io/r-novice-inflammation/)

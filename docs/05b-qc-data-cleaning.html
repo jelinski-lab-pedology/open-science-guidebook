@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Science: Tools Applications, &amp; Workflow - Data Munging -also called data wrangling</title>
+<title>Open Science: Tools Applications, &amp; Workflow - 12&nbsp; Quality Control (QC) and Data Cleaning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,8 +25,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05a-pulling-raw-data.html" rel="next">
-<link href="./04-raw-data-qaqc.html" rel="prev">
+<link href="./05c-standardizing-formats.html" rel="next">
+<link href="./05a-pulling-raw-data.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Data Munging -also called data wrangling</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Quality Control (QC) and Data Cleaning</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -170,7 +170,7 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./05-data-munging.html" class="sidebar-item-text sidebar-link active">Data Munging -also called data wrangling</a>
+        <a href="./05-data-munging.html" class="sidebar-item-text sidebar-link">Data Munging -also called data wrangling</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -183,7 +183,7 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05b-qc-data-cleaning.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Quality Control (QC) and Data Cleaning</span></a>
+  <a href="./05b-qc-data-cleaning.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Quality Control (QC) and Data Cleaning</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -227,7 +227,13 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#documenting-data-munging---standards" id="toc-documenting-data-munging---standards" class="nav-link active" data-scroll-target="#documenting-data-munging---standards">Documenting Data Munging - Standards</a></li>
+  <li><a href="#qc-and-data-cleaning-processes" id="toc-qc-and-data-cleaning-processes" class="nav-link active" data-scroll-target="#qc-and-data-cleaning-processes"> <span class="header-section-number">12.1</span> QC and Data Cleaning Processes</a>
+  <ul class="collapse">
+  <li><a href="#basic-formatting-and-qa-follow-up-structural-qc" id="toc-basic-formatting-and-qa-follow-up-structural-qc" class="nav-link" data-scroll-target="#basic-formatting-and-qa-follow-up-structural-qc"> <span class="header-section-number">12.1.1</span> Basic formatting and QA follow-up: Structural QC</a></li>
+  <li><a href="#domain-qc" id="toc-domain-qc" class="nav-link" data-scroll-target="#domain-qc"> <span class="header-section-number">12.1.2</span> Domain QC</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"> <span class="header-section-number">12.2</span> Additional Resources</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"> <span class="header-section-number">12.3</span> </a></li>
   </ul>
 </nav>
     </div>
@@ -236,7 +242,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Data Munging -also called data wrangling</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Quality Control (QC) and Data Cleaning</span></h1>
 </div>
 
 
@@ -250,56 +256,65 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>Data munging as defined here is the process of moving from <a href="@sec-rawdata">raw data</a> to data in a processed form that is usable in analysis. Data munging consists of format standardization and Quality Assurance and Quality Control (QAQC).</p>
-<p>Other references for what is included in data munging:</p>
-<p><a href="https://www.astera.com/type/blog/what-is-data-munging/#:~:text=Data%20munging%20is%20the%20process,cleaning%2C%20enrichment%2C%20and%20validation">Astera::What is data munging and why is it important?</a></p>
+<p>The QC process involves detecting erroneous or defective data in an existing dataset and is the first step in the data munging stage. While it is not always possible to ensure that there is NO erroneous or defective data in a dataset, a combination of good pre-data structures and QA protocols, in combination with QC and data cleaning will result in a high quality dataset that is suitable for further data munging and data analysis.</p>
+<p>NOTE: Part of QC (and QA) processes may involve flagging outlier in data. This is important and necessary. However, it is critical, especially with environmental data sets (which can often be messy and contain unexpected values) that you do NOT reject data outright simply because it is a statistical outlier! Flagging statistical outliers is important. Deciding whether to accept or reject them requires investigation and careful consideration.</p>
+<section id="qc-and-data-cleaning-processes" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="qc-and-data-cleaning-processes"><span class="header-section-number">12.1</span> QC and Data Cleaning Processes</h2>
+<p>Once your raw data has been pulled into your workspace in a reproducible way, it is important to conduct QC and data cleaning in order to detect any potentially erroneous, defective, or missing data and subsequently decide how to proceed. While the detection process is more amenable to automated procedures and can be quantified, deciding how to proceed once these potentially defective data points are detected can be subjective and requires domain knowledge as well as intuition, along with rich and reproducible documentation of decisions made. The following standard QC procedures should be performed on every dataset:</p>
+<section id="basic-formatting-and-qa-follow-up-structural-qc" class="level3" data-number="12.1.1">
+<h3 data-number="12.1.1" class="anchored" data-anchor-id="basic-formatting-and-qa-follow-up-structural-qc"><span class="header-section-number">12.1.1</span> Basic formatting and QA follow-up: Structural QC</h3>
+<p>Although a good QA plan and processes can ensure that the raw data conforms to standards and contains as few structural errors as possible, the first step in any QC process should be structural. Some of these structural issues can be resolved in the read-in process with additional arguments to <a href="https://www.geeksforgeeks.org/read-contents-of-a-csv-file-in-r-programming-read-csv-function/">read.csv</a>(imports data as data frame), <a href="https://medium.com/r-tutorials/r-functions-daily-read-csv-3c418c25cba4">tidyverse::readr::read_csv</a>(imports data as <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html">tibble</a>) or other preferred functions in raw data import. Others may involve additional scripting to resolve:</p>
 <ul>
-<li><p>Data Discovery (this is probably not relevant to our purposes) &gt; Everything begins with a defined goal, and the data analysis journey isn’t an exception. Data discovery is the first stage of data munging, where data analysts define data’s purpose and how to achieve it through data analytics. The goal is to identify the potential uses and requirements of data.</p></li>
-<li><p>Data Structuring (QA - a lot of this happens in the Pre-Data stage if done well) &gt; Once the requirements are identified and outlined, the next stage is structuring raw data to make it machine-readable. Structured data has a well-defined schema and follows a consistent layout. Think of data neatly organized in rows and columns available in spreadsheets and relational databases.</p></li>
-<li><p>Data Cleansing (QC): &gt; Data cleansing lays the foundation for accurate and efficient data analysis. Several transformations — like Remove, Replace, Find and Replace, etc. — are applied to eliminate redundant text and null values as well as identify missing fields, misplaced entries, and typing errors that can distort the analysis.</p></li>
-<li><p>Data Enrichment (?): &gt; It typically involves aggregating multiple data sources. For instance, if an order ID is found within a system, a user can match that order ID against a different database to obtain further details like the account name, account balance, buying history, credit limit, etc. This additional data “enriches” the original ID with greater context.</p></li>
-</ul>
-<p>NOTE: could metadata writing also be considered data enrichment?</p>
+<li>Are non-spatial data files in text format (separated values, preferrably csv as per our lab standards)?
 <ul>
-<li>Data Validation (QC?): &gt; Data validation contrasts with data cleansing in that it rejects any data that don’t comply with pre-defined rules or constraints. also checks for the correctness and meaningfulness of the information.</li>
-</ul>
-<p><a href="https://www.alteryx.com/glossary/data-munging">Alteryx::Data Munging</a></p>
+<li>If they are not, write a script that converts the raw data file from non .csv format to .csv format.</li>
+</ul></li>
+<li>Does the first row contain column names?
 <ul>
-<li><p>Discovery: &gt; Also known as data profiling. Learn what’s in your raw data sets to think ahead about the best approach for your analytic explorations. This step involves gathering data from data sources and forming a high-level picture of the distribution, type, and format of data values. It allows you to understand unique elements of the data such as outliers and value distribution to inform the analysis process.</p></li>
-<li><p>Enriching: &gt; Before you structure and cleanse your data, what else could you add to provide more value to your analysis? Enrichment is often about joins and complex derivations. For example, if you’re looking at biking data, perhaps a weather dataset would be an important factor in your analysis.</p></li>
-<li><p>Structuring: &gt; This is a critical step because data can come in all shapes and sizes, and it is up to you to decide the best format to visualize and explore it. Separating, blending, and un-nesting are all important actions in this step.</p></li>
-<li><p>Cleaning: &gt; This step is essential to standardizing your data to ensure that all inconsistencies (such as null and misspelled values) are addressed. Other data may need to be standardized to a single format, such as state abbreviations.</p></li>
-<li><p>Validating: &gt; Verify if you’ve caught all the data quality and consistency issues and go back to address anything you may have missed. Data validation should be done on multiple dimensions.</p></li>
-<li><p>Publishing and orchestrating: &gt; This is where you can download and deliver the results of your wrangling effort to downstream analytics tools. Once you’ve published your data it’s time to move onto the next step, analytics.</p></li>
-<li><p>Examples:</p></li>
-<li><p>Data aggregation: Combining data from multiple sources (e.g.&nbsp;spreadsheets, cloud databases, source systems, etc.) by importing, joining tables, and summarizing it based on specific criteria</p></li>
-<li><p>Correcting missing data: Inputting missing values, deleting rows or columns with a high percentage of missing data, and using interpolation to estimate missing values</p></li>
-<li><p>Converting data types: Changing strings to numeric values, converting datetime formats, and converting categorical data into numerical representations</p></li>
-<li><p>Filtering and sorting: Selecting specific rows or columns based on certain criteria or reordering data based on specific values</p></li>
-<li><p>Removing duplicates: Identifying and eliminating duplicate rows or records in the data set</p></li>
-<li><p>Data normalization: Standardizing or scaling data values to meet a specific range</p></li>
-<li><p>Feature engineering: Creating new features or variables from existing data, such as calculating the difference between two columns</p></li>
-<li><p>Outlier detection and handling: Seeking out outliers within the data and removing them, capping them, or transforming them if they could affect analysis results</p></li>
-<li><p>Text cleaning and processing: Removing unnecessary characters such as whitespace or punctuation, tokenizing text, converting text to lowercase, or stemming/lemmatizing words</p></li>
-<li><p>Data transformation: Applying mathematical or statistical transformations to the data, such as taking the logarithm, square root, or exponential of a variable</p></li>
+<li>If not - assign column names using <a href="https://sparkbyexamples.com/r-programming/change-column-names-of-the-r-dataframe/">colnames or setnames</a>.</li>
+</ul></li>
+<li>Are there special characters, spaces or other wierdness in the column names?
+<ul>
+<li>If so, rename them as above</li>
+</ul></li>
+<li>Are data types or column classes correct?
+<ul>
+<li>R has <a href="https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures.html#:~:text=R%27s%20basic%20data%20types%20are,%2C%20data%20frame%2C%20and%20factor">5 basic data types</a>: character (text string), numeric (real or decimal), integer, logical (true/false) and complex (numbers with real and imaginary parts). For the most part we rarely encounter complex data types in our line of work, and we seldom use logical data types (true/false) - preferring instead to code those as binary 1/0. Additionally, because numeric data types also include integers, it is often just fine for integers to be numeric - however there may be some cases when you want to enforce integers strictly, in which case you do want to use the integer class. SO - this means that you really just need to be concerned about whether character and numeric data types are assigned as expected in your imported dataset. NOTE: R will automatically detect data types on import unless explicitly assigned - this is fine most of the time and actually worksquite well for QC purposes because, for example, if a field (column) that you expect to be numeric (such as say, pH) is listed as character - there are likely some unwanted values in your dataset for that field that you want to investigate. NA values are read as NULL or missing and therefore do not affect variable type. However, if in your pH column you have a value such as 5.4x or &lt; 5.4 or N/A, then the entire field will be read as a character. You need to go in and fix that. One way of doing this is to display unique values for the field using the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/unique">base::unique</a> function and searching for any unexpected values. You can then replace or correct these values using the <a href="https://www.digitalocean.com/community/tutorials/replace-in-r">base::replace</a> function ON THE FIELD OF INTEREST (preferred) or on the whole dataset. Once you have resolved any of these outstanding issues, you can coerce the field to the data type of your choice using <a href="https://r-lang.com/as-character-function-in-r/">as.character</a>, <a href="">as.numeric</a>.</li>
+</ul></li>
+<li>Are there empty columns or rows in the dataset?
+<ul>
+<li>You may have some completely empty or null columns or rows in your dataset. Most of the time you may want to remove these. There are a few ways to go about it:
+<ul>
+<li><a href="https://community.rstudio.com/t/drop-all-na-columns-from-a-dataframe/5844/2">use a custom function</a></li>
+<li><a href="https://rdrr.io/cran/janitor/man/remove_empty.html">use the janitor::remove_empty function</a></li>
+<li><a href="https://www.codingprof.com/3-easy-ways-to-remove-empty-columns-in-r/">using colsums, sapply or tidyverse::discard</a></li>
+</ul></li>
+</ul></li>
 </ul>
-<p>NOTE: ADD UNIQUE IDS!!!!! How to have IDs sample vs horizon vs pedon vs site ids</p>
-<p><a href="https://www.geeksforgeeks.org/data-munging-in-r-programming/">Geeks for Geeks::Data Munging in R Programming</a></p>
-<p><a href="https://waterdata.usgs.gov/blog/data-munging/">Samantha Oliver - USGS Water Data::Beyond Basic R - Data Munging</a></p>
-<p>NOTE: Gapfilling, imputing, etc</p>
-<p><a href="https://tjmurphy.github.io/jabstb/jaxwest7.html">TJ Murphy::Reproducible Data Munging in R</a></p>
-<p><a href="https://bookdown.org/daniel_dauber_io/r4np_book/data-wrangling.html">Daniel Dauber::R for Non-Programmers - Data Wranging</a> NOTE: this is VERY good</p>
-<p>NOTE: you can do some data munging in the read.csv specific arguments: https://www.geeksforgeeks.org/read-contents-of-a-csv-file-in-r-programming-read-csv-function/</p>
-<p>List of questions: Is the file in text format (separated values, preferrably csv)?</p>
-<p>Does the first row contain column names?</p>
-<p>Are there special characters, spaces or other wierdness in the column names? Renaming column names</p>
-<p>Are there missing values in the dataset? If so, decide if/how they should be dealt with.</p>
-<p>Specifying data types or column classes.</p>
-<p><a href="https://datascience.stackexchange.com/questions/12018/when-to-choose-character-instead-of-factor-in-r">Factors vs characters</a> <a href="http://monashbioinformaticsplatform.github.io/2015-09-28-rbioinformatics-intro-r/01-supp-factors.html">and</a></p>
-<section id="documenting-data-munging---standards" class="level2">
-<h2 class="anchored" data-anchor-id="documenting-data-munging---standards">Documenting Data Munging - Standards</h2>
-<p>As R is the main language of choice in our lab, the default data munging documentation standard involves an R project or series of R scripts. These should be stored in the <strong>src</strong> folder of your project directory and curated according to our lab [R code and project style guidelines]#todo.</p>
-<p>Data munging documentation should also include metadata for this stage - and could be in the form of part of a project Quarto book published on GitHub Pages. This metadata should document all decisions made in the data munging process, the why and how. Due to the detailed nature of many of these decisions they are too much detail for a standard readme file or a project metadata file. However, a Quarto book with sections, chapters, and space to provide R code blocks would be an excellent way to document these decisions.</p>
+</section>
+<section id="domain-qc" class="level3" data-number="12.1.2">
+<h3 data-number="12.1.2" class="anchored" data-anchor-id="domain-qc"><span class="header-section-number">12.1.2</span> Domain QC</h3>
+<p>Other QC issues typically involve applying domain knowledge to make some objective decisions regarding QC and data cleaning. These are: - ID’ing and deciding what to do with missing values, - Identifying and deciding what to do with duplicates - Identifying and deciding what to do with potential outliers - Deciding when/if actors vs character data types are most appropriate: <a href="https://datascience.stackexchange.com/questions/12018/when-to-choose-character-instead-of-factor-in-r">Factors vs characters</a> <a href="http://monashbioinformaticsplatform.github.io/2015-09-28-rbioinformatics-intro-r/01-supp-factors.html">and</a></p>
+<section id="identification-of-missing-values-review-and-decisions" class="level4" data-number="12.1.2.1">
+<h4 data-number="12.1.2.1" class="anchored" data-anchor-id="identification-of-missing-values-review-and-decisions"><span class="header-section-number">12.1.2.1</span> Identification of missing values, review and decisions</h4>
+<p>The identification of missing values is a critical first step in QA and data cleaning. This identification should be done programmatically, and once ID is complete, decisions should be made regarding how to deal with these values. There are several options:</p>
+<ul>
+<li>Retain missing values as is</li>
+<li>Replace missing values with “imputed” values</li>
+<li>Delete records with a high proportion of missing values</li>
+</ul>
+<section id="retaining-missing-values" class="level5" data-number="12.1.2.1.1">
+<h5 data-number="12.1.2.1.1" class="anchored" data-anchor-id="retaining-missing-values"><span class="header-section-number">12.1.2.1.1</span> Retaining missing values</h5>
+<p>Given the high uncertainty of many environmental measurements, it is often preferrable to retain missing values in the dataset. In practice, using our R-based workflow, this means that when univariate, bivariate, or multivariate analyses are performed on the dataset that call a variable for which a particular sample has missing values - these samples will not be</p>
+</section>
+</section>
+</section>
+</section>
+<section id="additional-resources" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">12.2</span> Additional Resources</h2>
+</section>
+<section id="section" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="section"><span class="header-section-number">12.3</span> </h2>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -312,7 +327,6 @@ Required Tools - Data Munging
 <div class="callout-body-container callout-body">
 <ul>
 <li>R/RStudio</li>
-<li>Google Drive</li>
 </ul>
 </div>
 </div>
@@ -402,13 +416,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./04-raw-data-qaqc.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quality Assurance (QA) and Quality Control (QC) on Raw Data</span></span>
+      <a href="./05a-pulling-raw-data.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Reproducibly Pulling Raw Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05a-pulling-raw-data.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Reproducibly Pulling Raw Data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05c-standardizing-formats.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Standardizing Formats #todo</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

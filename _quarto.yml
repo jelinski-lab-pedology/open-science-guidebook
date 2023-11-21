@@ -25,12 +25,16 @@ book:
       - 03b-lab-projects.qmd
       - 03c-review-projects.qmd
       - 03d-data-synthesis-projects.qmd
+    - part: 04-raw-data-qaqc.qmd
+      # chapters:
+      # - 04a-quality-assurance-plans.qmd
     - part: 05-data-munging.qmd
       chapters:
       - 05a-pulling-raw-data.qmd
-      #- 05b-qaqc-data-cleaning.qmd #includes log, includes reps for lab data, flagging samples for rerun
+      - 05b-qc-data-cleaning.qmd #includes log, includes reps for lab data, flagging samples for rerun
       - 05c-standardizing-formats.qmd
     #- part: 06-data-analysis-interpretation.qmd #metadata
+        #- 06x-exploratory-data-analysis-log.qmd
         #- 06a-data-analysis-log.qmd
         #- 06b-building-analysis-scripts.qmd
         #- 06c-maintaining-R-project.qmd

@@ -42,3 +42,7 @@ The raw data for review projects is literature itself (peer-reviewed, gray or un
 ## Data Synthesis Projects
 
 Data synthesis projects consolidate published and unpublished data from other scientists and collaborators.
+
+## Additional Resources
+
+[USGS::Data Management - Quality by Design: Recommended Practices](https://www.usgs.gov/data-management/quality-design-recommended-practices) [USGS::Data Management - Domain Management: Recommended Practices](https://www.usgs.gov/data-management/domain-management-recommended-practices)

@@ -1,0 +1,48 @@
+## Quality Assurance (QA) and Quality Control (QC) on Raw Data {#sec-qaqc}
+
+### Differences between Quality Assurance (QA) and Quality Control (QC)
+
+Quality assurance (QA) is the deployment of protocols and methods to prevent defective or erroneous data from entering your workflow during data collection, whereas quality control (QC) is the detection of erroneous or defective data in an existing dataset [USGS::Data Management - Manage Quality](https://www.usgs.gov/data-management/manage-quality#qa). For this reason, quality assurance (QA) processes are best integrated into this workflow at the "pre-data" and raw data collection stages, while quality control (QC) is the first part of the data munging or data wrangling process.
+
+### Quality assurance (QA) planning and practice
+
+QA planning intersects significantly with your pre-data workflow and may be a part of any data management plan. QA processes for a project are best articulated in a Quality Assurance Plan (QAP). One of the best resources for QA planning is the USGS [Quality Assurance Plans: Recommended Practices and Examples](https://www.usgs.gov/data-management/quality-assurance-plans-recommended-practices-and-examples) resource. This resource recommends the following components of a QAP:
+
+- Identif[ies] data quality objectives for your data or project
+- Identif[ies] requirements for
+    - Staff skills and training
+    - Field and lab methods and equipment that meet data-collection standards
+    - Software and file types to use for data handling and analysis that support data quality goals
+    - Data standards, structure, and domains consistent with community conventions for other data in the same subject area
+    - Periodic data-quality assessment using defined quality metrics
+- Describe[s] a structure for data storage that can also facilitate checking for errors and help to document data quality
+- Describe[s] approved data entry tools and procedures, when applicable
+- Establish[es] data-quality criteria and data-screening processes for all of the data you will collect
+- Include[s] quality metrics that can determine current data-quality status
+- Establish[es] a plan for 'data quality assessments' as part of the data flow
+- Contain[s] a process for handling data corrections
+- Contain[s] a process for data users to dispute and correct data
+
+QA practice is the application of QAP components to prevent the creation of erroneous or defective data whenever and wherever possible. 
+
+This includes:
+
+- citing well documented methods for data collection OR developing detailed documentation for an new data collection methods or protocols
+- developing training checklists and standards for staff or scientists involved in data collection
+- for laboratory procedures: ensure that methods for including blanks, replicates, and standards are well documented and standardized
+- for laboratory procedures: initial review of standards, replicates and blanks to ensure a sample, set of samples or sample run has passed the minimum acceptable standard for inclusion into the dataset
+- could involve the coding of quality review flags if data is input through automated forms
+- protocols and standards for transferring information from physical data sheets to electronic data sheets to detect and avoid errors in data input
+- protocols and standards for versioning of shared data sheets to avoid conflicts and input errors
+
+### Quality Control (QC) practice
+
+QC in practice is best integrated into the initial portion of the data munging stage of the workflow and will be addressed in that portion of this document. 
+
+### Additional QA/QC Resources
+[USGS:: Data Management - Manage Quality](https://www.usgs.gov/data-management/manage-quality#qa)
+[USGS :: Data Management - Quality Assurance Plans:  Recommended Practices and Examples](https://www.usgs.gov/data-management/quality-assurance-plans-recommended-practices-and-examples)
+[USGS:: Data Management - QA - Preventing Data Issues: Recommended Practices](https://www.usgs.gov/data-management/quality-assurance-qa-preventing-data-issues-recommended-practices)
+[Arthur Chapman :: Principles of Data Quality](https://www.gbif.org/document/80509/principles-of-data-quality)
+
+

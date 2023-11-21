@@ -1,0 +1,59 @@
+# Quality Control (QC) and Data Cleaning
+
+The QC process involves detecting erroneous or defective data in an existing dataset and is the first step in the data munging stage. While it is not always possible to ensure that there is NO erroneous or defective data in a dataset, a combination of good pre-data structures and QA protocols, in combination with QC and data cleaning will result in a high quality dataset that is suitable for further data munging and data analysis.
+
+NOTE: Part of QC (and QA) processes may involve flagging outlier in data. This is important and necessary. However, it is critical, especially with environmental data sets (which can often be messy and contain unexpected values) that you do NOT reject data outright simply because it is a statistical outlier! Flagging statistical outliers is important. Deciding whether to accept or reject them requires investigation and careful consideration.
+
+## QC and Data Cleaning Processes
+Once your raw data has been pulled into your workspace in a reproducible way, it is important to conduct QC and data cleaning in order to detect any potentially erroneous, defective, or missing data and subsequently decide how to proceed. While the detection process is more amenable to automated procedures and can be quantified, deciding how to proceed once these potentially defective data points are detected can be subjective and requires domain knowledge as well as intuition, along with rich and reproducible documentation of decisions made. The following standard QC procedures should be performed on every dataset:
+
+### Basic formatting and QA follow-up: Structural QC
+Although a good QA plan and processes can ensure that the raw data conforms to standards and contains as few structural errors as possible, the first step in any QC process should be structural. Some of these structural issues can be resolved in the read-in process with additional arguments to [read.csv](https://www.geeksforgeeks.org/read-contents-of-a-csv-file-in-r-programming-read-csv-function/)(imports data as data frame), [tidyverse::readr::read_csv](https://medium.com/r-tutorials/r-functions-daily-read-csv-3c418c25cba4)(imports data as [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)) or other preferred functions in raw data import. Others may involve additional scripting to resolve:
+
+- Are non-spatial data files in text format (separated values, preferrably csv as per our lab standards)?
+    - If they are not, write a script that converts the raw data file from non .csv format to .csv format.
+
+- Does the first row contain column names?
+    - If not - assign column names using [colnames or setnames](https://sparkbyexamples.com/r-programming/change-column-names-of-the-r-dataframe/). 
+    
+- Are there special characters, spaces or other wierdness in the column names? 
+    - If so, rename them as above
+    
+- Are data types or column classes correct?
+    - R has [5 basic data types](https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures.html#:~:text=R%27s%20basic%20data%20types%20are,%2C%20data%20frame%2C%20and%20factor): character (text string), numeric (real or decimal), integer, logical (true/false) and complex (numbers with real and imaginary parts). For the most part we rarely encounter complex data types in our line of work, and we seldom use logical data types (true/false) - preferring instead to code those as binary 1/0. Additionally, because numeric data types also include integers, it is often just fine for integers to be numeric - however there may be some cases when you want to enforce integers strictly, in which case you do want to use the integer class. SO - this means that you really just need to be concerned about whether character and numeric data types are assigned as expected in your imported dataset. NOTE: R will automatically detect data types on import unless explicitly assigned - this is fine most of the time and actually worksquite well for QC purposes because, for example, if a field (column) that you expect to be numeric (such as say, pH) is listed as character - there are likely some unwanted values in your dataset for that field that you want to investigate. NA values are read as NULL or missing and therefore do not affect variable type. However, if in your pH column you have a value such as 5.4x or < 5.4 or N/A, then the entire field will be read as a character. You need to go in and fix that. One way of doing this is to display unique values for the field using the [base::unique](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/unique) function and searching for any unexpected values. You can then replace or correct these values using the [base::replace](https://www.digitalocean.com/community/tutorials/replace-in-r) function ON THE FIELD OF INTEREST (preferred) or on the whole dataset. Once you have resolved any of these outstanding issues, you can coerce the field to the data type of your choice using [as.character](https://r-lang.com/as-character-function-in-r/), [as.numeric]().
+
+- Are there empty columns or rows in the dataset?
+    - You may have some completely empty or null columns or rows in your dataset. Most of the time you may want to remove these. There are a few ways to go about it:
+        - [use a custom function](https://community.rstudio.com/t/drop-all-na-columns-from-a-dataframe/5844/2)
+        - [use the janitor::remove_empty function](https://rdrr.io/cran/janitor/man/remove_empty.html)
+        - [using colsums, sapply or tidyverse::discard](https://www.codingprof.com/3-easy-ways-to-remove-empty-columns-in-r/)
+
+### Domain QC
+Other QC issues typically involve applying domain knowledge to make some objective decisions regarding QC and data cleaning. These are:
+- ID'ing and deciding what to do with missing values, 
+- Identifying and deciding what to do with duplicates
+- Identifying and deciding what to do with potential outliers
+- Deciding when/if actors vs character data types are most appropriate: [Factors vs characters](https://datascience.stackexchange.com/questions/12018/when-to-choose-character-instead-of-factor-in-r)
+[and](http://monashbioinformaticsplatform.github.io/2015-09-28-rbioinformatics-intro-r/01-supp-factors.html)
+
+#### Identification of missing values, review and decisions
+The identification of missing values is a critical first step in QA and data cleaning. This identification should be done programmatically, and once ID is complete, decisions should be made regarding how to deal with these values. There are several options: 
+
+- Retain missing values as is
+- Replace missing values with "imputed" values
+- Delete records with a high proportion of missing values
+
+##### Retaining missing values
+Given the high uncertainty of many environmental measurements, it is often preferrable to retain missing values in the dataset. In practice, using our R-based workflow, this means that when univariate, bivariate, or multivariate analyses are performed on the dataset that call a variable for which a particular sample has missing values - these samples will not be 
+
+## Additional Resources
+
+
+
+## 
+
+::: callout-tip
+## Required Tools - Data Munging
+
+-   R/RStudio
+:::

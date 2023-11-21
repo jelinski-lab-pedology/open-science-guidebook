@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Science: Tools Applications, &amp; Workflow - Data Munging -also called data wrangling</title>
+<title>Open Science: Tools Applications, &amp; Workflow - 10&nbsp; Quality Assurance (QA) and Quality Control (QC) on Raw Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,8 +25,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05a-pulling-raw-data.html" rel="next">
-<link href="./04-raw-data-qaqc.html" rel="prev">
+<link href="./05-data-munging.html" rel="next">
+<link href="./03d-data-synthesis-projects.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Data Munging -also called data wrangling</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quality Assurance (QA) and Quality Control (QC) on Raw Data</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -165,12 +165,12 @@ ul.task-list{list-style: none;}
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-raw-data-qaqc.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quality Assurance (QA) and Quality Control (QC) on Raw Data</span></a>
+  <a href="./04-raw-data-qaqc.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quality Assurance (QA) and Quality Control (QC) on Raw Data</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
     <div class="sidebar-item-container"> 
-        <a href="./05-data-munging.html" class="sidebar-item-text sidebar-link active">Data Munging -also called data wrangling</a>
+        <a href="./05-data-munging.html" class="sidebar-item-text sidebar-link">Data Munging -also called data wrangling</a>
       <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
         <i class="bi bi-chevron-right ms-2"></i>
       </a>
@@ -227,7 +227,10 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#documenting-data-munging---standards" id="toc-documenting-data-munging---standards" class="nav-link active" data-scroll-target="#documenting-data-munging---standards">Documenting Data Munging - Standards</a></li>
+  <li><a href="#differences-between-quality-assurance-qa-and-quality-control-qc" id="toc-differences-between-quality-assurance-qa-and-quality-control-qc" class="nav-link active" data-scroll-target="#differences-between-quality-assurance-qa-and-quality-control-qc"> <span class="header-section-number">10.0.1</span> Differences between Quality Assurance (QA) and Quality Control (QC)</a></li>
+  <li><a href="#quality-assurance-qa-planning-and-practice" id="toc-quality-assurance-qa-planning-and-practice" class="nav-link" data-scroll-target="#quality-assurance-qa-planning-and-practice"> <span class="header-section-number">10.0.2</span> Quality assurance (QA) planning and practice</a></li>
+  <li><a href="#quality-control-qc-practice" id="toc-quality-control-qc-practice" class="nav-link" data-scroll-target="#quality-control-qc-practice"> <span class="header-section-number">10.0.3</span> Quality Control (QC) practice</a></li>
+  <li><a href="#additional-qaqc-resources" id="toc-additional-qaqc-resources" class="nav-link" data-scroll-target="#additional-qaqc-resources"> <span class="header-section-number">10.0.4</span> Additional QA/QC Resources</a></li>
   </ul>
 </nav>
     </div>
@@ -236,7 +239,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Data Munging -also called data wrangling</h1>
+<h1 class="title"><span id="sec-qaqc" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quality Assurance (QA) and Quality Control (QC) on Raw Data</span></span></h1>
 </div>
 
 
@@ -250,72 +253,50 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>Data munging as defined here is the process of moving from <a href="@sec-rawdata">raw data</a> to data in a processed form that is usable in analysis. Data munging consists of format standardization and Quality Assurance and Quality Control (QAQC).</p>
-<p>Other references for what is included in data munging:</p>
-<p><a href="https://www.astera.com/type/blog/what-is-data-munging/#:~:text=Data%20munging%20is%20the%20process,cleaning%2C%20enrichment%2C%20and%20validation">Astera::What is data munging and why is it important?</a></p>
+<section id="differences-between-quality-assurance-qa-and-quality-control-qc" class="level3" data-number="10.0.1">
+<h3 data-number="10.0.1" class="anchored" data-anchor-id="differences-between-quality-assurance-qa-and-quality-control-qc"><span class="header-section-number">10.0.1</span> Differences between Quality Assurance (QA) and Quality Control (QC)</h3>
+<p>Quality assurance (QA) is the deployment of protocols and methods to prevent defective or erroneous data from entering your workflow during data collection, whereas quality control (QC) is the detection of erroneous or defective data in an existing dataset <a href="https://www.usgs.gov/data-management/manage-quality#qa">USGS::Data Management - Manage Quality</a>. For this reason, quality assurance (QA) processes are best integrated into this workflow at the “pre-data” and raw data collection stages, while quality control (QC) is the first part of the data munging or data wrangling process.</p>
+</section>
+<section id="quality-assurance-qa-planning-and-practice" class="level3" data-number="10.0.2">
+<h3 data-number="10.0.2" class="anchored" data-anchor-id="quality-assurance-qa-planning-and-practice"><span class="header-section-number">10.0.2</span> Quality assurance (QA) planning and practice</h3>
+<p>QA planning intersects significantly with your pre-data workflow and may be a part of any data management plan. QA processes for a project are best articulated in a Quality Assurance Plan (QAP). One of the best resources for QA planning is the USGS <a href="https://www.usgs.gov/data-management/quality-assurance-plans-recommended-practices-and-examples">Quality Assurance Plans: Recommended Practices and Examples</a> resource. This resource recommends the following components of a QAP:</p>
 <ul>
-<li><p>Data Discovery (this is probably not relevant to our purposes) &gt; Everything begins with a defined goal, and the data analysis journey isn’t an exception. Data discovery is the first stage of data munging, where data analysts define data’s purpose and how to achieve it through data analytics. The goal is to identify the potential uses and requirements of data.</p></li>
-<li><p>Data Structuring (QA - a lot of this happens in the Pre-Data stage if done well) &gt; Once the requirements are identified and outlined, the next stage is structuring raw data to make it machine-readable. Structured data has a well-defined schema and follows a consistent layout. Think of data neatly organized in rows and columns available in spreadsheets and relational databases.</p></li>
-<li><p>Data Cleansing (QC): &gt; Data cleansing lays the foundation for accurate and efficient data analysis. Several transformations — like Remove, Replace, Find and Replace, etc. — are applied to eliminate redundant text and null values as well as identify missing fields, misplaced entries, and typing errors that can distort the analysis.</p></li>
-<li><p>Data Enrichment (?): &gt; It typically involves aggregating multiple data sources. For instance, if an order ID is found within a system, a user can match that order ID against a different database to obtain further details like the account name, account balance, buying history, credit limit, etc. This additional data “enriches” the original ID with greater context.</p></li>
-</ul>
-<p>NOTE: could metadata writing also be considered data enrichment?</p>
+<li>Identif[ies] data quality objectives for your data or project</li>
+<li>Identif[ies] requirements for
 <ul>
-<li>Data Validation (QC?): &gt; Data validation contrasts with data cleansing in that it rejects any data that don’t comply with pre-defined rules or constraints. also checks for the correctness and meaningfulness of the information.</li>
+<li>Staff skills and training</li>
+<li>Field and lab methods and equipment that meet data-collection standards</li>
+<li>Software and file types to use for data handling and analysis that support data quality goals</li>
+<li>Data standards, structure, and domains consistent with community conventions for other data in the same subject area</li>
+<li>Periodic data-quality assessment using defined quality metrics</li>
+</ul></li>
+<li>Describe[s] a structure for data storage that can also facilitate checking for errors and help to document data quality</li>
+<li>Describe[s] approved data entry tools and procedures, when applicable</li>
+<li>Establish[es] data-quality criteria and data-screening processes for all of the data you will collect</li>
+<li>Include[s] quality metrics that can determine current data-quality status</li>
+<li>Establish[es] a plan for ‘data quality assessments’ as part of the data flow</li>
+<li>Contain[s] a process for handling data corrections</li>
+<li>Contain[s] a process for data users to dispute and correct data</li>
 </ul>
-<p><a href="https://www.alteryx.com/glossary/data-munging">Alteryx::Data Munging</a></p>
+<p>QA practice is the application of QAP components to prevent the creation of erroneous or defective data whenever and wherever possible.</p>
+<p>This includes:</p>
 <ul>
-<li><p>Discovery: &gt; Also known as data profiling. Learn what’s in your raw data sets to think ahead about the best approach for your analytic explorations. This step involves gathering data from data sources and forming a high-level picture of the distribution, type, and format of data values. It allows you to understand unique elements of the data such as outliers and value distribution to inform the analysis process.</p></li>
-<li><p>Enriching: &gt; Before you structure and cleanse your data, what else could you add to provide more value to your analysis? Enrichment is often about joins and complex derivations. For example, if you’re looking at biking data, perhaps a weather dataset would be an important factor in your analysis.</p></li>
-<li><p>Structuring: &gt; This is a critical step because data can come in all shapes and sizes, and it is up to you to decide the best format to visualize and explore it. Separating, blending, and un-nesting are all important actions in this step.</p></li>
-<li><p>Cleaning: &gt; This step is essential to standardizing your data to ensure that all inconsistencies (such as null and misspelled values) are addressed. Other data may need to be standardized to a single format, such as state abbreviations.</p></li>
-<li><p>Validating: &gt; Verify if you’ve caught all the data quality and consistency issues and go back to address anything you may have missed. Data validation should be done on multiple dimensions.</p></li>
-<li><p>Publishing and orchestrating: &gt; This is where you can download and deliver the results of your wrangling effort to downstream analytics tools. Once you’ve published your data it’s time to move onto the next step, analytics.</p></li>
-<li><p>Examples:</p></li>
-<li><p>Data aggregation: Combining data from multiple sources (e.g.&nbsp;spreadsheets, cloud databases, source systems, etc.) by importing, joining tables, and summarizing it based on specific criteria</p></li>
-<li><p>Correcting missing data: Inputting missing values, deleting rows or columns with a high percentage of missing data, and using interpolation to estimate missing values</p></li>
-<li><p>Converting data types: Changing strings to numeric values, converting datetime formats, and converting categorical data into numerical representations</p></li>
-<li><p>Filtering and sorting: Selecting specific rows or columns based on certain criteria or reordering data based on specific values</p></li>
-<li><p>Removing duplicates: Identifying and eliminating duplicate rows or records in the data set</p></li>
-<li><p>Data normalization: Standardizing or scaling data values to meet a specific range</p></li>
-<li><p>Feature engineering: Creating new features or variables from existing data, such as calculating the difference between two columns</p></li>
-<li><p>Outlier detection and handling: Seeking out outliers within the data and removing them, capping them, or transforming them if they could affect analysis results</p></li>
-<li><p>Text cleaning and processing: Removing unnecessary characters such as whitespace or punctuation, tokenizing text, converting text to lowercase, or stemming/lemmatizing words</p></li>
-<li><p>Data transformation: Applying mathematical or statistical transformations to the data, such as taking the logarithm, square root, or exponential of a variable</p></li>
+<li>citing well documented methods for data collection OR developing detailed documentation for an new data collection methods or protocols</li>
+<li>developing training checklists and standards for staff or scientists involved in data collection</li>
+<li>for laboratory procedures: ensure that methods for including blanks, replicates, and standards are well documented and standardized</li>
+<li>for laboratory procedures: initial review of standards, replicates and blanks to ensure a sample, set of samples or sample run has passed the minimum acceptable standard for inclusion into the dataset</li>
+<li>could involve the coding of quality review flags if data is input through automated forms</li>
+<li>protocols and standards for transferring information from physical data sheets to electronic data sheets to detect and avoid errors in data input</li>
+<li>protocols and standards for versioning of shared data sheets to avoid conflicts and input errors</li>
 </ul>
-<p>NOTE: ADD UNIQUE IDS!!!!! How to have IDs sample vs horizon vs pedon vs site ids</p>
-<p><a href="https://www.geeksforgeeks.org/data-munging-in-r-programming/">Geeks for Geeks::Data Munging in R Programming</a></p>
-<p><a href="https://waterdata.usgs.gov/blog/data-munging/">Samantha Oliver - USGS Water Data::Beyond Basic R - Data Munging</a></p>
-<p>NOTE: Gapfilling, imputing, etc</p>
-<p><a href="https://tjmurphy.github.io/jabstb/jaxwest7.html">TJ Murphy::Reproducible Data Munging in R</a></p>
-<p><a href="https://bookdown.org/daniel_dauber_io/r4np_book/data-wrangling.html">Daniel Dauber::R for Non-Programmers - Data Wranging</a> NOTE: this is VERY good</p>
-<p>NOTE: you can do some data munging in the read.csv specific arguments: https://www.geeksforgeeks.org/read-contents-of-a-csv-file-in-r-programming-read-csv-function/</p>
-<p>List of questions: Is the file in text format (separated values, preferrably csv)?</p>
-<p>Does the first row contain column names?</p>
-<p>Are there special characters, spaces or other wierdness in the column names? Renaming column names</p>
-<p>Are there missing values in the dataset? If so, decide if/how they should be dealt with.</p>
-<p>Specifying data types or column classes.</p>
-<p><a href="https://datascience.stackexchange.com/questions/12018/when-to-choose-character-instead-of-factor-in-r">Factors vs characters</a> <a href="http://monashbioinformaticsplatform.github.io/2015-09-28-rbioinformatics-intro-r/01-supp-factors.html">and</a></p>
-<section id="documenting-data-munging---standards" class="level2">
-<h2 class="anchored" data-anchor-id="documenting-data-munging---standards">Documenting Data Munging - Standards</h2>
-<p>As R is the main language of choice in our lab, the default data munging documentation standard involves an R project or series of R scripts. These should be stored in the <strong>src</strong> folder of your project directory and curated according to our lab [R code and project style guidelines]#todo.</p>
-<p>Data munging documentation should also include metadata for this stage - and could be in the form of part of a project Quarto book published on GitHub Pages. This metadata should document all decisions made in the data munging process, the why and how. Due to the detailed nature of many of these decisions they are too much detail for a standard readme file or a project metadata file. However, a Quarto book with sections, chapters, and space to provide R code blocks would be an excellent way to document these decisions.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Required Tools - Data Munging
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>R/RStudio</li>
-<li>Google Drive</li>
-</ul>
-</div>
-</div>
+</section>
+<section id="quality-control-qc-practice" class="level3" data-number="10.0.3">
+<h3 data-number="10.0.3" class="anchored" data-anchor-id="quality-control-qc-practice"><span class="header-section-number">10.0.3</span> Quality Control (QC) practice</h3>
+<p>QC in practice is best integrated into the initial portion of the data munging stage of the workflow and will be addressed in that portion of this document.</p>
+</section>
+<section id="additional-qaqc-resources" class="level3" data-number="10.0.4">
+<h3 data-number="10.0.4" class="anchored" data-anchor-id="additional-qaqc-resources"><span class="header-section-number">10.0.4</span> Additional QA/QC Resources</h3>
+<p><a href="https://www.usgs.gov/data-management/manage-quality#qa">USGS:: Data Management - Manage Quality</a> <a href="https://www.usgs.gov/data-management/quality-assurance-plans-recommended-practices-and-examples">USGS :: Data Management - Quality Assurance Plans: Recommended Practices and Examples</a> <a href="https://www.usgs.gov/data-management/quality-assurance-qa-preventing-data-issues-recommended-practices">USGS:: Data Management - QA - Preventing Data Issues: Recommended Practices</a> <a href="https://www.gbif.org/document/80509/principles-of-data-quality">Arthur Chapman :: Principles of Data Quality</a></p>
 
 
 </section>
@@ -402,13 +383,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./04-raw-data-qaqc.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quality Assurance (QA) and Quality Control (QC) on Raw Data</span></span>
+      <a href="./03d-data-synthesis-projects.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Synthesis Projects #todo - ask Hava for opinions as she is an expert</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05a-pulling-raw-data.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Reproducibly Pulling Raw Data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05-data-munging.html" class="pagination-link">
+        <span class="nav-page-text">Data Munging -also called data wrangling</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
