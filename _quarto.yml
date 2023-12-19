@@ -60,6 +60,12 @@ book:
         #- 10b-looking-at-future.qmd
     - 11-summary.qmd
     - 12-references.qmd
+    - part: "Workshop: Jelinski Lab Open and Reproducible Science Workflow 18DEC2023"
+      chapters:
+      - workshop-18DEC2023-part1-overview-github.qmd
+      - workshop-18DEC2023-part2-githubdesktop-reproducibility-zotero.qmd
+      - workshop-18DEC2023-part3-ebooks-quarto.qmd
+      - workshop-18DEC2023-part4-future-plans-wrapup.qmd
 
 bibliography: references.bib
 

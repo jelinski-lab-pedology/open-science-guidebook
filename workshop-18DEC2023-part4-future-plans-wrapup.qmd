@@ -1,0 +1,39 @@
+# Part 4: Future Plans, Suggestions and Wrap-up
+
+## Potential Future Coding/Writing Sessions
+
+Nic asks if anyone is interested in having coding or writing sessions, either online or in-person. He personally doesn't find them very useful but thinks others might. 
+
+Jen describes her experience with Zoom writing sessions - having check-in times, timed writing blocks, sharing writing for feedback, setting goals for next session. She finds them useful for accountability and community. Sessions can be tailored to the group's needs.
+
+Adrian describes his experience in Jonathan's group which had weekly check-ins, quarterly offsite work retreats, and good collaboration. Adrian sees value in getting peer feedback and help. Jane's group does not have any regular sessions currently.
+
+Nic suggests trying a small weekly Zoom session for the spring with a Pomodoro timer. It could help collectively solve problems. He asks for input, particularly since he likely won't be as available to help with coding issues.
+
+## Collaborative Platforms
+
+Nic and Nora have been testing Posit Cloud, a collaborative scripting platform. It allows simultaneous editing of the same R script. Changes sync through Github. This avoids issues with one person screensharing and coding while the other watches. However, some kinks still need to be worked out.
+
+Adrian suggests Google Colab for Python, which also enables live collaboration through Jupiter Notebook. Nora indicates it can sync with Git. Adrian says Colab has version history like Google Docs.
+
+## Open Science Ebook Updates
+
+Nic plans to continue updating his open science ebook over break. He reflects on "pre-data" collection structures to facilitate projects before data is collected. He realizes most students are too far along to reconstruct things but aims to help future students.
+
+He plans to add content on publishing reproducible science, archiving/storing data, licenses, formats, etc. He'll include more style guidelines like Markdown and tabular data standards. 
+
+He put personal reflections on what he's learned from struggles with writing practice and productivity the last two years. He dumped out everything he could to perhaps help others.
+
+## Using Obsidian
+
+Obsidian is an interconnected notes system that's like a personal Wikipedia. It uses markdown text documents that link to each other. It helps cite sources while writing. The graph view can show linked note clusters. Mentions of a term across notes can be pulled into a single note.
+
+Obsidian is free, open source, platform agnostic, and future proof - the underlying text files can outlast the app. Proprietary tools like Evernote risk losing data if they cease support. 
+
+The vault contains all notes in one place instead of a hierarchical folder structure. Nicholas uses iCloud to sync his vault across devices.
+
+## Wrap Up
+
+Nic will send a summary with links. He requests adopting the Github project structure moving forward. Regularly pushing changes helps make version control habitual.
+
+He thanks Adrian for joining remotely and ends the recording.

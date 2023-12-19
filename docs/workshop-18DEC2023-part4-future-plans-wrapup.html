@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Science: Tools Applications, &amp; Workflow - 7&nbsp; Laboratory Projects</title>
+<title>Open Science: Tools Applications, &amp; Workflow - 18&nbsp; Part 4: Future Plans, Suggestions and Wrap-up</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03c-review-projects.html" rel="next">
-<link href="./03a-field-projects.html" rel="prev">
+<link href="./workshop-18DEC2023-part3-ebooks-quarto.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-pre-data-raw-data.html">“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types</a></li><li class="breadcrumb-item"><a href="./03b-lab-projects.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Laboratory Projects</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop-18DEC2023-part1-overview-github.html">Workshop: Jelinski Lab Open and Reproducible Science Workflow 18DEC2023</a></li><li class="breadcrumb-item"><a href="./workshop-18DEC2023-part4-future-plans-wrapup.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Part 4: Future Plans, Suggestions and Wrap-up</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -169,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03b-lab-projects.html" class="sidebar-item-text sidebar-link active">
+  <a href="./03b-lab-projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Laboratory Projects</span></span></a>
   </div>
 </li>
@@ -278,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./workshop-18DEC2023-part4-future-plans-wrapup.html" class="sidebar-item-text sidebar-link">
+  <a href="./workshop-18DEC2023-part4-future-plans-wrapup.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Part 4: Future Plans, Suggestions and Wrap-up</span></span></a>
   </div>
 </li>
@@ -294,16 +293,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#pre-data-infrastructure" id="toc-pre-data-infrastructure" class="nav-link active" data-scroll-target="#pre-data-infrastructure"><span class="header-section-number">7.1</span> Pre-Data Infrastructure</a>
-  <ul class="collapse">
-  <li><a href="#google-sheets-integration-with-master-data-sheet-using-make-and-r" id="toc-google-sheets-integration-with-master-data-sheet-using-make-and-r" class="nav-link" data-scroll-target="#google-sheets-integration-with-master-data-sheet-using-make-and-r"><span class="header-section-number">7.1.1</span> Google Sheets Integration with Master Data Sheet Using Make and R</a></li>
-  <li><a href="#self-generated-data-laboratory-notebook-and-analysis-or-task-log" id="toc-self-generated-data-laboratory-notebook-and-analysis-or-task-log" class="nav-link" data-scroll-target="#self-generated-data-laboratory-notebook-and-analysis-or-task-log"><span class="header-section-number">7.1.2</span> Self-Generated Data: Laboratory Notebook and Analysis or Task Log</a></li>
-  <li><a href="#externally-generated-data-original-data-file-integration" id="toc-externally-generated-data-original-data-file-integration" class="nav-link" data-scroll-target="#externally-generated-data-original-data-file-integration"><span class="header-section-number">7.1.3</span> Externally Generated Data: Original Data File + Integration</a></li>
-  </ul></li>
-  <li><a href="#curating-laboratory-data" id="toc-curating-laboratory-data" class="nav-link" data-scroll-target="#curating-laboratory-data"><span class="header-section-number">7.2</span> Curating Laboratory Data</a>
-  <ul class="collapse">
-  <li><a href="#raw-data-repository-standards-for-laboratory-projects" id="toc-raw-data-repository-standards-for-laboratory-projects" class="nav-link" data-scroll-target="#raw-data-repository-standards-for-laboratory-projects"><span class="header-section-number">7.2.1</span> Raw Data Repository Standards for Laboratory Projects</a></li>
-  </ul></li>
+  <li><a href="#potential-future-codingwriting-sessions" id="toc-potential-future-codingwriting-sessions" class="nav-link active" data-scroll-target="#potential-future-codingwriting-sessions"><span class="header-section-number">18.1</span> Potential Future Coding/Writing Sessions</a></li>
+  <li><a href="#collaborative-platforms" id="toc-collaborative-platforms" class="nav-link" data-scroll-target="#collaborative-platforms"><span class="header-section-number">18.2</span> Collaborative Platforms</a></li>
+  <li><a href="#open-science-ebook-updates" id="toc-open-science-ebook-updates" class="nav-link" data-scroll-target="#open-science-ebook-updates"><span class="header-section-number">18.3</span> Open Science Ebook Updates</a></li>
+  <li><a href="#using-obsidian" id="toc-using-obsidian" class="nav-link" data-scroll-target="#using-obsidian"><span class="header-section-number">18.4</span> Using Obsidian</a></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up"><span class="header-section-number">18.5</span> Wrap Up</a></li>
   </ul>
 </nav>
     </div>
@@ -312,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Laboratory Projects</span></h1>
+<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Part 4: Future Plans, Suggestions and Wrap-up</span></h1>
 </div>
 
 
@@ -327,46 +321,36 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The raw data for laboratory projects consists of laboratory analysis of existing soil samples or samples consolidated from collaborators.</p>
-<section id="pre-data-infrastructure" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="pre-data-infrastructure"><span class="header-section-number">7.1</span> Pre-Data Infrastructure</h2>
-<section id="google-sheets-integration-with-master-data-sheet-using-make-and-r" class="level3" data-number="7.1.1">
-<h3 data-number="7.1.1" class="anchored" data-anchor-id="google-sheets-integration-with-master-data-sheet-using-make-and-r"><span class="header-section-number">7.1.1</span> Google Sheets Integration with Master Data Sheet Using Make and R</h3>
-<p>The primary data entry location for laboratory data is Google Sheets. NOTE: your Google Drive folders for your project should be configured exactly the same as your local PARA repository. Since you are using GitHub there doens’t need to be an extra full copy of the repo on Google Drive, so there will be a lot of empty folders - but that is fine. Set up a Google Sheet in your raw data folder for the project on Google Drive. Then, using the googlesheet4 package in R, [pull down a copy of the lab master sample log]#todo, [subset it for the samples in your project]#todo, and export that subset to another google sheet. Now you can add fields to the Google Sheet to populate them as you receive data or conduct laboratory analysis. *NOTE: once you have your project subsetted sample log you can create a field which contains an internal “lab” ID, which is usually a short integer and can be convenient when labelling tubes, etc. However, only include these short lab IDs on your project specific sample log. Do not include them on the laboratory master sample sheet.</p>
-<p><em>NOTE: if you are analyzing samples in your project that were not physically collected by you (but were collected by collaborators as part of this or another project), you should manually enter those samples into the master lab sample log and utilize the sample IDs provided by the collaborators.</em></p>
+<section id="potential-future-codingwriting-sessions" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="potential-future-codingwriting-sessions"><span class="header-section-number">18.1</span> Potential Future Coding/Writing Sessions</h2>
+<p>Nic asks if anyone is interested in having coding or writing sessions, either online or in-person. He personally doesn’t find them very useful but thinks others might.</p>
+<p>Jen describes her experience with Zoom writing sessions - having check-in times, timed writing blocks, sharing writing for feedback, setting goals for next session. She finds them useful for accountability and community. Sessions can be tailored to the group’s needs.</p>
+<p>Adrian describes his experience in Jonathan’s group which had weekly check-ins, quarterly offsite work retreats, and good collaboration. Adrian sees value in getting peer feedback and help. Jane’s group does not have any regular sessions currently.</p>
+<p>Nic suggests trying a small weekly Zoom session for the spring with a Pomodoro timer. It could help collectively solve problems. He asks for input, particularly since he likely won’t be as available to help with coding issues.</p>
 </section>
-<section id="self-generated-data-laboratory-notebook-and-analysis-or-task-log" class="level3" data-number="7.1.2">
-<h3 data-number="7.1.2" class="anchored" data-anchor-id="self-generated-data-laboratory-notebook-and-analysis-or-task-log"><span class="header-section-number">7.1.2</span> Self-Generated Data: Laboratory Notebook and Analysis or Task Log</h3>
-<p>For data that you are generating yourself, you should keep a [Laboratory Notebook] #todo - see standards and templates in our Laboratory Manual. If you are doing an analysis that results in manually recorded data (such as pH, which requires you to look at a screen and writ ethe number down in your lab notebook), data is then transferred manually from your laboratory notebook to the Google Sheet and fields are added as needed. If you are doing an analysis that results in digital data (such as pXRF, MIR, or LPSA), then you will need to export the digital data and populate it into the correct fields associated with the samples in your data sheet.</p>
+<section id="collaborative-platforms" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="collaborative-platforms"><span class="header-section-number">18.2</span> Collaborative Platforms</h2>
+<p>Nic and Nora have been testing Posit Cloud, a collaborative scripting platform. It allows simultaneous editing of the same R script. Changes sync through Github. This avoids issues with one person screensharing and coding while the other watches. However, some kinks still need to be worked out.</p>
+<p>Adrian suggests Google Colab for Python, which also enables live collaboration through Jupiter Notebook. Nora indicates it can sync with Git. Adrian says Colab has version history like Google Docs.</p>
 </section>
-<section id="externally-generated-data-original-data-file-integration" class="level3" data-number="7.1.3">
-<h3 data-number="7.1.3" class="anchored" data-anchor-id="externally-generated-data-original-data-file-integration"><span class="header-section-number">7.1.3</span> Externally Generated Data: Original Data File + Integration</h3>
-<p>For externally generated data (i.e.&nbsp;you sent samples off to a commerical lab and recieved a pdf or tabular report back). you will need to export the digital data and populate it into the correct fields associated with the samples in your data sheet. <em>NOTE that all original data files from external sources should be kept (as they were received) in a subfolder of the raw-data subdirectory.</em></p>
+<section id="open-science-ebook-updates" class="level2" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="open-science-ebook-updates"><span class="header-section-number">18.3</span> Open Science Ebook Updates</h2>
+<p>Nic plans to continue updating his open science ebook over break. He reflects on “pre-data” collection structures to facilitate projects before data is collected. He realizes most students are too far along to reconstruct things but aims to help future students.</p>
+<p>He plans to add content on publishing reproducible science, archiving/storing data, licenses, formats, etc. He’ll include more style guidelines like Markdown and tabular data standards.</p>
+<p>He put personal reflections on what he’s learned from struggles with writing practice and productivity the last two years. He dumped out everything he could to perhaps help others.</p>
 </section>
+<section id="using-obsidian" class="level2" data-number="18.4">
+<h2 data-number="18.4" class="anchored" data-anchor-id="using-obsidian"><span class="header-section-number">18.4</span> Using Obsidian</h2>
+<p>Obsidian is an interconnected notes system that’s like a personal Wikipedia. It uses markdown text documents that link to each other. It helps cite sources while writing. The graph view can show linked note clusters. Mentions of a term across notes can be pulled into a single note.</p>
+<p>Obsidian is free, open source, platform agnostic, and future proof - the underlying text files can outlast the app. Proprietary tools like Evernote risk losing data if they cease support.</p>
+<p>The vault contains all notes in one place instead of a hierarchical folder structure. Nicholas uses iCloud to sync his vault across devices.</p>
 </section>
-<section id="curating-laboratory-data" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="curating-laboratory-data"><span class="header-section-number">7.2</span> Curating Laboratory Data</h2>
-<p>Lab Data curation involves ensuring that all self- or externally-generated data is kept in its original form as well as transferred to the project sample log/data sheet which is the foundational raw data sheet for the project.</p>
-<section id="raw-data-repository-standards-for-laboratory-projects" class="level3" data-number="7.2.1">
-<h3 data-number="7.2.1" class="anchored" data-anchor-id="raw-data-repository-standards-for-laboratory-projects"><span class="header-section-number">7.2.1</span> Raw Data Repository Standards for Laboratory Projects</h3>
-<p>Your raw-data repository for Laboratory Projects should include the following:</p>
-<ul>
-<li>The subsetted sample log w/ fields added and updated according to the [Jelinski Lab Tabular Data Standards] #todo</li>
-<li>Images or scans of a laboratory notebook</li>
-<li>Ocassionally, your laboratory analysis may result in physical products such as soil chromatographs. These should be stored in their original state, scanned in a standardized way, and the image repository should be handled in the same way as image repositories are handled for field projects.</li>
-<li>a readme or metadata file (or chapter in your metadata Quarto book). The metadata file should contain references, either to our internal lab protocols documented in our lab manual #todo or to published or available protocols from other sources.</li>
-</ul>
-<p><em>NOTE: see the laboratory methods manual for standardized protocols on how to maintain a laboratory notebook, and a sample analysis/task log.</em></p>
-<p>These files live in the raw data folder of your repo. However note that if you have images, the image repository will be very large in some cases and gitHub is not a good place to store images. Therefore - in your [.gitignore file]#todo, you should include the image type or the image repository directory so that these do not upload to GitHub.</p>
-<ul>
-<li><p>Your raw data repository should be stored locally and somewhere in the cloud. For everything except your image/video repository should be stored on GitHub. The image/video repository should be stored locally and either in Flickr or a <strong>Shared</strong> Google Drive (a truly shared drive, not through your personal account) or Google Photos (same re: shared). <em>NOTE #todo: should image repositories also be required to upload to CFANS Drive?</em></p></li>
-<li><p>Your raw data should also contain pre-data - what is pre-data in this case? #todo - in what format?#todo.</p></li>
-</ul>
-<p>NOTE: folder repo structure should contain a pre-data folder!!!!!#todo</p>
-<p><em>NOTES to add: #how deal with replicate sample runs.# flagging samples for reruns</em></p>
+<section id="wrap-up" class="level2" data-number="18.5">
+<h2 data-number="18.5" class="anchored" data-anchor-id="wrap-up"><span class="header-section-number">18.5</span> Wrap Up</h2>
+<p>Nic will send a summary with links. He requests adopting the Github project structure moving forward. Regularly pushing changes helps make version control habitual.</p>
+<p>He thanks Adrian for joining remotely and ends the recording.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -605,14 +589,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./03a-field-projects.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Field Projects</span></span>
+      <a href="./workshop-18DEC2023-part3-ebooks-quarto.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Part 3: Creating E-Books with Quarto and GitHub Pages</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03c-review-projects.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Review Projects #todo</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

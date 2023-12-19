@@ -1,0 +1,39 @@
+# Part 3: Creating E-Books with Quarto and GitHub Pages
+
+## Creating Ebooks with Quarto
+Nic has been locally generating HTMLs from his Quarto ebook for several weeks. When he makes his product repository public on Github, others will be able to access the ebook. 
+
+He suggests making scientific work more "human" by having a radically open workflow that reveals frustrations and mistakes.
+
+Jen suggests rendering files locally and pushing them to Github. Then the index will pull them up in the browser locally, allowing for easier sharing via screensharing without publishing them publicly.
+
+## Coding is Writing!
+
+Coding is writing. Nic now has a Blair ebook on the open science workflow and has put up style guides and standards like an R code style guide to make collective code more readable. The style guide covers naming functions, code length, commenting, etc. He condensed style guidelines from Google, the tidyverse, and the book "Clean Code."
+
+He emphasizes logging progress and writing daily, even if just a few bullets and sentences. Hava's daily logs are a good example.
+
+### Setting Up Quarto
+- To use Quarto on your computer, you need to install a LaTeX distribution called MacTeX. This allows Quarto to run LaTeX in the background to handle typesetting.
+- A Quarto book consists of multiple Markdown files that contain the content, plus a `_quarto.yml` file that specifies metadata and how to structure the Markdown files.
+- The `_quarto.yml` file uses YAML syntax to define configuration like output format.
+
+### Writing Content
+- Content for a Quarto book goes in Markdown files with the `.qmd` extension. These are just plain text files that support Markdown formatting.
+- The first file must be named `index.qmd` to serve as the landing page.
+- Additional content files can be named anything, like `chapter1.qmd` or `methods.qmd`. The `_quarto.yml` file controls ordering and structure.
+
+### Configuring Output
+- To output a standard ebook, list the Markdown files in `_quarto.yml` in the desired order. Quarto will number chapters automatically.
+- Can also define more complex structures with parts, sub-chapters etc.
+- Set `output: html` and `output-dir: docs` to generate HTML files in a `docs/` folder.
+
+### Rendering the Book
+- Open one of the Markdown files in RStudio and click "Render".
+- Quarto will process the files and output HTML.
+- On GitHub, the HTML files are combined into an online ebook.
+
+### Example Structure
+- Showed example of notebook-style dissertation chapter documenting analysis work with logs and code. 
+- Useful way to capture full record even with dead ends instead of just the final polished manuscript.
+- Markdown/Quarto structure is flexible for different content types.

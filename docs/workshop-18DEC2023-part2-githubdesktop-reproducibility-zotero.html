@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Science: Tools Applications, &amp; Workflow - 7&nbsp; Laboratory Projects</title>
+<title>Open Science: Tools Applications, &amp; Workflow - 16&nbsp; Part 2: Using GitHub Desktop, Local Workflow, R Reproducibility, Zotero</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03c-review-projects.html" rel="next">
-<link href="./03a-field-projects.html" rel="prev">
+<link href="./workshop-18DEC2023-part3-ebooks-quarto.html" rel="next">
+<link href="./workshop-18DEC2023-part1-overview-github.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-pre-data-raw-data.html">“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types</a></li><li class="breadcrumb-item"><a href="./03b-lab-projects.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Laboratory Projects</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop-18DEC2023-part1-overview-github.html">Workshop: Jelinski Lab Open and Reproducible Science Workflow 18DEC2023</a></li><li class="breadcrumb-item"><a href="./workshop-18DEC2023-part2-githubdesktop-reproducibility-zotero.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Part 2: Using GitHub Desktop, Local Workflow, R Reproducibility, Zotero</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03b-lab-projects.html" class="sidebar-item-text sidebar-link active">
+  <a href="./03b-lab-projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Laboratory Projects</span></span></a>
   </div>
 </li>
@@ -266,7 +266,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./workshop-18DEC2023-part2-githubdesktop-reproducibility-zotero.html" class="sidebar-item-text sidebar-link">
+  <a href="./workshop-18DEC2023-part2-githubdesktop-reproducibility-zotero.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Part 2: Using GitHub Desktop, Local Workflow, R Reproducibility, Zotero</span></span></a>
   </div>
 </li>
@@ -294,16 +294,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#pre-data-infrastructure" id="toc-pre-data-infrastructure" class="nav-link active" data-scroll-target="#pre-data-infrastructure"><span class="header-section-number">7.1</span> Pre-Data Infrastructure</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">16.1</span> Overview</a>
   <ul class="collapse">
-  <li><a href="#google-sheets-integration-with-master-data-sheet-using-make-and-r" id="toc-google-sheets-integration-with-master-data-sheet-using-make-and-r" class="nav-link" data-scroll-target="#google-sheets-integration-with-master-data-sheet-using-make-and-r"><span class="header-section-number">7.1.1</span> Google Sheets Integration with Master Data Sheet Using Make and R</a></li>
-  <li><a href="#self-generated-data-laboratory-notebook-and-analysis-or-task-log" id="toc-self-generated-data-laboratory-notebook-and-analysis-or-task-log" class="nav-link" data-scroll-target="#self-generated-data-laboratory-notebook-and-analysis-or-task-log"><span class="header-section-number">7.1.2</span> Self-Generated Data: Laboratory Notebook and Analysis or Task Log</a></li>
-  <li><a href="#externally-generated-data-original-data-file-integration" id="toc-externally-generated-data-original-data-file-integration" class="nav-link" data-scroll-target="#externally-generated-data-original-data-file-integration"><span class="header-section-number">7.1.3</span> Externally Generated Data: Original Data File + Integration</a></li>
+  <li><a href="#setting-up-a-github-repo-to-work-with-github-desktop" id="toc-setting-up-a-github-repo-to-work-with-github-desktop" class="nav-link" data-scroll-target="#setting-up-a-github-repo-to-work-with-github-desktop"><span class="header-section-number">16.1.1</span> Setting up a Github Repo to Work with Github Desktop</a></li>
+  <li><a href="#local-development-workflow" id="toc-local-development-workflow" class="nav-link" data-scroll-target="#local-development-workflow"><span class="header-section-number">16.1.2</span> Local Development Workflow</a></li>
+  <li><a href="#best-practices-in-r-for-reproducibility" id="toc-best-practices-in-r-for-reproducibility" class="nav-link" data-scroll-target="#best-practices-in-r-for-reproducibility"><span class="header-section-number">16.1.3</span> Best Practices in R for Reproducibility</a></li>
   </ul></li>
-  <li><a href="#curating-laboratory-data" id="toc-curating-laboratory-data" class="nav-link" data-scroll-target="#curating-laboratory-data"><span class="header-section-number">7.2</span> Curating Laboratory Data</a>
-  <ul class="collapse">
-  <li><a href="#raw-data-repository-standards-for-laboratory-projects" id="toc-raw-data-repository-standards-for-laboratory-projects" class="nav-link" data-scroll-target="#raw-data-repository-standards-for-laboratory-projects"><span class="header-section-number">7.2.1</span> Raw Data Repository Standards for Laboratory Projects</a></li>
-  </ul></li>
+  <li><a href="#handling-large-files" id="toc-handling-large-files" class="nav-link" data-scroll-target="#handling-large-files"><span class="header-section-number">16.2</span> Handling Large Files</a></li>
+  <li><a href="#zotero-for-reference-management" id="toc-zotero-for-reference-management" class="nav-link" data-scroll-target="#zotero-for-reference-management"><span class="header-section-number">16.3</span> Zotero for Reference Management</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">17</span> Summary</a></li>
   </ul>
 </nav>
     </div>
@@ -312,7 +311,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Laboratory Projects</span></h1>
+<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Part 2: Using GitHub Desktop, Local Workflow, R Reproducibility, Zotero</span></h1>
 </div>
 
 
@@ -327,46 +326,68 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The raw data for laboratory projects consists of laboratory analysis of existing soil samples or samples consolidated from collaborators.</p>
-<section id="pre-data-infrastructure" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="pre-data-infrastructure"><span class="header-section-number">7.1</span> Pre-Data Infrastructure</h2>
-<section id="google-sheets-integration-with-master-data-sheet-using-make-and-r" class="level3" data-number="7.1.1">
-<h3 data-number="7.1.1" class="anchored" data-anchor-id="google-sheets-integration-with-master-data-sheet-using-make-and-r"><span class="header-section-number">7.1.1</span> Google Sheets Integration with Master Data Sheet Using Make and R</h3>
-<p>The primary data entry location for laboratory data is Google Sheets. NOTE: your Google Drive folders for your project should be configured exactly the same as your local PARA repository. Since you are using GitHub there doens’t need to be an extra full copy of the repo on Google Drive, so there will be a lot of empty folders - but that is fine. Set up a Google Sheet in your raw data folder for the project on Google Drive. Then, using the googlesheet4 package in R, [pull down a copy of the lab master sample log]#todo, [subset it for the samples in your project]#todo, and export that subset to another google sheet. Now you can add fields to the Google Sheet to populate them as you receive data or conduct laboratory analysis. *NOTE: once you have your project subsetted sample log you can create a field which contains an internal “lab” ID, which is usually a short integer and can be convenient when labelling tubes, etc. However, only include these short lab IDs on your project specific sample log. Do not include them on the laboratory master sample sheet.</p>
-<p><em>NOTE: if you are analyzing samples in your project that were not physically collected by you (but were collected by collaborators as part of this or another project), you should manually enter those samples into the master lab sample log and utilize the sample IDs provided by the collaborators.</em></p>
+<section id="overview" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">16.1</span> Overview</h2>
+<p>This section of the transcript covers setting up Github repos, workflows for version control and collaboration, best practices for reproducibility in R projects, handling large files, and utilizing Zotero for reference management and PDF storage.</p>
+<section id="setting-up-a-github-repo-to-work-with-github-desktop" class="level3" data-number="16.1.1">
+<h3 data-number="16.1.1" class="anchored" data-anchor-id="setting-up-a-github-repo-to-work-with-github-desktop"><span class="header-section-number">16.1.1</span> Setting up a Github Repo to Work with Github Desktop</h3>
+<p>Nic demonstrates creating a Github repo from a template he designed for open science workflows. The repo contains a standardized folder structure for organizing code, data, outputs, manuscripts, presentations, metadata, support files, and documentation. It also includes helper files like a gitignore, license, readme, and R project file.</p>
+<p>After creating the repo, Nic shows how to clone it to your local machine using Github Desktop. He renames the R Project file to match his new repo name. In Github Desktop, this change is detected, allowing him to commit and push the updates back to the main branch on Github.</p>
+<section id="step-by-step-instructions-for-working-with-github-desktop-github-and-your-local-machine" class="level4" data-number="16.1.1.1">
+<h4 data-number="16.1.1.1" class="anchored" data-anchor-id="step-by-step-instructions-for-working-with-github-desktop-github-and-your-local-machine"><span class="header-section-number">16.1.1.1</span> Step-by-step instructions for working with GitHub Desktop, GitHub, and your local machine</h4>
+<section id="cloning-the-repo-locally-with-github-desktop" class="level5" data-number="16.1.1.1.1">
+<h5 data-number="16.1.1.1.1" class="anchored" data-anchor-id="cloning-the-repo-locally-with-github-desktop"><span class="header-section-number">16.1.1.1.1</span> Cloning the Repo Locally with GitHub Desktop</h5>
+<ol type="1">
+<li>Download and install GitHub Desktop if not already: https://desktop.github.com/</li>
+<li>Open GitHub Desktop and log into your GitHub account</li>
+<li>Click <code>File &gt; Clone Repository</code></li>
+<li>Select the repository you created from the list<br>
+</li>
+<li>Select a <code>Local Path</code> to store the cloned repo on your computer</li>
+<li>Click <code>Clone</code></li>
+<li>The repo will now be cloned onto your computer linked to the GitHub remote repository</li>
+</ol>
+<p>Now you can develop locally and use GitHub Desktop to push changes:</p>
+<ol type="1">
+<li>Modify files and work on the project on your computer<br>
+</li>
+<li>Go to GitHub Desktop and check the changes by clicking <code>Fetch origin</code><br>
+</li>
+<li>Enter a summary and description of the changes<br>
+</li>
+<li>Click <code>Commit to main</code></li>
+<li>Click <code>Push origin</code> to push committed changes to the GitHub repo</li>
+<li>Changes are now version controlled on GitHub!</li>
+</ol>
+<p>By working locally and frequently pushing changes, you can collaborate with others through the central GitHub repository.</p>
 </section>
-<section id="self-generated-data-laboratory-notebook-and-analysis-or-task-log" class="level3" data-number="7.1.2">
-<h3 data-number="7.1.2" class="anchored" data-anchor-id="self-generated-data-laboratory-notebook-and-analysis-or-task-log"><span class="header-section-number">7.1.2</span> Self-Generated Data: Laboratory Notebook and Analysis or Task Log</h3>
-<p>For data that you are generating yourself, you should keep a [Laboratory Notebook] #todo - see standards and templates in our Laboratory Manual. If you are doing an analysis that results in manually recorded data (such as pH, which requires you to look at a screen and writ ethe number down in your lab notebook), data is then transferred manually from your laboratory notebook to the Google Sheet and fields are added as needed. If you are doing an analysis that results in digital data (such as pXRF, MIR, or LPSA), then you will need to export the digital data and populate it into the correct fields associated with the samples in your data sheet.</p>
-</section>
-<section id="externally-generated-data-original-data-file-integration" class="level3" data-number="7.1.3">
-<h3 data-number="7.1.3" class="anchored" data-anchor-id="externally-generated-data-original-data-file-integration"><span class="header-section-number">7.1.3</span> Externally Generated Data: Original Data File + Integration</h3>
-<p>For externally generated data (i.e.&nbsp;you sent samples off to a commerical lab and recieved a pdf or tabular report back). you will need to export the digital data and populate it into the correct fields associated with the samples in your data sheet. <em>NOTE that all original data files from external sources should be kept (as they were received) in a subfolder of the raw-data subdirectory.</em></p>
 </section>
 </section>
-<section id="curating-laboratory-data" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="curating-laboratory-data"><span class="header-section-number">7.2</span> Curating Laboratory Data</h2>
-<p>Lab Data curation involves ensuring that all self- or externally-generated data is kept in its original form as well as transferred to the project sample log/data sheet which is the foundational raw data sheet for the project.</p>
-<section id="raw-data-repository-standards-for-laboratory-projects" class="level3" data-number="7.2.1">
-<h3 data-number="7.2.1" class="anchored" data-anchor-id="raw-data-repository-standards-for-laboratory-projects"><span class="header-section-number">7.2.1</span> Raw Data Repository Standards for Laboratory Projects</h3>
-<p>Your raw-data repository for Laboratory Projects should include the following:</p>
-<ul>
-<li>The subsetted sample log w/ fields added and updated according to the [Jelinski Lab Tabular Data Standards] #todo</li>
-<li>Images or scans of a laboratory notebook</li>
-<li>Ocassionally, your laboratory analysis may result in physical products such as soil chromatographs. These should be stored in their original state, scanned in a standardized way, and the image repository should be handled in the same way as image repositories are handled for field projects.</li>
-<li>a readme or metadata file (or chapter in your metadata Quarto book). The metadata file should contain references, either to our internal lab protocols documented in our lab manual #todo or to published or available protocols from other sources.</li>
-</ul>
-<p><em>NOTE: see the laboratory methods manual for standardized protocols on how to maintain a laboratory notebook, and a sample analysis/task log.</em></p>
-<p>These files live in the raw data folder of your repo. However note that if you have images, the image repository will be very large in some cases and gitHub is not a good place to store images. Therefore - in your [.gitignore file]#todo, you should include the image type or the image repository directory so that these do not upload to GitHub.</p>
-<ul>
-<li><p>Your raw data repository should be stored locally and somewhere in the cloud. For everything except your image/video repository should be stored on GitHub. The image/video repository should be stored locally and either in Flickr or a <strong>Shared</strong> Google Drive (a truly shared drive, not through your personal account) or Google Photos (same re: shared). <em>NOTE #todo: should image repositories also be required to upload to CFANS Drive?</em></p></li>
-<li><p>Your raw data should also contain pre-data - what is pre-data in this case? #todo - in what format?#todo.</p></li>
-</ul>
-<p>NOTE: folder repo structure should contain a pre-data folder!!!!!#todo</p>
-<p><em>NOTES to add: #how deal with replicate sample runs.# flagging samples for reruns</em></p>
+<section id="local-development-workflow" class="level3" data-number="16.1.2">
+<h3 data-number="16.1.2" class="anchored" data-anchor-id="local-development-workflow"><span class="header-section-number">16.1.2</span> Local Development Workflow</h3>
+<p>Nic shares the typical workflow for version control - working locally on your computer, committing changes, and pushing them to Github frequently. He adds some dummy data files and a script to his local copy, then demonstrates committing and pushing changes after each work session. Git tracks differences, not complete files, saving space.</p>
+<p>He recommends writing the readme early on as an exercise to clearly state project goals upfront. The template readme provides a guide for documenting folder structure and contents.</p>
+</section>
+<section id="best-practices-in-r-for-reproducibility" class="level3" data-number="16.1.3">
+<h3 data-number="16.1.3" class="anchored" data-anchor-id="best-practices-in-r-for-reproducibility"><span class="header-section-number">16.1.3</span> Best Practices in R for Reproducibility</h3>
+<p>Nic emphasizes using R Projects and the <code>here()</code> package to make analysis reproducible across computers. R Projects root file paths to their folder location. <code>here()</code> constructs paths from that root folder in a platform-agnostic way. Together they avoid manual path setting that breaks on other devices.</p>
+<p>He demonstrates explicitly calling functions from packages with <code>package::function()</code>. This points to the right package if multiple ones have identically named functions.</p>
+<p>We learn you can call a package function without loading the library, saving memory and environment clutter. The function will automatically install its package if missing.</p>
+</section>
+</section>
+<section id="handling-large-files" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="handling-large-files"><span class="header-section-number">16.2</span> Handling Large Files</h2>
+<p>Github has a 100MB file size limit. For public data, use R to directly download files from online repositories into a script instead of bundling them. For private data, upload to Box and download from there. In both cases the analysis stays reproducible.</p>
+</section>
+<section id="zotero-for-reference-management" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="zotero-for-reference-management"><span class="header-section-number">16.3</span> Zotero for Reference Management</h2>
+<p>Nic pays for unlimited Zotero storage and sets up group libraries for shared reference databases linked to downloaded PDFs. Even after students leave Macalester, he can maintain the Zotero storage so past students retain access to the literature they collected.</p>
+</section>
+<section id="summary" class="level1" data-number="17">
+<h1 data-number="17"><span class="header-section-number">17</span> Summary</h1>
+<p>In summary, Nic covered setting up an open science Github repository, demonstrated workflows for version controlling and sharing analysis via Github Desktop, shared best practices in R for reproducible code, strategies for handling large data files, and utilizing Zotero to collaboratively manage references and PDF literature.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -605,13 +626,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./03a-field-projects.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Field Projects</span></span>
+      <a href="./workshop-18DEC2023-part1-overview-github.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Part 1: Overview and Setting up GitHub</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03c-review-projects.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Review Projects #todo</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./workshop-18DEC2023-part3-ebooks-quarto.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Part 3: Creating E-Books with Quarto and GitHub Pages</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

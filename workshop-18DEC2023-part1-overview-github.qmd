@@ -1,0 +1,91 @@
+# Part 1: Overview and Setting up GitHub
+
+## Introduction
+
+The workshop leader, Nic, explains that the goal of the workshop is to get everyone in the lab group working in a standardized and efficient way on research projects. The aims are to facilitate open and reproducible science, collaboration, and time management. 
+
+### General Philosophy
+
+The philosophy behind the workflow is "radical open science" - showing work publicly while it is happening rather than waiting until it is published. There can be reasons to keep some data private temporarily, but openness should be the default.
+
+Nic argues we are beyond the days where work should be kept hidden until publication. There are benefits to showing work in progress, though judgments have to be made about how much to show at what stages.
+
+### Defining Projects
+
+In academia, the core project units that people are assessed on are papers, proposals, dissertations and theses. So the workflow is oriented around facilitating progress on those outputs.
+
+The aim is to have a system where all information related to a project lives in one place from the start, with clear naming conventions. This avoids data and files getting scattered across multiple platforms. It also makes projects transferable between people and platforms.
+
+### Lab Github Organization 
+
+The group uses a shared Github organization for open lab resources:
+
+- Open science guidebook
+- Lab protocols eBook 
+- Group handbook (onboarding etc)
+- Project template 
+
+Nic explains Github repositories and branches for managing versions and collaborative work.
+
+## Registering Projects
+
+The first activity is for each person to identify their current paper projects - anything from an initial idea to near submission. 
+
+Nic introduces the project registry - a table for tracking all lab projects in a standardized way. Everyone registers one of their projects by adding to the table.
+
+The registry assigns a unique numbered code to each project. This ties together related files/folders across platforms and over time as titles change.
+
+Participants add their name, project title, status (idea, analyzing data etc.)
+
+### Step-by-step instructions for registering projects
+
+1. Identify your potential paper projects - these can range from initial ideas to near complete drafts. Come up with a brief 1-2 sentence description for each project.
+
+2. Go to the Lab Group's GitHub organization page and click on the Project Registry. 
+
+3. Click "Add Item" at the bottom of the Project Registry table to add a row. 
+
+4. In the new row, fill in the following columns:
+
+- **Number**: Select the next available project number to uniquely identify your project
+- **Name**: Use the naming convention "Number-YourLastName-2-4WordDescription" e.g. "065-Jelinski-LakeSedimentCoreAnalysis"
+- **Status**: Select the current status of your project idea, analysis, drafting etc.
+
+5. Make note of the unique number and name you entered. This will be used to identify all folders and files associated with your project across platforms.
+
+## Setting up Project Repositories 
+
+Next, participants use the Project Template repository to create a repository for their registered project within their personal Github account.
+
+This automatically structures their project folder with:
+
+- Detailed readme
+- Folders for data, documents etc
+- Template markdown documents 
+
+Nic explains the contents and how to customize.
+
+The readme and structure provide a standardized way for people to organize their projects as they get started. They can modify as needed over time.
+
+### Step-by-step Instructions for Setting Up Your Repository
+
+1. Go back to the Main Jelinski Lab GitHub Organzation page and click on the Project Template repository. 
+
+2. Click on "Use this template" and select "Create new repository" 
+
+3. For Owner, select your own GitHub account.
+
+4. For Repository name, enter the unique name you created when registering your project e.g. 065-Jelinski-LakeSedimentCoreAnalysis
+
+5. You can choose Public or Private visibility. You can change this later.
+
+6. Click "Create repository" from template. This will set up a repository in your GitHub account containing folders, templates and documentation to standardize your project workflow.
+
+## Next Steps
+
+In the final segments, Nic aims to show everyone how to:
+
+- Generate a Quarto ebook from their markdown documents and connect it to their Github repository
+- Use logging conventions to track status and notes 
+
+There will also be discussion of file naming conventions and digital organization systems.

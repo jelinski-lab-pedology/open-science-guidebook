@@ -1,0 +1,60 @@
+# Part 2: Using GitHub Desktop, Local Workflow, R Reproducibility, Zotero
+
+## Overview
+
+This section of the transcript covers setting up Github repos, workflows for version control and collaboration, best practices for reproducibility in R projects, handling large files, and utilizing Zotero for reference management and PDF storage.
+
+### Setting up a Github Repo to Work with Github Desktop
+
+Nic demonstrates creating a Github repo from a template he designed for open science workflows. The repo contains a standardized folder structure for organizing code, data, outputs, manuscripts, presentations, metadata, support files, and documentation. It also includes helper files like a gitignore, license, readme, and R project file.
+
+After creating the repo, Nic shows how to clone it to your local machine using Github Desktop. He renames the R Project file to match his new repo name. In Github Desktop, this change is detected, allowing him to commit and push the updates back to the main branch on Github.
+
+#### Step-by-step instructions for working with GitHub Desktop, GitHub, and your local machine
+
+##### Cloning the Repo Locally with GitHub Desktop
+
+1.  Download and install GitHub Desktop if not already: https://desktop.github.com/
+2.  Open GitHub Desktop and log into your GitHub account
+3.  Click `File > Clone Repository`
+4.  Select the repository you created from the list\
+5.  Select a `Local Path` to store the cloned repo on your computer
+6.  Click `Clone`
+7.  The repo will now be cloned onto your computer linked to the GitHub remote repository
+
+Now you can develop locally and use GitHub Desktop to push changes:
+
+1.  Modify files and work on the project on your computer\
+2.  Go to GitHub Desktop and check the changes by clicking `Fetch origin`\
+3.  Enter a summary and description of the changes\
+4.  Click `Commit to main`
+5.  Click `Push origin` to push committed changes to the GitHub repo
+6.  Changes are now version controlled on GitHub!
+
+By working locally and frequently pushing changes, you can collaborate with others through the central GitHub repository.
+
+### Local Development Workflow
+
+Nic shares the typical workflow for version control - working locally on your computer, committing changes, and pushing them to Github frequently. He adds some dummy data files and a script to his local copy, then demonstrates committing and pushing changes after each work session. Git tracks differences, not complete files, saving space.
+
+He recommends writing the readme early on as an exercise to clearly state project goals upfront. The template readme provides a guide for documenting folder structure and contents.
+
+### Best Practices in R for Reproducibility
+
+Nic emphasizes using R Projects and the `here()` package to make analysis reproducible across computers. R Projects root file paths to their folder location. `here()` constructs paths from that root folder in a platform-agnostic way. Together they avoid manual path setting that breaks on other devices.
+
+He demonstrates explicitly calling functions from packages with `package::function()`. This points to the right package if multiple ones have identically named functions.
+
+We learn you can call a package function without loading the library, saving memory and environment clutter. The function will automatically install its package if missing.
+
+## Handling Large Files
+
+Github has a 100MB file size limit. For public data, use R to directly download files from online repositories into a script instead of bundling them. For private data, upload to Box and download from there. In both cases the analysis stays reproducible.
+
+## Zotero for Reference Management
+
+Nic pays for unlimited Zotero storage and sets up group libraries for shared reference databases linked to downloaded PDFs. Even after students leave Macalester, he can maintain the Zotero storage so past students retain access to the literature they collected.
+
+# Summary
+
+In summary, Nic covered setting up an open science Github repository, demonstrated workflows for version controlling and sharing analysis via Github Desktop, shared best practices in R for reproducible code, strategies for handling large data files, and utilizing Zotero to collaboratively manage references and PDF literature.

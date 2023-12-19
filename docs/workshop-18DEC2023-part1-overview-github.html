@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Science: Tools Applications, &amp; Workflow - 6&nbsp; Field Projects</title>
+<title>Open Science: Tools Applications, &amp; Workflow - 15&nbsp; Part 1: Overview and Setting up GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03b-lab-projects.html" rel="next">
-<link href="./03-pre-data-raw-data.html" rel="prev">
+<link href="./workshop-18DEC2023-part2-githubdesktop-reproducibility-zotero.html" rel="next">
+<link href="./12-references.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-pre-data-raw-data.html">“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types</a></li><li class="breadcrumb-item"><a href="./03a-field-projects.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Field Projects</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop-18DEC2023-part1-overview-github.html">Workshop: Jelinski Lab Open and Reproducible Science Workflow 18DEC2023</a></li><li class="breadcrumb-item"><a href="./workshop-18DEC2023-part1-overview-github.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Part 1: Overview and Setting up GitHub</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -163,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03a-field-projects.html" class="sidebar-item-text sidebar-link active">
+  <a href="./03a-field-projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Field Projects</span></span></a>
   </div>
 </li>
@@ -260,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./workshop-18DEC2023-part1-overview-github.html" class="sidebar-item-text sidebar-link">
+  <a href="./workshop-18DEC2023-part1-overview-github.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Part 1: Overview and Setting up GitHub</span></span></a>
   </div>
 </li>
@@ -294,26 +294,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#pre-data-infrastructure" id="toc-pre-data-infrastructure" class="nav-link active" data-scroll-target="#pre-data-infrastructure"><span class="header-section-number">6.1</span> Pre-Data Infrastructure</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">15.1</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#survey123-for-tabular-data-spatial-data-and-image-collection" id="toc-survey123-for-tabular-data-spatial-data-and-image-collection" class="nav-link" data-scroll-target="#survey123-for-tabular-data-spatial-data-and-image-collection"><span class="header-section-number">6.1.1</span> Survey123 for tabular data, spatial data, and image collection</a></li>
-  <li><a href="#lab-standards-for-survey123-form" id="toc-lab-standards-for-survey123-form" class="nav-link" data-scroll-target="#lab-standards-for-survey123-form"><span class="header-section-number">6.1.2</span> Lab Standards for Survey123 Form</a></li>
-  <li><a href="#additional-survey123-functionality-of-interest" id="toc-additional-survey123-functionality-of-interest" class="nav-link" data-scroll-target="#additional-survey123-functionality-of-interest"><span class="header-section-number">6.1.3</span> Additional Survey123 Functionality of Interest</a></li>
-  <li><a href="#hard-copy-field-data-sheets" id="toc-hard-copy-field-data-sheets" class="nav-link" data-scroll-target="#hard-copy-field-data-sheets"><span class="header-section-number">6.1.4</span> Hard Copy Field Data Sheets</a></li>
+  <li><a href="#general-philosophy" id="toc-general-philosophy" class="nav-link" data-scroll-target="#general-philosophy"><span class="header-section-number">15.1.1</span> General Philosophy</a></li>
+  <li><a href="#defining-projects" id="toc-defining-projects" class="nav-link" data-scroll-target="#defining-projects"><span class="header-section-number">15.1.2</span> Defining Projects</a></li>
+  <li><a href="#lab-github-organization" id="toc-lab-github-organization" class="nav-link" data-scroll-target="#lab-github-organization"><span class="header-section-number">15.1.3</span> Lab Github Organization</a></li>
   </ul></li>
-  <li><a href="#raw-data-collection" id="toc-raw-data-collection" class="nav-link" data-scroll-target="#raw-data-collection"><span class="header-section-number">6.2</span> Raw Data Collection</a>
+  <li><a href="#registering-projects" id="toc-registering-projects" class="nav-link" data-scroll-target="#registering-projects"><span class="header-section-number">15.2</span> Registering Projects</a>
   <ul class="collapse">
-  <li><a href="#tips-for-using-survey-123-in-the-field" id="toc-tips-for-using-survey-123-in-the-field" class="nav-link" data-scroll-target="#tips-for-using-survey-123-in-the-field"><span class="header-section-number">6.2.1</span> Tips for using Survey 123 in the field</a></li>
+  <li><a href="#step-by-step-instructions-for-registering-projects" id="toc-step-by-step-instructions-for-registering-projects" class="nav-link" data-scroll-target="#step-by-step-instructions-for-registering-projects"><span class="header-section-number">15.2.1</span> Step-by-step instructions for registering projects</a></li>
   </ul></li>
-  <li><a href="#raw-data-curation" id="toc-raw-data-curation" class="nav-link" data-scroll-target="#raw-data-curation"><span class="header-section-number">6.3</span> Raw Data Curation</a></li>
-  <li><a href="#standards-for-creating-the-raw-data-archive" id="toc-standards-for-creating-the-raw-data-archive" class="nav-link" data-scroll-target="#standards-for-creating-the-raw-data-archive"><span class="header-section-number">6.4</span> Standards for Creating the Raw Data Archive</a></li>
-  <li><a href="#physical-sample-curation" id="toc-physical-sample-curation" class="nav-link" data-scroll-target="#physical-sample-curation"><span class="header-section-number">6.5</span> Physical Sample Curation</a>
+  <li><a href="#setting-up-project-repositories" id="toc-setting-up-project-repositories" class="nav-link" data-scroll-target="#setting-up-project-repositories"><span class="header-section-number">15.3</span> Setting up Project Repositories</a>
   <ul class="collapse">
-  <li><a href="#sample-names" id="toc-sample-names" class="nav-link" data-scroll-target="#sample-names"><span class="header-section-number">6.5.1</span> Sample Names</a></li>
-  <li><a href="#sample-log" id="toc-sample-log" class="nav-link" data-scroll-target="#sample-log"><span class="header-section-number">6.5.2</span> Sample Log</a></li>
-  <li><a href="#connecting-your-sample-log-to-a-master-laboratory-sample-log-todo" id="toc-connecting-your-sample-log-to-a-master-laboratory-sample-log-todo" class="nav-link" data-scroll-target="#connecting-your-sample-log-to-a-master-laboratory-sample-log-todo"><span class="header-section-number">6.5.3</span> Connecting your sample log to a master laboratory sample log #todo</a></li>
-  <li><a href="#subsequent-laboratory-analysis-of-physical-samples-todo" id="toc-subsequent-laboratory-analysis-of-physical-samples-todo" class="nav-link" data-scroll-target="#subsequent-laboratory-analysis-of-physical-samples-todo"><span class="header-section-number">6.5.4</span> Subsequent Laboratory Analysis of Physical Samples #todo</a></li>
+  <li><a href="#step-by-step-instructions-for-setting-up-your-repository" id="toc-step-by-step-instructions-for-setting-up-your-repository" class="nav-link" data-scroll-target="#step-by-step-instructions-for-setting-up-your-repository"><span class="header-section-number">15.3.1</span> Step-by-step Instructions for Setting Up Your Repository</a></li>
   </ul></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">15.4</span> Next Steps</a></li>
   </ul>
 </nav>
     </div>
@@ -322,7 +317,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Field Projects</span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Part 1: Overview and Setting up GitHub</span></h1>
 </div>
 
 
@@ -337,117 +332,88 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Field projects are defined here as projects that require doing fieldwork to collect novel physical samples or morphological data. These projects require travel of some sort to collect raw data. Raw data for these projects typically will consist of physical samples.</p>
-<section id="pre-data-infrastructure" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="pre-data-infrastructure"><span class="header-section-number">6.1</span> Pre-Data Infrastructure</h2>
-<section id="survey123-for-tabular-data-spatial-data-and-image-collection" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="survey123-for-tabular-data-spatial-data-and-image-collection"><span class="header-section-number">6.1.1</span> Survey123 for tabular data, spatial data, and image collection</h3>
-<p>Our standardized tool for data collection for field projects is <a href="https://survey123.arcgis.com/">ArcGIS Survey123</a>. Survey123 is a tool that allows you to create customized data entry and submission forms that you can then access through the Survey123 app on your phone. These forms can be created through the ArcGIS Online Survey123 portal. Although it is a proprietary tool, all faculty, students and staff at UMN have full, free access to the ArcGIS Online suite of tools which includes Survey123. Despite the fact that Survey123 is proprietary and not open source, it is highly functional and therefore the ease of use makes it our tool of choice. This chapter assumes you are familiar and have accessed Survey123. If you have not worked with Survey123 before, it is well supported and documented by ESRI and you can check out our Tools: Survey123 chapter #todo in this book.</p>
+<section id="introduction" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">15.1</span> Introduction</h2>
+<p>The workshop leader, Nic, explains that the goal of the workshop is to get everyone in the lab group working in a standardized and efficient way on research projects. The aims are to facilitate open and reproducible science, collaboration, and time management.</p>
+<section id="general-philosophy" class="level3" data-number="15.1.1">
+<h3 data-number="15.1.1" class="anchored" data-anchor-id="general-philosophy"><span class="header-section-number">15.1.1</span> General Philosophy</h3>
+<p>The philosophy behind the workflow is “radical open science” - showing work publicly while it is happening rather than waiting until it is published. There can be reasons to keep some data private temporarily, but openness should be the default.</p>
+<p>Nic argues we are beyond the days where work should be kept hidden until publication. There are benefits to showing work in progress, though judgments have to be made about how much to show at what stages.</p>
 </section>
-<section id="lab-standards-for-survey123-form" class="level3" data-number="6.1.2">
-<h3 data-number="6.1.2" class="anchored" data-anchor-id="lab-standards-for-survey123-form"><span class="header-section-number">6.1.2</span> Lab Standards for Survey123 Form</h3>
-<p>As you set up your Survey123 form, you should think through each of the pieces of information that will be important to collect in the field and provide a way to capture that information in your form. When in doubt - err on the side of including it in your form - you can always ignore it in the field while using the app if there is some redundancy.</p>
-<p>If you are doing a field project, you should strongly consider using Survey123 to collect your plot or site-level data. Think of what unit of your sampling will have a unqiue latitude and longitude and that is the data collection unit that your survey form should be designed for. For example, if you have a project that requires taking soil cores, with multiple samples from different depths taken from each core, then the survey form should be designed around each of the cores, which will have a unqiue latitude and longitude, and not each of the samples (many of which from the same core will have the same latitude and longitude).</p>
-<p>Survey123 excels at consolidating spatial data (latitudes and longitudes), tabular data (text, numbers, or X entered in response to questions on the form), and images (taken in response to questions on the form) in one location. When you submit each of your records, this raw data will live in the Survey123 database through ArcGIS Online that is associated with your form.</p>
-<p>Our laboratory standards for Survey123 forms is that they should (at a minimum) collect the following information:</p>
+<section id="defining-projects" class="level3" data-number="15.1.2">
+<h3 data-number="15.1.2" class="anchored" data-anchor-id="defining-projects"><span class="header-section-number">15.1.2</span> Defining Projects</h3>
+<p>In academia, the core project units that people are assessed on are papers, proposals, dissertations and theses. So the workflow is oriented around facilitating progress on those outputs.</p>
+<p>The aim is to have a system where all information related to a project lives in one place from the start, with clear naming conventions. This avoids data and files getting scattered across multiple platforms. It also makes projects transferable between people and platforms.</p>
+</section>
+<section id="lab-github-organization" class="level3" data-number="15.1.3">
+<h3 data-number="15.1.3" class="anchored" data-anchor-id="lab-github-organization"><span class="header-section-number">15.1.3</span> Lab Github Organization</h3>
+<p>The group uses a shared Github organization for open lab resources:</p>
 <ul>
-<li>Name of initials of person recording data or submitting record</li>
-<li>GPS location of record (autocollected in response to location question)</li>
-<li>Date and time of record collection (autocollected in response to time question)</li>
-<li>Unique plot or observation number in the context of the project</li>
+<li>Open science guidebook</li>
+<li>Lab protocols eBook</li>
+<li>Group handbook (onboarding etc)</li>
+<li>Project template</li>
 </ul>
-<p>Your Survey123 form should also include fields to enter all relevant raw data as required by your project.</p>
+<p>Nic explains Github repositories and branches for managing versions and collaborative work.</p>
 </section>
-<section id="additional-survey123-functionality-of-interest" class="level3" data-number="6.1.3">
-<h3 data-number="6.1.3" class="anchored" data-anchor-id="additional-survey123-functionality-of-interest"><span class="header-section-number">6.1.3</span> Additional Survey123 Functionality of Interest</h3>
-<p><em>Images.</em> Survey123 is an excellent way to collect and organize images. Single image submission questions can be configured to collect multiple images. Once submitted, all images are stored with the associated record in the online database.</p>
-<p><em>Deep Customization - XLSForms</em> Deeper functionality for setting up forms in Survey123 requires a PC and the use of XLSForms and Survey123 Conect (a desktop app that only runs on Windows). While this is very annoying for us Mac users, it allows extensive customization of your Survey123 form, including but certainly not limited to:</p>
+</section>
+<section id="registering-projects" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="registering-projects"><span class="header-section-number">15.2</span> Registering Projects</h2>
+<p>The first activity is for each person to identify their current paper projects - anything from an initial idea to near submission.</p>
+<p>Nic introduces the project registry - a table for tracking all lab projects in a standardized way. Everyone registers one of their projects by adding to the table.</p>
+<p>The registry assigns a unique numbered code to each project. This ties together related files/folders across platforms and over time as titles change.</p>
+<p>Participants add their name, project title, status (idea, analyzing data etc.)</p>
+<section id="step-by-step-instructions-for-registering-projects" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="step-by-step-instructions-for-registering-projects"><span class="header-section-number">15.2.1</span> Step-by-step instructions for registering projects</h3>
+<ol type="1">
+<li><p>Identify your potential paper projects - these can range from initial ideas to near complete drafts. Come up with a brief 1-2 sentence description for each project.</p></li>
+<li><p>Go to the Lab Group’s GitHub organization page and click on the Project Registry.</p></li>
+<li><p>Click “Add Item” at the bottom of the Project Registry table to add a row.</p></li>
+<li><p>In the new row, fill in the following columns:</p></li>
+</ol>
 <ul>
-<li><em>Repeats</em>: “Repeats” allow you to generate multiple records (rows) from a single survey entry/submission - so for example, you can generate multiple rows for the master sample log (each row is a sample) from one submission form (plot or pedon): https://community.esri.com/t5/arcgis-survey123-blog/survey123-tricks-of-the-trade-repeats/ba-p/898041</li>
-<li><em>Customizing File Names for Submitted Images</em>: Customaization through XLS Forms allows you to set the file names of submitted photos - this is really important - automatically annotate photo file names with project, plot, and question or anything else from designated fields in the form (as well as date/time). This functionality can save significant time when you go to curate your photo archive. https://community.esri.com/t5/arcgis-survey123-blog/survey123-tricks-of-the-trade-set-the-file-name-of/ba-p/1217125</li>
+<li><strong>Number</strong>: Select the next available project number to uniquely identify your project</li>
+<li><strong>Name</strong>: Use the naming convention “Number-YourLastName-2-4WordDescription” e.g.&nbsp;“065-Jelinski-LakeSedimentCoreAnalysis”</li>
+<li><strong>Status</strong>: Select the current status of your project idea, analysis, drafting etc.</li>
 </ul>
+<ol start="5" type="1">
+<li>Make note of the unique number and name you entered. This will be used to identify all folders and files associated with your project across platforms.</li>
+</ol>
 </section>
-<section id="hard-copy-field-data-sheets" class="level3" data-number="6.1.4">
-<h3 data-number="6.1.4" class="anchored" data-anchor-id="hard-copy-field-data-sheets"><span class="header-section-number">6.1.4</span> Hard Copy Field Data Sheets</h3>
-<p>Survey123 is an excellent tool for collecting plot or site level data in the field with your phone. However, some types of field data collection are extremely difficult to digitize under field conditions. Examples of these are:</p>
+</section>
+<section id="setting-up-project-repositories" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="setting-up-project-repositories"><span class="header-section-number">15.3</span> Setting up Project Repositories</h2>
+<p>Next, participants use the Project Template repository to create a repository for their registered project within their personal Github account.</p>
+<p>This automatically structures their project folder with:</p>
 <ul>
-<li>Soil morphology data (lots of specialized acronyms, notes, and chicken scratches add depth to the data, often difficult to use phone while textureing soil, many fields and extremely time consuming to use an app or tablet in the field).</li>
-<li>Data consisting of many numbers or that exists at the sample level. Remember I said that Survey123 really shines when used at the level of unique geospatial coordinates which is typically the plot or site level. However, often times we may also be collecting data at the sample level. For example recording the dimensions of a permafrost soil core section that will go into a sample bag, or the field pH and EC of a soil sample. These data are best collected using hard copy forms. There are examples of hard copy forms for field data collection that Megan Andersen put together in the Jelinski Lab Field Handbook repository [here]#todo. <strong>Always print your hard copy forms on Rite-In-The-Rain!!</strong></li>
+<li>Detailed readme</li>
+<li>Folders for data, documents etc</li>
+<li>Template markdown documents</li>
 </ul>
+<p>Nic explains the contents and how to customize.</p>
+<p>The readme and structure provide a standardized way for people to organize their projects as they get started. They can modify as needed over time.</p>
+<section id="step-by-step-instructions-for-setting-up-your-repository" class="level3" data-number="15.3.1">
+<h3 data-number="15.3.1" class="anchored" data-anchor-id="step-by-step-instructions-for-setting-up-your-repository"><span class="header-section-number">15.3.1</span> Step-by-step Instructions for Setting Up Your Repository</h3>
+<ol type="1">
+<li><p>Go back to the Main Jelinski Lab GitHub Organzation page and click on the Project Template repository.</p></li>
+<li><p>Click on “Use this template” and select “Create new repository”</p></li>
+<li><p>For Owner, select your own GitHub account.</p></li>
+<li><p>For Repository name, enter the unique name you created when registering your project e.g.&nbsp;065-Jelinski-LakeSedimentCoreAnalysis</p></li>
+<li><p>You can choose Public or Private visibility. You can change this later.</p></li>
+<li><p>Click “Create repository” from template. This will set up a repository in your GitHub account containing folders, templates and documentation to standardize your project workflow.</p></li>
+</ol>
 </section>
 </section>
-<section id="raw-data-collection" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="raw-data-collection"><span class="header-section-number">6.2</span> Raw Data Collection</h2>
-<p>After your pre-data infrastructure is set up, do some test runs and some mock data collection around campus. This will allow you to use your infrastructure, datasheets, and think through any missing pieces or functionality issues. Revise as needed and get ready for your travel - check out our [Field Manual]#todo for protocols and processes related to field work.</p>
-<section id="tips-for-using-survey-123-in-the-field" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="tips-for-using-survey-123-in-the-field"><span class="header-section-number">6.2.1</span> Tips for using Survey 123 in the field</h3>
-<p>Survey 123 is generally an excellent app in the field, and most new phones are sufficiently durable and waterproof to be used in the field. As recently as 2019 I carried a separate digital camera and GPS. Now I do everything (capture GPS, take pictures, use Survey123 for tabular data) on my phone. *NOTE - this also means you should have a backup field ready rugged battery pack to charge your phone during the day if necessary in the field. There are also some other tips when using Survey123 in the field.</p>
+<section id="next-steps" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">15.4</span> Next Steps</h2>
+<p>In the final segments, Nic aims to show everyone how to:</p>
 <ul>
-<li><p><strong>Images</strong>. When choosing to use Survey123 as an image repository, ensure that you 1) take pictures with your phone and upload them to a survey response from your photo library (instead of taking them live through the app) - this ensures that if something goes wrong with the response you still have the image on your camera. The images will also be full quality this way, while taking them through the app may result in reduced quality and image compression. Additionally, make sure your survey is set up to receive and store original quality images - the default is compression so you need to change the default (google search how to do this and provide link here)#todo.</p></li>
-<li><p><strong>Offline/Online</strong>. Unless you are in a populated area, you may not be able to upload survey responses live in the field. That is fine. Survey 123 allows you to save draft responses to your outbox which are stored locally on your phone. When you get back to a good internet connection, you can submit your survey responses.</p></li>
-<li><p><strong>Phone GPS Accuracy</strong>. Even if you don’t have service or wifi signal, your phone GPS will be more accurate if you keep your cellular and wifi on. This will drain your battery faster in remote areas but the gain in accuracy is worth it. As mentioned above, for this reason, bring a field ready battery pack.</p></li>
-<li><p><strong>GPS Backup</strong>. Always ensure that your phone is not your only source of GPS data to insure against data loss. There are several combinations you can use to achieve this:</p>
-<ul>
-<li>Phone + Hard Copy. Write down the Lat/Lon on your data sheet or notebook</li>
-<li>Two Phone apps. Take GPS points with Survey123 &amp; another app such as OnX.</li>
-<li>Phone + GPS unit. Take an indendent GPS unit in the field with you and take a GPS point at every plot or site. Store on the GPS unit.</li>
-</ul></li>
-<li><p><strong>Data Backup</strong>. Your data should be backed up each evening when you return from the field. Do this by: exporting images from your phone to a computer or external drive, taking pictures of all hard copy data sheets collected that day and backing them up to a computer or external drive, if you have a wifi connection, uploading tabular data and survey responses to Survey123 and downloading the updated version of the database.</p></li>
+<li>Generate a Quarto ebook from their markdown documents and connect it to their Github repository</li>
+<li>Use logging conventions to track status and notes</li>
 </ul>
-</section>
-</section>
-<section id="raw-data-curation" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="raw-data-curation"><span class="header-section-number">6.3</span> Raw Data Curation</h2>
-<p>Once your raw data has been collected, you are ready to curate it. Raw data curation involves assuring that your dataset is complete, formatted correctly, is properly stored and backed up, and includes additional notes not contained in the standard data formats.</p>
-</section>
-<section id="standards-for-creating-the-raw-data-archive" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="standards-for-creating-the-raw-data-archive"><span class="header-section-number">6.4</span> Standards for Creating the Raw Data Archive</h2>
-<p>You should strive to meet the following standards when curating your raw data archive:</p>
-<ul>
-<li><p>Your raw data archive should be generated within 1 week of returning from the field (if a single trip), or updated within 1 weeks of collection (for recurring work over longer periods).</p></li>
-<li><p>Your raw data archive should consist of:</p>
-<ul>
-<li>a shapefile in OGC Geopackage format containing lat lon and point or plot IDs</li>
-<li>tabular data exported from Survey123</li>
-<li>pictures or scans of your raw data sheets</li>
-<li>a local image/video repository where images are placed in a uniqely named folder for each plot or site. NOTE: ideally the title of each folder, in addition to containing the plot or site code should also have a descriptive name alongside the plot code to jog your memory when you are looking back at your plots and images. For example “FRN-31 where we saw moose in lake”.
-<ul>
-<li>NOTE: your images should contain metadata in their image names. Nowadays most image files will be exported from your phone with a unique number ID such as “IMG_6249”. You should always retain that number in your file name; BUT you should add additional metadata to the file name by appending: 1) the project id, 2) the plot id, 3) a one or two word phrase regarding the question the image was taken in repsonse to. So, for example, an excellent image title for an image with the name and the folder above would be: “FRN-31_pedon_IMG_6249”. Note that this can be done in an automated way using XLSForms in Survey123. If you want to really take this to the next level, also include some descriptive text in the image file name between the Survey123 generated material and the image file name i.e.&nbsp;“FRN-31_pedon_Bwhorizon30cm_IMG_6249”. *Alternatively, you can also use an open source desktop image metadata editing app such as <a href="https://www.digikam.org">DigiKam</a>.</li>
-</ul></li>
-<li>a file (preferrably in [Markdown]#todo) format which contains any additional qualitative information, notes, observations, or a brain dump from the field data collection - if applicable.</li>
-<li>our standardized [sample log file]#todo that details characteristics and names of physical samples taken.</li>
-<li>a readme.txt file that contains metadata about your raw data archive. You can add to your existing readme file or Quarto book as well to include the files in your raw data subdirectory in the readme/metadata.</li>
-</ul></li>
-</ul>
-<p>These files live in the raw data folder of your repo. However note that the image repository will be very large in some cases and gitHub is not a good place to store images. Therefore - in your [.gitignore file]#todo, you should include the image type or the image repository directory so that these do not upload to GitHub.</p>
-<ul>
-<li><p>Your raw data repository should be stored locally and somewhere in the cloud. For everything except your image/video repository should be stored on GitHub. The image/video repository should be stored locally and either in Flickr or a <strong>Shared</strong> Google Drive (a truly shared drive, not through your personal account) or Google Photos (same re: shared). <em>NOTE #todo: should image repositories also be required to upload to CFANS Drive?</em></p></li>
-<li><p>Your raw data should also contain pre-data - including spreadsheet forms and an archive of the Survey123 form - in what format?#todo.</p></li>
-</ul>
-<p>NOTE: folder repo structure should contain a pre-data folder!!!!!#todo</p>
-</section>
-<section id="physical-sample-curation" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="physical-sample-curation"><span class="header-section-number">6.5</span> Physical Sample Curation</h2>
-<p>The short- and long-term curation of physical samples collected during fieldwork is not trivial. There are several issues to be solved - sample names, sample log, and connecting your sample log to a laboratory sample log.</p>
-<section id="sample-names" class="level3" data-number="6.5.1">
-<h3 data-number="6.5.1" class="anchored" data-anchor-id="sample-names"><span class="header-section-number">6.5.1</span> Sample Names</h3>
-<p>See our field manual for detailed protocols on sample naming. Briefly, however, your physical samples should be collected in pre-labelled bags. These bags are pre-labelled with a two digit year and sample number. This allows you to collect samples in the field without labelling bags in difficult conditions. The sample log is then a critical piece of your raw data as it connects your sample numbers to metadata about the sample (depths, plot or site, and horizon, for example). Sample numbers then be something like “22-001”. NOTE; this assumes that you won’t collect more than 999 samples in a year (usually safe?). If projects are occuring at the same time, then we need a way of differentiating between these samples. We should therefore append the sample number with the last initials of the project lead who is collecting them in the field (i.e.&nbsp;“22-001-NAJ”).</p>
-<p>*NOTE: if you are working on an externally sponsored project or a project that has a larger collaborative team or more parts, your sample names may be prescribed for you. That is fine - in that case, use the sample naming conventions that are part of the larger project. - how will this work with master sample log integration?</p>
-</section>
-<section id="sample-log" class="level3" data-number="6.5.2">
-<h3 data-number="6.5.2" class="anchored" data-anchor-id="sample-log"><span class="header-section-number">6.5.2</span> Sample Log</h3>
-<p>Use the sample log template provided in our Field Manual. Take pictures and backup pictures or scans of the sample log each night after data collection.</p>
-</section>
-<section id="connecting-your-sample-log-to-a-master-laboratory-sample-log-todo" class="level3" data-number="6.5.3">
-<h3 data-number="6.5.3" class="anchored" data-anchor-id="connecting-your-sample-log-to-a-master-laboratory-sample-log-todo"><span class="header-section-number">6.5.3</span> Connecting your sample log to a master laboratory sample log #todo</h3>
-<p>Big idea - use Make (Integromat) to trigger a watch on a Survey123 survey that automatically appends row (note need to have survey set up with repeat to produce multiple records of samples with one survey record submission) to a master laboratory physical sample sheet. The Google sheet should also somehow provide a sample name for each? Or you could have in your question at the site or plot level with multipl entries - what are the names/IDs of the samples collected at this plot/site? YES, this second is the best way to go.</p>
-</section>
-<section id="subsequent-laboratory-analysis-of-physical-samples-todo" class="level3" data-number="6.5.4">
-<h3 data-number="6.5.4" class="anchored" data-anchor-id="subsequent-laboratory-analysis-of-physical-samples-todo"><span class="header-section-number">6.5.4</span> Subsequent Laboratory Analysis of Physical Samples #todo</h3>
-<p>This should maybe be a separate chapter after lab analysis. then can be two stages - integrate with Google Sheets, pull from physical sample log, build on that.</p>
+<p>There will also be discussion of file naming conventions and digital organization systems.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -686,13 +652,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./03-pre-data-raw-data.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">“Pre-Data” and Raw Data: Setting Up and Executing Raw Data Collection and Curation Infrastructure for Different Project Types</span>
+      <a href="./12-references.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">References</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03b-lab-projects.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Laboratory Projects</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./workshop-18DEC2023-part2-githubdesktop-reproducibility-zotero.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Part 2: Using GitHub Desktop, Local Workflow, R Reproducibility, Zotero</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
