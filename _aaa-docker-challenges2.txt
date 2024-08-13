@@ -1,0 +1,70 @@
+references from tabs up 17FEB2024 - Pedometrics and Docker
+
+Pedometrics/aksdb
+https://nsidc.org/data/ggd318/versions/2
+https://www.nature.com/articles/s41467-018-07557-4#citeas
+
+ISCN data:
+https://portal.edirepository.org/nis/mapbrowse?scope=edi&identifier=1160&revision=1
+
+TO DO:
+XRAY safety protocols
+group handbook
+lab protocols update
+
+https://towardsdatascience.com/reproducible-work-in-r-e7d160d5d198
+https://rpubs.com/Mentors_Ubiqum/list_packages
+
+DOCKER:
+https://thenewstack.io/docker-basics-how-to-use-dockerfiles/
+https://stackoverflow.com/questions/56074662/how-to-build-a-docker-image-with-the-right-r-and-package-versions-and-open-rstud
+https://stackoverflow.com/questions/69167940/install-packages-during-build-of-rocker-tidyverse-docker-image
+https://towardsdatascience.com/reproducible-work-in-r-e7d160d5d198
+https://stackoverflow.com/questions/45289764/install-r-packages-using-docker-file
+https://support.openanalytics.eu/t/using-specific-versions-of-r-packages-in-docker-file/763
+https://stackoverflow.com/questions/61306219/running-old-version-of-r-using-docker-image
+https://github.com/r-hub/rversions
+https://r-hub.github.io/rversions/
+https://rocker-project.org/use/extending.html
+https://stackoverflow.com/questions/38986057/how-to-set-image-name-in-dockerfile
+https://stackoverflow.com/questions/18497688/run-a-docker-image-as-a-container
+
+BUILDING OWN DOCKERFILE
+https://docs.docker.com/engine/reference/commandline/image_build/
+
+INSTALLING PACKAGES IN DOCKER
+https://stackoverflow.com/questions/51500385/how-to-speed-up-r-packages-installation-in-docker
+https://stackoverflow.com/questions/73772906/unable-to-install-r-packages-in-docker-container
+https://analytics4all.org/2018/07/13/r-installing-packages-with-dependencies/
+https://jsta.github.io/r-docker-tutorial/02-Launching-Docker.html
+
+AWS and R
+https://jagg19.github.io/2019/08/aws-r/
+https://stackoverflow.com/questions/63680987/ec2-server-instance-running-rstudio-on-port-8787-timing-out
+
+
+VERY IMPORTANT:
+https://www.richpauloo.com/blog/docker-rstudio/
+https://tilburgsciencehub.com/topics/automation/replicability/cloud-computing/rstudio-aws/
+https://tilburgsciencehub.com/topics/automation/replicability/cloud-computing/running-computations-remotely/connect-instance/
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html
+https://serverfault.com/questions/836198/how-to-install-docker-on-aws-ec2-instance-with-ami-ce-ee-update
+https://filezilla-project.org/download.php?platform=macos-arm64
+https://stackoverflow.com/questions/72703762/package-gdalutils-is-not-available-for-this-version-of-r-4-2-0
+https://community.rstudio.com/t/a-workflow-for-research-based-on-renv-and-docker/99838
+
+Idea - use AWS, install gdal first using brew
+so install brew (sudo)
+then run gdal install
+
+then rest of aws setup
+
+then, run the image?
+
+NOTE: rgdal needs gdal installation see dependencies here: https://gist.github.com/dncgst/111b74066eaea87c92cdc5211949cd1e
+
+QUESTIONS: CAN I do all this with a docker-compose file?
+https://docs.docker.com/compose/gettingstarted/
+https://www.youtube.com/watch?v=-A-Tod_XOB0
+https://www.dataquest.io/blog/install-package-r/
+https://devcenter.heroku.com/articles/local-development-with-docker-compose

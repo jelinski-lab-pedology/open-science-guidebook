@@ -1,0 +1,73 @@
+# Update the packages on your instance
+sudo yum update -y
+
+###### is this needed?
+# install python
+sudo yum install python
+
+# definitely needed in this order
+# need gcc
+sudo yum install gcc gcc-c++ -y
+
+# need development tools
+sudo yum groupinstall "Development Tools"
+
+# need sqlite
+sudo yum install sqlite-devel
+
+# need libtiff-devel
+sudo yum install libtiff-devel
+
+#need curl devel
+sudo yum install curl-devel
+
+
+# need proj
+wget https://download.osgeo.org/proj/proj-7.2.1.tar.gz
+tar xzvf proj-7.2.1.tar.gz
+cd proj-7.2.1/
+./configure
+make
+sudo make install
+
+
+wget http://download.osgeo.org/gdal/3.5.0/gdal-3.5.0.tar.gz
+tar xzf gdal-3.5.0.tar.gz
+cd gdal-3.5.0/  
+./configure
+make 
+sudo make install
+
+######
+The following for an Ubuntu installation (https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html)
+
+# install python
+sudo apt-get install python3.6-dev
+
+# install gcc
+sudo apt-get install gcc
+
+# install homebrew dependencies
+sudo apt-get install build-essential procps curl file git
+
+#install homebrew
+git clone https://github.com/Homebrew/brew homebrew
+
+eval "$(homebrew/bin/brew shellenv)"
+brew update --force --quiet
+chmod -R go-w "$(brew --prefix)/share/zsh"
+
+# install svn
+brew install svn
+
+#check to see if svn installed
+brew list svn
+
+#install gdal
+brew install gdal
+#note this may install proj as well
+
+
+
+
+

@@ -1,0 +1,172 @@
+OK I
+m trying a complete differnet way here. First, pull a R version image from rocker. Here I wanted to run 4.2.1 to run the wosis scripts.
+
+Then, open a terminal and run:
+docker run --rm -ti -p 8787:8787 -v /tmp:/tmp -e ROOT=TRUE -e DISABLE_AUTH=TRUE rocker/r-ver:4.2.1 
+
+now, check what packages come with that:
+my_packages <- library()$results[,1]
+my_packages
+
+now, check the path where they are installed:
+.libPaths()
+
+try installing a package to that path (note i tried this with the "site-library" path first and it didn't work, but it did work with just the library path below):
+install.packages("magrittr",lib = "/usr/local/lib/R/library")
+
+now verify installation
+my_packages <- library()$results[,1]
+my_packages
+
+now trying the same with rgdal. Doesn't work. because rgdal requires a gdal install. gdal is a system app. you can install it via homebrew
+
+installed homebrew first via .pkg install - this din't work, so instead i used the command line on the homebrew website:
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+need to install gdal and proj apps
+
+brew install gdal proj
+
+
+
+###########
+
+Here I am trying to install gdal and dependencies in the EC2 setup before pulling in R image
+# install python
+sudo yum install python
+
+
+
+
+
+############
+
+Some useful terminal commands:
+cd to change directory
+cd .. to go up a directory
+ls to list files and folders
+
+How to stop a docker container that is running from the command line - note need the long container ID:
+docker stop beaeee3ea579b0965439aec1cfcc9c53f2f14f444c0cfe010b1495302038d0d2
+
+remove it like this
+docker rm beaeee3ea579b0965439aec1cfcc9c53f2f14f444c0cfe010b1495302038d0d2
+
+to see id of docker container running
+docker ps
+
+to see id of all docker containers including stooped
+docker ps -a
+
+to see all docker images
+docker images
+
+to delete docker images from device
+docker rmi [image id]
+
+to build from a dockerfile in a directory (from https://docs.docker.com/engine/reference/commandline/image_build/)
+docker build - < Dockerfile
+
+These are the instructions for running R Studio on AWS:
+https://tilburgsciencehub.com/topics/automation/replicability/cloud-computing/rstudio-aws/
+
+
+Move files from local computer to AWS instance: https://tilburgsciencehub.com/topics/automation/replicability/cloud-computing/running-computations-remotely/move-files/
+- note: I used FileZilla to do this - I put the directory I wanted on my desktop first
+
+# Update the packages on your instance
+sudo yum update -y
+# Install Docker
+sudo yum install docker -y
+# Start the Docker Service
+sudo service docker start
+# Add the ec2-user to the docker group so you can execute Docker commands without using sudo.
+sudo usermod -a -G docker ec2-user
+
+# Copy the appropriate docker-compose binary from GitHub:
+sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+# Fix permissions after download:
+sudo chmod +x /usr/local/bin/docker-compose
+
+#Verify if download was successful:
+docker-compose version
+
+# log out of instance
+control d
+
+Move files over to your AWS instance (see top, above) I used FileZilla
+Open FileZille
+File -> Site Manager -> New Site
+Change protocol to sftp
+Use the public IPV4 DNS address (see AWS console) as the host name. should look something like this: "ec2-18-223-24-19.us-east-2.compute.amazonaws.com"
+Choose “Key file” as the logon type, set the username to ec2-user, and add your *.pem file as the key file.
+Click on “Connect”. On the right side, all files on the EC2 Instance are listed, and on the left side you can find the files on your local machine. To copy files from one place to another, you can simply drag and drop them between both windows.
+
+Now, pull the dockerimage - not quite sure yet what this does - NOTE jump down to ###A11 for trying a different version
+docker pull shrabastee/r-causalverse:latest
+
+####A11 - note I modified the yml file to match as well
+docker pull rocker/rstudio:4.0.0
+
+Now, cd to where the docker-compose.yml file is
+cd r-causalverse-master
+
+# Run the compose file
+docker-compose -f docker-compose.yml run --name rstudio --service-ports rstudio
+
+# Open 8787 web server port on AWS instance see- https://tilburgsciencehub.com/topics/automation/replicability/cloud-computing/rstudio-aws/
+
+## Go to AWS Management Console - click on your instance - go to security tab
+## Click on the link under the security groups - edit inbound security - add rule - 
+## put in 8787 in port range - change source to AnywhereIPv4 - save rules
+
+# Copy the Public IPv4 DNS address for instance IP
+# Open a new tab in your browser and paste the URL, including the port number, for example: http://<instance IP>:8787
+# To login, enter rstudio as username and the password specified earlier in the docker-compose file.
+
+
+# NOW for specific WOSIS setup:
+install.packages("gdalUtilities")
+install.packages("devtools")
+can try to specifiy lib = "/usr/local/lib/R/library" in the install command
+
+
+devtools:::install_github("gearslaboratory/gdalUtils")
+
+# NOW - I receve d a warning - package rgdal not available for this version of r
+
+# This gets you the R and R Studio versions you are using:
+sessionInfo()
+
+Here I am using R 4.3.1
+
+# Now try earlier version
+# with R version 3.5.1:
+docker pull rocker/rstudio:4.0.0
+
+
+
+
+NOW, go to this link on your local computer and fork this repo (or just download it)
+https://github.com/shrabasteebanerjee/r-causalverse.git
+
+Move files over to your AWS instance (see top, above) I used FileZilla
+
+NOTE: if you are in instance - do Command-d to disconnect
+
+Now move the folder with your docker yaml (edited per the instructions (ec2-fielpath and password) to the ec2 machine)
+
+#Now reconnect to ec2 instance and pull image from dockerhub
+$ docker pull shrabastee/r-causalverse:latest
+
+# change directory in ec-2 to where the docker yaml file is:
+$ cd r-causalverse-master
+
+# configure docker image using the yaml file
+$ docker-compose -f docker-compose.yml run --name rstudio --service-ports rstudio
+
+
+
+

@@ -1,0 +1,8 @@
+now trying to run on docker desktop
+
+in terminal
+
+docker run --rm -p 8787:8787 -e PASSWORD=YOURNEWPASSWORD rocker/r-ver:4.2.1
+
+or actually run like this for interactive mode:
+docker run --rm -it -p 8787:8787 -e PASSWORD=YOURNEWPASSWORD rocker/r-ver:4.2.1

@@ -1,0 +1,25 @@
+# Publishing a GitHub Repository
+
+If you have been following this workflow, then you likely have a GitHub repository for your project / manuscript that contains data, code, and outputs at the very least. You may choose to make the GitHub repository private or public during the project period, but after the project period, you should make the repository public. While you are working on the project, if you choose, you can share the repository link with others, or make it public.
+
+## Dealing with large files
+
+By default, GitHub does not allow you to upload files greater than 50mB to your repository. If you have files that are larger than this, you essentially have two options:
+
+1\) use [GitHub Large File Storage (LFS)](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage), where GitHub maintains pointers to the large files, but not the files themselves.
+
+2\) use .gitignore file to exclude these large files from your push to GutHub from your locally linked repository.
+
+3\) NOTE: Large files that are ignored in pushes CAN be included as distributed files in binary distributions if you produce "[releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)" of your repository.
+
+## Repository releases, Zenodo, and generating a doi for your repository
+
+When you have a relatively coherent "package" built on your GitHub repository, you should [publish it as a release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) and archive it and get a doi for the release from Zenodo.
+
+### Publishing "releases"
+
+You can publish [releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) of your repository on GitHub. When you do this, you can add additional large files to the release package that users can download. There is no limit on the fiel size you can add as included binaries in a release. 
+
+Releases should be given tags using [semantic versioning](https://semver.org).
+
+To receive a [doi for your release](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content), you should register for a [Zenodo](https://zenodo.org) account and link it to your GitHub account. Then, when you log in to Zenodo you will see all of the repositories associated with your GitHub account. When you switch the archive repository button "on", Zenodo will automatically generate a doi for each release you publish on GitHub. This will not only generate a unique doi for each release and store an image of the release on Zenodo, but also provides a landing page for the release that can be cited and a general doi that can be used to cite all versions which always resolves to the latest release. 

@@ -1,0 +1,116 @@
+# Update the packages on your instance
+sudo yum update -y
+# Install Docker
+sudo yum install docker -y
+# Start the Docker Service
+sudo service docker start
+# Add the ec2-user to the docker group so you can execute Docker commands without using sudo.
+sudo usermod -a -G docker ec2-user
+
+# Copy the appropriate docker-compose binary from GitHub:
+sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+# Fix permissions after download:
+sudo chmod +x /usr/local/bin/docker-compose
+
+#Verify if download was successful:
+docker-compose version
+
+# log out of instance
+control d
+
+#Move files over to your AWS instance (see top, above) I used FileZilla
+#Open FileZille
+#File -> Site Manager -> New Site
+#Change protocol to sftp
+#Use the public IPV4 DNS address (see AWS console) as the host name. should look something like this: "ec2-18-223-24-19.us-east-2.compute.amazonaws.com"
+#Choose “Key file” as the logon type, set the username to ec2-user, and add your *.pem file as the key file.
+#Click on “Connect”. On the right side, all files on the EC2 Instance are listed, and on the left side you can find the files on your local machine. To copy files from one place to another, you can simply drag and drop them between both windows.
+
+#Now, pull the dockerimage - not quite sure yet what this does - NOTE jump down to ###A11 for trying a different version
+docker pull rocker/geospatial:4.2.1
+# note - the above image is 4.21 gB so need a machine that is that big as well
+
+
+#Now, cd to where the docker-compose.yml file is
+cd r-geospatial-master
+
+# Run the compose file
+docker-compose -f docker-compose3.yml run --name rstudio --service-ports rstudio
+
+# verify correct packages are installed (NOTE: you can't do this after the fact)
+my_packages <- library()$results[,1]
+my_packages
+
+# find paths 
+.libPaths()
+
+# try to install gdalUtilities
+install.packages("gdalUtilities",lib = "/usr/local/lib/R/site-library")
+
+# now install gdalUtils
+devtools::install_github("gearslaboratory/gdalUtils", lib = "/usr/local/lib/R/site-library")
+
+###### WORKED!!!!!
+
+OK NOW
+
+library(gdalUtilities)
+library(sf)
+
+
+#### TRYING TO FIX TIMEOUT ISSUE:
+#try single command line 
+docker run -p 8787:8787 -e PASSWORD=SECRET -d --name rstudio rocker/geospatial:4.2.1
+
+#here i'm mapping a volume
+docker run -p 8787:8787 -e PASSWORD=SECRET -v /home/ec2-user/wosis-latest-aws:/home/rstudio/data -d --name rstudio rocker/geospatial:4.2.1
+
+#OK THIS fixed the timeout - now rstudio is up and running and not timing out. It looks #like with the docker compose it was actually the container that was timing out, not r #studio
+
+
+##### Results from first WOSIS attempt - only downloaded 25mb, second downloaded 100mB. Here are the stats:
+> ## ----download.profile.gpkg-----------------------------------------------------------------------
+> layer.name <- "wosis_latest_profiles"
+> (dst.target.name <- paste0(wosis.dir.name,"/", layer.name, ".gpkg"))
+[1] "./wosis_latest/wosis_latest_profiles.gpkg"
+> if (!file.exists(dst.target.name)) { 
++     system.time(
++         gdalUtilities::ogr2ogr(src=wfs,
++                                dst=dst.target.name,
++                                layer=layer.name,
++                                f = "GPKG",
++                                overwrite=TRUE,
++                                skipfailures=TRUE)
++     )
++ }
+    user   system  elapsed 
+ 108.463   35.130 1238.871 
+ 
+ > profiles.gpkg <- st_read(dst.target.name)
+Reading layer `ms:wosis_latest_profiles' from data source 
+  `/home/rstudio/wosis_latest/wosis_latest_profiles.gpkg' using driver `GPKG'
+Simple feature collection with 206600 features and 71 fields
+Geometry type: POINT
+Dimension:     XY
+Bounding box:  xmin: -172.3633 ymin: -77.84866 xmax: 178.4333 ymax: 79.9
+Geodetic CRS:  WGS 84
+> class(profiles.gpkg)
+[1] "sf"         "data.frame"
+> dim(profiles.gpkg)
+[1] 206600     72
+
+> head(sort(table(profiles.gpkg$country_name), decreasing=TRUE))
+
+United States of America                Australia                    Chile 
+                   49934                    41386                    13643 
+             Switzerland                   Brazil                   Canada 
+                   11077                     9108                     8666
+                   
+NOTE: when I tried this again I got 56,192 for US. Note that Rossiter's tutorial has 56,372 in July 2022, so something isn't pulling right for the gpkg. It seems I get different numbers every time like its a connection timeout issue. Seems arbitraty.
+
+OK - now I tried again and got 56,189.
+
+When I did the shapefile I got 56,192.
+
+

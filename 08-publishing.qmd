@@ -1,0 +1,13 @@
+# Publishing {#sec-publishing}
+
+Publishing involves so much more than submitting a manuscript and working your way through the peer-review process. Although this is a critical part of any project, and the goal of all of our endeavors is to produce peer-reviewed publications, there are many ways that data, code, analysis and interpretation can be published. In fact, when using an open science mindset, we should always expect to publish our raw data, our code, metadata, and even a companion document (potentially as a GutHub Pages e-book) *in addition* to any peer-reviewed manuscripts that result from our work.
+
+These publications can take several forms:
+
+-   datasets, databases, photo databases published through data repositories such as ESS-DIVE, NSF Arctic Data Center, UMN DRUM, or GitHub
+
+-   a quarto companion e-book (hosted on GitHub pages)
+
+-   others
+
+In this section we will focus on how and where you can publish these materials so that they are useable by others, citable, and have a permanent doi.

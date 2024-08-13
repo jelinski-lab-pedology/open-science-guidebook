@@ -44,10 +44,12 @@ book:
         #- 07c-writing-manuscripts.qmd
         #- 07d-writing-metadata.qmd #standards
         #- 07e-writing-in-markdown.qmd
-    #- part: 08-publishing.qmd
+    - part: 08-publishing.qmd
         #- 08a-data-archiving-storage.qmd
         #- 08b-licenses-copyright.qmd
         #- 08c-formats-standards.qmd
+        chapters:
+        - 08d-publishing-github-repos
         #- 08d-quarto-books.qmd
         #- 08e-orcid-google-scholar.qmd
     - part: 09-style-guides-and-standards.qmd

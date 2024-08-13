@@ -1,0 +1,614 @@
+# Introduction to Docker and why you would use it
+
+# Getting set up with Amazon Web Services (AWS)
+
+## Creating an account logging in, and navigating to EC2 Dashboard
+This first thing you'll want to do is create an account with AWS. NOTE: creating an account does not mean you will need to pay anything, however - AWS offers a free tier that may or may not meet your needs. You can sign up for an account [here](https://aws.amazon.com). 
+
+Then, log in to AWS. You will see your AWS user console. If you click on the services tab in the upper left you will see a laundry list of services provided by AWS that is very overwhelming. Don't worry - we will only be using one. Under Services -> Compute you will find "EC2 Virtual Servers in the Cloud". That is the only service we will be using. Click on EC2 and it should bring you to your EC2 dashboard. Again, there is a lot going on here but don't worry - there is more functionality here than we will use.
+
+## Launching an Instance through EC2
+In EC2, an "Instance" is a user-specific configuration of a virtual computer (that Amazon is running somewhere in the US/World) that we will access remotely. This "instance" is called a virtual machine because it is not necessarily a single computer sitting somewhere that you are connecting to. Rather, you will be connecting to the computing resources needed (regardless of what the physical infrastructure actually looks like in the real-world) that will function as if it were a single physical machine. Here is really the beauty/utility of using AWS EC2 - you can scale your virtual machine or "instance" to your computing needs, and the costs are quite cheap provided you run it when needed (like < $0.01 per hour, so even if you set up an instance and run it for 48 hours it could cost you less than $1.). There is a free tier and prices go up from there but are generally extremely affordable.
+
+To create or "launch" an instance, first navigate to the "Instances" panel: Instances -> Instances. If you are just logging in to the EC2 app dashboard for the first time, you likely won't see anything listed under instances because we haven't created one yet!
+
+To start a new instance, click the "Launch Instance" button. When you launch an instance, you need to first give it a name (name it something meaningful to you - see my thoughts on name conventions for these below).
+
+### Selecting a Machine Image
+You then need to select an Image (Amazon maintains their own catalog of images called Amazon Machine Images or AMI). An "Image" can simply be thought of as the "out of the box" operating system, application server and specific applications that your virtual machine will come with. Again, a very powerful aspect of this is that you can run different operating systems on a virtual machine instead of junking up your own computer (anyone who has run Parallels for an extended period of time on a Mac can probably sympathize).
+
+Amazon Linux is the default and offers the most flexibility (since it is their OS). Most mac users will be fairly comfortable on a Linux OS, although there are some differeces (see below). If you want though, you could run a MacOS image, a Windows image or even more obscure operating systems. I am writing this tutorial assuming Amazon Linux will be the OS of choice. Also, the default Amazon Linux 2023 AMI is free tier eligible (note that some images are not free). For our machine image, we don't need anything more than the default current AMI since we will be configuring and installing anything extra needed on our own (using Docker). In short, therefore, unless you have a very specific reason not to - just choose the defaults for the image choice.
+
+### Selecting an Instance Type
+Here is where you choose the size and power of your virtual machine, including the number of CPU cores, and memory storage. The default is "t2.micro". This functions fine, however is limited in storage space and RAM. There may be issues with trying to load large docker images on it with limited space. So, my suggestion is to try things on the free tier first, and if you run out of space then bump up to a t2.medium or t2.large. You don't get charged for stopped instances, only running instances, so at $0.09 per hour its really very cheap.
+
+### Creating a login keypair
+Next, you will be asked if you would like to generate a login certificate (keypair) for your instance. If you don't already have one in an easily accessible place on your computer (a .pem file) then you SHOULD create one. Once you have created one as log as you still have the file you can use that keypair for other instances as well. WHEN DOES THIS ACTUALLY GET USED -JUST FILEZILLA??
+
+### Network Settings - Creating a Security Group
+Choose to create a security group - and leave the defaults. For a better understanding of what is happening here see THIS.
+
+NOTE: if you want to run an RStudio instance that is accessible from a url on EC2, then you need to add an additional security rule:
+In your instance page, go into the "Security" tab and then click on the "security groups" link. Then click "Edit inbound Rules".
+
+Click "Add rule"
+
+Select Custom TCP
+
+In port range type in "8787"
+
+For source select "Anywhere IPv4"
+
+Save Rules
+
+NOTE: by default EC2 instances themselves 
+
+
+
+
+### Leave all other options as defaults
+
+### Launching and accessing your instances
+Now scroll to the bottom and click the "Launch Instance" button. Now go back to the "Instances" dashboard - you should see your new instance here. Your instance should automatically have been set up and started running by default. Click the bok on the left next to your instance and then click the connect button at the top of the page. Use the default connection type (connect using EC2 Instance Connect) and leave the user name as the default (ec2-user).
+
+You will then be connected with the terminal line (as bash shell) of your virtual machine! You're in! Now, how to use Docker, load a Docker image, and run R Studio server.
+
+WHAT ABOUT INSTANCE LOCATION - OHIO, ETC??
+
+## Doing stuff on your virtual machine
+
+### In the shell
+When you first connect to your virtual machine, you will find yourself in the shell. By default the Amazon Linux VM uses the bash shell. If you have no idea what this means, you can read about shells [here]. Shells are command line interpreter programs. Bash is a common shell - there are others as well.
+
+### Doing stuff in the shell
+We will interact with your virtual machine first through the shell. There are a few very basic key navigational commands:
+cd to change directory
+cd .. to go up a directory
+ls to list files and folders
+
+The shell line will start with something like:
+[ec2-user@ip-172-31-3-79 ~]$
+
+This is a complex of your username (ec2-user) by default, the private IPv4 address for your instance ip-172-31-3-79, the home directory for the user ec2 on the virtual machine "~", and the $ symbol that indicates you are in the bash shell adn it is ready to take commands.
+
+### Package managers - YUM!
+All operating systems use "package managers" to install, update and remove packages. In Linux, the package manager is called "yum".
+
+yum stands for "Yellowdog Updater, Modified". It is a free and open-source command-line package-management utility for Linux operating systems using the RPM (Red Hat Package Manager) packaging format. Some key points about yum:
+
+It automatically handles dependencies between packages. If Package A requires Package B to run, yum will install Package B automatically when you install Package A.
+
+It can install, update, delete or manage RPM packages from repositories configured on the system.
+
+It can install the latest version of a package using the command yum update [package]
+The repositories it uses can be modified, with both official repositories like EPEL or RHEL and custom user repositories.
+
+yum is used by several popular Linux distributions like Red Hat Enterprise Linux, Fedora, CentOS etc. to manage packaging and updates.
+
+It uses metadata provided by repositories to determine availability, dependencies etc before installing or updating packages.
+
+Default configured repositories provide software packages that have been tested to be stable.
+
+In summary, yum provides automatic dependency resolution, package management and easy updating of RPM-based Linux systems from configured repositories. It is the default package manager on some of the most popular enterprise Linux distributions.
+
+On Debian systems, apt (Advanced Packaging Tool) is the major package manager. MacOS doesn't come with a native package manager - most people use Homebrew. So, all of this to say that you will see yum commands in these instructions that refer specifically to the YUM package manager for Linux based systems. If you are using a Debian system or MacOSX, then the equivalent would be apt or brew.
+
+Just like how R has a package repository, there are registered package repositories that yum (and apt and homebrew) access. To see what repository or repositories the yum package manager is looking at/installing from, type:
+
+yum repolist
+
+(note here that repolist is a command givcen to the yum package manager program that asks it to show the repos that are enabled on the system).
+
+### Issuing high-level commands with "sudo"
+sudo (superuser do) is a program for Unix-like computer operating systems that allows users to run programs with the security privileges of another user, by default the superuser. It stands for "superuser do", as by default it allows specified users to run commands as the superuser.
+
+Some key points about sudo:
+
+Allows a permitted user to execute a command as the superuser or another user, as specified in the sudoers configuration file.
+
+The sudoers file controls which users can run which commands as which users.
+
+Using sudo requires the user to authenticate with their own password first. This provides an audit trail of who ran privileged commands.
+
+Logging of sudo usage and errors is configurable to monitor activity.
+
+Better security practice than setting up user accounts with superuser permissions.
+
+Prevents sharing of superuser passwords for accountability. Each user authenticates with their own password.
+
+So in summary, sudo provides delegation of superuser privileges to specific trusted users, enhancing both security and accountability. It logs usage and ensures users authenticate with their own credentials before running privileged commands.
+
+So, generally sudo is used for commands to install or uninstall programs, run executables, modify user privileges, start or stop services. The big stuff.
+
+### First step - update all packages as good practice.
+sudo yum update -y
+
+The sudo yum update -y command is used to update all installed packages on a Linux system using the yum package manager. Here's a breakdown of what it does:
+
+sudo - Runs the following command with superuser (administrative) privileges. This allows yum to install updates to system packages.
+
+yum - Executes the yum package manager command.
+
+update - Tells yum to update installed packages.
+
+-y - Answers "yes" automatically to any prompts during the update process. This makes the update completely automated without any user intervention.
+
+In summary, sudo yum update -y updates all installed packages to their latest versions available in the configured repositories. The -y flag makes sure the process is completely automated without prompting the user.
+It's a common command used to keep a Linux system up-to-date with the latest packages, security fixes, and enhancements. System administrators often run this command regularly (e.g. daily or weekly) as part of automation scripts to maintain updated machines.
+
+### Install Docker on your virtual machine
+This command installs the Docker engine on a Linux machine running a yum-based distribution like RHEL/CentOS using sudo privileges. install the latest version of Docker engine and its dependencies from the configured yum repositories on the system. The -y flag makes the installation automatic without requiring any user confirmation.
+
+sudo yum install docker -y
+
+### Start the Docker "service" - this allows you to issue commands to Docker at any time and it will execute. Think about it like opening a Docker App on your computer and leaving it open. You can pull it up at any time and do stuff in it without having to double click open again.
+
+sudo service docker start
+
+Docker service refers to the background docker daemon process that runs on the host machine. Some key points:
+
+- The docker daemon is the background process that manages building, running and distributing Docker containers.
+
+- The daemon listens on a socket (default is unix:///var/run/docker.sock) for requests to run containers, manage images etc. 
+
+- CLI tools like docker, docker compose etc communicate with this daemon over the socket API.
+
+- So the docker service keeps the docker daemon process running in background.
+
+A daemon is a computer program that runs as a background process rather than under direct control of an interactive user. Some examples:
+
+- Docker daemon to manage containers
+- Print daemon to handle print requests 
+- SSH daemon to accept SSH connections
+
+So in summary:
+
+- Docker daemon is the background process powering Docker functionality 
+- Docker service keeps the daemon always running across reboots
+- Daemons in general are helpful for running processes in background free from user shell exiting.
+
+Starting the docker service ensures the Docker daemon is running to accept Docker CLI commands and container management requests via the socket API.
+
+#### Why is this called a daemon?
+That's an interesting piece of history! The term "daemon" does seem unusual for referring to background services or processes in a computer context.
+
+The etymology traces back to Greek Mythology - a "daemon" referred to a supernatural being that worked in the background, unseen from the mortal world. This could be a benign guiding spirit or a more sinister entity.
+
+In the 1960s when MIT computer scientists were developing some of the first background processes to handle print queues and other tasks, they referred to them as "daemon" processes since they were unseen processes working in the background like those mythological creatures. 
+
+The name "daemon" stuck and started being used to refer to any persistent background service process on Unix and later Linux systems. Even today the convention continues with terms like dbus-daemon, sshd daemon etc.
+
+So in summary:
+
+- The term has mythological origins to refer to unseen supernatural agents
+- MIT engineers found it an apt name for invisible background computer processes  
+- The "daemon" name persists today due to tradition rather than having a literal meaning
+
+So that's the story of why background helper processes came to be known as "daemons" - an unusual but interesting piece of etymological history!
+
+#### how does the docker daemon actually listen on the socket //var/run/docker.sock and what the heck is a socket?
+
+Great question! The docker.sock file and sockets in general can seem confusing at first. Let me explain:
+
+What is a Socket?
+
+- A socket is an inter-process communication mechanism that allows processes to communicate with each other, kind of like a pipeline.
+
+- Sockets allow bi-directional data exchange between processes on the same machine or different machines.
+
+- Common types are UNIX domain sockets (for IPC on one host) and TCP/IP sockets (for network communication).
+
+Docker Daemon Socket:
+
+- The docker daemon exposes a UNIX socket at /var/run/docker.sock
+
+- This allows other local processes like the docker CLI to talk to the daemon.
+
+- Instead of a network port, it uses this IPC socket file to send requests like "run container", "pull image", etc.
+
+- The daemon handles tasks like building images, managing containers, networking, etc.
+
+So in summary:
+
+- Sockets enable inter-process communication 
+- Docker uses a UNIX socket for local IPC between the CLI and daemon
+- This shared socket allows sending management commands to the Docker background service
+
+Hope this helps explain what sockets are and the docker daemon socket! Let me know if any part needs more clarification.
+
+### Add the ec2-user to the docker group so you can execute Docker commands without using sudo.
+
+sudo usermod -a -G docker ec2-user
+ 
+This Linux command adds the ec2-user user to the docker group to grant permission to run Docker commands:
+
+Breakdown:
+
+`sudo` - Run command with superuser privileges
+
+`usermod` - Modify a user account
+
+`-a` - Append the user to the supplementary group
+
+`-G` - Specify the group to append the user to  
+
+`docker` - The name of the group. In this case, the Docker group.
+
+`ec2-user` - The user account to add to the docker group
+
+So in effect, this command:
+
+`sudo usermod -a -G docker ec2-user`
+
+Adds the user "ec2-user" to the supplementary group called "docker". 
+
+This grants the ec2-user permissions to access the Docker daemon and run Docker commands. Without this, only the root user would have Docker access and you would need to run 'sudo' every time you issue a Docker command.
+
+The docker group allows non-root access to Docker. So this enables the ec2-user to manage Docker containers, images, volumes etc. without needing root privileges using the Docker CLI or Docker Compose.
+
+### Logout and log back in for the user authorization to take effect
+Logout by typing
+
+exit
+
+or hit control-d
+
+and you will be logged out of the instance (although the instance will still be running). Now go back to your AWS instances page and connect to your instance again.
+
+### Pull a docker image from the docker repository to your local machine
+
+In this case I am concerned with getting R Studio up and running (with geospatial tools) on my virtual machine, so the [Rocker Project](https://rocker-project.org) and [Rocker images](https://rocker-project.org/images/) (which all contain R) is the easiest place to start.
+
+Specifically for my use case (pulling [WoSIS latest](https://www.isric.org/accessing-wosis-using-r)), I need geospatial packages in R installed, and perhaps MOST IMPORTANTLY the system package GDAL. Installing GDAL at the system level is quite time consuming (we could do it with yum as the package manager), and the rocker/geospatial images already come with GDAL as part of the image. SO, because the rocker/geospatial images come with GDAL, R, Rstudio, and a base set of geospatial packages for R - I'll just pull one of those and use it as a base for my machine image! Of course, I could do this all by the command line, but it would take quite some time. That is the power of the Docker packages, everything is pre-built and you can customize from there.
+
+So, I am going to pull the rocker/geospatial package for R version 4.2.1 (I could pull the latest version of R, or any other available version, but I am using 4.2.1 because that version is from 06-23-2022 (see [rversions](https://github.com/r-hub/rversions))) and the Wosis latest access tutorial is from July 2022 and uses packages that are deprecated in newer versions of R (the advanteg of Docker and running a virtual machine!!!! don't have to junk up my computer and mess around with older versions of programs!!!). 
+
+docker pull rocker/geospatial:4.2.1
+# note - the above image is 4.21 gB so need a machine that is that big as well
+
+### Check to see what Docker images are available on your system
+
+docker images
+
+The docker image you downloaded/pulled should be listed and available. Note that it tells you the size of the downloaded image (in my case 4.17GB) and it has an assigned image ID (random alphanumerics). You will need to reference that ID if you ever want to delete an image from your virtual machine (why would you do that? - because they take up a bunch of space!!!!).
+
+### Customizing a docker image (and specifically R within a docker image) by adding packages.
+
+#### Method 1: Create a container, run R Studio, and install additional packages in R on virtual machine
+
+OK in this method I will assume we already have our Docker image with R/R Studio (in my case rocker/geospatial:4.2.1) on our machine. 
+
+docker run -p 8787:8787 -e PASSWORD=SECRET -d --name rstudio rocker/geospatial:4.2.1
+
+the deafult r studio server username is rstudio - the password is now set to "SECRET"
+
+This Docker command runs a container with RStudio server from the rocker/geospatial image:
+
+Breakdown:
+
+`docker run` - Run a new container 
+
+`-p 8787:8787` - Map port 8787 of the container to port 8787 on the host machine
+
+`-e PASSWORD=SECRET` - Set environment variable PASSWORD to "SECRET"
+
+`-d` - Run the container in detached mode (in background)
+
+`--name rstudio` - Name the container "rstudio"
+
+`rocker/geospatial:4.2.1` - Use rocker/geospatial image with tag 4.2.1
+
+In summary, it:
+
+- Runs a container named "rstudio" from the specified Rocker geospatial image
+- Exposes port 8787 for accessing RStudio server
+- Sets the login password as "SECRET" 
+- Runs the container in detached mode in the background
+- Allows accessing RStudio at http://localhost:8787 with password as "SECRET"
+
+This provides a quick way to start using RStudio for geospatial data analysis in Docker without needing to install it locally. The password and container name can be changed as per needs.
+
+NOW, verify that the docker container has been created (note in your exi)
+  
+docker ps
+
+This shows you the currently running docker containers on the system. 
+
+The "ps" in docker ps stands for "process status". This comes from the original Unix ps command which lists the currently running processes on a system.
+
+In detail:
+
+- On Unix/Linux the `ps` command shows status of currently running processes started by the operating system.
+
+- It gives a snapshot of all programs being executed at that point in time along with details like PID, start time, user etc.
+
+- The `docker ps` equivalent was modeled after this to list currently running Docker containers.
+
+- Containers are like lightweight virtualized processes running on top of the host OS.
+
+- So `docker ps` allows seeing status of containers, which can be considered as processes within Docker context.
+
+Therefore, the `ps` in `docker ps` was inspired from the standard Unix `ps` command for checking status of OS processes.
+
+This was likely chosen deliberately to draw analogy between OS processes and Docker containers in terms of checking status - hence the naming as `docker ps`.
+
+NOTE: this shows you the RUNNING docker containers. If you want to see all docker containers then you type the following:
+
+docker ps -a
+
+the -a stands for all. When you run docker ps -a it will show you all docker containers, both running and stopped. NOTE that a container is an "Instance" of an "Image". Think of the Images as the DNA and the containers as the RNA. The image itself isn't useful until it is run as a container. Think of a container as a full setup of a working operating system on your virtual machine. It is your laptop, configured, with all the programs and packages provided in the docker file.
+
+Once you verify that your Docker image is running, then time to access R Studio server.
+
+### Accessing your EC2 Instance with Docker container running RStudio on port 8787.
+
+Now, assuming you have your security group configured correctly with inbound custom TCP on port 8787. Then, you should be able to access your RStudio instance via a web address:
+You need to find your instance in your instance dashboard and click on the alphanumeric code link in the "Instance ID" column. Look over to the right for the "Public IPv4 DNS" address. Copy that and then enter it in a new broswer window as follows:
+
+http://[your Public IPv4 DNS]:8787
+
+IN this specific case, for example, mine was 
+http://ec2-3-12-149-126.us-east-2.compute.amazonaws.com:8787
+
+The 8787 is to access the specific port that we allowed by our inbound custom TCP rules protocol and also that we ran rstudio on in our docker run command. 
+
+You should see a login page for RStudio Server.
+
+the default username is : rstudio
+the password is what we put in our docker run command (in this case, but can be changed to anything else): SECRET
+
+Once you log in, you're in! You should be able to do stuff in R studio! Note that you are now using the Rocker image that you pulled, so the default available packages will be whatever was included in the image.
+
+To check what packages are installed and accessible by R, you can do:
+
+now, check what packages come with that:
+my_packages <- library()$results[,1]
+my_packages
+
+NOTE: about 4min timeout (container shutdown) when trying to run by docker-compose
+
+#### Installing additional packages in R running on EC2 instance
+Unlike on your normal laptop computer, when you install things on an EC2 image, they go into background folders on the virtual machine. To find the path where R packages are living on the virtual machine do the following:
+
+.libPaths()
+
+NOTE: there are two paths "...site-library" and "...library". Here is the difference between the two:
+
+In R, there can be multiple library paths where packages can be installed. The two main library paths you are seeing are:
+
+1. /usr/local/lib/R/site-library:
+- This is the default system-wide library location where R packages get installed.
+
+2. /usr/local/lib/R/library:
+- This is the default user library location for per-user package installations.
+
+When you install a package in R:
+
+- With system-wide permissions (as root/admin), it goes into the site-library location. This is accessible system-wide.
+
+- If installed as a normal user, it goes into the per-user library path instead under library.
+
+By having two separate paths, it allows separation based on whether the packages are admin managed or user managed.
+
+The .libPaths() function in R shows the current library directories which are searched when you load packages using library() or require().
+
+In your case, you are seeing both system and user paths configured in R's .libPaths, hence why new packages could be getting installed into either location depending on install context.
+
+If you want to install new packages on a AWS EC2 instance, you need to use the site-library path and not the library path.
+
+SO: in my case I need two additional packages that were not included in the rocker image. To pull data from WOSIS latest (in my special use case) per the instructions from David Rossiter's tutorial, I need two additional packages: gdalUtilities (available on CRAN) and gdalUtils (only available on GitHub). Therefore, they need different commands to install them - note that installing packages by install_github requires the devtools package. In this case, the rocker/geospatial image comes with the devtools package already installed.
+
+# try to install gdalUtilities
+install.packages("gdalUtilities",lib = "/usr/local/lib/R/site-library")
+
+# now install gdalUtils
+devtools::install_github("gearslaboratory/gdalUtils", lib = "/usr/local/lib/R/site-library")
+
+SOMETHING HERE ABOUT which CRAN snapshot, which package version are installed by default? Is there a way to control the package version that is installed? Is there a specific snapshot that is pulled from based on the rocker image version (i.e. if you are using an older version (as I am here)) instead of latest, does it pull from an archived CRAN mirror to get the package as it was available around the time of the specific R version.
+
+WORKS - NOW CODE!!!
+
+NOTE: need to add stuff about creating folders, how files are stored (they are wiped so need a file transfer service to save them!!!!!, mounting volumes as part of the docker run command, FileZilla access).
+
+#### Method 2: Build a new Docker image that "extends" and existing docker image by including additional packages 
+
+The other option to installing the packages after accessing the instance is to write a Dockerfile and "build" an extended image of the base Rocker images which includes installation of the additional packages during the build.
+
+#### Dockerfiles
+Dockerfiles tell Docker how to build an image
+
+They start with a base image - in this case I am using rocker/geospatial:4.2.1. Then extend the image via RUN commands see (https://rocker-project.org/use/extending.html)
+
+FROM rocker/geospatial:4.2.1
+
+RUN R -e 'install.packages("gdalUtilities")'
+RUN R -e 'remotes::install_github("gearslaboratory/gdalUtils")'
+
+RUN rm -rf /tmp/downloaded_packages
+
+RUN mkdir /home/rstudio/data \
+&& chown rstudio:rstudio /home/rstudio/data \
+&& chmod -R ugo+rw /home/rstudio/data \
+&& usermod -aG sudo rstudio
+
+Now, this needs to be a dockerfile that is available on your virtual machine. In order to do that, you need to connect to your virtual machine and create a directory you can access and put this file in it.
+
+##### Here is how to connect to your virtual machine using FileZilla:
+#Move files over to your AWS instance (see top, above) I used FileZilla
+#Open FileZille
+#File -> Site Manager -> New Site
+#Change protocol to sftp
+#Use the public IPV4 DNS address (see AWS console) as the host name. should look something like this: "ec2-18-223-24-19.us-east-2.compute.amazonaws.com"
+#Choose “Key file” as the logon type, set the username to ec2-user, and add your *.pem file as the key file.
+#Click on “Connect”. On the right side, all files on the EC2 Instance are listed, and on the left side you can find the files on your local machine. To copy files from one place to another, you can simply drag and drop them between both windows.
+
+NOTE: the original instructions say to log out of your image when you create directories and transfer files - I'm following that advice here - but it might be possible to do this while still logged in.
+
+Once the dockerfile is on your virtual machine, navigate to the folder the file is in, then build the image
+
+docker build -t wosis-latest-r-extract:v0.1 .
+
+This Docker command builds a new Docker image using the Dockerfile in the current directory and tags it with the name "wosis-latest-r-extract" and tag "v1":
+
+Breakdown:
+
+`docker build` - Builds a new Docker image using the Dockerfile in the specified build context
+
+`-t wosis-latest-r-extract:v1` - Tags the resulting image with name "wosis-latest-r-extract" and tag "v1"
+
+`.` - Sets the build context to current directory (looks for a Dockerfile here)
+
+In summary, it:
+
+1. Locates the Dockerfile in the current directory (.) 
+
+2. Runs the Dockerfile instructions to build a new Docker image
+
+3. Assigns the image name as "wosis-latest-r-extract" and a tag of "v1"
+
+
+NOW: run this as follows:
+docker run -p 8787:8787 -e PASSWORD=SECRET -d --name rstudio wosis-latest-r-extract:v1
+
+This WORKED!!!! 
+
+#### Pushing a built package to Dockerhub. 
+
+Much like GitHub, Dockerhub offers verioning control for images. Since I have a working images which is an extension of an existing rocker image, I might as well push it to DockerHub so it can just be pulled as is in the future.
+
+Here's how to do that:
+
+First, you need a docker account. I signed up and my username is: nicjelinski
+
+Unfortunately, however, I need to backtrack a bit - because you can't add labels to an exiting Docker IMage. To add labels (metadata), you need to do it during the build itself, with the LABEL command.
+
+Here are some great resources for how to add labels and standardized labels:
+https://medium.com/@chamilad/lets-make-your-docker-image-better-than-90-of-existing-ones-8b1e5de950d
+
+Here is the contents of my new Dockerfile:
+
+FROM rocker/geospatial:4.2.1
+
+RUN R -e 'install.packages("gdalUtilities")'
+RUN R -e 'remotes::install_github("gearslaboratory/gdalUtils")'
+
+RUN rm -rf /tmp/downloaded_packages
+
+LABEL maintainer="https://github.com/nic-jelinski = jeli0026@umn.edu"
+LABEL org.label-schema.build-date="2024-02-24T02:29:33Z"
+LABEL org.label-schema.schema-version="0.1"
+LABEL org.label-schema.name="nicjelinski/wosis-latest-pull
+LABEL org.label-schema.description="Extension of rocker/geospatial:4.2.1 to follow D. Rossiter WOSIS-Latest pull tutorial"
+LABEL org.label-schema.url="https://github.com/alaska-soil-data-bank/tools"
+
+RUN mkdir /home/rstudio/data \
+&& chown rstudio:rstudio /home/rstudio/data \
+&& chmod -R ugo+rw /home/rstudio/data \
+&& usermod -aG sudo rstudio
+
+Now I rebuild on my virtual machine - WORKED!
+
+Now I see if I can push to dockerHub directly from my virtual machine
+
+#### Pushing generated image to DockerHub
+First, log in to Dockerhub
+
+docker login -u nicjelinski
+
+it will then prompt for password
+
+Then, you need to add a new tag to the image you built that includes your username:
+docker tag wosis-latest-r-extract:v0.1 nicjelinski/wosis-latest-r-extract:v0.1
+
+Now, you can push to DockerHub:
+docker push nicjelinski/wosis-latest-r-extract:v0.1
+
+Finally, clean up in Dockerhub by adding description and overview text (can this be automated?). ALSO, need to understand how multiple versions work.
+
+#### Attempt to pull image to make sure it works!
+
+First, delete the existing images - note that now that the image has two tags, docker throws an error when trying to delete it. The way to solve it is to add the -f switch in the rmi command (force delete):
+
+docker rmi -f 1916fb425ca4
+
+Now, pull from DockerHub raw
+docker pull nicjelinski/wosis-latest-r-extract:v0.1
+
+Then run it
+docker run -p 8787:8787 -e PASSWORD=SECRET -d --name rstudio nicjelinski/wosis-latest-r-extract:v0.1
+
+WORKS!!!!!
+
+### Stopping, removing docker containers
+
+### Deleting docker images
+
+### Need to deal with mounting volumes, etc
+#here i'm mapping a volume
+docker run -p 8787:8787 -e PASSWORD=SECRET -v /home/ec2-user/r-wosis-test:/home/rstudio/data -d --name rstudio nicjelinski/wosis-latest-r-extract:v0.1
+
+https://docs.docker.com/storage/volumes/
+
+NOTE: The instance IP changes every time it starts and stops - if you have trouble connecting by http, make sure you are using the right Public IPv4 DNS!
+
+####### THIS PULLS ALL 44 AS A CSV
+###### Trying bacth pull of all layer data here - test with two
+library(gdalUtilities) 
+library(gdalUtils) 
+library(sf) 
+library(stars)  
+library(dplyr)
+library(ggplot2)        # gpplot graphics
+library(maps)           # optional -- for boundary polygons
+library(mapdata)
+
+drivers <- sf::st_drivers()
+# print(drivers)
+ix <- grep("GPKG", drivers$name,  fixed=TRUE)
+drivers[ix,]
+
+ix <- grep("ESRI", drivers$name,  fixed=TRUE)
+drivers[ix,]
+
+ix <- grep("CSV", drivers$name,  fixed=TRUE)
+drivers[ix,]
+
+# Horizon level data - the pull for one attribute takes ~ 7min
+
+wfs <- "WFS:https://maps.isric.org/mapserv?map=/map/wosis_latest.map"
+
+(layers.info <- sf::st_layers(wfs))
+
+layers.info$name
+
+layers.info.batch = substr(layers.info$name[7:44], 4, nchar(layers.info$name[7:44]))
+
+wosis.dir.name <- "./data"
+if (!file.exists(wosis.dir.name)) dir.create(wosis.dir.name)
+
+for (i in layers.info.batch) {
+  src.layer.name <- i
+  dst.layer.name <- i
+  (dst.target.name <- paste0(wosis.dir.name,"/",dst.layer.name,".csv"))
+  
+  if (!file.exists(dst.target.name)) { 
+    gdalUtilities::ogr2ogr(src=wfs,
+                           dst=dst.target.name,
+                           layer=src.layer.name,
+                           f="CSV",
+                           overwrite=TRUE)
+  }
+}
+
+##NOTE: trying to pull all 44. Started at 7:30PM 24FEB2024 stopped (threw error after #6 - it might be a timeout thing?)@ 8:11PM (40min). Yes it seems to be a timeout thing - need to check periodically. Also, redownloaded the two that were stopped and they were not complete. So if this process stops, should re-download the one that it stopped on because it may not be complete.
+
+
+
+Some handy stuff - to see size of all files in directory on command line:
+ls -l
+
+How to get Zulu date time in command line shell:
+date -u +'%Y-%m-%dT%H:%M:%SZ'
+
+
+
